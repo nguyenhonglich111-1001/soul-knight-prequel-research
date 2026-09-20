@@ -1,0 +1,1106 @@
+[
+ {
+  "from": 1,
+  "to": 447,
+  "count": 271,
+  "sample": "Fish Chips"
+ },
+ {
+  "from": 901,
+  "to": 902,
+  "count": 2,
+  "sample": "Star Membership"
+ },
+ {
+  "from": 1001,
+  "to": 1447,
+  "count": 261,
+  "sample": "An exotic, luxuriantly golden chip of dried fish that can be used to procure var"
+ },
+ {
+  "from": 1501,
+  "to": 1502,
+  "count": 2,
+  "sample": "A crystallized shard of concentrated Helxar power that can be used to perform He"
+ },
+ {
+  "from": 2000,
+  "to": 2003,
+  "count": 4,
+  "sample": "Boarish Eidolon"
+ },
+ {
+  "from": 2100,
+  "to": 2103,
+  "count": 4,
+  "sample": "Highwayman Eidolon"
+ },
+ {
+  "from": 2200,
+  "to": 2215,
+  "count": 16,
+  "sample": "Triumvirite Eidolon"
+ },
+ {
+  "from": 2300,
+  "to": 2330,
+  "count": 31,
+  "sample": "Blackguard Eidolon"
+ },
+ {
+  "from": 2600,
+  "to": 2603,
+  "count": 4,
+  "sample": "Boarish Eidolon Shard"
+ },
+ {
+  "from": 2700,
+  "to": 2703,
+  "count": 4,
+  "sample": "Highwayman Eidolon Shard"
+ },
+ {
+  "from": 2800,
+  "to": 2815,
+  "count": 16,
+  "sample": "Triumvirite Eidolon Shard"
+ },
+ {
+  "from": 2900,
+  "to": 2930,
+  "count": 31,
+  "sample": "Blackguard Eidolon Shard"
+ },
+ {
+  "from": 4000,
+  "to": 4018,
+  "count": 19,
+  "sample": "Can be used to star up the corresponding Eidolon."
+ },
+ {
+  "from": 4501,
+  "to": 4518,
+  "count": 18,
+  "sample": "Cherry Juice"
+ },
+ {
+  "from": 4701,
+  "to": 4717,
+  "count": 17,
+  "sample": "Dodge Juice"
+ },
+ {
+  "from": 4801,
+  "to": 4803,
+  "count": 3,
+  "sample": "A fruit native to the <color=#5DAB71FF>{0}</color> that, upon consumption, doubl"
+ },
+ {
+  "from": 6001,
+  "to": 6117,
+  "count": 117,
+  "sample": "Chilly"
+ },
+ {
+  "from": 7001,
+  "to": 7156,
+  "count": 16,
+  "sample": "Cleansing Tonic"
+ },
+ {
+  "from": 7301,
+  "to": 7340,
+  "count": 40,
+  "sample": "Random Common Equipment"
+ },
+ {
+  "from": 7401,
+  "to": 7440,
+  "count": 40,
+  "sample": "Random Common equipment dropped from dungeons."
+ },
+ {
+  "from": 7500,
+  "to": 7668,
+  "count": 123,
+  "sample": "Negative Weight"
+ },
+ {
+  "from": 8001,
+  "to": 8120,
+  "count": 73,
+  "sample": "E-Specs Bundle"
+ },
+ {
+  "from": 9003,
+  "to": 9064,
+  "count": 58,
+  "sample": "Random Weapon"
+ },
+ {
+  "from": 9901,
+  "to": 9927,
+  "count": 26,
+  "sample": "You can choose to obtain one of the following items:"
+ },
+ {
+  "from": 10000,
+  "to": 10259,
+  "count": 260,
+  "sample": ""
+ },
+ {
+  "from": 14001,
+  "to": 14001,
+  "count": 1,
+  "sample": "Any Triumvirite Megalith"
+ },
+ {
+  "from": 22549,
+  "to": 23405,
+  "count": 857,
+  "sample": "Crimson Amethium Gourd"
+ },
+ {
+  "from": 25001,
+  "to": 25548,
+  "count": 548,
+  "sample": "Virtue"
+ },
+ {
+  "from": 29001,
+  "to": 29074,
+  "count": 74,
+  "sample": "Starlit Canvas"
+ },
+ {
+  "from": 30000,
+  "to": 30353,
+  "count": 354,
+  "sample": ""
+ },
+ {
+  "from": 35001,
+  "to": 35165,
+  "count": 165,
+  "sample": "Life"
+ },
+ {
+  "from": 35300,
+  "to": 35463,
+  "count": 117,
+  "sample": ""
+ },
+ {
+  "from": 35601,
+  "to": 35601,
+  "count": 1,
+  "sample": "The amount of extra ATK gained through your Main Stat."
+ },
+ {
+  "from": 45001,
+  "to": 45017,
+  "count": 17,
+  "sample": "Young knights within the premises of Helxar-touched dungeons will find themselve"
+ },
+ {
+  "from": 45101,
+  "to": 45147,
+  "count": 38,
+  "sample": "During the new season, you’ll sometimes discover ancient forgotten vaults hidden"
+ },
+ {
+  "from": 50560,
+  "to": 50560,
+  "count": 1,
+  "sample": "Insufficient Ingredients!"
+ },
+ {
+  "from": 50801,
+  "to": 51044,
+  "count": 243,
+  "sample": "Clear Dungeons"
+ },
+ {
+  "from": 52001,
+  "to": 52014,
+  "count": 14,
+  "sample": "Skill Upgrade"
+ },
+ {
+  "from": 53000,
+  "to": 53020,
+  "count": 21,
+  "sample": "Enter the Base"
+ },
+ {
+  "from": 53500,
+  "to": 53627,
+  "count": 116,
+  "sample": "Enter the Base {0} times."
+ },
+ {
+  "from": 60001,
+  "to": 60433,
+  "count": 386,
+  "sample": "Exceptional"
+ },
+ {
+  "from": 60501,
+  "to": 60508,
+  "count": 8,
+  "sample": "Venture"
+ },
+ {
+  "from": 60601,
+  "to": 60605,
+  "count": 5,
+  "sample": "Explore a boundless world"
+ },
+ {
+  "from": 60701,
+  "to": 61029,
+  "count": 274,
+  "sample": "Backpack"
+ },
+ {
+  "from": 61101,
+  "to": 61124,
+  "count": 24,
+  "sample": "Power Up"
+ },
+ {
+  "from": 61198,
+  "to": 61525,
+  "count": 251,
+  "sample": "S0-SS3"
+ },
+ {
+  "from": 61701,
+  "to": 61730,
+  "count": 30,
+  "sample": "Affix Quality"
+ },
+ {
+  "from": 61800,
+  "to": 61805,
+  "count": 6,
+  "sample": "Adventure"
+ },
+ {
+  "from": 62001,
+  "to": 62043,
+  "count": 43,
+  "sample": "Chillstead Village"
+ },
+ {
+  "from": 63000,
+  "to": 63000,
+  "count": 1,
+  "sample": "Reset Apex Points for free and all Apex Points will be returned. Are you sure yo"
+ },
+ {
+  "from": 63101,
+  "to": 63110,
+  "count": 10,
+  "sample": "A slight presence of Helxar can be felt."
+ },
+ {
+  "from": 63201,
+  "to": 63229,
+  "count": 29,
+  "sample": "No Avarice Effects"
+ },
+ {
+  "from": 64001,
+  "to": 64263,
+  "count": 263,
+  "sample": "{0} Finale"
+ },
+ {
+  "from": 64998,
+  "to": 65028,
+  "count": 31,
+  "sample": "You cannot transition while inside a dungeon - please return to town first."
+ },
+ {
+  "from": 65101,
+  "to": 65435,
+  "count": 335,
+  "sample": "Build Guide"
+ },
+ {
+  "from": 66000,
+  "to": 66186,
+  "count": 163,
+  "sample": "Undervault"
+ },
+ {
+  "from": 66500,
+  "to": 66571,
+  "count": 72,
+  "sample": "Demolishes all blocks within a distance of 1 in horizontal, vertical, and diagon"
+ },
+ {
+  "from": 66701,
+  "to": 66704,
+  "count": 4,
+  "sample": "Unavailable for your class"
+ },
+ {
+  "from": 67000,
+  "to": 67025,
+  "count": 26,
+  "sample": "Randolph the Questor"
+ },
+ {
+  "from": 67100,
+  "to": 67224,
+  "count": 123,
+  "sample": "Frag Exchange"
+ },
+ {
+  "from": 67300,
+  "to": 67437,
+  "count": 138,
+  "sample": "Breaking Tides Rankings"
+ },
+ {
+  "from": 67501,
+  "to": 67729,
+  "count": 139,
+  "sample": "High on Life"
+ },
+ {
+  "from": 68001,
+  "to": 68026,
+  "count": 14,
+  "sample": "Type"
+ },
+ {
+  "from": 68101,
+  "to": 68105,
+  "count": 5,
+  "sample": "<color=#40E2FFFF>All-Time Best</color>\n- The Best Time for the highest floor you"
+ },
+ {
+  "from": 68500,
+  "to": 68648,
+  "count": 117,
+  "sample": "Growth"
+ },
+ {
+  "from": 68700,
+  "to": 68916,
+  "count": 208,
+  "sample": "Unenchanted"
+ },
+ {
+  "from": 69001,
+  "to": 69023,
+  "count": 15,
+  "sample": "New Specializations arrive on October 28, 2025."
+ },
+ {
+  "from": 69100,
+  "to": 69400,
+  "count": 262,
+  "sample": "Fatestone Backpack"
+ },
+ {
+  "from": 69501,
+  "to": 69700,
+  "count": 200,
+  "sample": "Stone crystal remains from the fall of the Astrolabe, containing the sealed sour"
+ },
+ {
+  "from": 69801,
+  "to": 69840,
+  "count": 40,
+  "sample": "Divine Guard Stone Shard"
+ },
+ {
+  "from": 69901,
+  "to": 69940,
+  "count": 40,
+  "sample": "Starquartz fragments from broken Fatestones. containing a little source power of"
+ },
+ {
+  "from": 70000,
+  "to": 70046,
+  "count": 47,
+  "sample": "Awakening"
+ },
+ {
+  "from": 71001,
+  "to": 71077,
+  "count": 77,
+  "sample": "(A voice murmurs at your ear) Young warrior..."
+ },
+ {
+  "from": 72000,
+  "to": 72008,
+  "count": 9,
+  "sample": "Start to drop high-quality Sacred Souls."
+ },
+ {
+  "from": 72100,
+  "to": 72221,
+  "count": 54,
+  "sample": "Zenithlon"
+ },
+ {
+  "from": 73000,
+  "to": 73431,
+  "count": 422,
+  "sample": "Grand Blue"
+ },
+ {
+  "from": 73500,
+  "to": 73721,
+  "count": 181,
+  "sample": "Chilly Isle"
+ },
+ {
+  "from": 73800,
+  "to": 73861,
+  "count": 62,
+  "sample": "We've finally arrived."
+ },
+ {
+  "from": 74000,
+  "to": 74071,
+  "count": 41,
+  "sample": "Rank Rewards"
+ },
+ {
+  "from": 75000,
+  "to": 75134,
+  "count": 135,
+  "sample": "Aeonic Enigmine"
+ },
+ {
+  "from": 75196,
+  "to": 75239,
+  "count": 44,
+  "sample": "Antiquary Fragment"
+ },
+ {
+  "from": 75300,
+  "to": 75349,
+  "count": 50,
+  "sample": "The hour is at hand... I will transcend the gods themselves."
+ },
+ {
+  "from": 75500,
+  "to": 75615,
+  "count": 116,
+  "sample": "Pandora’s Labyrinth"
+ },
+ {
+  "from": 75700,
+  "to": 75722,
+  "count": 23,
+  "sample": "Damage taken within the Labyrinth is reduced by {0}%."
+ },
+ {
+  "from": 75800,
+  "to": 75821,
+  "count": 22,
+  "sample": "Fortify"
+ },
+ {
+  "from": 75900,
+  "to": 75929,
+  "count": 30,
+  "sample": "Whispers tell of a maiden imprisoned by Hades, one burdened with an anomalous af"
+ },
+ {
+  "from": 76001,
+  "to": 76012,
+  "count": 12,
+  "sample": "Frostridge Monarch: Axial Heart"
+ },
+ {
+  "from": 76101,
+  "to": 76121,
+  "count": 21,
+  "sample": "Accompany"
+ },
+ {
+  "from": 76200,
+  "to": 76373,
+  "count": 174,
+  "sample": "Faction"
+ },
+ {
+  "from": 76500,
+  "to": 76556,
+  "count": 57,
+  "sample": "A rather... unusual band of visitors has arrived in the village."
+ },
+ {
+  "from": 77500,
+  "to": 77514,
+  "count": 15,
+  "sample": "A special material used for performing Void Morph."
+ },
+ {
+  "from": 77601,
+  "to": 77668,
+  "count": 68,
+  "sample": "Forging Upgrade"
+ },
+ {
+  "from": 77801,
+  "to": 78003,
+  "count": 123,
+  "sample": "Chevaliers’ Academy"
+ },
+ {
+  "from": 79000,
+  "to": 79005,
+  "count": 6,
+  "sample": "To the center of the earth! Ancient caches of treasure that have never seen the "
+ },
+ {
+  "from": 80001,
+  "to": 80310,
+  "count": 299,
+  "sample": "Plug into the groove of EDM Soulsynth!\n\nSoulsynth Rhythm Pool:\nDuring the course"
+ },
+ {
+  "from": 80401,
+  "to": 80402,
+  "count": 2,
+  "sample": "Useful Tips"
+ },
+ {
+  "from": 80501,
+  "to": 80736,
+  "count": 189,
+  "sample": "Claws Clash"
+ },
+ {
+  "from": 80801,
+  "to": 82153,
+  "count": 1104,
+  "sample": "You don’t currently have any Ranked records from last season; Push your limits t"
+ },
+ {
+  "from": 90001,
+  "to": 90042,
+  "count": 17,
+  "sample": "Deals"
+ },
+ {
+  "from": 90101,
+  "to": 90123,
+  "count": 11,
+  "sample": "Daily Bundle I"
+ },
+ {
+  "from": 90201,
+  "to": 90208,
+  "count": 8,
+  "sample": "Daily Purchase(s)"
+ },
+ {
+  "from": 90301,
+  "to": 90343,
+  "count": 43,
+  "sample": "Initiate Bundle"
+ },
+ {
+  "from": 90401,
+  "to": 90418,
+  "count": 16,
+  "sample": "A Pile of Chest Keys"
+ },
+ {
+  "from": 90501,
+  "to": 90505,
+  "count": 5,
+  "sample": "Knight-Cadet's Fairing"
+ },
+ {
+  "from": 90601,
+  "to": 90629,
+  "count": 29,
+  "sample": "Weapon Pro. Bundle"
+ },
+ {
+  "from": 90701,
+  "to": 90711,
+  "count": 11,
+  "sample": "GachaC Bundle I"
+ },
+ {
+  "from": 91101,
+  "to": 91130,
+  "count": 30,
+  "sample": "Starter Bundle: I"
+ },
+ {
+  "from": 91201,
+  "to": 91240,
+  "count": 40,
+  "sample": "Holiday Bundle"
+ },
+ {
+  "from": 95001,
+  "to": 95229,
+  "count": 229,
+  "sample": "Life Affixia"
+ },
+ {
+  "from": 96001,
+  "to": 96229,
+  "count": 229,
+  "sample": "Fragments obtained by dismantling the Life Forged Affix. Can be used to replace "
+ },
+ {
+  "from": 98001,
+  "to": 98002,
+  "count": 2,
+  "sample": "Chillstead Godwright"
+ },
+ {
+  "from": 99001,
+  "to": 99002,
+  "count": 2,
+  "sample": "Bundle Locked"
+ },
+ {
+  "from": 99101,
+  "to": 99109,
+  "count": 9,
+  "sample": "Receive 2 stellarites and 50000 coins"
+ },
+ {
+  "from": 101000,
+  "to": 101007,
+  "count": 8,
+  "sample": "Apprentice's Manual"
+ },
+ {
+  "from": 101100,
+  "to": 101709,
+  "count": 314,
+  "sample": "Lunarian Arcanum"
+ },
+ {
+  "from": 102000,
+  "to": 102000,
+  "count": 1,
+  "sample": "Recruit Armor"
+ },
+ {
+  "from": 102100,
+  "to": 102102,
+  "count": 3,
+  "sample": "Forestkeeper's Jacket"
+ },
+ {
+  "from": 102200,
+  "to": 102467,
+  "count": 76,
+  "sample": "Cosmonaut Jacket"
+ },
+ {
+  "from": 103000,
+  "to": 103000,
+  "count": 1,
+  "sample": "Recruit Helm"
+ },
+ {
+  "from": 103100,
+  "to": 103102,
+  "count": 3,
+  "sample": "Forestkeeper's Leather Hood"
+ },
+ {
+  "from": 103200,
+  "to": 103469,
+  "count": 78,
+  "sample": "Cosmonaut Respirator"
+ },
+ {
+  "from": 104000,
+  "to": 104000,
+  "count": 1,
+  "sample": "Recruit's Boots"
+ },
+ {
+  "from": 104100,
+  "to": 104102,
+  "count": 3,
+  "sample": "Forestkeeper's Boots"
+ },
+ {
+  "from": 104200,
+  "to": 104446,
+  "count": 55,
+  "sample": "Cosmonaut Exotreads"
+ },
+ {
+  "from": 104700,
+  "to": 104717,
+  "count": 18,
+  "sample": "Fallen Starwalkers"
+ },
+ {
+  "from": 105000,
+  "to": 105000,
+  "count": 1,
+  "sample": "Silver Ring"
+ },
+ {
+  "from": 105100,
+  "to": 105102,
+  "count": 3,
+  "sample": "Mahogany Ring"
+ },
+ {
+  "from": 105200,
+  "to": 105445,
+  "count": 54,
+  "sample": "Liftoff Souvenir"
+ },
+ {
+  "from": 105700,
+  "to": 105737,
+  "count": 38,
+  "sample": "Flaring Draconic Vortex"
+ },
+ {
+  "from": 106000,
+  "to": 106000,
+  "count": 1,
+  "sample": "Silver Necklace"
+ },
+ {
+  "from": 106100,
+  "to": 106102,
+  "count": 3,
+  "sample": "Mahogany Necklace"
+ },
+ {
+  "from": 106200,
+  "to": 106444,
+  "count": 53,
+  "sample": "Moontrance Locket"
+ },
+ {
+  "from": 106700,
+  "to": 106748,
+  "count": 49,
+  "sample": "Organic Remedist's Vineband"
+ },
+ {
+  "from": 107401,
+  "to": 107401,
+  "count": 1,
+  "sample": "Rusty Gear"
+ },
+ {
+  "from": 107501,
+  "to": 107501,
+  "count": 1,
+  "sample": "Arcane Gear"
+ },
+ {
+  "from": 107701,
+  "to": 107709,
+  "count": 9,
+  "sample": "Warpdrive Gear"
+ },
+ {
+  "from": 108401,
+  "to": 108401,
+  "count": 1,
+  "sample": "Duskstone"
+ },
+ {
+  "from": 108501,
+  "to": 108501,
+  "count": 1,
+  "sample": "Argent Emblem"
+ },
+ {
+  "from": 108701,
+  "to": 108730,
+  "count": 30,
+  "sample": "Hellhound Claw"
+ },
+ {
+  "from": 110001,
+  "to": 112171,
+  "count": 414,
+  "sample": "Your All Damage is increased by {1}% for every {0}% of currently missing mana."
+ },
+ {
+  "from": 120001,
+  "to": 120420,
+  "count": 60,
+  "sample": "The crit chance of allies within {0}m is increased by {1}%, but your own crit da"
+ },
+ {
+  "from": 122001,
+  "to": 122361,
+  "count": 37,
+  "sample": "Grimhowl Ensemble"
+ },
+ {
+  "from": 129001,
+  "to": 129002,
+  "count": 2,
+  "sample": "Reduces the Defense of Dreadmarch and Void entities within {0}m by {1}."
+ },
+ {
+  "from": 130001,
+  "to": 130057,
+  "count": 57,
+  "sample": "Your hurled mana-duplicated shields now deal randomized damage between {0}%-{1}%"
+ },
+ {
+  "from": 148002,
+  "to": 149313,
+  "count": 1312,
+  "sample": "Combatant's Attire"
+ },
+ {
+  "from": 160001,
+  "to": 160039,
+  "count": 33,
+  "sample": "Nullifies 1 instance of incoming damage."
+ },
+ {
+  "from": 161001,
+  "to": 161045,
+  "count": 45,
+  "sample": "You siphon essence from enemies within {1}m/{0}s, causing them to suffer {2}% bo"
+ },
+ {
+  "from": 165001,
+  "to": 165106,
+  "count": 106,
+  "sample": "The next instance of damage you take has a {0}% chance to be reduced by {1}% and"
+ },
+ {
+  "from": 166001,
+  "to": 166066,
+  "count": 57,
+  "sample": "The next instance of damage you take has a {0}% chance to be reduced by {1}% and"
+ },
+ {
+  "from": 167001,
+  "to": 167023,
+  "count": 23,
+  "sample": "After casting any skill, you instantly blink to a random enemy within {0}m, and "
+ },
+ {
+  "from": 168001,
+  "to": 168023,
+  "count": 23,
+  "sample": "Calamitous: Reaper’s Sprint - Blink"
+ },
+ {
+  "from": 168999,
+  "to": 169012,
+  "count": 14,
+  "sample": "Astrophage Resonance:"
+ },
+ {
+  "from": 170001,
+  "to": 170029,
+  "count": 29,
+  "sample": "Upon accumulating {0} stacks of Helxar corruption, you become immune to further "
+ },
+ {
+  "from": 180000,
+  "to": 180320,
+  "count": 33,
+  "sample": "Valkyrie’s Verdict"
+ },
+ {
+  "from": 191001,
+  "to": 191281,
+  "count": 103,
+  "sample": "Each time you defeat an enemy, gain 1 stack of Drengr’s Might; Upon reaching {0}"
+ },
+ {
+  "from": 200001,
+  "to": 200210,
+  "count": 210,
+  "sample": "Rhythm of War"
+ },
+ {
+  "from": 200501,
+  "to": 200540,
+  "count": 40,
+  "sample": "Cold Glare"
+ },
+ {
+  "from": 201001,
+  "to": 201239,
+  "count": 239,
+  "sample": "Your attack speed is increased by {0}%, and you gain a stack of $zhanyi$ wheneve"
+ },
+ {
+  "from": 201501,
+  "to": 201546,
+  "count": 46,
+  "sample": "Every {0}s, deal {1}% Cold Damage to a nearby enemy. {2}% chance (guaranteed if "
+ },
+ {
+  "from": 202001,
+  "to": 202657,
+  "count": 655,
+  "sample": "Proficiency"
+ },
+ {
+  "from": 204001,
+  "to": 204650,
+  "count": 649,
+  "sample": "Reduce base cooldown by {0}%."
+ },
+ {
+  "from": 205001,
+  "to": 205023,
+  "count": 23,
+  "sample": "Simultaneously deal Fire Damage once to all enemies within {0}m before teleporti"
+ },
+ {
+  "from": 206001,
+  "to": 206136,
+  "count": 136,
+  "sample": "Melee Weapon"
+ },
+ {
+  "from": 206501,
+  "to": 206636,
+  "count": 136,
+  "sample": "Sword & Shields, Spear & Shields, Greatswords, Dual Blades, and Longspears."
+ },
+ {
+  "from": 206699,
+  "to": 206701,
+  "count": 3,
+  "sample": "For {3}s, increases the subject’s movement speed by {0}% and damage by {1}%, and"
+ },
+ {
+  "from": 207001,
+  "to": 207034,
+  "count": 34,
+  "sample": "Attack"
+ },
+ {
+  "from": 209001,
+  "to": 209040,
+  "count": 40,
+  "sample": "Proximal Warp Drive"
+ },
+ {
+  "from": 210001,
+  "to": 210022,
+  "count": 12,
+  "sample": "Restores {0}% life and can be used {1} times, with the usage stacks becoming rep"
+ },
+ {
+  "from": 220001,
+  "to": 220012,
+  "count": 12,
+  "sample": "Magus Obscurus"
+ },
+ {
+  "from": 221001,
+  "to": 221012,
+  "count": 12,
+  "sample": "A magus whose name has been lost to history. All that is known is that he achiev"
+ },
+ {
+  "from": 222001,
+  "to": 222012,
+  "count": 12,
+  "sample": "Sophoritic Candescence"
+ },
+ {
+  "from": 223001,
+  "to": 223012,
+  "count": 12,
+  "sample": "Unleashes the power of raw Sophorite, emitting a continuous beam that blasts all"
+ },
+ {
+  "from": 224001,
+  "to": 224012,
+  "count": 12,
+  "sample": "Both the beam’s duration and interval between ticks are shorter by {0}%."
+ },
+ {
+  "from": 225001,
+  "to": 225012,
+  "count": 12,
+  "sample": "The beam also reduces the enemy’s corresponding resistance by {0} for {1}s."
+ },
+ {
+  "from": 250001,
+  "to": 250008,
+  "count": 8,
+  "sample": "Choose rewards"
+ },
+ {
+  "from": 260001,
+  "to": 260006,
+  "count": 6,
+  "sample": "Let the hunt begin!"
+ },
+ {
+  "from": 270137,
+  "to": 270155,
+  "count": 15,
+  "sample": "Lightning Barrage"
+ },
+ {
+  "from": 275134,
+  "to": 275154,
+  "count": 21,
+  "sample": "Primarily uses Lightning Shot, combined with various skills to familiarize yours"
+ },
+ {
+  "from": 331017,
+  "to": 331023,
+  "count": 7,
+  "sample": "Grendelian Cartel"
+ },
+ {
+  "from": 332000,
+  "to": 332029,
+  "count": 29,
+  "sample": "???"
+ },
+ {
+  "from": 422000,
+  "to": 422005,
+  "count": 6,
+  "sample": "<size=52><color=#FFE656>Seasonal Perks</color></size>\n<size=43><color=#00c9ce>- "
+ },
+ {
+  "from": 431000,
+  "to": 431000,
+  "count": 1,
+  "sample": "Default Avatar"
+ },
+ {
+  "from": 432000,
+  "to": 432025,
+  "count": 16,
+  "sample": "A very mysterious avatar frame - how to obtain it is currently unknown."
+ },
+ {
+  "from": 1610322,
+  "to": 1610322,
+  "count": 1,
+  "sample": ""
+ }
+]

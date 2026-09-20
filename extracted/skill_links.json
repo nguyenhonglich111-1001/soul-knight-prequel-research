@@ -1,0 +1,514 @@
+[
+ {
+  "item_id": 101594,
+  "item_name": "Raffle Roulette",
+  "item_name_cn": "幸运轮盘",
+  "skill_id": "1500001",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101594,
+  "item_name": "Raffle Roulette",
+  "item_name_cn": "幸运轮盘",
+  "skill_id": "1550001",
+  "skill_class": "RGSkill_A_Charge",
+  "bundle": "skill_weapon_expansion_assets_all_1ec4cb8beea992b9b9c4dc0861398715.bundle"
+ },
+ {
+  "item_id": 101594,
+  "item_name": "Raffle Roulette",
+  "item_name_cn": "幸运轮盘",
+  "skill_id": "1550038",
+  "skill_class": "RGSkill_A_Charge",
+  "bundle": "skill_weapon_expansion_assets_all_1ec4cb8beea992b9b9c4dc0861398715.bundle"
+ },
+ {
+  "item_id": 101596,
+  "item_name": "Spatha of the Fire Colossus",
+  "item_name_cn": "火焰巨人之剑",
+  "skill_id": "1500021",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101597,
+  "item_name": "Harpbow: Cadenza",
+  "item_name_cn": "琴弓·协奏曲",
+  "skill_id": "1500031",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101597,
+  "item_name": "Harpbow: Cadenza",
+  "item_name_cn": "琴弓·协奏曲",
+  "skill_id": "1550004",
+  "skill_class": "RGSkill_A_Charge",
+  "bundle": "skill_weapon_expansion_assets_all_1ec4cb8beea992b9b9c4dc0861398715.bundle"
+ },
+ {
+  "item_id": 101598,
+  "item_name": "Spectral Creeperstem",
+  "item_name_cn": "幽灵藤杖",
+  "skill_id": "1500041",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101599,
+  "item_name": "Frost-Encrusted Electrodes",
+  "item_name_cn": "结霜电极",
+  "skill_id": "1500051",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101599,
+  "item_name": "Frost-Encrusted Electrodes",
+  "item_name_cn": "结霜电极",
+  "skill_id": "1550007",
+  "skill_class": "RGSkill_A_Charge",
+  "bundle": "skill_weapon_expansion_assets_all_1ec4cb8beea992b9b9c4dc0861398715.bundle"
+ },
+ {
+  "item_id": 101600,
+  "item_name": "Soul Cangue",
+  "item_name_cn": "灵魂枷锁",
+  "skill_id": "1500061",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101600,
+  "item_name": "Soul Cangue",
+  "item_name_cn": "灵魂枷锁",
+  "skill_id": "1550005",
+  "skill_class": "RGSkill_A_Charge",
+  "bundle": "skill_weapon_expansion_assets_all_1ec4cb8beea992b9b9c4dc0861398715.bundle"
+ },
+ {
+  "item_id": 101601,
+  "item_name": "Foculon",
+  "item_name_cn": "聚焦棱镜",
+  "skill_id": "1500071",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101601,
+  "item_name": "Foculon",
+  "item_name_cn": "聚焦棱镜",
+  "skill_id": "1550008",
+  "skill_class": "RGSkill_A_Charge",
+  "bundle": "skill_weapon_expansion_assets_all_1ec4cb8beea992b9b9c4dc0861398715.bundle"
+ },
+ {
+  "item_id": 101601,
+  "item_name": "Foculon",
+  "item_name_cn": "聚焦棱镜",
+  "skill_id": "1550012",
+  "skill_class": "RGSkill_A_Charge",
+  "bundle": "skill_weapon_expansion_assets_all_1ec4cb8beea992b9b9c4dc0861398715.bundle"
+ },
+ {
+  "item_id": 101601,
+  "item_name": "Foculon",
+  "item_name_cn": "聚焦棱镜",
+  "skill_id": "1550030",
+  "skill_class": "RGSkill_A_Charge",
+  "bundle": "skill_weapon_expansion_assets_all_1ec4cb8beea992b9b9c4dc0861398715.bundle"
+ },
+ {
+  "item_id": 101602,
+  "item_name": "Fantasium Splinter",
+  "item_name_cn": "幻镜裂片",
+  "skill_id": "1500081",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101602,
+  "item_name": "Fantasium Splinter",
+  "item_name_cn": "幻镜裂片",
+  "skill_id": "1550009",
+  "skill_class": "RGSkill_A_Charge",
+  "bundle": "skill_weapon_expansion_assets_all_1ec4cb8beea992b9b9c4dc0861398715.bundle"
+ },
+ {
+  "item_id": 101603,
+  "item_name": "Will of the Sierra",
+  "item_name_cn": "重峦意志",
+  "skill_id": "1500091",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101604,
+  "item_name": "Evolutionary Lota",
+  "item_name_cn": "进化片断",
+  "skill_id": "1500101",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101604,
+  "item_name": "Evolutionary Lota",
+  "item_name_cn": "进化片断",
+  "skill_id": "1550011",
+  "skill_class": "RGSkill_A_Charge",
+  "bundle": "skill_weapon_expansion_assets_all_1ec4cb8beea992b9b9c4dc0861398715.bundle"
+ },
+ {
+  "item_id": 101605,
+  "item_name": "Pollux Castor",
+  "item_name_cn": "双星之愿",
+  "skill_id": "1500111",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101606,
+  "item_name": "Forsaken Blackspikes",
+  "item_name_cn": "外道黑棘",
+  "skill_id": "1500121",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101607,
+  "item_name": "Haliphar’s Ossuary",
+  "item_name_cn": "圣灵遗骨",
+  "skill_id": "1500131",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101608,
+  "item_name": "Eldmarrow Totem",
+  "item_name_cn": "先魂图腾",
+  "skill_id": "1500141",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101609,
+  "item_name": "Backlite Shutter",
+  "item_name_cn": "逆光快门",
+  "skill_id": "1500151",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101610,
+  "item_name": "Strangling Grasp",
+  "item_name_cn": "收束之握",
+  "skill_id": "1500161",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101611,
+  "item_name": "Witherpistils",
+  "item_name_cn": "凋零雌蕊",
+  "skill_id": "1500171",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101612,
+  "item_name": "Reignblade: Pyraxis",
+  "item_name_cn": "令剑·焚天",
+  "skill_id": "1500181",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101613,
+  "item_name": "Temple Caduceus",
+  "item_name_cn": "圣殿权柄",
+  "skill_id": "1500191",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101614,
+  "item_name": "Verdant Verse",
+  "item_name_cn": "翠绿真言",
+  "skill_id": "1500201",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101615,
+  "item_name": "Harpbow: Obscur",
+  "item_name_cn": "琴弓·夜曲",
+  "skill_id": "1500211",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101615,
+  "item_name": "Harpbow: Obscur",
+  "item_name_cn": "琴弓·夜曲",
+  "skill_id": "1500221",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101615,
+  "item_name": "Harpbow: Obscur",
+  "item_name_cn": "琴弓·夜曲",
+  "skill_id": "1500231",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101619,
+  "item_name": "Frostwrath",
+  "item_name_cn": "冰狱玄钉",
+  "skill_id": "1500241",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101620,
+  "item_name": "Blessed Blades",
+  "item_name_cn": "重祝圣刃",
+  "skill_id": "1500251",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101621,
+  "item_name": "Karmic Cinderpult",
+  "item_name_cn": "业火熔渣",
+  "skill_id": "1500261",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101622,
+  "item_name": "Thermal Warning",
+  "item_name_cn": "高温预警",
+  "skill_id": "1500271",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101623,
+  "item_name": "Cloudburst Polybolos",
+  "item_name_cn": "云爆箭筒",
+  "skill_id": "1500281",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101624,
+  "item_name": "Telluric Schism",
+  "item_name_cn": "干裂地脉",
+  "skill_id": "1500291",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101625,
+  "item_name": "Golden Resonance",
+  "item_name_cn": "黄金音叉",
+  "skill_id": "1500301",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101626,
+  "item_name": "Anemoian Cortain",
+  "item_name_cn": "风王佩剑",
+  "skill_id": "1500311",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101630,
+  "item_name": "Aphrogene",
+  "item_name_cn": "泡沫长杖",
+  "skill_id": "1500321",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101631,
+  "item_name": "Charred Aperture",
+  "item_name_cn": "焦黑滤镜",
+  "skill_id": "1500331",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101632,
+  "item_name": "Sidereal Steerhelm",
+  "item_name_cn": "银河舵轮",
+  "skill_id": "1500341",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101633,
+  "item_name": "Dipole Binary",
+  "item_name_cn": "正负短接",
+  "skill_id": "1500351",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101634,
+  "item_name": "Fulgur Aeolian",
+  "item_name_cn": "风驰电掣",
+  "skill_id": "1500361",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101635,
+  "item_name": "Rime-Scar",
+  "item_name_cn": "霜痕",
+  "skill_id": "1500371",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101637,
+  "item_name": "Branding Twinlash",
+  "item_name_cn": "炽红双鞭",
+  "skill_id": "1500381",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101638,
+  "item_name": "Sheol’s Gavel",
+  "item_name_cn": "火狱钉锤",
+  "skill_id": "1500391",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101639,
+  "item_name": "Searing Gyves",
+  "item_name_cn": "炙铁镣铐",
+  "skill_id": "1500401",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101640,
+  "item_name": "Moiraic Wheel",
+  "item_name_cn": "天命轮盘",
+  "skill_id": "1500411",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101641,
+  "item_name": "Lethean Knell",
+  "item_name_cn": "失魂丧钟",
+  "skill_id": "1500421",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101642,
+  "item_name": "Iron Maidenfan",
+  "item_name_cn": "机巧铁扇",
+  "skill_id": "1500431",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101643,
+  "item_name": "Grandfather Paradox",
+  "item_name_cn": "祖父悖论",
+  "skill_id": "1500441",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101644,
+  "item_name": "Firmament’s Caprice",
+  "item_name_cn": "翻云覆雨",
+  "skill_id": "1500451",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101645,
+  "item_name": "The Orrery",
+  "item_name_cn": "天动仪",
+  "skill_id": "1500461",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101646,
+  "item_name": "Panthalassic Gourd",
+  "item_name_cn": "四海葫芦",
+  "skill_id": "1500471",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101646,
+  "item_name": "Panthalassic Gourd",
+  "item_name_cn": "四海葫芦",
+  "skill_id": "1550044",
+  "skill_class": "RGSkill_A_Charge",
+  "bundle": "skill_weapon_expansion_assets_all_1ec4cb8beea992b9b9c4dc0861398715.bundle"
+ },
+ {
+  "item_id": 101647,
+  "item_name": "Argent Lunarium",
+  "item_name_cn": "奉月银盘",
+  "skill_id": "1500481",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101647,
+  "item_name": "Argent Lunarium",
+  "item_name_cn": "奉月银盘",
+  "skill_id": "1500491",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101647,
+  "item_name": "Argent Lunarium",
+  "item_name_cn": "奉月银盘",
+  "skill_id": "1500501",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101647,
+  "item_name": "Argent Lunarium",
+  "item_name_cn": "奉月银盘",
+  "skill_id": "1500511",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 101647,
+  "item_name": "Argent Lunarium",
+  "item_name_cn": "奉月银盘",
+  "skill_id": "1500551",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ },
+ {
+  "item_id": 122291,
+  "item_name": "Noel Rex Ensemble",
+  "item_name_cn": "雪人王套装",
+  "skill_id": "1405291",
+  "skill_class": "RGSkill",
+  "bundle": "skill_misc_assets_all_11b13251c72548cef02293b087e591e6.bundle"
+ }
+]

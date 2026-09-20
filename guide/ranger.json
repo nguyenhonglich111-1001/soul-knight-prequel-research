@@ -1,0 +1,391 @@
+{
+  "title": "Ranger Progression Guide",
+  "page_title": "Soul Knight Ranger Guide",
+  "subtitle": "Soul Knight Prequel 1.13.0 — levelling to Aeonic",
+  "source": {
+    "file": "range-guide.md",
+    "author": "Kuma",
+    "posted": "2026-08-28",
+    "note": "Original text written by Kuma and posted to Discord. Wording has been tidied up; the advice, the ordering and the opinions are theirs. Every name, description and icon on this page was pulled out of the game's own files."
+  },
+  "class_key": "Info_CLASS_ARCHER_ROBBER",
+  "reading_note": "Kuma writes ranked lists with `<`, and it means **better than** — `Heart Pendant < Fettered Fury < Censurer's Necklace` means take the Heart Pendant if you can get it, and the Censurer's Necklace is the fallback. Lists below are rewritten best-first so there is nothing to decode.",
+  "tldr": [
+    "Level on whatever dungeon is ~10 levels above you. Pick Ranger at level 12.",
+    "Scattershot carries you to 60. At 60, switch to the Rain of Arrows: Leonar build.",
+    "Grab any Legendary gear and any projectile Fatebound while levelling — do not overthink it.",
+    "Floor 400 is the checkpoint for the mid-game build. Floor 600 unlocks Aeonic.",
+    "Save Forge tickets, coins and scrolls. You will want them for the end-game build."
+  ],
+  "glossary": {
+    "sheshouwuqi": "ranged weapon",
+    "jinzhanwuqi": "melee weapon",
+    "faqi": "magic weapon",
+    "ewaishanghai": "bonus damage",
+    "daxue": "Exsanguinate",
+    "biaoji": "Mark",
+    "kongju": "Fear",
+    "yunxuan": "Stun",
+    "kuangnu": "Berserk",
+    "zhuanzhu": "Concentration",
+    "zhanyi": "Battle Intent",
+    "shuxingyichang": "status ailment",
+    "juexin": "Resolve",
+    "lianji": "Combo"
+  },
+  "sections": [
+    {
+      "id": "stage1",
+      "title": "Stage 1 — Levelling",
+      "tag": "Level 1 → 60",
+      "blocks": [
+        {
+          "type": "callout",
+          "tone": "tip",
+          "text": "All of this is much easier with a title that boosts your attack by 50 or 100. If you have one, skip ahead to Halcyon Cemetery."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "No title yet? Farm mobs in **Brinewash Grotto** and kill the boss there.",
+              "key": "AREA_DUNGEON04"
+            },
+            {
+              "text": "Got a title? Start straight on **Halcyon Cemetery** instead.",
+              "key": "AREA_DUNGEON06"
+            },
+            {
+              "text": "Then head to **Arid Sands** and grind to level 12, which is where you pick your class. Pick Ranger.",
+              "key": "AREA_DUNGEON07"
+            },
+            {
+              "text": "From there, just beat whatever dungeon is about 10 levels above you."
+            },
+            {
+              "text": "At level 30, start running the level 45 dungeons. There are two — either is fine."
+            },
+            {
+              "text": "At level 50, run any Pandora's Labyrinth that offers projectile Fatebounds — and the ones offering Onslaught too."
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "text": "Use **Scattershot** as your main skill. Once you unlock its specialization, take any damage-increase spec. Once the rest of the skills open up, use whatever makes sense together. Too lazy to read the specs? Copy a leaderboard spec layout and move on."
+        },
+        {
+          "type": "cards",
+          "kind": "skill",
+          "title": "Your levelling skill",
+          "items": [
+            {
+              "key": "SX_P1_22_100",
+              "desc_key": "201098",
+              "note": "The whole early game. Fires a cluster that fragments on hit — free clear speed while you have no gear."
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "text": "For gear, use any Legendary you find and any projectile-related Fatestone. That is genuinely all the thought it deserves at this stage. It gets much easier once you actually understand what each piece does."
+        },
+        {
+          "type": "callout",
+          "tone": "warn",
+          "text": "Good weapons for the class start dropping around here. If you find an **Insane**-rarity weapon and you are holding a Prime one, use the Insane weapon anyway — rarity wins."
+        }
+      ]
+    },
+    {
+      "id": "stage2",
+      "title": "Stage 2 — Early mid-game",
+      "tag": "Level 60 → floor 400",
+      "blocks": [
+        {
+          "type": "prose",
+          "text": "At level 60 the real problems start. Switch to the **Rain of Arrows: Leonar** build — usually called the torrential build — for much better damage. You can copy a leaderboard build wholesale, with three exceptions you should pick yourself: equipment, Fatebounds and Axial Incarnate."
+        },
+        {
+          "type": "cards",
+          "kind": "skill",
+          "title": "The torrential build",
+          "items": [
+            {
+              "key": "200102",
+              "desc_key": "201102",
+              "note": "The build's core. A creeping rain of arrows that walks toward your cursor — parks damage on a whole room."
+            },
+            {
+              "key": "SX_P1_22_030",
+              "note": "Crits add fragments and load up your next skill cast. This is the multiplier that makes the build work."
+            },
+            {
+              "key": "SX_P1_22_020",
+              "note": "Fragments burst out of anything you kill or Exsanguinate."
+            },
+            {
+              "key": "SX_P1_22_010",
+              "note": "Free damage for playing at range, which is where you want to be anyway."
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "kind": "equipment",
+          "title": "Early gear — best first",
+          "items": [
+            {
+              "slot": "Weapon",
+              "as_written": "firmanent caprice",
+              "key": "101644"
+            },
+            {
+              "slot": "Helmet",
+              "as_written": "harrier head",
+              "key": "103466"
+            },
+            {
+              "slot": "Helmet",
+              "as_written": "bishop biretta",
+              "key": "148157"
+            },
+            {
+              "slot": "Helmet",
+              "as_written": "head piece of skolgul",
+              "key": null,
+              "note": "Could not match this to anything in the game files. Closest candidates are **Sangrilok Helm** and **Headpiece of the Eternal Hunt**."
+            },
+            {
+              "slot": "Helmet",
+              "as_written": "tophat",
+              "key": "103467"
+            },
+            {
+              "slot": "Armor",
+              "as_written": "Bloodoath Cloaks",
+              "key": "102462"
+            },
+            {
+              "slot": "Armor",
+              "as_written": "plumesilk vest",
+              "key": "102452"
+            },
+            {
+              "slot": "Armor",
+              "as_written": "starforge battlegrab",
+              "key": "102454"
+            },
+            {
+              "slot": "Boots",
+              "as_written": "Huntsman Boots",
+              "key": "104709"
+            },
+            {
+              "slot": "Boots",
+              "as_written": "Orion galoshes",
+              "key": "104400"
+            },
+            {
+              "slot": "Ring",
+              "as_written": "welkins jade",
+              "key": "105712"
+            },
+            {
+              "slot": "Necklace",
+              "as_written": "Heart Pendant",
+              "key": "106733"
+            },
+            {
+              "slot": "Necklace",
+              "as_written": "fettered fury",
+              "key": "106728"
+            },
+            {
+              "slot": "Necklace",
+              "as_written": "censure necklase",
+              "key": "106441"
+            },
+            {
+              "slot": "Cubis core",
+              "as_written": "Yggdrasil leaf core",
+              "key": "108708"
+            },
+            {
+              "slot": "Mech gear",
+              "as_written": "Vitality Gear",
+              "key": "107702"
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "text": "Follow the leaderboard's tempered stats on each piece. There is no reason not to."
+        },
+        {
+          "type": "cards",
+          "kind": "fatebound",
+          "title": "Early Fatebounds",
+          "items": [
+            {
+              "key": "EBF_SCATTERING",
+              "as_written": "multishot",
+              "calamity": true
+            },
+            {
+              "key": "EBF_STORM",
+              "as_written": "onslaught",
+              "calamity": true,
+              "note": "Not the same thing as the **Onslaught** skill node in the Ranger tree — the game reuses the name for both."
+            },
+            {
+              "key": "EBF_LOCK",
+              "as_written": "lock on",
+              "calamity": true
+            },
+            {
+              "key": "EBF_ARROW",
+              "as_written": "improved arrows",
+              "calamity": true
+            },
+            {
+              "key": "EBF_LEAD_BULLET",
+              "as_written": "heavy ordinance",
+              "note": "Skip this one if you already have Lock-On."
+            },
+            {
+              "key": "EBF_CHARGE",
+              "as_written": "Concentration"
+            },
+            {
+              "key": "EBF_CHARGE_MASTER",
+              "as_written": "Gathering storm"
+            },
+            {
+              "key": null,
+              "as_written": "Mortal combo",
+              "note": "No Fatebound in the game files matches this name. Possibly a community name for a Combo-based node."
+            }
+          ],
+          "footnote": "Marked nodes are the ones worth putting **Calamity** on if you can manage it."
+        },
+        {
+          "type": "cards",
+          "kind": "incarnate",
+          "title": "Axial Incarnate — best first",
+          "items": [
+            {
+              "key": "356",
+              "desc_key": "1356",
+              "as_written": "hades",
+              "note": "Kuma's pick once you unlock it."
+            },
+            {
+              "key": "344",
+              "desc_key": "1344",
+              "as_written": "medusa",
+              "note": "Use this first — best ranged damage of the ones you can get early."
+            },
+            {
+              "key": "328",
+              "desc_key": "1328",
+              "as_written": "boar king"
+            }
+          ],
+          "footnote": "In-game these are named after the Incarnate, not the boss: Hades is the Tartarean Pantocrator, Medusa is Lamian, Boar King is Bouldarch."
+        },
+        {
+          "type": "prose",
+          "text": "Then just keep running **Pandora's Labyrinth** and **Enigmine** for gear and resources. Save some of it — Forge tickets, coins and scrolls — for the end-game build. Suffer."
+        },
+        {
+          "type": "callout",
+          "tone": "ok",
+          "text": "Do all of this right and you should end up around floor 400, maybe further."
+        },
+        {
+          "type": "prose",
+          "title": "Why the torrential build?",
+          "text": "1. It does not need high spec levels or tight restrictions to put out big damage.\n2. It combines two skills whose specs stack into higher damage.\n3. It is not as laggy as the Razorward or Scattershot builds.\n4. It is easy to play.\n5. Bows are cool."
+        }
+      ]
+    },
+    {
+      "id": "stage3",
+      "title": "Stage 3 — Aeonic",
+      "tag": "Floor 600+",
+      "blocks": [
+        {
+          "type": "prose",
+          "text": "At floor 600 you can start running **Aeonic**. Run a lot of it, climbing the difficulties: Insane, then Ultra Insane, then Insanely Insane. Yes, the naming is ridiculous."
+        },
+        {
+          "type": "prose",
+          "text": "Once you have the Underworld summon core you can start chasing **Calamity** Fatestones. Good luck getting a natural 4-socket Fatebound drop — Chillyroom made that thing a myth. Better odds on a lottery ticket."
+        },
+        {
+          "type": "prose",
+          "text": "If you are already doing 30T–50T damage, start farming better gear. Copy the leaderboard for items at this point; the marginal calls stop mattering."
+        }
+      ]
+    },
+    {
+      "id": "builds",
+      "title": "The three Ranger builds",
+      "tag": "Pick one",
+      "blocks": [
+        {
+          "type": "prose",
+          "text": "There are three Ranger builds. Once you have cleared floor 400 on the torrential build you can try the other two, or not — nobody is checking."
+        },
+        {
+          "type": "cards",
+          "kind": "skill",
+          "items": [
+            {
+              "key": "200102",
+              "desc_key": "201102",
+              "note": "**Torrential.** Kuma's recommendation and the build this guide is built around.",
+              "featured": true
+            },
+            {
+              "key": "SX_P1_22_100",
+              "desc_key": "201098",
+              "note": "**Scattershot.** What you level on. Falls off once you have real gear."
+            },
+            {
+              "key": "SX_P1_22_001",
+              "desc_key": "201100",
+              "note": "**Razorward** — the guide calls it Razorwind. Strong, but the projectile count makes it laggy."
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "kind": "skill",
+          "title": "The rest of the branch",
+          "items": [
+            {
+              "key": "SX_P1_22_002",
+              "desc_key": "201101"
+            },
+            {
+              "key": "SX_P1_22_200"
+            },
+            {
+              "key": "SX_P1_22_030"
+            },
+            {
+              "key": "SX_P1_22_020"
+            },
+            {
+              "key": "SX_P1_22_010"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "limits": "Damage numbers are missing from every description on this page — they show as `?`. The game keeps item and skill values in encrypted Luban config tables inside `code_dll.bundle`, which has not been decrypted. Names, effect text and icons all come from the readable parts of the APK. A handful of items and the newest skills have no icon because their sprites are not shipped inside the 1.13.0 APK at all."
+}
