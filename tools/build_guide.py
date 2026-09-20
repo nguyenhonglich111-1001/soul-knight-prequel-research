@@ -27,7 +27,9 @@ ORDINALS = ['best', '2nd', '3rd', '4th', '5th']
 SLOT_ICON = {'Weapon': 'icn_equip_weapon', 'Helmet': 'icn_equip_helmet',
              'Armor': 'icn_equip_armor', 'Boots': 'icn_equip_shoes',
              'Ring': 'icn_equip_ring', 'Necklace': 'icn_equip_necklace',
-             'Cubis core': 'icn_equip_charms1', 'Mech gear': 'icn_equip_gear'}
+             # The game's own labels: Const_ItemType_CHARMS1 is "Mech Core" (机核) and
+             # CHARMS2 is "Cubis Core" (魔核). These were the wrong way round.
+             'Cubis core': 'icn_equip_charms2', 'Mech gear': 'icn_equip_charms1'}
 
 # Unity rich text, matched *after* html.escape has turned its angle brackets into entities.
 COLOR_TAG = re.compile(r'&lt;color=#([0-9A-Fa-f]{6})[0-9A-Fa-f]{0,2}&gt;(.*?)&lt;/color&gt;', re.S)
@@ -47,6 +49,11 @@ class Data:
         self.loc = json.load(open(os.path.join(out, 'localization_all.json'), encoding='utf8'))
         self.numeric = {str(r['id']): r for r in
                         json.load(open(os.path.join(out, 'items_numeric.json'), encoding='utf8'))}
+        # Legendary effect text, keyed by item id. `build_equipment.effect_key()` derives
+        # it from the item's skill prefab; it is the only description equipment has.
+        eq = os.path.join(out, 'equipment.json')
+        self.effects = {str(r['id']): r['effect'] for r in
+                        json.load(open(eq, encoding='utf8'))} if os.path.exists(eq) else {}
         self.by_en = collections.defaultdict(list)
         for key, row in self.loc.items():
             en = row.get('English')
@@ -104,6 +111,8 @@ class Data:
                     break
         if not desc:
             desc = (self.numeric.get(key) or {}).get('description') or None
+        if not desc:
+            desc = self.effects.get(key) or None
         path = self.icon_path(key, name)
         return {'name': name, 'desc': desc,
                 'icon': self.data_uri(path) if path else None,

@@ -11,7 +11,8 @@ Unity 2022.3 (Addressables). Its content sits in ~465 `.bundle` files in
 | `localization_all.json` | Every string the game shows, 28,703 keys, 13 languages. `{ "<key>": { "English": "...", "Chinese": "...", ... } }` |
 | `items.json` | 1,490 `ITEM_*` items: `id`, `prefix`, `key`, `name`, `description`, `names` / `descriptions` (all languages), `icon` |
 | `items_numeric.json` | 16,908 numeric-key entries (most weapons, armor, consumables, UI text). Same fields as above, plus `description_id` |
-| `equipment.json` | 806 equipment rows: `id`, `slot`, `name`, `names`, `icon`, `skill_ids`, `rarity_hint` (665 have an icon) |
+| `equipment.json` | 806 equipment rows: `id`, `slot`, `name`, `names`, `icon`, `skill_ids`, `rarity_hint`, `effect`, `effect_key` (665 have an icon, 46 have effect text) |
+| `item_details.json` | 806 rows with everything derivable per item: `category`, `weapon_type`, `weapon_class`, `armor_class`, `family`, `tier`, `class`, `effect` |
 | `skill_links.json` | 64 legendary items joined to the skill prefab that implements them (`item_id`, `skill_id`, `bundle`) |
 | `prefabs/*.json` | 18,182 prefabs with every `MonoBehaviour` field: skills, buffs, bullets, characters, stages, UI |
 | `named_prefabs.json` | 2,368 prefabs whose name is a loc key: name + description in 13 languages (1,186 have a description) |
@@ -94,13 +95,27 @@ Within these blocks the convention is **description at `N`, name at `N+1`** --
 Placeholders `{0}`, `{1}` are the numbers the config fills in, and `$tag$` is a game term
 (`$kuangnu$`, `$jiankang$`, ...) the UI expands.
 
-**What is still missing is only the item -> effect-ID mapping.** That single lookup lives in the
-Luban config tables and nowhere else in the APK (see the gaps below). Until it is recovered you can
-still get from an item to its implementation through `skill_links.json`:
+**The item -> effect link is solved for legendaries.** It was thought to be locked in the Luban
+config; it is not. The `1500xxx` skill prefabs step by 10 and the `130xxx` effect-text block is
+numbered densely from 1, so they line up by index:
 
 ```
-101643  Grandfather Paradox / 祖父悖论  ->  skill prefab 1500441  ->  buff BF_1500441
+effect key = 130001 + (skill_id - 1500001) // 10
+
+101643  Grandfather Paradox / 祖父悖论  ->  skill prefab 1500441  ->  effect text 130045
+                                                             ->  buff BF_1500441
 ```
+
+Three items were checked against the game and all three land exactly -- `1500441` -> `130045`,
+`1500451` Firmament's Caprice -> `130046`, `1500431` Iron Maidenfan -> `130044` -- and the
+semantics corroborate the rest of the table (`130003` names a Fire Colossus and belongs to
+Spatha of the Fire Colossus). `build_equipment.effect_key()` applies it, and `equipment.json`
+now carries `effect` and `effect_key`.
+
+This fills **46 of 806** equipment rows, which between them previously had *zero* descriptions.
+11 of the 57 `130xxx` texts remain unassigned: their prefabs exist but carry an effect name
+rather than an item name in `Desc`, and 27 legendary-range weapons have no skill link, so there
+is no bijection to fall back on.
 
 `tools/extract_skill_links.py` builds that mapping by reading the prefabs' Unity type trees: the
 root `RGSkill` component keeps the designers' own Chinese label in its `Desc` field, and that label
@@ -156,7 +171,20 @@ for pointing at are generated into `extracted/_sheets/`.
   `ItemIcon` paths in the Addressables catalog, zero references across all 18,182 prefab dumps).
   The 550 rows that resolve through the `ITEM_*` name alias are fine. Fix plan and the evidence:
   [icon-mapping-plan.md](icon-mapping-plan.md).
-- **item -> effect-ID, and every config-driven number.** Both live in the
+- **Only 46 of 806 equipment rows have machine-derivable description text.** Those 46 come from
+  the `130xxx` rule above. Ruled out as sources: `ITEM_<suffix>_D` (0 of 550), the
+  `148xxx`/`149xxx` name block, and `95xxx`/`96xxx` (a per-item index for 156 items, but it only
+  reaches fragment boilerplate).
+- **`110001`-`112171` does hold more effect text, but the item link is unsolved.** Nothing in it
+  joins to an item by name, yet it demonstrably describes items: `110421` is the effect of *both*
+  `101591` Sangrilok Twinblades and `101593` Sangrilok Longbow, and `111061` is `101628`
+  Valkyrian Scepter (all three confirmed in-game). So one text can serve several items, and the
+  two known pairs share no offset. More confirmed pairs are needed before a rule is worth trying.
+- **Rarity is not in the APK at all.** Only the six labels exist (`ITEM_RATE_0`-`_5`); no
+  per-item rarity field appears anywhere. `item_details.json` carries a `tier` proxy instead,
+  derived from the alias family code, with `legendary` asserted only for the 46 items that have
+  a `LegendEquipSkill` prefab.
+- **every config-driven number, and which affix an item rolls.** Both live in the
   [Luban](https://github.com/focus-creative-games/luban) config tables (`Luban.Runtime.dll` is
   referenced in `global-metadata.dat`). Those `.bytes` tables are not in Addressables, not in
   `Resources`, and not in any of the 468 bundles -- the only place left is `code_dll.bundle`, or
@@ -214,6 +242,7 @@ Four things the earlier version of this file listed as gaps are now fixed:
    python tools/dump_prefabs.py                     # prefabs/*.json        (~20 min)
    python tools/build_equipment.py                  # equipment.json        (instant)
    python tools/build_indexes.py                    # buffs/characters/loc_refs (instant)
+   python tools/build_item_details.py               # item_details.json     (instant)
    python tools/build_guide.py                      # range-guide.html      (instant)
    ```
    The last three read the output of the first three, so run them last.

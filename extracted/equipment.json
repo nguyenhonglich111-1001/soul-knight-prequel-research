@@ -20,7 +20,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_BK_000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101001,
@@ -43,7 +45,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_BW_000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101002,
@@ -66,7 +70,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_CB_000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101003,
@@ -89,7 +95,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_DS_000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101004,
@@ -112,7 +120,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_GS_000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101005,
@@ -135,7 +145,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_LS_000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101006,
@@ -158,7 +170,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_SS_000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101007,
@@ -181,7 +195,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_ST_000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101100,
@@ -204,7 +220,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_BK_021.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101101,
@@ -227,7 +245,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_BW_021.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101102,
@@ -250,7 +270,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_CB_021.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101103,
@@ -273,7 +295,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_DS_021.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101104,
@@ -296,7 +320,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_GS_021.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101105,
@@ -319,7 +345,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_LS_021.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101106,
@@ -342,7 +370,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_SS_021.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101107,
@@ -365,7 +395,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_ST_021.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101150,
@@ -388,7 +420,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_BK_002.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101151,
@@ -411,7 +445,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_BW_002.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101152,
@@ -434,7 +470,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_CB_002.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101153,
@@ -457,7 +495,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_DS_002.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101154,
@@ -480,7 +520,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_GS_002.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101155,
@@ -503,7 +545,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_SS_002.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101156,
@@ -526,7 +570,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101157,
@@ -549,7 +595,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_ST_002.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101200,
@@ -572,7 +620,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_BK_022.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101201,
@@ -595,7 +645,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_BW_022.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101202,
@@ -618,7 +670,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_CB_022.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101203,
@@ -641,7 +695,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_DS_022.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101204,
@@ -664,7 +720,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_GS_022.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101205,
@@ -687,7 +745,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_LS_022.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101206,
@@ -710,7 +770,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_SS_022.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101207,
@@ -733,7 +795,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_ST_022.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101250,
@@ -756,7 +820,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_BK_003.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101251,
@@ -779,7 +845,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_BW_003.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101252,
@@ -802,7 +870,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_CB_003.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101253,
@@ -825,7 +895,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_DS_003.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101254,
@@ -848,7 +920,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_GS_003.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101255,
@@ -871,7 +945,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_SS_003.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101256,
@@ -894,7 +970,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101257,
@@ -917,7 +995,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_ST_003.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101300,
@@ -940,7 +1020,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_BK_024.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101301,
@@ -963,7 +1045,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_BW_024.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101302,
@@ -986,7 +1070,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_CB_024.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101303,
@@ -1009,7 +1095,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_DS_024.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101304,
@@ -1032,7 +1120,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_GS_024.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101305,
@@ -1055,7 +1145,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_LS_024.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101306,
@@ -1078,7 +1170,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_SS_024.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101307,
@@ -1101,7 +1195,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_ST_024.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101308,
@@ -1124,7 +1220,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_MR_024.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101350,
@@ -1147,7 +1245,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_BK_007.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101351,
@@ -1170,7 +1270,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_BW_007.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101352,
@@ -1193,7 +1295,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_CB_007.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101353,
@@ -1216,7 +1320,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_DS_007.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101354,
@@ -1239,7 +1345,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_GS_007.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101355,
@@ -1262,7 +1370,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_LS_007.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101356,
@@ -1285,7 +1395,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_SS_007.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101357,
@@ -1308,7 +1420,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_ST_007.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101358,
@@ -1331,7 +1445,9 @@
   },
   "icon": "ItemIcon_W/ItemIcon_W_MR_007.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101400,
@@ -1354,7 +1470,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_BK_000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101401,
@@ -1377,7 +1495,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_BK_001.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101402,
@@ -1400,7 +1520,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_BK_002.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101403,
@@ -1423,7 +1545,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_BK_003.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101404,
@@ -1446,7 +1570,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_BK_004.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101405,
@@ -1469,7 +1595,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_BK_005.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101406,
@@ -1492,7 +1620,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_BK_006.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101407,
@@ -1515,7 +1645,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_BW_000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101408,
@@ -1538,7 +1670,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_BW_001.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101409,
@@ -1561,7 +1695,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_BW_002.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101410,
@@ -1584,7 +1720,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_BW_003.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101411,
@@ -1607,7 +1745,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_BW_004.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101412,
@@ -1630,7 +1770,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_BW_005.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101413,
@@ -1653,7 +1795,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_BW_006.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101414,
@@ -1676,7 +1820,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_CB_000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101415,
@@ -1699,7 +1845,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_CB_001.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101416,
@@ -1722,7 +1870,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_CB_002.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101417,
@@ -1745,7 +1895,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_CB_003.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101418,
@@ -1768,7 +1920,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_CB_004.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101419,
@@ -1791,7 +1945,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_CB_005.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101420,
@@ -1814,7 +1970,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_CB_006.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101421,
@@ -1837,7 +1995,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_DS_000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101422,
@@ -1860,7 +2020,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_DS_001.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101423,
@@ -1883,7 +2045,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_DS_002.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101424,
@@ -1906,7 +2070,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_DS_003.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101425,
@@ -1929,7 +2095,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_DS_004.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101426,
@@ -1952,7 +2120,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_DS_005.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101427,
@@ -1975,7 +2145,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_DS_006.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101428,
@@ -1998,7 +2170,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_GS_000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101429,
@@ -2021,7 +2195,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_GS_001.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101430,
@@ -2044,7 +2220,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_GS_002.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101431,
@@ -2067,7 +2245,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_GS_003.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101432,
@@ -2090,7 +2270,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_GS_004.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101433,
@@ -2113,7 +2295,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_GS_005.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101434,
@@ -2136,7 +2320,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_GS_006.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101435,
@@ -2159,7 +2345,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_LS_000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101436,
@@ -2182,7 +2370,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_LS_001.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101437,
@@ -2205,7 +2395,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_LS_002.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101438,
@@ -2228,7 +2420,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_LS_003.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101439,
@@ -2251,7 +2445,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_LS_004.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101440,
@@ -2274,7 +2470,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_LS_005.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101441,
@@ -2297,7 +2495,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_LS_006.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101442,
@@ -2320,7 +2520,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_SS_000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101443,
@@ -2343,7 +2545,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_SS_001.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101444,
@@ -2366,7 +2570,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_SS_002.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101445,
@@ -2389,7 +2595,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_SS_003.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101446,
@@ -2412,7 +2620,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_SS_004.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101447,
@@ -2435,7 +2645,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_SS_005.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101448,
@@ -2458,7 +2670,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_SS_006.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101449,
@@ -2481,7 +2695,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_ST_000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101450,
@@ -2504,7 +2720,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_ST_001.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101451,
@@ -2527,7 +2745,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_ST_002.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101452,
@@ -2550,7 +2770,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_ST_003.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101453,
@@ -2573,7 +2795,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_ST_004.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101454,
@@ -2596,7 +2820,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_ST_005.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101455,
@@ -2619,7 +2845,9 @@
   },
   "icon": "ItemIcon_WL/ItemIcon_WL_ST_006.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101456,
@@ -2642,7 +2870,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_GS_EQB.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101457,
@@ -2665,7 +2895,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_QT_EQB.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101458,
@@ -2688,7 +2920,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_BW_EQB.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101459,
@@ -2711,7 +2945,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_BK_EQB.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101460,
@@ -2734,7 +2970,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_SS_YZW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101461,
@@ -2757,7 +2995,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_LS_YZW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101462,
@@ -2780,7 +3020,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_CB_YZW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101463,
@@ -2803,7 +3045,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_ST_YZW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101464,
@@ -2826,7 +3070,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_SS_DTL.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101465,
@@ -2849,7 +3095,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_GS_DTL.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101466,
@@ -2872,7 +3120,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_LS_DTL.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101467,
@@ -2895,7 +3145,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_ST_DTL.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101468,
@@ -2918,7 +3170,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_SS_MTL.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101469,
@@ -2941,7 +3195,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_DS_MTL.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101470,
@@ -2964,7 +3220,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_BW_MTL.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101471,
@@ -2987,7 +3245,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_ST_MTL.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101472,
@@ -3010,7 +3270,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_LS_MSS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101473,
@@ -3033,7 +3295,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_BW_MSS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101474,
@@ -3056,7 +3320,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_CB_MSS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101475,
@@ -3079,7 +3345,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_BK_MSS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101476,
@@ -3102,7 +3370,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101477,
@@ -3125,7 +3395,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101478,
@@ -3148,7 +3420,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101479,
@@ -3171,7 +3445,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101480,
@@ -3194,7 +3470,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_DS_KLW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101481,
@@ -3217,7 +3495,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_GS_KLW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101482,
@@ -3240,7 +3520,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_BW_KLW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101483,
@@ -3263,7 +3545,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_ST_KLW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101484,
@@ -3286,7 +3570,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_GS_LSC.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101485,
@@ -3309,7 +3595,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_LS_LSC.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101486,
@@ -3332,7 +3620,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_CB_LSC.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101487,
@@ -3355,7 +3645,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_BK_LSC.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101488,
@@ -3378,7 +3670,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_SS_DQS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101489,
@@ -3401,7 +3695,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_GS_DQS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101490,
@@ -3424,7 +3720,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_DS_DQS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101491,
@@ -3447,7 +3745,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_LS_DQS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101492,
@@ -3470,7 +3770,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_DS_DWS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101493,
@@ -3493,7 +3795,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_CB_DWS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101494,
@@ -3516,7 +3820,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_ST_DWS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101495,
@@ -3539,7 +3845,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_BK_DWS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101496,
@@ -3562,7 +3870,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_SS_YSS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101497,
@@ -3585,7 +3895,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_DS_YSS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101498,
@@ -3608,7 +3920,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_GS_YSS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101499,
@@ -3631,7 +3945,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_BK_YSS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101500,
@@ -3654,7 +3970,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_LS_GBL.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101501,
@@ -3677,7 +3995,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_BW_GBL.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101502,
@@ -3700,7 +4020,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_ST_GBL.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101503,
@@ -3723,7 +4045,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_BK_GBL.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101504,
@@ -3746,7 +4070,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_SS_HDW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101505,
@@ -3769,7 +4095,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_GS_HDW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101506,
@@ -3792,7 +4120,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_DS_HDW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101507,
@@ -3815,7 +4145,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_CB_HDW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101508,
@@ -3838,7 +4170,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_SS_HLW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101509,
@@ -3861,7 +4195,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_DS_HLW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101510,
@@ -3884,7 +4220,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_LS_HLW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101511,
@@ -3907,7 +4245,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_ST_HLW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101512,
@@ -3930,7 +4270,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_GS_XYW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101513,
@@ -3953,7 +4295,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_LS_XYW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101514,
@@ -3976,7 +4320,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_BW_XYW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101515,
@@ -3999,7 +4345,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_BK_XYW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101516,
@@ -4022,7 +4370,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_SS_JSX.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101517,
@@ -4045,7 +4395,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_LS_JSX.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101518,
@@ -4068,7 +4420,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_CB_JSX.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101519,
@@ -4091,7 +4445,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_ST_JSX.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101520,
@@ -4114,7 +4470,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_SQ_WSS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101521,
@@ -4137,7 +4495,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_DS_WSS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101522,
@@ -4160,7 +4520,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_CB_WSS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101523,
@@ -4183,7 +4545,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_BK_WSS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101524,
@@ -4206,7 +4570,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_BW_WKE.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101525,
@@ -4229,7 +4595,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_GS_WKE.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101526,
@@ -4252,7 +4620,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_SS_WKE.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101527,
@@ -4275,7 +4645,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_ST_WKE.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101528,
@@ -4298,7 +4670,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_BW_MTH.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101529,
@@ -4321,7 +4695,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_DS_MTH.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101530,
@@ -4344,7 +4720,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_LS_MTH.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101531,
@@ -4367,7 +4745,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_ST_MTH.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101532,
@@ -4390,7 +4770,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_BK_SLM.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101533,
@@ -4413,7 +4795,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_CB_SLM.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101534,
@@ -4436,7 +4820,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_GS_SLM.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101535,
@@ -4459,7 +4845,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_QT_SLM.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101536,
@@ -4482,7 +4870,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_CB_HJX.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101537,
@@ -4505,7 +4895,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_GS_HJX.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101538,
@@ -4528,7 +4920,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_LS_HJX.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101539,
@@ -4551,7 +4945,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_QT_HJX.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101540,
@@ -4574,7 +4970,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_BK_ANB.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101541,
@@ -4597,7 +4995,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_BW_ANB.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101542,
@@ -4620,7 +5020,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_SQ_ANB.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101543,
@@ -4643,7 +5045,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_ST_ANB.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101544,
@@ -4666,7 +5070,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_SP_HQS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101545,
@@ -4689,7 +5095,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_DS_HQS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101546,
@@ -4712,7 +5120,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_GS_HQS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101547,
@@ -4735,7 +5145,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_SS_HQS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101548,
@@ -4758,7 +5170,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_SS_DDJ.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101549,
@@ -4781,7 +5195,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_GS_DDJ.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101550,
@@ -4804,7 +5220,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_CB_DDJ.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101551,
@@ -4827,7 +5245,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_ST_DDJ.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101552,
@@ -4850,7 +5270,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_SS_LSD.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101553,
@@ -4873,7 +5295,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_LS_LSD.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101554,
@@ -4896,7 +5320,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_BK_LSD.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101555,
@@ -4919,7 +5345,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_ST_LSD.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101556,
@@ -4942,7 +5370,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_GS_DZS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101557,
@@ -4965,7 +5395,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_DS_DZS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101558,
@@ -4988,7 +5420,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_CB_DZS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101559,
@@ -5011,7 +5445,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_ST_DZS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101560,
@@ -5034,7 +5470,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_LS_HQZ.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101561,
@@ -5057,7 +5495,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_BW_HQZ.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101562,
@@ -5080,7 +5520,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_BK_HQZ.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101563,
@@ -5103,7 +5545,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_QT_HQZ.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101564,
@@ -5126,7 +5570,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_LS_WSK.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101565,
@@ -5149,7 +5595,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_SP_WSK.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101566,
@@ -5172,7 +5620,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_BW_WSK.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101567,
@@ -5195,7 +5645,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_CB_WSK.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101568,
@@ -5218,7 +5670,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_SS_HSM.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101569,
@@ -5241,7 +5695,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_GS_HSM.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101570,
@@ -5264,7 +5720,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_DS_HSM.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101571,
@@ -5287,7 +5745,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_ST_HSM.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101572,
@@ -5310,7 +5770,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_QT_XRW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101573,
@@ -5333,7 +5795,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_CB_NS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101574,
@@ -5356,7 +5820,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_BW_QHC.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101575,
@@ -5379,7 +5845,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_DS_QHC.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101576,
@@ -5402,7 +5870,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_LS_QHC.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101577,
@@ -5425,7 +5895,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_SP_QHC.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101578,
@@ -5448,7 +5920,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_CB_WKJ.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101579,
@@ -5471,7 +5945,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_QT_WKJ.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101580,
@@ -5494,7 +5970,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_SS_WKJ.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101581,
@@ -5517,7 +5995,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_ST_WKJ.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101582,
@@ -5540,7 +6020,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_BK_WXR.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101583,
@@ -5563,7 +6045,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_CB_WXR.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101584,
@@ -5586,7 +6070,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_GS_WXR.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101585,
@@ -5609,7 +6095,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_SQ_WXR.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101586,
@@ -5632,7 +6120,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_SP_QHC.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101587,
@@ -5655,7 +6145,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_SS_XDJ.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101588,
@@ -5678,7 +6170,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_LS_XDJ.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101589,
@@ -5701,7 +6195,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_ST_XDJ.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101590,
@@ -5724,7 +6220,9 @@
   },
   "icon": "ItemIcon_WB/ItemIcon_WB_SQ_XDJ.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101591,
@@ -5747,7 +6245,9 @@
   },
   "icon": "ItemIcon/ItemIcon_1591000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101592,
@@ -5770,7 +6270,9 @@
   },
   "icon": "ItemIcon/ItemIcon_1592000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101593,
@@ -5793,7 +6295,9 @@
   },
   "icon": "ItemIcon/ItemIcon_1593000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101594,
@@ -5820,7 +6324,9 @@
    "1550001",
    "1550038"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130001",
+  "effect": "Your hurled mana-duplicated shields now deal randomized damage between {0}%-{1}% of their original, and their size is also randomized between {2}%-{3}%."
  },
  {
   "id": 101595,
@@ -5843,7 +6349,9 @@
   },
   "icon": "ItemIcon/ItemIcon_1595000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101596,
@@ -5868,7 +6376,9 @@
   "skill_ids": [
    "1500021"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130003",
+  "effect": "Whenever you cast Fireblade Matrix, your Fire Colossus does so as well, and the CD of your Fire Colossus is reduced by {0}%."
  },
  {
   "id": 101597,
@@ -5894,7 +6404,9 @@
    "1500031",
    "1550004"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130004",
+  "effect": "Whenever you fire a homing arrow, your Darkbow: Nocturne does so as well."
  },
  {
   "id": 101598,
@@ -5919,7 +6431,9 @@
   "skill_ids": [
    "1500041"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130005",
+  "effect": "You can now physically pass through enemies, and doing so is deemed as attacking them with Invasive Growth."
  },
  {
   "id": 101599,
@@ -5945,7 +6459,9 @@
    "1500051",
    "1550007"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130006",
+  "effect": "You toss out {0} Ice Boomerangs whenever you cast Electromorphosis, and the duration, CD and mana cost of Electromorphosis are all halved."
  },
  {
   "id": 101600,
@@ -5971,7 +6487,9 @@
    "1500061",
    "1550005"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130007",
+  "effect": "Your Armaros inflicts the Soul Shackle effect on any enemy it damages, and Soul Shackled enemies suffer the equivalent of all damage taken by your Armaros."
  },
  {
   "id": 101601,
@@ -5999,7 +6517,9 @@
    "1550012",
    "1550030"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130008",
+  "effect": "Whenever your Elemental Beam comes into contact with an enemy, an Elemental Polychromator is manifested at their location."
  },
  {
   "id": 101602,
@@ -6025,7 +6545,9 @@
    "1500081",
    "1550009"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130009",
+  "effect": "When Phantom Stance is active, Gale Flash will also be unleashed from the opposite direction. The cooldown of Phantom Stance is reduced by half."
  },
  {
   "id": 101603,
@@ -6050,7 +6572,9 @@
   "skill_ids": [
    "1500091"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130010",
+  "effect": "Rain of Arrows: Ourea destroys any $nupao$ on hit, triggering Rain of Arrows: Ourea again at the target's location. The duration, cooldown, and mana cost of Rain of Arrows: Ourea are reduced by half."
  },
  {
   "id": 101604,
@@ -6076,7 +6600,9 @@
    "1500101",
    "1550011"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130011",
+  "effect": "When within the range of Wild Florescence, each Razorsedge attempts to absorb a Solaraia to complete its $jinhua$, after which it continuously releases Lifestream to attack. In addition, Wild Florescence’s CD is reduced by half."
  },
  {
   "id": 101605,
@@ -6101,7 +6627,9 @@
   "skill_ids": [
    "1500111"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130012",
+  "effect": "Whenever your Reality Throws roll a 1, the result is rerolled. In addition, the next entropic flow or Singularity that you cast following a Reality Throw is re-cast the same number of times as the Throw’s rolled number."
  },
  {
   "id": 101606,
@@ -6126,7 +6654,9 @@
   "skill_ids": [
    "1500121"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130013",
+  "effect": "$fenshen$ inherits an additional {0}% $fujia_shuxing$, with total damage increased by {1}%. $fenshen$ summoned through Shadowclone Jutsu: Throng is considered permanent but halved in number."
  },
  {
   "id": 101607,
@@ -6151,7 +6681,9 @@
   "skill_ids": [
    "1500131"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130014",
+  "effect": "Your $wanglingqishi$ will absorb the homing souls released by Atrophic Torrent, and expend {0}% of its own current life to empower and re-release them as $wanglingqishi$'s own attack, with {1}% increased total damage."
  },
  {
   "id": 101608,
@@ -6176,7 +6708,9 @@
   "skill_ids": [
    "1500141"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130015",
+  "effect": "You gain $chaozai$ and {0}% increased movement speed upon activating Ancestral Spirit, and its CD is halved. In addition, you immediately regain $chaozai$, as well as have the remaining duration of Ancestral Spirit reduced by {1}s, if you lose $chaozai$ at any point during the effect."
  },
  {
   "id": 101609,
@@ -6201,7 +6735,9 @@
   "skill_ids": [
    "1500151"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130016",
+  "effect": "Flame shades of Pyroshade no longer explode upon absorbing Embers. Instead, they trigger Coronal Flare, increasing the total damage of all bombardments by {0}%. When the shade returns, it increases max mana by {1}, stacking up to {2} times and lasting for {3}s."
  },
  {
   "id": 101610,
@@ -6226,7 +6762,9 @@
   "skill_ids": [
    "1500161"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130017",
+  "effect": "When you perform any charge-up attack, you attempt to manifest Darkblade: Decretum into your grasp for {0}s; for this duration, {2}% of max life of all enemies within {1}m are put on reserve, and for every {3}% of either your or the enemy’s max life put on reserve, your Dark Maelstrom deals {4}% more damage."
  },
  {
   "id": 101611,
@@ -6251,7 +6789,9 @@
   "skill_ids": [
    "1500171"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130018",
+  "effect": "Rain of Arrows: Syl deals {0}% increased total damage, and Briarbrand also inflicts $zhanfang$ and $kuwei$ on the enemy."
  },
  {
   "id": 101612,
@@ -6276,7 +6816,9 @@
   "skill_ids": [
    "1500181"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130019",
+  "effect": "Cooldown of Incinerating Vortex is halved, and casting attempts to convert a nearby Flaming Hydra into $zhuxin$. $qiwen$ is increased by {1} when repeat casting Incinerating Vortex to $zhuxin$, $zhuxin$ burning minions, or defeating enemies. When $zhuxin$ defeats enemies, Incinerating Vortex's duration is prolonged by {0}s, but no new vortex can be generated when $zhuxin$ is on the field."
  },
  {
   "id": 101613,
@@ -6301,7 +6843,9 @@
   "skill_ids": [
    "1500191"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130020",
+  "effect": "While Blessing of Wisdom is active, the Blastwave deals Light Damage equal to {0}% of its original damage *plus* Empyrean Hammer’s damage, and is considered an Empyrean Hammer cast; in addition, the Blastwave contracts back to its origin point every {1}s, up to {2} times. Calling down the Empyrean Hammer no longer deals Light Damage and removes any lingering Blastwave (Blastwave still deals damage as it is removed, but will not continue to travel)."
  },
  {
   "id": 101614,
@@ -6326,7 +6870,9 @@
   "skill_ids": [
    "1500201"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130021",
+  "effect": "Scattershot’s base CD is increased by {0}%, but upon critting, it has a(n) {1}% chance to create a spinning Razorward blade that deals {2}% increased total damage before returning to you instantly."
  },
  {
   "id": 101615,
@@ -6353,7 +6899,9 @@
    "1500221",
    "1500231"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130022",
+  "effect": "Casting Nightpiercer grants {0} stacks of $xianlv$, and if a homing arrow is already present when you do so, you no longer fire a new arrow but instead refresh the current one’s duration. In addition, damaging an enemy with Atrophic Barrage or Precision Barrage inflicts {1} and {2} stacks of $xielv$ on them, respectively; each stack of either $xianlv$ or $xielv$ increases the total damage of your homing arrows by {3}%."
  },
  {
   "id": 101616,
@@ -6376,7 +6924,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101619,
@@ -6401,7 +6951,9 @@
   "skill_ids": [
    "1500241"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130025",
+  "effect": "Icicles from Stormshatter are no longer projected; instead, they deal damage directly to the target. Each icicle converts into {0} $bingpo$, and any crit you deal with Cold Damage also has a {1}% chance to trigger Stormshatter’s effects. While $bingpo$ exists, Stormshatter’s total damage is increased by {2}%, but dealing Shock Damage consumes {3} $bingpo$."
  },
  {
   "id": 101620,
@@ -6426,7 +6978,9 @@
   "skill_ids": [
    "1500251"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130026",
+  "effect": "Instances of damage dealt by your Blades of Execution are recorded as stacks of $suming$, with each record increasing Scars of Half Light chance by {0}%; in addition, Scar light bursts no longer deal Light Damage, but rather {1}% of the damage of each Extirpation Pact."
  },
  {
   "id": 101621,
@@ -6451,7 +7005,9 @@
   "skill_ids": [
    "1500261"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130027",
+  "effect": "The heatwave from Bomb Voyage! now cokerizes enemies. Cokerized enemies take {0}% increased total damage from Adhesive Gunpowder and are instantly executed if their life falls below {1}%."
  },
  {
   "id": 101622,
@@ -6476,7 +7032,9 @@
   "skill_ids": [
    "1500271"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130028",
+  "effect": "While Adhesive Gunpowder is active, the total damage of Bomb Voyage! is increased by {0}%, and you automatically detonate {2} nearby Embers every {1}s; in addition, any consumed Ember has a {3}% chance to generate a new one."
  },
  {
   "id": 101623,
@@ -6501,7 +7059,9 @@
   "skill_ids": [
    "1500281"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130029",
+  "effect": "Rain of Arrows: Geddon now deals damage equal to {0}% of all accumulated damage at one instance. While Adhesive Gunpowder is active, the damage of Rain of Arrows: Geddon is combined with the damage of Adhesive Gunpowder, and is also considered to be dealt by Adhesive Gunpowder; Each instance of this damage reduces the remaining duration of Adhesive Gunpowder by {1}s."
  },
  {
   "id": 101624,
@@ -6526,7 +7086,9 @@
   "skill_ids": [
    "1500291"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130030",
+  "effect": "The total damage of Terra Slam is increased by {0}%. Picking up a Lifesprig from Vital Resolve no longer generates a Leafstorm, but instead restores {1}% of your max life and increases your max life by {2}%; This effect can stack up to {3} times and lasts for {4}s."
  },
  {
   "id": 101625,
@@ -6551,7 +7113,9 @@
   "skill_ids": [
    "1500301"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130031",
+  "effect": "The Leafstorm fired when picking up a Lifesprig now has a {0}% chance to deal one instance of Toxic Bloom damage; The total damage of this hit is increased by {1}%."
  },
  {
   "id": 101626,
@@ -6576,7 +7140,9 @@
   "skill_ids": [
    "1500311"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130032",
+  "effect": "You can move while channeling Breath of the Wild, and the skill no longer triggers an airburst centered on you, but instead sequentially generates {0} high-pressure cyclones at the locations of nearby enemies; these cyclones are treated as airbursts, but their base AoE is reduced by {1}%, their total damage is increased by {2}%, and receive bonus attack speed."
  },
  {
   "id": 101627,
@@ -6599,7 +7165,9 @@
   },
   "icon": "ItemIcon/ItemIcon_1627000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101628,
@@ -6622,7 +7190,9 @@
   },
   "icon": "ItemIcon/ItemIcon_1628000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101629,
@@ -6645,7 +7215,9 @@
   },
   "icon": "ItemIcon/ItemIcon_1629000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101630,
@@ -6670,7 +7242,9 @@
   "skill_ids": [
    "1500321"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130033",
+  "effect": "While Starlight in the Everdark is fully charged-up and while holding the skill, additionally launch {1} conjured orbs every {0}s, and your Projectile DMG is increased by {2}%."
  },
  {
   "id": 101631,
@@ -6695,7 +7269,9 @@
   "skill_ids": [
    "1500331"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130034",
+  "effect": "Your Excantation: Iridescence deals {0}% more damage and the number of your concentrated attacks is increased by {1}."
  },
  {
   "id": 101632,
@@ -6720,7 +7296,9 @@
   "skill_ids": [
    "1500341"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130035",
+  "effect": "Every {0}s, the first comet released by Excantation: Chiron’s Wake deals {1}% more damage."
  },
  {
   "id": 101633,
@@ -6745,7 +7323,9 @@
   "skill_ids": [
    "1500351"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130036",
+  "effect": "Lightning Shot deals {0}% more damage. Active use also fires rear lightning bolts."
  },
  {
   "id": 101634,
@@ -6770,7 +7350,9 @@
   "skill_ids": [
    "1500361"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130037",
+  "effect": "Tornado Storm deals {0}% more damage. The tornado shifts towards enemies every {1}s."
  },
  {
   "id": 101635,
@@ -6795,7 +7377,9 @@
   "skill_ids": [
    "1500371"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130038",
+  "effect": "Frost Shot deals {0}% more damage. Ice shards curve to nearby tornadoes after-launch."
  },
  {
   "id": 101636,
@@ -6818,7 +7402,9 @@
   },
   "icon": "ItemIcon/ItemIcon_1636000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101637,
@@ -6843,7 +7429,9 @@
   "skill_ids": [
    "1500381"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130039",
+  "effect": "Molten Scourge deals {0}% more damage, and Iron Slag splatters’ travel time is reduced by {1}%."
  },
  {
   "id": 101638,
@@ -6868,7 +7456,9 @@
   "skill_ids": [
    "1500391"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130040",
+  "effect": "Cruciation deals {0}% more damage, and the eruption AoE of Earth Spikes is {1}% larger."
  },
  {
   "id": 101639,
@@ -6893,7 +7483,9 @@
   "skill_ids": [
    "1500401"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130041",
+  "effect": "Hellscream deals {0}% more damage, and the priming interval for Echoes is now affected by your skill CD speed."
  },
  {
   "id": 101640,
@@ -6918,7 +7510,9 @@
   "skill_ids": [
    "1500411"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130042",
+  "effect": "Each hurled shield deals {0}% more initial damage."
  },
  {
   "id": 101641,
@@ -6943,7 +7537,9 @@
   "skill_ids": [
    "1500421"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130043",
+  "effect": "Casting Warcry can consume up to {0} mana. Deals {1}% more damage for each point of mana consumed. This weapon also enables the Amplifier Specialization."
  },
  {
   "id": 101642,
@@ -6968,7 +7564,9 @@
   "skill_ids": [
    "1500431"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130044",
+  "effect": "Whirlwind Slash deals {0}% more damage, and all Stance Shift effects are enhanced by {1}%."
  },
  {
   "id": 101643,
@@ -6993,7 +7591,9 @@
   "skill_ids": [
    "1500441"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130045",
+  "effect": "Scattershot deals {0}% more damage. The effects of Piercing Arrows no longer require piercing an enemy to trigger."
  },
  {
   "id": 101644,
@@ -7018,7 +7618,9 @@
   "skill_ids": [
    "1500451"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130046",
+  "effect": "While charging up Cloudpiercer Shot, your movement speed is reduced by {0}%. A charged-up Cloudpiercer Shot deals {1}% more damage, and its AoE is expanded by {2}%."
  },
  {
   "id": 101645,
@@ -7043,7 +7645,9 @@
   "skill_ids": [
    "1500461"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130047",
+  "effect": "Moonsear deals {0}% more damage, and the max stack limit of Lumine Flux is increased by {1}."
  },
  {
   "id": 101646,
@@ -7069,7 +7673,9 @@
    "1500471",
    "1550044"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130048",
+  "effect": "Reventide deals {0}% more damage, and its base AoE is increased by {1}%, but its CD is increased by {2}%."
  },
  {
   "id": 101647,
@@ -7098,7 +7704,9 @@
    "1500511",
    "1500551"
   ],
-  "rarity_hint": "legendary"
+  "rarity_hint": "legendary",
+  "effect_key": "130049",
+  "effect": "Lunescence deals {0}% more damage, and its required charge-up time is reduced by {1}%."
  },
  {
   "id": 101648,
@@ -7121,7 +7729,9 @@
   },
   "icon": "ItemIcon/ItemIcon_1648000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101649,
@@ -7144,7 +7754,9 @@
   },
   "icon": "ItemIcon/ItemIcon_1649000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101650,
@@ -7167,7 +7779,9 @@
   },
   "icon": "ItemIcon/ItemIcon_1650000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101651,
@@ -7190,7 +7804,9 @@
   },
   "icon": "ItemIcon/ItemIcon_1651000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101652,
@@ -7213,7 +7829,9 @@
   },
   "icon": "ItemIcon/ItemIcon_1652000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101653,
@@ -7236,7 +7854,9 @@
   },
   "icon": "ItemIcon/ItemIcon_1653000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101654,
@@ -7259,7 +7879,9 @@
   },
   "icon": "ItemIcon/ItemIcon_1654000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101655,
@@ -7282,7 +7904,9 @@
   },
   "icon": "ItemIcon/ItemIcon_1655000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101700,
@@ -7305,7 +7929,9 @@
   },
   "icon": "ItemIcon_WS/ItemIcon_WS_CB_001.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101701,
@@ -7328,7 +7954,9 @@
   },
   "icon": "ItemIcon_WS/ItemIcon_WS_QT_001.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101702,
@@ -7351,7 +7979,9 @@
   },
   "icon": "ItemIcon_WS/ItemIcon_WS_GS_011.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101703,
@@ -7374,7 +8004,9 @@
   },
   "icon": "ItemIcon_WS/ItemIcon_WS_SS_DTL.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101704,
@@ -7397,7 +8029,9 @@
   },
   "icon": "ItemIcon_WS/ItemIcon_WS_BK_WKE.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101705,
@@ -7420,7 +8054,9 @@
   },
   "icon": "ItemIcon_WS/ItemIcon_WS_ST_JSX.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101706,
@@ -7443,7 +8079,9 @@
   },
   "icon": "ItemIcon_WS/ItemIcon_WS_BK_MTH.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101707,
@@ -7466,7 +8104,9 @@
   },
   "icon": "ItemIcon_WS/ItemIcon_WS_DS_BZSLM_01.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101708,
@@ -7489,7 +8129,9 @@
   },
   "icon": "ItemIcon_WS/ItemIcon_WS_ST_BZSLM_01.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 101709,
@@ -7512,7 +8154,9 @@
   },
   "icon": "ItemIcon_WS/ItemIcon_WS_CB_BZSLM_01.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102000,
@@ -7535,7 +8179,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_A2_000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102100,
@@ -7558,7 +8204,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_A1_016.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102101,
@@ -7581,7 +8229,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_A3_016.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102102,
@@ -7604,7 +8254,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_A3_017.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102200,
@@ -7627,7 +8279,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_A3_021.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102201,
@@ -7650,7 +8304,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_A1_017.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102202,
@@ -7673,7 +8329,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_A1_018.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102250,
@@ -7696,7 +8354,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_A1_003.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102300,
@@ -7719,7 +8379,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_A3_023.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102301,
@@ -7742,7 +8404,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_A1_019.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102302,
@@ -7765,7 +8429,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_A1_020.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102350,
@@ -7788,7 +8454,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_A1_007.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102400,
@@ -7811,7 +8479,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_A1_000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102401,
@@ -7834,7 +8504,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_A1_001.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102402,
@@ -7857,7 +8529,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_A1_002.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102403,
@@ -7880,7 +8554,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_A1_003.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102404,
@@ -7903,7 +8579,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_A1_004.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102405,
@@ -7926,7 +8604,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_A1_005.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102406,
@@ -7949,7 +8629,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_A1_006.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102407,
@@ -7972,7 +8654,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_A1_007.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102408,
@@ -7995,7 +8679,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_A1_008.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102409,
@@ -8018,7 +8704,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_A1_009.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102410,
@@ -8041,7 +8729,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_A1_EQB.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102411,
@@ -8064,7 +8754,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_A2_YZW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102412,
@@ -8087,7 +8779,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_A2_DTL.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102413,
@@ -8110,7 +8804,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_A1_MTL.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102414,
@@ -8133,7 +8829,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_A1_MSS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102415,
@@ -8156,7 +8854,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102416,
@@ -8179,7 +8879,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_A1_KLW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102417,
@@ -8202,7 +8904,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_A3_LSC.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102418,
@@ -8225,7 +8929,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_A2_DQS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102419,
@@ -8248,7 +8954,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_A3_DWS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102420,
@@ -8271,7 +8979,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_A3_YSS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102421,
@@ -8294,7 +9004,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_A1_GBL.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102422,
@@ -8317,7 +9029,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_A1_HDW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102423,
@@ -8340,7 +9054,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_A2_HLW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102424,
@@ -8363,7 +9079,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_A2_XYW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102425,
@@ -8386,7 +9104,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_A3_JSX.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102426,
@@ -8409,7 +9129,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_A1_WSS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102427,
@@ -8432,7 +9154,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_A1_WKE.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102428,
@@ -8455,7 +9179,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_A1_MTH.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102429,
@@ -8478,7 +9204,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_A3_SLM.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102430,
@@ -8501,7 +9229,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_A3_HJX.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102431,
@@ -8524,7 +9254,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_A3_ANB.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102432,
@@ -8547,7 +9279,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_A1_HQS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102433,
@@ -8570,7 +9304,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_A1_DDJ.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102434,
@@ -8593,7 +9329,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_A3_LSD.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102435,
@@ -8616,7 +9354,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_A3_DZS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102436,
@@ -8639,7 +9379,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_A3_HQZ.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102437,
@@ -8662,7 +9404,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_A2_WSK.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102438,
@@ -8685,7 +9429,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_A3_HSM.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102439,
@@ -8708,7 +9454,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_A2_XRW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102440,
@@ -8731,7 +9479,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_A1_NS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102441,
@@ -8754,7 +9504,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_A2_QHC.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102442,
@@ -8777,7 +9529,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_A3_WKJ.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102443,
@@ -8800,7 +9554,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_A3_WXR.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102444,
@@ -8823,7 +9579,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_A3_XDJ.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102445,
@@ -8846,7 +9604,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102446,
@@ -8869,7 +9629,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102447,
@@ -8892,7 +9654,9 @@
   },
   "icon": "ItemIcon/ItemIcon_2447000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102448,
@@ -8915,7 +9679,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102449,
@@ -8938,7 +9704,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102450,
@@ -8961,7 +9729,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102451,
@@ -8984,7 +9754,9 @@
   },
   "icon": "ItemIcon/ItemIcon_2451000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102452,
@@ -9007,7 +9779,9 @@
   },
   "icon": "ItemIcon/ItemIcon_2452000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102453,
@@ -9030,7 +9804,9 @@
   },
   "icon": "ItemIcon/ItemIcon_2453000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102454,
@@ -9053,7 +9829,9 @@
   },
   "icon": "ItemIcon/ItemIcon_2454000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102455,
@@ -9076,7 +9854,9 @@
   },
   "icon": "ItemIcon/ItemIcon_2455000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102456,
@@ -9099,7 +9879,9 @@
   },
   "icon": "ItemIcon/ItemIcon_2456000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102457,
@@ -9122,7 +9904,9 @@
   },
   "icon": "ItemIcon/ItemIcon_2457000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102458,
@@ -9145,7 +9929,9 @@
   },
   "icon": "ItemIcon/ItemIcon_2458000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102459,
@@ -9168,7 +9954,9 @@
   },
   "icon": "ItemIcon/ItemIcon_2459000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102460,
@@ -9191,7 +9979,9 @@
   },
   "icon": "ItemIcon/ItemIcon_2460000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102461,
@@ -9214,7 +10004,9 @@
   },
   "icon": "ItemIcon/ItemIcon_2461000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102462,
@@ -9237,7 +10029,9 @@
   },
   "icon": "ItemIcon/ItemIcon_2462000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102463,
@@ -9260,7 +10054,9 @@
   },
   "icon": "ItemIcon/ItemIcon_2463000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102464,
@@ -9283,7 +10079,9 @@
   },
   "icon": "ItemIcon/ItemIcon_2464000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102465,
@@ -9306,7 +10104,9 @@
   },
   "icon": "ItemIcon/ItemIcon_2465000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102466,
@@ -9329,7 +10129,9 @@
   },
   "icon": "ItemIcon/ItemIcon_2466000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 102467,
@@ -9352,7 +10154,9 @@
   },
   "icon": "ItemIcon/ItemIcon_2467000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103000,
@@ -9375,7 +10179,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_H2_000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103100,
@@ -9398,7 +10204,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_H1_016.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103101,
@@ -9421,7 +10229,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_H3_016.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103102,
@@ -9444,7 +10254,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_H3_017.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103200,
@@ -9467,7 +10279,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_H3_021.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103201,
@@ -9490,7 +10304,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_H1_017.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103202,
@@ -9513,7 +10329,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_H1_018.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103250,
@@ -9536,7 +10354,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_H1_003.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103300,
@@ -9559,7 +10379,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_H3_023.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103301,
@@ -9582,7 +10404,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_H1_019.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103302,
@@ -9605,7 +10429,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_H1_020.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103350,
@@ -9628,7 +10454,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_H1_007.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103400,
@@ -9651,7 +10479,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_H1_000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103401,
@@ -9674,7 +10504,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_H1_001.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103402,
@@ -9697,7 +10529,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_H1_002.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103403,
@@ -9720,7 +10554,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_H1_003.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103404,
@@ -9743,7 +10579,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_H1_004.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103405,
@@ -9766,7 +10604,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_H1_005.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103406,
@@ -9789,7 +10629,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_H1_006.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103407,
@@ -9812,7 +10654,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_H1_007.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103408,
@@ -9835,7 +10679,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_H1_008.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103409,
@@ -9858,7 +10704,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_H1_009.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103410,
@@ -9881,7 +10729,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_H1_EQB.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103411,
@@ -9904,7 +10754,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_H2_YZW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103412,
@@ -9927,7 +10779,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_H2_DTL.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103413,
@@ -9950,7 +10804,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_H1_MTL.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103414,
@@ -9973,7 +10829,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_H1_MSS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103415,
@@ -9996,7 +10854,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103416,
@@ -10019,7 +10879,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_H1_KLW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103417,
@@ -10042,7 +10904,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_H3_LSC.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103418,
@@ -10065,7 +10929,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_H2_DQS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103419,
@@ -10088,7 +10954,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_H3_DWS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103420,
@@ -10111,7 +10979,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_H3_YSS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103421,
@@ -10134,7 +11004,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_H1_GBL.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103422,
@@ -10157,7 +11029,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_H1_HDW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103423,
@@ -10180,7 +11054,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_H2_HLW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103424,
@@ -10203,7 +11079,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_H2_XYW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103425,
@@ -10226,7 +11104,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_H3_JSX.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103426,
@@ -10249,7 +11129,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_H1_WSS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103427,
@@ -10272,7 +11154,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_H1_WKE.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103428,
@@ -10295,7 +11179,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_H1_MTH.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103429,
@@ -10318,7 +11204,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_H3_SLM.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103430,
@@ -10341,7 +11229,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_H3_HJX.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103431,
@@ -10364,7 +11254,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_H3_ANB.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103432,
@@ -10387,7 +11279,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_H1_HQS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103433,
@@ -10410,7 +11304,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_H1_DDJ.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103434,
@@ -10433,7 +11329,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_H1_LSD.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103435,
@@ -10456,7 +11354,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_H3_DZS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103436,
@@ -10479,7 +11379,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_H3_HQZ.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103437,
@@ -10502,7 +11404,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_H2_WSK.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103438,
@@ -10525,7 +11429,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_H3_HSM.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103439,
@@ -10548,7 +11454,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_H2_XRW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103440,
@@ -10571,7 +11479,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_H1_NS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103441,
@@ -10594,7 +11504,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_H2_QHC.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103442,
@@ -10617,7 +11529,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_H3_WKJ.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103443,
@@ -10640,7 +11554,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_H3_WXR.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103444,
@@ -10663,7 +11579,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_H3_XDJ.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103445,
@@ -10686,7 +11604,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103446,
@@ -10709,7 +11629,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103447,
@@ -10732,7 +11654,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103448,
@@ -10755,7 +11679,9 @@
   },
   "icon": "ItemIcon/ItemIcon_3448000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103449,
@@ -10778,7 +11704,9 @@
   },
   "icon": "ItemIcon/ItemIcon_3449000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103450,
@@ -10801,7 +11729,9 @@
   },
   "icon": "ItemIcon/ItemIcon_3450000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103451,
@@ -10824,7 +11754,9 @@
   },
   "icon": "ItemIcon/ItemIcon_3451000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103452,
@@ -10847,7 +11779,9 @@
   },
   "icon": "ItemIcon/ItemIcon_3452000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103453,
@@ -10870,7 +11804,9 @@
   },
   "icon": "ItemIcon/ItemIcon_3453000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103454,
@@ -10893,7 +11829,9 @@
   },
   "icon": "ItemIcon/ItemIcon_3454000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103455,
@@ -10916,7 +11854,9 @@
   },
   "icon": "ItemIcon/ItemIcon_3455000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103456,
@@ -10939,7 +11879,9 @@
   },
   "icon": "ItemIcon/ItemIcon_3456000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103457,
@@ -10962,7 +11904,9 @@
   },
   "icon": "ItemIcon/ItemIcon_3457000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103458,
@@ -10985,7 +11929,9 @@
   },
   "icon": "ItemIcon/ItemIcon_3458000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103459,
@@ -11008,7 +11954,9 @@
   },
   "icon": "ItemIcon/ItemIcon_3459000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103460,
@@ -11031,7 +11979,9 @@
   },
   "icon": "ItemIcon/ItemIcon_3460000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103461,
@@ -11054,7 +12004,9 @@
   },
   "icon": "ItemIcon/ItemIcon_3461000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103462,
@@ -11077,7 +12029,9 @@
   },
   "icon": "ItemIcon/ItemIcon_3462000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103463,
@@ -11100,7 +12054,9 @@
   },
   "icon": "ItemIcon/ItemIcon_3463000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103464,
@@ -11123,7 +12079,9 @@
   },
   "icon": "ItemIcon/ItemIcon_3464000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103465,
@@ -11146,7 +12104,9 @@
   },
   "icon": "ItemIcon/ItemIcon_3465000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103466,
@@ -11169,7 +12129,9 @@
   },
   "icon": "ItemIcon/ItemIcon_3466000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103467,
@@ -11192,7 +12154,9 @@
   },
   "icon": "ItemIcon/ItemIcon_3467000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103468,
@@ -11215,7 +12179,9 @@
   },
   "icon": "ItemIcon/ItemIcon_3468000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 103469,
@@ -11238,7 +12204,9 @@
   },
   "icon": "ItemIcon/ItemIcon_3469000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104000,
@@ -11261,7 +12229,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_S2_000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104100,
@@ -11284,7 +12254,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_S1_016.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104101,
@@ -11307,7 +12279,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_S3_016.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104102,
@@ -11330,7 +12304,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_S3_017.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104200,
@@ -11353,7 +12329,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_S3_021.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104201,
@@ -11376,7 +12354,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_S1_017.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104202,
@@ -11399,7 +12379,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_S1_018.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104250,
@@ -11422,7 +12404,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_S1_003.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104300,
@@ -11445,7 +12429,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_S3_023.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104301,
@@ -11468,7 +12454,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_S1_019.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104302,
@@ -11491,7 +12479,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_S1_020.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104350,
@@ -11514,7 +12504,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_S1_007.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104400,
@@ -11537,7 +12529,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_S1_000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104401,
@@ -11560,7 +12554,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_S1_001.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104402,
@@ -11583,7 +12579,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_S1_002.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104403,
@@ -11606,7 +12604,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_S1_003.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104404,
@@ -11629,7 +12629,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_S1_004.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104405,
@@ -11652,7 +12654,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_S1_005.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104406,
@@ -11675,7 +12679,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_S1_006.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104407,
@@ -11698,7 +12704,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_S1_007.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104408,
@@ -11721,7 +12729,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_S1_008.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104409,
@@ -11744,7 +12754,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_S1_009.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104410,
@@ -11767,7 +12779,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_S1_EQB.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104411,
@@ -11790,7 +12804,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_S2_YZW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104412,
@@ -11813,7 +12829,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_S2_DTL.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104413,
@@ -11836,7 +12854,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_S1_MTL.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104414,
@@ -11859,7 +12879,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_S1_MSS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104415,
@@ -11882,7 +12904,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104416,
@@ -11905,7 +12929,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_S1_KLW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104417,
@@ -11928,7 +12954,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_S3_LSC.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104418,
@@ -11951,7 +12979,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_S2_DQS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104419,
@@ -11974,7 +13004,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_S3_DWS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104420,
@@ -11997,7 +13029,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_S3_YSS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104421,
@@ -12020,7 +13054,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_S1_GBL.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104422,
@@ -12043,7 +13079,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_S1_HDW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104423,
@@ -12066,7 +13104,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_S2_HLW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104424,
@@ -12089,7 +13129,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_S2_XYW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104425,
@@ -12112,7 +13154,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_S3_JSX.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104426,
@@ -12135,7 +13179,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_S1_WSS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104427,
@@ -12158,7 +13204,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_S1_WKE.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104428,
@@ -12181,7 +13229,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_S1_MTH.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104429,
@@ -12204,7 +13254,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_S3_SLM.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104430,
@@ -12227,7 +13279,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_S3_HJX.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104431,
@@ -12250,7 +13304,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_S3_ANB.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104432,
@@ -12273,7 +13329,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_S1_HQS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104433,
@@ -12296,7 +13354,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_S1_DDJ.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104434,
@@ -12319,7 +13379,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_S3_LSD.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104435,
@@ -12342,7 +13404,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_S3_DZS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104436,
@@ -12365,7 +13429,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_S3_HQZ.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104437,
@@ -12388,7 +13454,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_S2_WSK.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104438,
@@ -12411,7 +13479,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_S3_HSM.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104439,
@@ -12434,7 +13504,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_S2_XRW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104440,
@@ -12457,7 +13529,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_S1_NS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104441,
@@ -12480,7 +13554,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_S2_QHC.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104442,
@@ -12503,7 +13579,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_S3_WKJ.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104443,
@@ -12526,7 +13604,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_S3_WXR.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104444,
@@ -12549,7 +13629,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_S3_XDJ.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104445,
@@ -12572,7 +13654,9 @@
   },
   "icon": "ItemIcon/ItemIcon_4445000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104446,
@@ -12595,7 +13679,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104700,
@@ -12618,7 +13704,9 @@
   },
   "icon": "ItemIcon_CS/ItemIcon_CS_S3_GBL.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104701,
@@ -12641,7 +13729,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104702,
@@ -12664,7 +13754,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104703,
@@ -12687,7 +13779,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104704,
@@ -12710,7 +13804,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104705,
@@ -12733,7 +13829,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104706,
@@ -12756,7 +13854,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104707,
@@ -12779,7 +13879,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104708,
@@ -12802,7 +13904,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104709,
@@ -12825,7 +13929,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104710,
@@ -12848,7 +13954,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104711,
@@ -12871,7 +13979,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104712,
@@ -12894,7 +14004,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104713,
@@ -12917,7 +14029,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104714,
@@ -12940,7 +14054,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104715,
@@ -12963,7 +14079,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104716,
@@ -12986,7 +14104,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 104717,
@@ -13009,7 +14129,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105000,
@@ -13032,7 +14154,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_R_000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105100,
@@ -13055,7 +14179,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_R_016.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105101,
@@ -13078,7 +14204,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_R_003.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105102,
@@ -13101,7 +14229,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_R_009.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105200,
@@ -13124,7 +14254,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_R_021.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105201,
@@ -13147,7 +14279,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_R_004.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105202,
@@ -13170,7 +14304,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_R_002.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105250,
@@ -13193,7 +14329,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_R_005.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105300,
@@ -13216,7 +14354,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_R_023.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105301,
@@ -13239,7 +14379,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_R_007.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105302,
@@ -13262,7 +14404,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_R_010.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105350,
@@ -13285,7 +14429,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_R_011.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105400,
@@ -13308,7 +14454,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_R_000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105401,
@@ -13331,7 +14479,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_R_001.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105402,
@@ -13354,7 +14504,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_R_002.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105403,
@@ -13377,7 +14529,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_R_003.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105404,
@@ -13400,7 +14554,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_R_004.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105405,
@@ -13423,7 +14579,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_R_005.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105406,
@@ -13446,7 +14604,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_R_006.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105407,
@@ -13469,7 +14629,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_R_EQB.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105408,
@@ -13492,7 +14654,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_R_YZW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105409,
@@ -13515,7 +14679,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_R_DTL.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105410,
@@ -13538,7 +14704,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_R_MTL.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105411,
@@ -13561,7 +14729,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_R_MSS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105412,
@@ -13584,7 +14754,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105413,
@@ -13607,7 +14779,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_R_KLW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105414,
@@ -13630,7 +14804,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_R_LSC.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105415,
@@ -13653,7 +14829,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_R_DQS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105416,
@@ -13676,7 +14854,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_R_DWS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105417,
@@ -13699,7 +14879,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_R_YSS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105418,
@@ -13722,7 +14904,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_R_GBL.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105419,
@@ -13745,7 +14929,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_R_HDW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105420,
@@ -13768,7 +14954,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_R_HLW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105421,
@@ -13791,7 +14979,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_R_XYW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105422,
@@ -13814,7 +15004,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_R_JSX.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105423,
@@ -13837,7 +15029,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_R_WSS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105424,
@@ -13860,7 +15054,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_R_WKE.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105425,
@@ -13883,7 +15079,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_R_MTL.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105426,
@@ -13906,7 +15104,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_R_SLM.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105427,
@@ -13929,7 +15129,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_R_HJX.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105428,
@@ -13952,7 +15154,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_R_ANB.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105429,
@@ -13975,7 +15179,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_R_HQS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105430,
@@ -13998,7 +15204,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_R_DDJ.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105431,
@@ -14021,7 +15229,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_R_LSD.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105432,
@@ -14044,7 +15254,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_R_DZS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105433,
@@ -14067,7 +15279,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_R_HQZ.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105434,
@@ -14090,7 +15304,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_R_WSK.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105435,
@@ -14113,7 +15329,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_R_HSM.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105436,
@@ -14136,7 +15354,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_R_QHC.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105437,
@@ -14159,7 +15379,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_R_WKJ.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105438,
@@ -14182,7 +15404,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_R_WXR.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105439,
@@ -14205,7 +15429,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_R_XDJ.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105440,
@@ -14228,7 +15454,9 @@
   },
   "icon": "ItemIcon/ItemIcon_5440000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105441,
@@ -14251,7 +15479,9 @@
   },
   "icon": "ItemIcon/ItemIcon_5441000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105442,
@@ -14274,7 +15504,9 @@
   },
   "icon": "ItemIcon/ItemIcon_5442000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105443,
@@ -14297,7 +15529,9 @@
   },
   "icon": "ItemIcon/ItemIcon_5443000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105444,
@@ -14320,7 +15554,9 @@
   },
   "icon": "ItemIcon/ItemIcon_5444000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105445,
@@ -14343,7 +15579,9 @@
   },
   "icon": "ItemIcon/ItemIcon_5445000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105700,
@@ -14366,7 +15604,9 @@
   },
   "icon": "ItemIcon_CS/ItemIcon_CS_R_HLW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105701,
@@ -14389,7 +15629,9 @@
   },
   "icon": "ItemIcon_CS/ItemIcon_CS_R_XYW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105702,
@@ -14412,7 +15654,9 @@
   },
   "icon": "ItemIcon_CS/ItemIcon_CS_R_KLW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105703,
@@ -14435,7 +15679,9 @@
   },
   "icon": "ItemIcon_CS/ItemIcon_CS_R_LSC.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105704,
@@ -14458,7 +15704,9 @@
   },
   "icon": "ItemIcon_CS/ItemIcon_CS_R_YJZ.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105705,
@@ -14481,7 +15729,9 @@
   },
   "icon": "ItemIcon_CS/ItemIcon_CS_R_YJL.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105706,
@@ -14504,7 +15754,9 @@
   },
   "icon": "ItemIcon_CS/ItemIcon_CS_R_YJH.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105707,
@@ -14527,7 +15779,9 @@
   },
   "icon": "ItemIcon_CS/ItemIcon_CS_R_BZSLM_01.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105708,
@@ -14550,7 +15804,9 @@
   },
   "icon": "ItemIcon_CS/ItemIcon_CS_R_BZSLM_02.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105709,
@@ -14573,7 +15829,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105710,
@@ -14596,7 +15854,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105711,
@@ -14619,7 +15879,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105712,
@@ -14642,7 +15904,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105713,
@@ -14665,7 +15929,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105714,
@@ -14688,7 +15954,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105715,
@@ -14711,7 +15979,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105716,
@@ -14734,7 +16004,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105717,
@@ -14757,7 +16029,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105718,
@@ -14780,7 +16054,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105719,
@@ -14803,7 +16079,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105720,
@@ -14826,7 +16104,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105721,
@@ -14849,7 +16129,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105722,
@@ -14872,7 +16154,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105723,
@@ -14895,7 +16179,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105724,
@@ -14918,7 +16204,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105725,
@@ -14941,7 +16229,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105726,
@@ -14964,7 +16254,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105727,
@@ -14987,7 +16279,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105728,
@@ -15010,7 +16304,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105729,
@@ -15033,7 +16329,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105730,
@@ -15056,7 +16354,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105731,
@@ -15079,7 +16379,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105732,
@@ -15102,7 +16404,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105733,
@@ -15125,7 +16429,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105734,
@@ -15148,7 +16454,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105735,
@@ -15171,7 +16479,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105736,
@@ -15194,7 +16504,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 105737,
@@ -15217,7 +16529,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106000,
@@ -15240,7 +16554,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_L_000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106100,
@@ -15263,7 +16579,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_L_016.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106101,
@@ -15286,7 +16604,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_L_003.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106102,
@@ -15309,7 +16629,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_L_009.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106200,
@@ -15332,7 +16654,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_L_021.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106201,
@@ -15355,7 +16679,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_L_004.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106202,
@@ -15378,7 +16704,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_L_002.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106250,
@@ -15401,7 +16729,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_L_001.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106300,
@@ -15424,7 +16754,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_L_023.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106301,
@@ -15447,7 +16779,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_L_007.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106302,
@@ -15470,7 +16804,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_L_010.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106350,
@@ -15493,7 +16829,9 @@
   },
   "icon": "ItemIcon_C/ItemIcon_C_L_012.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106400,
@@ -15516,7 +16854,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_L_000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106401,
@@ -15539,7 +16879,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_L_001.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106402,
@@ -15562,7 +16904,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_L_002.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106403,
@@ -15585,7 +16929,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_L_003.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106404,
@@ -15608,7 +16954,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_L_004.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106405,
@@ -15631,7 +16979,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_L_005.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106406,
@@ -15654,7 +17004,9 @@
   },
   "icon": "ItemIcon_CL/ItemIcon_CL_L_006.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106407,
@@ -15677,7 +17029,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_L_EQB.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106408,
@@ -15700,7 +17054,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_L_YZW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106409,
@@ -15723,7 +17079,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_L_DTL.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106410,
@@ -15746,7 +17104,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_L_MTL.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106411,
@@ -15769,7 +17129,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_L_MSS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106412,
@@ -15792,7 +17154,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106413,
@@ -15815,7 +17179,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_L_KLW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106414,
@@ -15838,7 +17204,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_L_LSC.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106415,
@@ -15861,7 +17229,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_L_DQS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106416,
@@ -15884,7 +17254,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_L_DWS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106417,
@@ -15907,7 +17279,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_L_YSS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106418,
@@ -15930,7 +17304,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_L_GBL.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106419,
@@ -15953,7 +17329,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_L_HDW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106420,
@@ -15976,7 +17354,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_L_HLW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106421,
@@ -15999,7 +17379,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_L_XYW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106422,
@@ -16022,7 +17404,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_L_JSX.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106423,
@@ -16045,7 +17429,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_L_WSS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106424,
@@ -16068,7 +17454,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_L_WKE.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106425,
@@ -16091,7 +17479,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_L_MTH.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106426,
@@ -16114,7 +17504,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_L_SLM.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106427,
@@ -16137,7 +17529,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_L_HJX.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106428,
@@ -16160,7 +17554,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_L_ANB.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106429,
@@ -16183,7 +17579,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_L_HQS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106430,
@@ -16206,7 +17604,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_L_DDJ.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106431,
@@ -16229,7 +17629,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_L_LSD.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106432,
@@ -16252,7 +17654,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_L_DZS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106433,
@@ -16275,7 +17679,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_L_HQZ.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106434,
@@ -16298,7 +17704,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_L_WSK.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106435,
@@ -16321,7 +17729,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_L_HSM.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106436,
@@ -16344,7 +17754,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_L_QHC.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106437,
@@ -16367,7 +17779,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_L_WKJ.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106438,
@@ -16390,7 +17804,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_L_WXR.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106439,
@@ -16413,7 +17829,9 @@
   },
   "icon": "ItemIcon_CB/ItemIcon_CB_L_XDJ.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106440,
@@ -16436,7 +17854,9 @@
   },
   "icon": "ItemIcon/ItemIcon_6440000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106441,
@@ -16459,7 +17879,9 @@
   },
   "icon": "ItemIcon/ItemIcon_6441000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106442,
@@ -16482,7 +17904,9 @@
   },
   "icon": "ItemIcon/ItemIcon_6442000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106443,
@@ -16505,7 +17929,9 @@
   },
   "icon": "ItemIcon/ItemIcon_6443000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106444,
@@ -16528,7 +17954,9 @@
   },
   "icon": "ItemIcon/ItemIcon_6444000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106700,
@@ -16551,7 +17979,9 @@
   },
   "icon": "ItemIcon_CS/ItemIcon_CS_L_MTL.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106701,
@@ -16574,7 +18004,9 @@
   },
   "icon": "ItemIcon_CS/ItemIcon_CS_L_HS_EX.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106702,
@@ -16597,7 +18029,9 @@
   },
   "icon": "ItemIcon_CS/ItemIcon_CS_L_HS_FIRE.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106703,
@@ -16620,7 +18054,9 @@
   },
   "icon": "ItemIcon_CS/ItemIcon_CS_L_HS_FIRE.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106704,
@@ -16643,7 +18079,9 @@
   },
   "icon": "ItemIcon_CS/ItemIcon_CS_L_HS_FIRE.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106705,
@@ -16666,7 +18104,9 @@
   },
   "icon": "ItemIcon_CS/ItemIcon_CS_L_HS_FIRE.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106706,
@@ -16689,7 +18129,9 @@
   },
   "icon": "ItemIcon_CS/ItemIcon_CS_L_HS_FIRE.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106707,
@@ -16712,7 +18154,9 @@
   },
   "icon": "ItemIcon_CS/ItemIcon_CS_L_HS_FIRE.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106708,
@@ -16735,7 +18179,9 @@
   },
   "icon": "ItemIcon_CS/ItemIcon_CS_L_HS_FIRE.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106709,
@@ -16758,7 +18204,9 @@
   },
   "icon": "ItemIcon_CS/ItemIcon_CS_L_HS_FIRE.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106710,
@@ -16781,7 +18229,9 @@
   },
   "icon": "ItemIcon_CS/ItemIcon_CS_L_XRW.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106711,
@@ -16804,7 +18254,9 @@
   },
   "icon": "ItemIcon_CS/ItemIcon_CS_L_NS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106712,
@@ -16827,7 +18279,9 @@
   },
   "icon": "ItemIcon_CS/ItemIcon_CS_L_UFO.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106713,
@@ -16850,7 +18304,9 @@
   },
   "icon": "ItemIcon_CS/ItemIcon_CS_L_DDT.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106714,
@@ -16873,7 +18329,9 @@
   },
   "icon": "ItemIcon_CS/ItemIcon_CS_L_NS_02.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106715,
@@ -16896,7 +18354,9 @@
   },
   "icon": "ItemIcon_CS/ItemIcon_CS_L_XRW_02.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106716,
@@ -16919,7 +18379,9 @@
   },
   "icon": "ItemIcon_CS/ItemIcon_CS_L_DQS.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106717,
@@ -16942,7 +18404,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106718,
@@ -16965,7 +18429,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106719,
@@ -16988,7 +18454,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106720,
@@ -17011,7 +18479,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106721,
@@ -17034,7 +18504,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106722,
@@ -17057,7 +18529,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106723,
@@ -17080,7 +18554,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106724,
@@ -17103,7 +18579,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106725,
@@ -17126,7 +18604,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106726,
@@ -17149,7 +18629,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106727,
@@ -17172,7 +18654,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106728,
@@ -17195,7 +18679,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106729,
@@ -17218,7 +18704,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106730,
@@ -17241,7 +18729,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106731,
@@ -17264,7 +18754,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106732,
@@ -17287,7 +18779,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106733,
@@ -17310,7 +18804,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106734,
@@ -17333,7 +18829,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106735,
@@ -17356,7 +18854,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106736,
@@ -17379,7 +18879,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106737,
@@ -17402,7 +18904,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106738,
@@ -17425,7 +18929,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106739,
@@ -17448,7 +18954,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106740,
@@ -17471,7 +18979,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106741,
@@ -17494,7 +19004,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106742,
@@ -17517,7 +19029,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106743,
@@ -17540,7 +19054,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106744,
@@ -17563,7 +19079,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106745,
@@ -17586,7 +19104,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106746,
@@ -17609,7 +19129,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106747,
@@ -17632,7 +19154,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 106748,
@@ -17655,7 +19179,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 107401,
@@ -17678,7 +19204,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 107501,
@@ -17701,7 +19229,9 @@
   },
   "icon": "ItemIcon/ItemIcon_7501000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 107701,
@@ -17724,7 +19254,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 107702,
@@ -17747,7 +19279,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 107703,
@@ -17770,7 +19304,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 107704,
@@ -17793,7 +19329,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 107705,
@@ -17816,7 +19354,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 107706,
@@ -17839,7 +19379,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 107707,
@@ -17862,7 +19404,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 107708,
@@ -17885,7 +19429,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 107709,
@@ -17908,7 +19454,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 108401,
@@ -17931,7 +19479,9 @@
   },
   "icon": "ItemIcon/ItemIcon_8401000.png",
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 108501,
@@ -17954,7 +19504,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 108701,
@@ -17977,7 +19529,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 108702,
@@ -18000,7 +19554,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 108703,
@@ -18023,7 +19579,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 108704,
@@ -18046,7 +19604,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 108705,
@@ -18069,7 +19629,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 108706,
@@ -18092,7 +19654,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 108707,
@@ -18115,7 +19679,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 108708,
@@ -18138,7 +19704,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 108709,
@@ -18161,7 +19729,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 108710,
@@ -18184,7 +19754,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 108711,
@@ -18207,7 +19779,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 108712,
@@ -18230,7 +19804,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 108713,
@@ -18253,7 +19829,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 108714,
@@ -18276,7 +19854,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 108715,
@@ -18299,7 +19879,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 108716,
@@ -18322,7 +19904,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 108717,
@@ -18345,7 +19929,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 108718,
@@ -18368,7 +19954,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 108719,
@@ -18391,7 +19979,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 108720,
@@ -18414,7 +20004,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 108721,
@@ -18437,7 +20029,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 108722,
@@ -18460,7 +20054,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 108723,
@@ -18483,7 +20079,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 108724,
@@ -18506,7 +20104,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 108725,
@@ -18529,7 +20129,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 108726,
@@ -18552,7 +20154,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 108727,
@@ -18575,7 +20179,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 108728,
@@ -18598,7 +20204,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 108729,
@@ -18621,7 +20229,9 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  },
  {
   "id": 108730,
@@ -18644,6 +20254,8 @@
   },
   "icon": null,
   "skill_ids": null,
-  "rarity_hint": null
+  "rarity_hint": null,
+  "effect_key": null,
+  "effect": null
  }
 ]

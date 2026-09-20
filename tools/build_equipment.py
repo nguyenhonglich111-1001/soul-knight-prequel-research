@@ -7,6 +7,8 @@ Combines, per item:
   * `skill_id`                                       -- from skill_links.json
   * `rarity_hint`                                    -- "legendary" when a skill prefab
                                                         implements the item
+  * `effect` / `effect_key`                          -- the legendary's effect text, via
+                                                        `effect_key()` below
 
 The slot comes from the ID's third digit. That mapping is not guesswork: the legendary
 skill prefabs are filed as `Assets/RGPrefab/Skill/LegendEquipSkill/<slot>/<skill id>/`,
@@ -22,6 +24,32 @@ import sys
 
 SLOTS = {1: 'weapon', 2: 'armor', 3: 'helm', 4: 'boots', 5: 'ring', 6: 'necklace',
          7: 'gear', 8: 'core'}
+
+# `1500xxx` skill prefabs step by 10; the `130xxx` effect-text block is numbered densely
+# from 1. So the two line up by index, not by value.
+EFFECT_BASE, SKILL_BASE = 130001, 1500001
+
+
+def effect_key(skill_ids):
+    """A legendary's effect-text key, from the id of the skill prefab that implements it.
+
+        130001 + (skill_id - 1500001) // 10
+
+    This is the item -> effect link that the Luban config was thought to be hiding. It is
+    not a guess: three items were checked against the game and all three land exactly --
+    `1500441` Grandfather Paradox -> `130045`, `1500451` Firmament's Caprice -> `130046`,
+    `1500431` Iron Maidenfan -> `130044`. The semantics corroborate the rest of the table
+    (`130003` talks about a Fire Colossus and belongs to Spatha of the Fire Colossus;
+    `130012` rerolls dice and belongs to Pollux Castor).
+
+    Only the `1500xxx` family is numbered this way. `1550xxx` ids are secondary skills on
+    the same items and `1405291` is something else entirely; both are ignored, which is
+    why the lowest `1500xxx` id wins when an item has several.
+    """
+    ids = sorted(s for s in (skill_ids or ()) if s.startswith('1500'))
+    if not ids:
+        return None
+    return str(EFFECT_BASE + (int(ids[0]) - SKILL_BASE) // 10)
 
 
 def slot_of(nid):
@@ -92,6 +120,8 @@ def main():
             continue
         skills = by_item.get(nid)
         icon = row['icon'] or icon_by_alias(row['name'], byen, icons)
+        ekey = effect_key(skills)
+        effect = (strings.get(ekey, {}).get('English') or '').strip() or None if ekey else None
         rows.append({
             'id': nid,
             'slot': slot,
@@ -100,6 +130,8 @@ def main():
             'icon': icon,
             'skill_ids': skills,
             'rarity_hint': 'legendary' if skills else None,
+            'effect_key': ekey if effect else None,
+            'effect': effect,
         })
 
     path = os.path.join(args.out, 'equipment.json')
@@ -112,6 +144,7 @@ def main():
     print('  by slot:   ', dict(per_slot))
     print('  with icon: ', sum(1 for r in rows if r['icon']))
     print('  with skill:', sum(1 for r in rows if r['skill_ids']))
+    print('  with effect:', sum(1 for r in rows if r['effect']))
 
 
 if __name__ == '__main__':

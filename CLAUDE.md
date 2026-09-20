@@ -29,13 +29,15 @@ python tools/extract_skill_links.py              # skill_links.json      (~5 min
 python tools/dump_prefabs.py                     # prefabs/*.json        (~20 min)
 python tools/build_equipment.py                  # equipment.json        (instant)
 python tools/build_indexes.py                    # named_prefabs/buffs/… (instant)
+python tools/build_item_details.py               # item_details.json     (instant)
 python tools/build_guide.py                      # range-guide.html      (instant)
 ```
 
 Order matters: `build_equipment.py` reads `localization_all.json`, `items_numeric.json` and
 `skill_links.json`; `build_indexes.py` reads `localization_all.json` and `prefabs/`;
-`build_guide.py` reads `guide/*.json`, `localization_all.json`, `items_numeric.json` and
-`extracted/icons/`.
+`build_guide.py` reads `guide/*.json`, `localization_all.json`, `items_numeric.json`,
+`equipment.json` (for legendary effect text) and `extracted/icons/`, so it runs after
+`build_equipment.py`.
 
 `extract_named_sprites.py` exports sprites the main extractor's `ICON_PATTERN` never matched,
 without re-running its 30-minute pass — it consults `sprite_index.json` and opens only the
@@ -134,11 +136,94 @@ from the name, which differs per block: `+1000` for the `1`-`447` item block and
 `200xxx` skill block (`200102` Rain of Arrows: Leonar → `201102`), `+100` for `7301`-`7437`.
 `NUMERIC_DESC_RULES` in `extract_soulknight.py` holds the item ones.
 
+**Legendary effect text — the item → effect link is solved for the `1500xxx` family.**
+Equipment has no `<id>_D`, and older notes here claimed the item → effect mapping was locked in
+the Luban config. It is not, for legendaries:
+
+```
+effect key = 130001 + (skill_id - 1500001) // 10          # build_equipment.effect_key()
+101643 Grandfather Paradox → skill 1500441 → 130045
+```
+
+The `1500xxx` skill prefabs step by 10 and the `130xxx` text block is numbered densely from 1,
+so the two align **by index**. Three items were checked against the game and all three land
+exactly: `1500441` → `130045`, `1500451` Firmament's Caprice → `130046`, `1500431` Iron
+Maidenfan → `130044`. The semantics corroborate the rest (`130003` names a Fire Colossus and
+belongs to Spatha of the Fire Colossus; `130012` rerolls dice and belongs to Pollux Castor).
+Only `1500xxx` is numbered this way — `1550xxx` are secondary skills of the same items and
+`1405291` is unrelated, so the lowest `1500xxx` id wins.
+
+This fills 46 of 806 equipment rows, which previously had **zero** descriptions between them.
+11 of the 57 `130xxx` texts stay unassigned: their prefabs exist in `prefabs/skill.json` but
+their `Desc` field holds an effect name rather than an item name (`1500531` is `火焰吐息焦土`,
+not a product), and 27 legendary-range weapons have no skill link, so there is no bijection to
+fall back on. Do not rank-align these — ask instead. One lead worth checking: `130024` says
+"your weapon become Immaterial and **Anumbral**", and `101616` **Anumbral Blade** has no link.
+
+**Where equipment descriptions are *not*.** All four of these were checked and are dead ends:
+
+- `ITEM_<suffix>_D` — the alias that reliably gives an icon gives **no** description:
+  0 of 550.
+- `148xxx`/`149xxx` (1,312 keys) — a pure *name* block for the textual items. `148114 + 1000`
+  is "Fallen Starwalkers", not a description of "Wayfarer's Tophat".
+- `110001`-`112171` (414 keys, stepping by 10) and `120001`-`120420` — **this one was
+  called wrong here for a while.** It reads like a generic affix pool and nothing in it
+  joins to an item by name (0 matches), but it *does* hold real per-item effect text for
+  the legendaries that have no skill prefab. Confirmed in-game: `110421` ("You become
+  $kuangnu$ whenever you've taken damage equal to {0}% of your max life") is the effect
+  of **both** `101591` Sangrilok Twinblades and `101593` Sangrilok Longbow, and `111061`
+  ("…gain Final Verdict…") is `101628` Valkyrian Scepter. Two facts follow: the mapping
+  is **not** one-to-one, since one text serves several items, and it is not derivable
+  from either id — `101591`→`110421` and `101628`→`111061` share no offset. Unsolved;
+  collect more confirmed pairs before attempting a rule.
+- `95xxx`/`96xxx` — parsing `"<name> Affixia"` does yield a per-item index for 156 items
+  (a different set from the skill route, including the `108726`-`108730` cores), but the text
+  it reaches is fragment boilerplate, not the item's effect.
+
+Ordinary non-legendary equipment has no per-item description anywhere in the APK, and would not:
+in game those items show *rolled* affixes drawn from the `11xxxx` pool by the config. The
+`130xxx` block exists precisely because legendary effects are fixed.
+
 **`$token$` and `{0}` in description text.** `{0}` is a value the game fills in from the
 encrypted config tables — unrecoverable. `$token$` is a glossary reference (`$kuangnu$`) whose
 term table is *also* encrypted. The tokens can be partly recovered from the German and Russian
 columns, which often expand them inline as `Berserker ($kuangnu$)`; `guide/ranger.json` keeps a
 hand-checked glossary of the ones that mattered.
+
+**The `ITEM_*` alias key encodes type, armor class and content tier.** The alias that
+`icon_by_alias()` uses for icons is `ITEM_<W|C><tier?>_<code><digit?>_<id>`, and every
+part of it is meaningful. `build_item_details.py` decodes all of it:
+
+- `W` weapon, `C` everything worn.
+- Second letter is the content tier: none = starting/shop gear, `L` = the named sets,
+  `B` = boss drops (`ITEM_WB_GS_EQB` Grimhowl Battleaxe), `S` = the newest block, whose
+  icons the game downloads rather than ships.
+- On weapons the code is the **weapon type**, and all twelve exist: `SS` Sword & Shield,
+  `GS` Greatsword, `DS` Dual Blades, `LS` Spear & Shield, `SP` Spear, `CB` Crossbow,
+  `BW` Bow, `SQ` Dual Pistols, `ST` Staff, `BK` Focus, `MR` Bangle, `QT` Fist Weapon.
+  `206501`-`206503` group them into Melee / Ranged / Casting.
+- On armor, helms and boots the code is `A`/`H`/`S` plus an armor class 1-3; rings are
+  `R` and necklaces `L`, with no digit.
+
+550 of 806 rows carry an alias. The 256 that do not are the legendary block and the
+`1xx7xx` newest items, so weapon type for a legendary can only be guessed from its name —
+`item_details.json` marks those `weapon_type_source: "name-guess"`.
+
+**A legendary's class comes from its effect text.** Specialization trees are keyed
+`SX_P1_<line><modifier>_<node>` and those two digits *are* the two halves of
+`Info_CLASS_<LINE>_<MODIFIER>`: line `1` WARRIOR, `2` ARCHER, `3` PSYCHIC, `4` STORM,
+`5` LIGHT; modifier `1` GUARD, `2` ROBBER, `3` NATURAL, `4` FLAME, `5` DARK. So branch 22
+is ARCHER_ROBBER = Ranger and 55 is LIGHT_DARK = Riftvoker. Since a legendary's effect
+text almost always names a skill, matching the text against the tree gives the class —
+Grandfather Paradox names Scattershot, so it is Ranger. `S_P1_<line>0_<node>` is the
+shared tree above the five specializations and only pins the line ("Warrior line"), so a
+specialization match must outrank a line match regardless of name length.
+
+**Rarity is not in the APK.** Only the six labels exist, `ITEM_RATE_0`-`_5` (Common,
+Charmed, Rare, Epic, Legendary, Insane). There is no per-item rarity field anywhere. The
+`tier` field in `item_details.json` is a proxy built from the alias family code, plus
+`legendary` for the 46 items that have a `LegendEquipSkill` prefab — that one is not a
+guess, the folder name says so.
 
 **`<key>` / `<key>_D`.** A display name at `<key>` and its description at `<key>_D` is the
 convention for `ITEM_*` keys *and* for prefab names: prefab `S_P1_04_100` is "Pyroclad" and
