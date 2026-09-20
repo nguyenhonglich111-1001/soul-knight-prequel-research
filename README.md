@@ -75,6 +75,12 @@ print([i for i in items if 'Paradox' in i['name']])
     it. See [icon-mapping-plan.md](icon-mapping-plan.md).
   - Items with IDs below `10000` use the ID verbatim under one of `ItemIcon_`, `ItemIcon_spt_`,
     `ICON_SP_`, `UI_SkillIcon_` or `UI_BF_`; `icon_candidates()` tries all of those.
+  - *Skills are different again.* A skill's icon is named after its skill-**tree** key
+    (`SX_P1_22_200`), not the `200xxx` id used everywhere else, so a numeric reference finds
+    nothing. The two keys are bridged by their **Chinese**, which is identical apart from the
+    separator -- their English is not: `200102` is "Rain of Arrows: Leonar" while
+    `SX_P1_22_200` is "Rain of Arrows: Maahes", two transliterations of the same lion (狮).
+    `build_guide.Data.skill_tree_icon()` does this for 175 skills.
   - The remaining ~140 equipment icons are not in the APK at all -- the game downloads them.
 
 ## Equipment effects: where the text actually is

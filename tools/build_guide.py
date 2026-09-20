@@ -38,6 +38,12 @@ SLOT_TAG = re.compile(r'\{(\d+)\}')
 BOLD_TAG = re.compile(r'\*\*(.+?)\*\*')
 CODE_TAG = re.compile(r'`([^`]+)`')
 
+# A skill referenced by its numeric id has no sprite of its own -- icons are named after
+# the skill-*tree* key. The two are joined by their Chinese, which is identical apart
+# from the separator. See `Data.icon_path`.
+TREE_KEY = re.compile(r'^SX?_P\d_\d+_\d+$')
+CN_SEP = re.compile(r'[\s·・:：]+')
+
 
 # --------------------------------------------------------------------------- data
 
@@ -63,11 +69,41 @@ class Data:
         self.icons = {f[:-4]: os.path.join(root, d, f)
                       for d in os.listdir(root)
                       for f in os.listdir(os.path.join(root, d)) if f.endswith('.png')}
+        # normalised Chinese -> skill-tree key that owns a sprite
+        self.by_cn = {}
+        for key, row in self.loc.items():
+            cn = row.get('Chinese')
+            if cn and key in self.icons and TREE_KEY.match(key):
+                self.by_cn.setdefault(CN_SEP.sub('', cn.strip()), key)
         self._b64 = {}
 
     def text(self, key):
         row = self.loc.get(key)
         return (row.get('English') or '').strip() if row else None
+
+    def skill_tree_icon(self, key):
+        """Icon for a skill referenced by its numeric id, via the Chinese column.
+
+        Skill sprites are named after the skill-*tree* key (`SX_P1_22_200`), never after
+        the `200xxx` id the rest of the data uses, so a numeric reference finds nothing.
+        The two keys are the same skill and their Chinese proves it -- `箭雨·狮` against
+        `箭雨 狮`, identical but for the separator.
+
+        Worth knowing *why* this is done on the Chinese: the English columns disagree.
+        `200102` is "Rain of Arrows: Leonar" and `SX_P1_22_200` is "Rain of Arrows:
+        Maahes" -- two transliterations of the same lion (狮), and the tree one is stale.
+        Joining on English would have missed it, and reading only English led to the
+        wrong conclusion that they were different skills.
+
+        Restricted to the `200xxx` block and to tree keys as sources on purpose: that is
+        175 skills matched with no ambiguity, whereas widening it to any sprite-named key
+        starts mapping "Fission" onto the Multishot fatebound because both are 分裂.
+        """
+        if not (key.isdigit() and 200000 <= int(key) < 201000):
+            return None
+        cn = (self.loc.get(key, {}).get('Chinese') or '').strip()
+        tree = self.by_cn.get(CN_SEP.sub('', cn)) if cn else None
+        return self.icons.get(tree) if tree else None
 
     def icon_path(self, key, name):
         """Sprite named after the key -> item-id icon -> `ITEM_*` alias icon.
@@ -89,7 +125,7 @@ class Data:
                 path = self.icons.get('ItemIcon_' + alias[len('ITEM_'):])
                 if path:
                     return path
-        return None
+        return self.skill_tree_icon(key)
 
     def data_uri(self, path):
         if path not in self._b64:

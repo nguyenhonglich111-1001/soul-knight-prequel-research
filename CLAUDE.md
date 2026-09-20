@@ -118,6 +118,10 @@ the broken rule described below.
    it covers 550 rows.
 3. Some sprites are simply named after their key — every Fatebound icon is the sprite named
    after its buff id, e.g. `EBF_SCATTERING`.
+4. **Skills referenced by numeric id have no sprite of their own.** Icons are named after
+   the skill-*tree* key (`SX_P1_22_200`), never the `200xxx` id, so a numeric reference
+   finds nothing. `build_guide.Data.skill_tree_icon()` bridges the two on the Chinese
+   column — 175 skills, no ambiguity. See "Cross-check the Chinese column" below.
 
 The real item → icon table is in the encrypted Luban config and **cannot be recovered**. Do not
 go looking again: `global-metadata.dat` has zero hits for `ItemIcon_`, `iconId` or
@@ -269,6 +273,31 @@ prefab dumps were never mislabelled by this. They were, however, reading stale b
 **`$type`, not `type`.** In `prefabs/*.json` the component's C# class is under `$type`. Several
 MonoBehaviours have their own field literally named `type`, which silently overwrote the class
 name in an earlier version — do not reintroduce that collision.
+
+## Cross-check the Chinese column before trusting an English string
+
+**The English columns are inconsistent; the CJK columns are not.** When two keys look
+like different things in English, compare their `Chinese` before concluding anything.
+This has now caused one wrong call and solved three problems:
+
+- `200102` is "Rain of Arrows: Leonar" and `SX_P1_22_200` is "Rain of Arrows: Maahes".
+  Reading only English, they look like two skills, and this file briefly claimed the
+  Ranger's skill was a different one. Their Chinese is `箭雨·狮` and `箭雨 狮` -- the same
+  lion (狮), separator aside. Two transliterations of one skill; the tree key's English is
+  stale and the game shows the `200xxx` one. All four Rain of Arrows variants pair this
+  way (`山` Ourea, `狮` Leonar, `林` Syl, `炎` Geddon) and only branch 22 disagrees in
+  English.
+- The `$token$` glossary was recovered from German and Russian, which expand tokens
+  inline as `Berserker ($kuangnu$)`.
+- `Data.skill_tree_icon()` joins numeric skill ids to their tree icons on Chinese.
+
+So: **normalise and compare `Chinese` (strip ` ·・:：`) whenever an English mismatch is
+about to become a conclusion.** Prefer it as a join key over English generally -- it is
+the source language, and the translators were not consistent with proper nouns.
+
+The same caution in reverse: Chinese alone over-matches on short generic words. Joining
+*any* sprite-named key on Chinese maps "Fission" onto the Multishot fatebound because
+both are 分裂. Constrain the source set (tree keys only) and the target block.
 
 ## When the data cannot settle it, ask for the game
 
