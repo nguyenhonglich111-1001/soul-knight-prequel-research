@@ -12,7 +12,7 @@
   "reading_note": "Kuma writes ranked lists with `<`, and it means **better than** — `Heart Pendant < Fettered Fury < Censurer's Necklace` means take the Heart Pendant if you can get it, and the Censurer's Necklace is the fallback. Lists below are rewritten best-first so there is nothing to decode.",
   "tldr": [
     "Level on whatever dungeon is ~10 levels above you. Pick Ranger at level 12.",
-    "Scattershot carries you to 60. At 60, switch to the Rain of Arrows: Leonar build.",
+    "Scattershot carries you to 60. At 60, switch to the Cloudpiercer Shot build, with Rain of Arrows: Leonar as its support skill.",
     "Grab any Legendary gear and any projectile Fatebound while levelling — do not overthink it.",
     "Floor 400 is the checkpoint for the mid-game build. Floor 600 unlocks Aeonic.",
     "Save Forge tickets, coins and scrolls. You will want them for the end-game build."
@@ -116,17 +116,23 @@
       "blocks": [
         {
           "type": "prose",
-          "text": "At level 60 the real problems start. Switch to the **Rain of Arrows: Leonar** build — usually called the torrential build — for much better damage. You can copy a leaderboard build wholesale, with three exceptions you should pick yourself: equipment, Fatebounds and Axial Incarnate."
+          "text": "At level 60 the real problems start. Switch to the **Cloudpiercer Shot** build — usually called the torrential build — for much better damage. Cloudpiercer Shot is the main skill; **Rain of Arrows: Leonar** backs it up. You can copy a leaderboard build wholesale, with three exceptions you should pick yourself: equipment, Fatebounds and Axial Incarnate."
         },
         {
           "type": "cards",
           "kind": "skill",
-          "title": "The torrential build",
+          "title": "The Cloudpiercer Shot build",
           "items": [
+            {
+              "key": "200010",
+              "desc_key": "201010",
+              "note": "The build's main skill. Charge it up to pull enemies in and apply Vulnerable — Firmament's Caprice, the weapon below, is built around it.",
+              "featured": true
+            },
             {
               "key": "200102",
               "desc_key": "201102",
-              "note": "The build's core. A creeping rain of arrows that walks toward your cursor — parks damage on a whole room."
+              "note": "Support skill. A creeping rain of arrows that walks toward your target — parks extra damage on the whole room while Cloudpiercer Shot does the heavy lifting."
             },
             {
               "key": "SX_P1_22_030",
@@ -160,7 +166,7 @@
             {
               "slot": "Helmet",
               "as_written": "bishop biretta",
-              "key": "148157"
+              "key": "ITEM_CL_H3_006"
             },
             {
               "slot": "Helmet",
@@ -222,7 +228,8 @@
               "as_written": "Vitality Gear",
               "key": "107702"
             }
-          ]
+          ],
+          "by_slot": true
         },
         {
           "type": "callout",
@@ -283,40 +290,54 @@
             {
               "key": "356",
               "desc_key": "120415",
-              "values": {"0": "20", "2": "0.5"},
+              "values": {
+                "0": "20",
+                "2": "0.5"
+              },
               "as_written": "hades",
               "pieces": [
-                {"key": "68847", "slot": "Top slot"},
-                {"key": "68848", "slot": "Left slot"},
-                {"key": "68849", "slot": "Right slot"}
+                {
+                  "key": "68847",
+                  "slot": "Top slot"
+                },
+                {
+                  "key": "68848",
+                  "slot": "Left slot"
+                },
+                {
+                  "key": "68849",
+                  "slot": "Right slot"
+                }
               ],
               "note": "Kuma's pick once you unlock it."
             },
             {
               "key": "344",
               "desc_key": "120407",
-              "values": {"0": "3/6/10", "1": "6", "2": "3"},
+              "values": {
+                "0": "3/6/10",
+                "1": "6",
+                "2": "3"
+              },
               "as_written": "medusa",
               "pieces": [
-                {"key": "68835", "slot": "Top slot"},
-                {"key": "68836", "slot": "Left slot"},
-                {"key": "68837", "slot": "Right slot"}
+                {
+                  "key": "68835",
+                  "slot": "Top slot"
+                },
+                {
+                  "key": "68836",
+                  "slot": "Left slot"
+                },
+                {
+                  "key": "68837",
+                  "slot": "Right slot"
+                }
               ],
               "note": "Use this first — best ranged damage of the ones you can get early."
-            },
-            {
-              "key": "328",
-              "desc_key": "120401",
-              "values": {"0": "2/4/8", "1": "1/2/3", "2": "1/2/3", "3": "5"},
-              "as_written": "boar king",
-              "pieces": [
-                {"key": "68819", "slot": "Top slot"},
-                {"key": "68820", "slot": "Left slot"},
-                {"key": "68821", "slot": "Right slot"}
-              ]
             }
           ],
-          "footnote": "In-game these are named after the Incarnate, not the boss: Hades is the Tartarean Pantocrator, Medusa is Lamian, Boar King is Bouldarch."
+          "footnote": "In-game these are named after the Incarnate, not the boss: Hades is the Tartarean Pantocrator, Medusa is Lamian."
         },
         {
           "type": "prose",
@@ -329,8 +350,8 @@
         },
         {
           "type": "prose",
-          "title": "Why the torrential build?",
-          "text": "1. It does not need high spec levels or tight restrictions to put out big damage.\n2. It combines two skills whose specs stack into higher damage.\n3. It is not as laggy as the Razorward or Scattershot builds.\n4. It is easy to play.\n5. Bows are cool."
+          "title": "Why the Cloudpiercer Shot build?",
+          "text": "1. It does not need high spec levels or tight restrictions to put out big damage.\n2. It combines Cloudpiercer Shot and Rain of Arrows, whose specs stack into higher damage.\n3. It is not as laggy as the Razorward or Scattershot builds.\n4. It is easy to play.\n5. Bows are cool."
         }
       ]
     },
@@ -360,27 +381,27 @@
       "blocks": [
         {
           "type": "prose",
-          "text": "There are three Ranger builds. Once you have cleared floor 400 on the torrential build you can try the other two, or not — nobody is checking."
+          "text": "There are three Ranger builds. Once you have cleared floor 400 on the Cloudpiercer Shot build you can try the other two, or not — nobody is checking."
         },
         {
           "type": "cards",
           "kind": "skill",
           "items": [
             {
-              "key": "200102",
-              "desc_key": "201102",
-              "note": "**Torrential.** Kuma's recommendation and the build this guide is built around.",
-              "featured": true
+              "key": "200010",
+              "desc_key": "201010",
+              "featured": true,
+              "note": "**Cloudpiercer Shot** — the game calls this build “Arrow Monsoon”, with **Rain of Arrows: Leonar** as support. Kuma's recommendation and the build this guide is built around."
             },
             {
               "key": "SX_P1_22_100",
               "desc_key": "201098",
-              "note": "**Scattershot.** What you level on. Falls off once you have real gear."
+              "note": "**Scattershot** — in game, “Scattered Aurora”. What you level on. Falls off once you have real gear."
             },
             {
               "key": "SX_P1_22_001",
               "desc_key": "201100",
-              "note": "**Razorward** — the guide calls it Razorwind. Strong, but the projectile count makes it laggy."
+              "note": "**Razorward** — in game, “Razor Hazard”. Strong, but the projectile count makes it laggy."
             }
           ]
         },
@@ -389,6 +410,10 @@
           "kind": "skill",
           "title": "The rest of the branch",
           "items": [
+            {
+              "key": "200102",
+              "desc_key": "201102"
+            },
             {
               "key": "SX_P1_22_002",
               "desc_key": "201101"
@@ -410,5 +435,5 @@
       ]
     }
   ],
-  "limits": "Damage numbers are missing from every description on this page — they show as `?`. The game keeps item and skill values in encrypted Luban config tables inside `code_dll.bundle`, which has not been decrypted. Names, effect text and icons all come from the readable parts of the APK. A handful of items and the newest skills have no icon because their sprites are not shipped inside the 1.13.0 APK at all."
+  "limits": "Numbers shown in gold were read off in-game codex screenshots at Lv.1. Every other number shows as `?`. The game keeps item and skill values in encrypted Luban config tables inside `code_dll.bundle`, which has not been decrypted. Names, effect text and icons all come from the readable parts of the APK. A handful of items and the newest skills have no icon because their sprites are not shipped inside the 1.13.0 APK at all."
 }

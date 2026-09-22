@@ -60,6 +60,20 @@ class Data:
         eq = os.path.join(out, 'equipment.json')
         eq = json.load(open(eq, encoding='utf8')) if os.path.exists(eq) else []
         self.effects = {str(r['id']): r['effect'] for r in eq}
+        # Lv.1 `{n}` values read off the codex, positional: [v0, v1, ...] fills {0}, {1}, ...
+        self.effect_values = {str(r['id']): r['effect_values_lv1'] for r in eq
+                              if r.get('effect_values_lv1')}
+        # effect_map.json also holds items only known by their `ITEM_*` key (Bishop's
+        # Biretta), which have no numeric equipment row for build_equipment.py to fill.
+        emap = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'guide',
+                            'effect_map.json')
+        if os.path.exists(emap):
+            for k, v in json.load(open(emap, encoding='utf8'))['confirmed'].items():
+                text = (self.loc.get(v['key']) or {}).get('English')
+                if text and k not in self.effects:
+                    self.effects[k] = text
+                if v.get('lv1') and k not in self.effect_values:
+                    self.effect_values[k] = v['lv1']
         # Equipment icons as build_equipment.py settled them: guide/icon_map.json (checked
         # in game, or derived from checked pairs) before the `ITEM_*` alias rule.
         self.equip_icons = {str(r['id']): os.path.join(out, 'icons', r['icon'])
@@ -156,10 +170,14 @@ class Data:
                     break
         if not desc:
             desc = (self.numeric.get(key) or {}).get('description') or None
+        values = None
         if not desc:
             desc = self.effects.get(key) or None
+            if desc and self.effect_values.get(key):
+                values = {str(i): (f'{v:g}' if isinstance(v, (int, float)) else v)
+                          for i, v in enumerate(self.effect_values[key])}
         path = self.icon_path(key, name)
-        return {'name': name, 'desc': desc,
+        return {'name': name, 'desc': desc, 'values': values,
                 'icon': self.data_uri(path) if path else None,
                 'icon_name': os.path.basename(path) if path else None}
 
@@ -226,7 +244,7 @@ class Renderer:
                          f'{html.escape(short)}</span>{slot}</div>')
         return f'<div class="pieces">{"".join(tiles)}</div>'
 
-    def card(self, entry, kind, rank=None):
+    def card(self, entry, kind, rank=None, show_slot=True):
         r = self.d.resolve(entry)
         shown = entry.get('as_written')
         if entry.get('key') and not r['name']:
@@ -250,20 +268,18 @@ class Renderer:
         bits.append('<div class="card-title">')
         bits.append(f'<h4>{html.escape(name)}</h4>')
         meta = []
-        if slot:
+        if slot and show_slot:
             pip = f'<img class="pip" src="{slot_uri}" alt="">' if slot_uri else ''
             meta.append(f'<span class="slot">{pip}{html.escape(slot)}</span>')
         if rank:
             meta.append(f'<span class="rank">{rank}</span>')
         if entry.get('calamity'):
             meta.append('<span class="cal">Calamity</span>')
-        if shown and r['name'] and shown.lower() != r['name'].lower():
-            meta.append(f'<span class="aka">guide calls it &ldquo;{html.escape(shown)}&rdquo;</span>')
         if meta:
             bits.append(f'<div class="meta">{"".join(meta)}</div>')
         bits.append('</div></div>')
         if r['desc']:
-            bits.append(f'<p class="desc">{self.rt(r["desc"], entry.get("values"))}</p>')
+            bits.append(f'<p class="desc">{self.rt(r["desc"], entry.get("values") or r["values"])}</p>')
         if entry.get('pieces'):
             bits.append(self.pieces(entry['pieces']))
         if entry.get('note'):
@@ -300,15 +316,27 @@ class Renderer:
             counts = collections.Counter(e.get('slot') for e in b['items'] if e.get('slot'))
             seen = collections.Counter()
             cards = []
+            rows = {}  # slot -> [card html], in first-seen order
             for e in b['items']:
                 slot, rank = e.get('slot'), None
                 if slot and counts[slot] > 1:
                     seen[slot] += 1
                     rank = ORDINALS[min(seen[slot], len(ORDINALS)) - 1]
-                cards.append(self.card(e, b['kind'], rank))
-            cards = ''.join(cards)
+                if b.get('by_slot') and slot:
+                    rows.setdefault(slot, []).append(self.card(e, b['kind'], rank, show_slot=False))
+                else:
+                    cards.append(self.card(e, b['kind'], rank))
             foot = (f'<p class="foot">{self.rt(b["footnote"])}</p>' if b.get('footnote') else '')
-            return f'{head}<div class="grid">{cards}</div>{foot}'
+            if rows:
+                # One line per slot, best pick leftmost, so the ranking reads left to right.
+                lines = []
+                for slot, row in rows.items():
+                    pip = (f'<img class="pip" src="{self.d.data_uri(self.d.icons[SLOT_ICON[slot]])}" alt="">'
+                           if SLOT_ICON.get(slot) in self.d.icons else '')
+                    lines.append(f'<div class="slotrow"><div class="slotlabel">{pip}'
+                                 f'{html.escape(slot)}</div><div class="rowcards">{"".join(row)}</div></div>')
+                return f'{head}<div class="slotrows">{"".join(lines)}</div>{foot}'
+            return f'{head}<div class="grid">{"".join(cards)}</div>{foot}'
         raise ValueError(f'unknown block type {kind!r}')
 
     def render(self):
@@ -443,6 +471,20 @@ code {{ font-family:var(--mono); font-size:.87em; color:var(--charmed);
 }}
 
 .grid {{ display:grid; gap:12px; grid-template-columns:repeat(auto-fill,minmax(296px,1fr)); }}
+.slotrows {{ display:flex; flex-direction:column; gap:14px; }}
+.slotrow {{ display:grid; grid-template-columns:104px 1fr; gap:12px; align-items:start; }}
+.slotlabel {{
+  display:flex; align-items:center; gap:7px; padding-top:18px;
+  font-family:var(--mono); font-size:12px; font-weight:600; color:var(--dim);
+  text-transform:uppercase; letter-spacing:.08em;
+}}
+.slotlabel .pip {{ width:16px; height:16px; }}
+.rowcards {{ display:grid; gap:12px; grid-template-columns:repeat(3,minmax(0,1fr)); }}
+@media (max-width:900px) {{
+  .slotrow {{ grid-template-columns:1fr; gap:6px; }}
+  .slotlabel {{ padding-top:0; }}
+  .rowcards {{ grid-template-columns:1fr; }}
+}}
 .card {{
   background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:15px;
   display:flex; flex-direction:column; gap:10px;
@@ -473,7 +515,6 @@ code {{ font-family:var(--mono); font-size:.87em; color:var(--charmed);
 }}
 .cal {{ background:rgba(232,80,72,.16); color:var(--insane)!important; }}
 .rank {{ background:rgba(250,170,63,.15); color:var(--legendary)!important; }}
-.aka {{ font-style:italic; }}
 .desc {{ margin:0; font-size:14.5px; color:#bfc5d6; }}
 .note {{
   margin:0; font-size:14px; color:var(--dim);
