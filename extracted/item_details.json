@@ -5508,7 +5508,7 @@
   "tier": "legendary",
   "class": "Archer line",
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1644000.png",
   "skill_ids": [
    "1500451"
   ],
@@ -13873,7 +13873,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_8300000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -13891,7 +13891,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_8400000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -13909,10 +13909,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_8401000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111261",
+  "effect": "Your Attack Power and max life increase by {1}% and {2}% respectively via consuming {0}% of your current life when using the Recuperation talent skill, stacking up to {3} times. The effect lasts until you enter a new zone."
  },
  {
   "id": 107703,
@@ -13927,7 +13927,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_8402000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -13945,10 +13945,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_8403000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111281",
+  "effect": "Increase your next {0} skill damage by {1}% when using the Speedy Cooldown talent skill."
  },
  {
   "id": 107705,
@@ -13963,7 +13963,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_8404000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -13981,7 +13981,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_8405000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -13999,7 +13999,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_8406000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -14017,7 +14017,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_8407000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -14035,10 +14035,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_8408000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111071",
+  "effect": "Increases Awakened skill damage by {0}%. After using a talent skill, replenish {1} points of Soulforce for every 1s of that skill's base CD."
  },
  {
   "id": 108401,

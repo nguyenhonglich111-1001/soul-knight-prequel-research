@@ -18,6 +18,9 @@
   "106441": {"key": "110241", "name": "Censurer's Necklace", "source": "screenshot IMG_6192", "lv1": [8]},
   "106728": {"key": "110671", "name": "Fettered Fury", "source": "screenshot IMG_6194", "lv1": [4, 3, 5]},
   "106733": {"key": "110901", "name": "Heart Pendant", "source": "screenshot IMG_6193", "lv1": [13.5]},
+  "107702": {"key": "111261", "name": "Vitality Gear", "source": "screenshot IMG_6235 (says \"talent skill\", so not the \"Chip\" twin 110561)", "lv1": [10, 2.5, 1.5, 3]},
+  "107704": {"key": "111281", "name": "Clockwork Gear", "source": "screenshot IMG_6237 (says \"talent skill\", so not the \"Chip\" twin 110563)", "lv1": [1, 40.5]},
+  "107709": {"key": "111071", "name": "Soulforce Clockwork", "source": "screenshot IMG_6236", "lv1": [11, 1]},
   "108701": {"key": "110567", "name": "Hellhound Claw", "source": "screenshot IMG_6197", "lv1": [120, 1.5, 1, 21.5]},
   "108708": {"key": "111081", "name": "Leaf of Yggdrasil", "source": "screenshot IMG_6198", "lv1": [500, 8, 150, 1.5, 15]},
   "ITEM_CL_H3_006": {"key": "110021", "name": "Bishop's Biretta", "source": "screenshot IMG_6185", "lv1": [5.5, 13.5]}

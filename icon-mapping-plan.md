@@ -2,7 +2,7 @@
 
 **Status:** the broken formula is gone (2026-09-22). Equipment icons now come from the `ITEM_*`
 alias rule, or from a hand-checked table ([guide/icon_map.json](guide/icon_map.json)), or not at
-all. What's still open is **coverage**: 226 of 806 rows have no icon, and more screenshots are
+all. What's still open is **coverage**: 215 of 806 rows have no icon, and more screenshots are
 the only way to close that.
 
 ## The bug
@@ -46,19 +46,22 @@ items had been checked. Against the 10 numeric items from the 2026-09-22 screens
 | Leaf of Yggdrasil | `108708` | **`9407`** | — | — |
 
 Cores aren't even in the `8xxx` sprite series the plan assumed. They are `94xx`, which the
-survey never looked at, and it wrongly rejected the whole slot.
+survey never looked at, and it wrongly rejected the whole slot. `8xxx` turned out to be mech
+gear (`107702` Vitality Gear → `8401`), and the `75xx` sprites the survey called gear are
+Voidlock materials.
 
 ## What replaced it
 
-1. **`guide/icon_map.json`, `confirmed`**: pairs checked against the game. 17 entries: the four
-   helmets from 2026-09-21, and 14 codex screenshots from 2026-09-22 (Crown of the Martial Saint
-   is in both). No tool rewrites them.
+1. **`guide/icon_map.json`, `confirmed`**: pairs checked against the game. 23 entries: the four
+   helmets from 2026-09-21, 17 codex screenshots from 2026-09-22 (Crown of the Martial Saint
+   is in both), and three the user picked off contact sheets (Firmament's Caprice, Arcane
+   Gear, Warpdrive Gear). No tool rewrites them.
 2. **`derived`**: `tools/build_icon_map.py` fills items that sit between two confirmed pairs of
    the same slot. It only does this when both ends have **the same offset** and every item and
    sprite in between exists. Then the gap has exactly as many items as sprites, and (assuming
    the art never runs backwards against the IDs, which every check so far bears out) there is
-   only one way to fill it. That gives 15 items: `103465`-`103466`, `102455`-`102461` and
-   `108702`-`108707`. When the offsets differ, a sprite was skipped somewhere inside and the
+   only one way to fill it. That gives 20 items: `103465`-`103466`, `102455`-`102461`,
+   `107703`, `107705`-`107708` and `108702`-`108707`. When the offsets differ, a sprite was skipped somewhere inside and the
    script leaves the whole gap blank: `106728` → `6454` and `106733` → `6458` leave four
    necklaces for three sprites.
 3. **`--check`** re-derives and fails on any drift, on a confirmed sprite that isn't extracted,
@@ -68,7 +71,7 @@ survey never looked at, and it wrongly rejected the whole slot.
    neither computes a sprite name from an ID. `equipment.json` records `icon_source`
    (`alias` / `confirmed` / `derived`).
 
-Counts: 580 of 806 rows have an icon (549 alias, 16 confirmed, 15 derived). Before the fix it was
+Counts: 591 of 806 rows have an icon (549 alias, 22 confirmed, 20 derived). Before the fix it was
 665, but 115 of those came from the formula.
 
 ## Getting more
@@ -91,11 +94,17 @@ every `{n}` filled in. Record that in [guide/effect_map.json](guide/effect_map.j
 inside a run of consecutive IDs, so that two screenshots with equal offsets settle everything
 between them:
 
-- **Weapons** have no confirmed pair at all. Screenshots at both ends of `101591`-`101655` would
-  settle up to 60 items in one go, if the offsets match. Firmament's Caprice (`101644`) is in the
-  guide and currently has no icon.
-- **Mech gear** has 8 sprites `7501`-`7508` and no checks. Vitality Gear (`107702`) is in the
-  guide.
+- **Weapons** have one confirmed item, `101644` Firmament's Caprice → `1644000` (offset 0). One
+  more weapon with offset 0 fills everything between the two; ones near both ends of
+  `101591`-`101655` settle up to 60 items. The gourd at `1646000` and the moon at `1647000` hint
+  that Panthalassic Gourd (`101646`) and Argent Lunarium (`101647`) are offset 0 as well.
+- **Mech gear is the `84xx` series**, not `75xx`. The 8 sprites `ItemIcon_7501000`-`7508000`
+  are the Voidlock materials (localization keys `7501`-`7508`, Lesser Voidlock … Voidal Armor
+  Hephaestite). Three screenshots confirm `1077nn` → `84(nn-1)`: Vitality Gear `107702` →
+  `8401`, Clockwork Gear `107704` → `8403`, Soulforce Clockwork `107709` → `8408`, so
+  `107703`-`107708` are derived. The user confirmed `107701` Warpdrive Gear → `8400` and
+  `107501` Arcane Gear → `8300` from the contact sheet, so gear mirrors the core layout
+  (`9300` / `9400`+). Only `107401` Rusty Gear is open; `8200` is the candidate.
 - **Helm** `103445`-`103463` and **armor** `102446`-`102451`: one screenshot near the low end of
   each would extend the derived runs.
 - **Necklace** `106729`-`106732`: one screenshot in the middle resolves the ambiguous gap.

@@ -157,12 +157,6 @@
             },
             {
               "slot": "Helmet",
-              "as_written": "head piece of skolgul",
-              "key": null,
-              "note": "Could not match this to anything in the game files. Closest candidates are **Sangrilok Helm** and **Headpiece of the Eternal Hunt**."
-            },
-            {
-              "slot": "Helmet",
               "as_written": "tophat",
               "key": "103467"
             },
@@ -268,9 +262,8 @@
               "as_written": "Gathering storm"
             },
             {
-              "key": null,
-              "as_written": "Mortal combo",
-              "note": "No Fatebound in the game files matches this name. Possibly a community name for a Combo-based node."
+              "key": "EBF_SUPERB_CHARGE",
+              "as_written": "Mortal combo"
             }
           ],
           "footnote": "Marked nodes are the ones worth putting **Calamity** on if you can manage it."

@@ -107,7 +107,14 @@ id>/` and reuse the same leading digit, and by the 7xxx/8xxx name blocks themsel
 Arcane / Vitality **Gear**; Leaf of Yggdrasil and the other **cores**). IDs below `10000` use
 the ID verbatim under one of five prefixes — see `icon_candidates()`. Careful: the *sprite*
 numbers do not follow the slot digit everywhere — core icons are `ItemIcon_94xx000`
-(`108701` Hellhound Claw is `9400000`), not `87xx` or `84xx`.
+(`108701` Hellhound Claw is `9400000`), not `87xx`. And `ItemIcon_7501000`-`7508000`
+are **not** mech gear: they are the Voidlock materials of loc keys `7501`-`7508`. Mech gear
+is the `84xx` series: `1077nn` → `84(nn-1)`, confirmed by three exact screenshot matches
+(`107702` → `8401`, `107704` → `8403`, `107709` → `8408`). So gear sprites are `8xxx` and core
+sprites `9xxx`, one digit above the slot, and the two runs look parallel (`8200`/`8300`/
+`8400`-`8418` against `9200`/`9300`/`9400`-`9420`). Arcane Gear → `8300` and Warpdrive Gear →
+`8400` are user-confirmed; Rusty Gear → `8200` is the one gear still unchecked. Several gear effects have a `Chip` twin a few keys
+away (`110561`/`111261`, `110563`/`111281`); the codex shows the `talent skill` one.
 
 **Finding an item's icon.** See [icon-mapping-plan.md](icon-mapping-plan.md) for the history.
 
@@ -195,7 +202,7 @@ fall back on. Do not rank-align these — ask instead. One lead worth checking: 
   of **both** `101591` Sangrilok Twinblades and `101593` Sangrilok Longbow, and `111061`
   ("…gain Final Verdict…") is `101628` Valkyrian Scepter. Two facts follow: the mapping
   is **not** one-to-one, since one text serves several items, and it is not derivable
-  from either id. 14 more pairs were read off screenshots on 2026-09-22 (e.g. `102452`
+  from either id. 17 more pairs were read off screenshots on 2026-09-22 (e.g. `102452`
   → `110549`, `102453` → `111161`, `108701` → `110567`, `108708` → `111081`) and still
   show no pattern: neighbouring items land thousands of keys apart. So these are
   **collected, not derived** — [guide/effect_map.json](guide/effect_map.json) holds every

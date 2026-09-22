@@ -22,6 +22,8 @@ Once hitting lvl 50 do any Pandora labyrinth that has projectiles fatebounds
 Onslaught too
 
 Some insane weapon for the class also start dropping here. Even if the insane is normal and you got a prime weapon. YOU should STILL use the insane weapon
+
+
 stage 2 : early-midgame
 Once you reach level 60, the problem just started. Switch your build into torrential torrent build for better damage.
 you can copy some of leaderboard build if you're TO DUMB TO UNDERSTAND, except equipment gears, fatebound and axial incarnate
