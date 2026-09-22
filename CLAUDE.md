@@ -199,7 +199,9 @@ Only `1500xxx` is numbered this way — `1550xxx` are secondary skills of the sa
 `1405291` is unrelated, so the lowest `1500xxx` id wins.
 
 This fills 46 of 806 equipment rows, which previously had **zero** descriptions between them.
-11 of the 57 `130xxx` texts stay unassigned: their prefabs exist in `prefabs/skill.json` but
+`130056` (Scorching Breath) belongs to `101653` Prairie Fire and Rending Earth, which has no
+skill prefab — confirmed by screenshot, so the other orphans can have owners too. 10 of the 57
+`130xxx` texts stay unassigned: their prefabs exist in `prefabs/skill.json` but
 their `Desc` field holds an effect name rather than an item name (`1500531` is `火焰吐息焦土`,
 not a product), and 27 legendary-range weapons have no skill link, so there is no bijection to
 fall back on. Do not rank-align these — ask instead. One lead worth checking: `130024` says
@@ -259,8 +261,16 @@ part of it is meaningful. `build_item_details.py` decodes all of it:
   `R` and necklaces `L`, with no digit.
 
 550 of 806 rows carry an alias. The 256 that do not are the legendary block and the
-`1xx7xx` newest items, so weapon type for a legendary can only be guessed from its name —
-`item_details.json` marks those `weapon_type_source: "name-guess"`.
+`1xx7xx` newest items. Their weapon type comes from the **in-game codex tabs** instead:
+[guide/weapon_types.json](guide/weapon_types.json) holds 43 weapons typed by pixel-matching
+the user's per-tab Codex of Equipment screenshots (IMG_6261-6273; one tab per weapon type) and
+mapping each sprite to its item through `icon_map.json`. Grid geometry on a 2868x1320 shot:
+8 columns, pitch 229.4 px, rows at y = 325 / 771 / 993, rightmost cell origin x = 2165, 6.48 px
+per sprite pixel. Owned cells match in colour; "Unowned" cells are greyscale, so match on
+luminance correlation over sprite rows 0-12 (the label covers the rest). Every alias-typed
+weapon seen in those grids sat in its own tab (~95 checks, 0 misses), and a legendary's type
+is often not what its name suggests (Grandfather Paradox is **Dual Pistols**). Only 9 remain
+`weapon_type_source: "name-guess"`; `build_item_details.py` reports any codex/alias clash.
 
 **A legendary's class comes from its effect text.** Specialization trees are keyed
 `SX_P1_<line><modifier>_<node>` and those two digits *are* the two halves of

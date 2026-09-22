@@ -8417,16 +8417,18 @@
    "Portuguese (Brazil)": "Roda Moiraica",
    "Spanish (Latin America)": "Rueda de las Moiras"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1639000.png",
+  "icon_source": "confirmed",
   "skill_ids": [
    "1500411"
   ],
   "rarity_hint": "legendary",
   "effect_key": "130042",
   "effect": "Each hurled shield deals {0}% more initial damage.",
-  "effect_source": "skill-link",
-  "effect_values_lv1": null
+  "effect_source": "confirmed",
+  "effect_values_lv1": [
+   160
+  ]
  },
  {
   "id": 101641,
@@ -8447,16 +8449,19 @@
    "Portuguese (Brazil)": "Badalada Leteana",
    "Spanish (Latin America)": "Toque fúnebre de Lete"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1640000.png",
+  "icon_source": "confirmed",
   "skill_ids": [
    "1500421"
   ],
   "rarity_hint": "legendary",
   "effect_key": "130043",
   "effect": "Casting Warcry can consume up to {0} mana. Deals {1}% more damage for each point of mana consumed. This weapon also enables the Amplifier Specialization.",
-  "effect_source": "skill-link",
-  "effect_values_lv1": null
+  "effect_source": "confirmed",
+  "effect_values_lv1": [
+   16,
+   12
+  ]
  },
  {
   "id": 101642,
@@ -8477,8 +8482,8 @@
    "Portuguese (Brazil)": "Donzela de Ferro",
    "Spanish (Latin America)": "Abanico de hierro"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1641000.png",
+  "icon_source": "confirmed",
   "skill_ids": [
    "1500431"
   ],
@@ -8805,13 +8810,17 @@
    "Spanish (Latin America)": "Fisura ardiente de la pradera"
   },
   "icon": "ItemIcon/ItemIcon_1653000.png",
-  "icon_source": "derived",
+  "icon_source": "confirmed",
   "skill_ids": null,
   "rarity_hint": null,
-  "effect_key": null,
-  "effect": null,
-  "effect_source": null,
-  "effect_values_lv1": null
+  "effect_key": "130056",
+  "effect": "Scorching Breath leaves behind a trail of scorched earth. Enemies within the scorched earth take Fire Damage equal to {1}% of Scorching Breath's damage every {0}s. Scorching Breath deals {2}% more damage.",
+  "effect_source": "confirmed",
+  "effect_values_lv1": [
+   0.5,
+   120,
+   240
+  ]
  },
  {
   "id": 101654,

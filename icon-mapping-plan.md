@@ -2,7 +2,7 @@
 
 **Status:** the broken formula is gone (2026-09-22). Equipment icons now come from the `ITEM_*`
 alias rule, or from a hand-checked table ([guide/icon_map.json](guide/icon_map.json)), or not at
-all. What's still open is **coverage**: 156 of 806 rows have no icon, and more screenshots are
+all. What's still open is **coverage**: 153 of 806 rows have no icon, and more screenshots are
 the only way to close that.
 
 ## The bug
@@ -71,7 +71,7 @@ Voidlock materials.
    neither computes a sprite name from an ID. `equipment.json` records `icon_source`
    (`alias` / `confirmed` / `derived`).
 
-Counts: 650 of 806 equipment rows have an icon (549 alias, 36 confirmed, 65 derived). The map
+Counts: 653 of 806 equipment rows have an icon (549 alias, 40 confirmed, 64 derived). The map
 also holds 32 Axial Incarnate pieces and 2 Axial Urges (see CLAUDE.md). Before the fix it was
 665, but 115 of those came from the formula.
 
@@ -102,9 +102,14 @@ between them:
   Tome of True Martial has no sprite, and from there the art runs one behind the ID —
   `101637` Branding Twinlash → `1636`, `101638` Sheol's Gavel → `1637`, `101639` Searing Gyves
   → `1638` (screenshots). A contact sheet labelled by ID put the wrong names on exactly these,
-  which is how it was caught — never trust a derived label past a known gap. Open:
-  `101640`-`101642` against unclaimed `1639`-`1641` (Moiraic Wheel and Lethean Knell are not in
-  the user's codex). The gourd at `1646000` and the moon at `1647000` hint
+  which is how it was caught — never trust a derived label past a known gap. Moiraic Wheel
+  `101640` → `1639` and Lethean Knell `101641` → `1640` (screenshots) continue the −1 run. Iron
+  Maidenfan `101642` → `1641` (user-confirmed from the Spear & Shield tab). Only two weapon
+  sprites are still unclaimed, `1617` and `1618` (IDs `101617`/`101618` have no item name);
+  Anumbral Blade `101616` is the likely owner of one, but it is not in the user's codex and
+  neither sprite could be confirmed (2026-09-22) -- **closed; do not ask again**. The 8 weapons without icons are Anumbral
+  Blade, Tome of True Martial, Vinebranch Saber, Silent Shadow Shortsword and the four Krisclaw
+  weapons. The gourd at `1646000` and the moon at `1647000` hint
   that Panthalassic Gourd (`101646`) and Argent Lunarium (`101647`) are offset 0 as well.
 - **Mech gear is the `84xx` series**, not `75xx`. The 8 sprites `ItemIcon_7501000`-`7508000`
   are the Voidlock materials (localization keys `7501`-`7508`, Lesser Voidlock … Voidal Armor

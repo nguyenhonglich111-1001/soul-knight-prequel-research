@@ -120,6 +120,10 @@ def build(out):
         if row.get('English'):
             byen[row['English']].append(key)
     cidx = class_index(loc)
+    # Weapon types read off the in-game codex tabs (guide/weapon_types.json). They beat a
+    # name guess; an alias type is from the item's own key, so a disagreement is reported.
+    wt = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'guide', 'weapon_types.json')
+    codex = json.load(open(wt, encoding='utf8'))['confirmed'] if os.path.exists(wt) else {}
 
     rows = []
     for r in eq:
@@ -130,6 +134,11 @@ def build(out):
             fam = kind + sub
         wtype = WEAPON_TYPE.get(code) if r['slot'] == 'weapon' else None
         source = 'alias' if wtype else None
+        seen = codex.get(str(r['id']), {}).get('type')
+        if seen and wtype and seen != wtype:
+            print(f"  CODEX DISAGREES: {r['id']} {r['name']}: alias {wtype}, codex tab {seen}")
+        if seen and not wtype:
+            wtype, source = seen, 'codex'
         if r['slot'] == 'weapon' and not wtype:
             wtype = type_from_name(r['name'])
             source = 'name-guess' if wtype else None
