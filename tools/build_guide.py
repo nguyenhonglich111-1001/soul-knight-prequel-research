@@ -79,6 +79,13 @@ class Data:
             cn = row.get('Chinese')
             if cn and key in self.icons and TREE_KEY.match(key):
                 self.by_cn.setdefault(CN_SEP.sub('', cn.strip()), key)
+        # Hand-checked key -> sprite pairs for things whose sprite is not named after
+        # their key (Axial Incarnate pieces are `Incarnation_NN`). See icon-mapping-plan.md.
+        imap = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'guide', 'icon_map.json')
+        imap = json.load(open(imap, encoding='utf8')) if os.path.exists(imap) else {}
+        self.mapped_icons = {k: self.icons[v['icon']]
+                             for part in ('confirmed', 'derived')
+                             for k, v in imap.get(part, {}).items() if v['icon'] in self.icons}
         self._b64 = {}
 
     def text(self, key):
@@ -120,6 +127,8 @@ class Data:
             return self.icons[key]
         if key in self.equip_icons:
             return self.equip_icons[key]
+        if key in self.mapped_icons:
+            return self.mapped_icons[key]
         for alias in self.by_en.get(name or '', ()):
             if alias.startswith('ITEM_'):
                 path = self.icons.get('ItemIcon_' + alias[len('ITEM_'):])
@@ -158,18 +167,24 @@ class Data:
 # --------------------------------------------------------------------------- text
 
 
-def rich(text, glossary):
+def rich(text, glossary, values=None):
     """Game markup and guide markup -> HTML.
 
     `<color=#RRGGBBAA>` is Unity's rich text. `{0}` is a value the game fills in from the
     encrypted config tables, so it can only be shown as an unknown. `$token$` is a
     glossary reference whose term table is also encrypted -- `glossary` in the guide file
-    supplies the ones that could be recovered from context."""
+    supplies the ones that could be recovered from context. `values` fills `{n}` with what
+    an in-game screenshot showed, where the guide file records it."""
     if not text:
         return ''
     out = html.escape(text)
     out = COLOR_TAG.sub(r'<span style="color:#\1">\2</span>', out)
-    out = SLOT_TAG.sub('<span class="unk" title="value lives in the encrypted config">?</span>', out)
+    values = values or {}
+    out = SLOT_TAG.sub(
+        lambda m: (f'<span class="val" title="read off an in-game screenshot">'
+                   f'{html.escape(str(values[m.group(1)]))}</span>' if m.group(1) in values
+                   else '<span class="unk" title="value lives in the encrypted config">?</span>'),
+        out)
     out = TERM_TAG.sub(
         lambda m: (f'<span class="term">{html.escape(glossary[m.group(1)])}</span>'
                    if m.group(1) in glossary
@@ -191,8 +206,25 @@ class Renderer:
         self.unresolved = []
         self.no_icon = []
 
-    def rt(self, text):
-        return rich(text, self.glossary)
+    def rt(self, text, values=None):
+        return rich(text, self.glossary, values)
+
+    def pieces(self, entries):
+        """A row of small icon + name tiles, e.g. an Axial Incarnate's three slots."""
+        tiles = []
+        for e in entries:
+            r = self.d.resolve(e)
+            if not r['icon']:
+                self.no_icon.append(r['name'] or e['key'])
+            name = r['name'] or e['key']
+            # "Lamian: Ghastly Malocchio" -> "Ghastly Malocchio"; the card already names Lamian.
+            short = name.split(':', 1)[1].strip() if ':' in name else name
+            icon = (f'<img class="ic" src="{r["icon"]}" alt="">' if r['icon']
+                    else '<span class="ic-missing" title="icon not shipped in this APK"></span>')
+            slot = f'<span class="piece-slot">{html.escape(e["slot"])}</span>' if e.get('slot') else ''
+            tiles.append(f'<div class="piece">{icon}<span class="piece-name">'
+                         f'{html.escape(short)}</span>{slot}</div>')
+        return f'<div class="pieces">{"".join(tiles)}</div>'
 
     def card(self, entry, kind, rank=None):
         r = self.d.resolve(entry)
@@ -231,7 +263,9 @@ class Renderer:
             bits.append(f'<div class="meta">{"".join(meta)}</div>')
         bits.append('</div></div>')
         if r['desc']:
-            bits.append(f'<p class="desc">{self.rt(r["desc"])}</p>')
+            bits.append(f'<p class="desc">{self.rt(r["desc"], entry.get("values"))}</p>')
+        if entry.get('pieces'):
+            bits.append(self.pieces(entry['pieces']))
         if entry.get('note'):
             bits.append(f'<p class="note">{self.rt(entry["note"])}</p>')
         bits.append('</div>')
@@ -451,6 +485,15 @@ code {{ font-family:var(--mono); font-size:.87em; color:var(--charmed);
   color:var(--faint); border-radius:4px; font-family:var(--mono); font-size:12px;
   padding:0 4px; cursor:help;
 }}
+.val {{ color:var(--legendary); font-weight:600; cursor:help; }}
+.pieces {{ display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }}
+.piece {{
+  background:var(--bg); border-radius:10px; padding:10px 6px 8px;
+  display:flex; flex-direction:column; align-items:center; gap:6px; text-align:center;
+}}
+.piece .ic {{ width:52px; height:52px; }}
+.piece-name {{ font-size:12.5px; line-height:1.25; color:#cbd0e0; }}
+.piece-slot {{ font-size:11px; color:var(--faint); }}
 .term {{ color:var(--charmed); font-weight:600; }}
 .term-unknown {{ color:var(--faint); font-style:italic; cursor:help; }}
 

@@ -4494,7 +4494,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1591000.png",
   "skill_ids": null,
   "effect_key": "110421",
   "effect": "You become $kuangnu$ whenever you’ve taken damage equal to {0}% of your max life."
@@ -4512,7 +4512,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1592000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -4530,7 +4530,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1593000.png",
   "skill_ids": null,
   "effect_key": "110421",
   "effect": "You become $kuangnu$ whenever you’ve taken damage equal to {0}% of your max life."
@@ -4548,7 +4548,7 @@
   "tier": "legendary",
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1594000.png",
   "skill_ids": [
    "1500001",
    "1550001",
@@ -4570,7 +4570,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1595000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -4588,7 +4588,7 @@
   "tier": "legendary",
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1596000.png",
   "skill_ids": [
    "1500021"
   ],
@@ -4608,7 +4608,7 @@
   "tier": "legendary",
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1597000.png",
   "skill_ids": [
    "1500031",
    "1550004"
@@ -4629,7 +4629,7 @@
   "tier": "legendary",
   "class": "Druid",
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1598000.png",
   "skill_ids": [
    "1500041"
   ],
@@ -4649,7 +4649,7 @@
   "tier": "legendary",
   "class": "Stormblade",
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1599000.png",
   "skill_ids": [
    "1500051",
    "1550007"
@@ -4670,7 +4670,7 @@
   "tier": "legendary",
   "class": "Soulkeeper",
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1600000.png",
   "skill_ids": [
    "1500061",
    "1550005"
@@ -4691,7 +4691,7 @@
   "tier": "legendary",
   "class": "Elementalist",
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1601000.png",
   "skill_ids": [
    "1500071",
    "1550008",
@@ -4714,7 +4714,7 @@
   "tier": "legendary",
   "class": "Assassin",
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1602000.png",
   "skill_ids": [
    "1500081",
    "1550009"
@@ -4735,7 +4735,7 @@
   "tier": "legendary",
   "class": "Bastion",
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1603000.png",
   "skill_ids": [
    "1500091"
   ],
@@ -4755,7 +4755,7 @@
   "tier": "legendary",
   "class": "Lifebinder",
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1604000.png",
   "skill_ids": [
    "1500101",
    "1550011"
@@ -4776,7 +4776,7 @@
   "tier": "legendary",
   "class": "Riftvoker",
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1605000.png",
   "skill_ids": [
    "1500111"
   ],
@@ -4796,7 +4796,7 @@
   "tier": "legendary",
   "class": "Shinobi",
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1606000.png",
   "skill_ids": [
    "1500121"
   ],
@@ -4816,7 +4816,7 @@
   "tier": "legendary",
   "class": "Necromancer",
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1607000.png",
   "skill_ids": [
    "1500131"
   ],
@@ -4836,7 +4836,7 @@
   "tier": "legendary",
   "class": "Stormshaman",
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1608000.png",
   "skill_ids": [
    "1500141"
   ],
@@ -4856,7 +4856,7 @@
   "tier": "legendary",
   "class": "Heliomancer",
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1609000.png",
   "skill_ids": [
    "1500151"
   ],
@@ -4876,7 +4876,7 @@
   "tier": "legendary",
   "class": "Dreadknight",
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1610000.png",
   "skill_ids": [
    "1500161"
   ],
@@ -4896,7 +4896,7 @@
   "tier": "legendary",
   "class": "Farstrider",
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1611000.png",
   "skill_ids": [
    "1500171"
   ],
@@ -4916,7 +4916,7 @@
   "tier": "legendary",
   "class": "Heretic",
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1612000.png",
   "skill_ids": [
    "1500181"
   ],
@@ -4936,7 +4936,7 @@
   "tier": "legendary",
   "class": "Paragon",
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1613000.png",
   "skill_ids": [
    "1500191"
   ],
@@ -4956,7 +4956,7 @@
   "tier": "legendary",
   "class": "Ranger",
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1614000.png",
   "skill_ids": [
    "1500201"
   ],
@@ -4976,7 +4976,7 @@
   "tier": "legendary",
   "class": "Dark Ranger",
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1615000.png",
   "skill_ids": [
    "1500211",
    "1500221",
@@ -5016,7 +5016,7 @@
   "tier": "legendary",
   "class": "Storm line",
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1619000.png",
   "skill_ids": [
    "1500241"
   ],
@@ -5036,7 +5036,7 @@
   "tier": "legendary",
   "class": "Vindicator",
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1620000.png",
   "skill_ids": [
    "1500251"
   ],
@@ -5056,7 +5056,7 @@
   "tier": "legendary",
   "class": "Artillerist",
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1621000.png",
   "skill_ids": [
    "1500261"
   ],
@@ -5076,7 +5076,7 @@
   "tier": "legendary",
   "class": "Artillerist",
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1622000.png",
   "skill_ids": [
    "1500271"
   ],
@@ -5096,7 +5096,7 @@
   "tier": "legendary",
   "class": "Artillerist",
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1623000.png",
   "skill_ids": [
    "1500281"
   ],
@@ -5116,7 +5116,7 @@
   "tier": "legendary",
   "class": "Wildwalker",
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1624000.png",
   "skill_ids": [
    "1500291"
   ],
@@ -5136,7 +5136,7 @@
   "tier": "legendary",
   "class": "Wildwalker",
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1625000.png",
   "skill_ids": [
    "1500301"
   ],
@@ -5156,7 +5156,7 @@
   "tier": "legendary",
   "class": "Wildwalker",
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1626000.png",
   "skill_ids": [
    "1500311"
   ],
@@ -5176,7 +5176,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1627000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -5194,7 +5194,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1628000.png",
   "skill_ids": null,
   "effect_key": "111061",
   "effect": "Increases damage by {0}%. After defeating {1} enemies, gain Final Verdict (total damage increased by {2}% for {3}s). Using an Awakened skill also grants Final Verdict."
@@ -5212,7 +5212,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1629000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -5230,7 +5230,7 @@
   "tier": "legendary",
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1630000.png",
   "skill_ids": [
    "1500321"
   ],
@@ -5250,7 +5250,7 @@
   "tier": "legendary",
   "class": "Astral Mage",
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1631000.png",
   "skill_ids": [
    "1500331"
   ],
@@ -5270,7 +5270,7 @@
   "tier": "legendary",
   "class": "Astral Mage",
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1632000.png",
   "skill_ids": [
    "1500341"
   ],
@@ -5290,7 +5290,7 @@
   "tier": "legendary",
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1633000.png",
   "skill_ids": [
    "1500351"
   ],
@@ -5310,7 +5310,7 @@
   "tier": "legendary",
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1634000.png",
   "skill_ids": [
    "1500361"
   ],
@@ -5330,7 +5330,7 @@
   "tier": "legendary",
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1635000.png",
   "skill_ids": [
    "1500371"
   ],
@@ -5368,7 +5368,7 @@
   "tier": "legendary",
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1636000.png",
   "skill_ids": [
    "1500381"
   ],
@@ -5388,7 +5388,7 @@
   "tier": "legendary",
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1637000.png",
   "skill_ids": [
    "1500391"
   ],
@@ -5408,7 +5408,7 @@
   "tier": "legendary",
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1638000.png",
   "skill_ids": [
    "1500401"
   ],
@@ -5488,7 +5488,7 @@
   "tier": "legendary",
   "class": "Ranger",
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1643000.png",
   "skill_ids": [
    "1500441"
   ],
@@ -5528,7 +5528,7 @@
   "tier": "legendary",
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1645000.png",
   "skill_ids": [
    "1500461"
   ],
@@ -5548,7 +5548,7 @@
   "tier": "legendary",
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1646000.png",
   "skill_ids": [
    "1500471",
    "1550044"
@@ -5569,7 +5569,7 @@
   "tier": "legendary",
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1647000.png",
   "skill_ids": [
    "1500481",
    "1500491",
@@ -5593,7 +5593,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1648000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -5611,7 +5611,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1649000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -5629,7 +5629,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1650000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -5647,7 +5647,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1651000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -5665,7 +5665,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1652000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -5683,7 +5683,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1653000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -5701,7 +5701,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1654000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -5719,10 +5719,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_1655000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111981",
+  "effect": "Hitting an enemy afflicted with Vulnerable increases your Attack Power Bonus by {0}% for {1}s."
  },
  {
   "id": 101700,
@@ -13423,10 +13423,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_6452000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110559",
+  "effect": "When you deal damage to an enemy, they take {1}% bonus damage every {0}s, stacking up to {2} times."
  },
  {
   "id": 106726,
@@ -13603,10 +13603,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_6460000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111041",
+  "effect": "Crits grant a stack of Mark of the Einherjar ({0}s CD, max {1} stacks). Upon reaching max stacks, you gain the Einheri form (gain {2}% Attack Power bonus, fully restore mana, and consume no mana when casting skills for {3}s. You cannot gain additional Marks of the Einherjar during this time)."
  },
  {
   "id": 106736,

@@ -141,6 +141,23 @@ away (`110561`/`111261`, `110563`/`111281`); the codex shows the `talent skill` 
    it covers 550 rows. Two screenshots agree with it (`104400`, `ITEM_CL_H3_006`).
 3. Some sprites are simply named after their key — every Fatebound icon is the sprite named
    after its buff id, e.g. `EBF_SCATTERING`.
+5. **Axial Incarnate pieces are `Incarnation_NN`** (export with
+   `extract_named_sprites.py --prefix Incarnation_ UI_Incarnation_ --folder Incarnation`).
+   Loc keys come in fours per incarnate — `<Name>: Axial Heart` then three pieces
+   (`68834`-`68837` Lamian, `68846`-`68849` Tartarean Pantocrator) — and the sprites do too.
+   Sprite = key − 68817 (`68835` → `Incarnation_18` … `68849` → `Incarnation_32`): nine
+   screenshots matched it and the user confirmed the whole sheet (`_sheets/incarnate_pieces.png`),
+   so all 32 are `confirmed` in `icon_map.json`, which `build_guide.py` reads for any key. Axial
+   Heart = centre slot. Talk about these as "<boss> – <slot>" (Medusa – Top), not by number:
+   Bouldarch = Boar King, Terrachnid = Crystal Snapclaw, Demiurgicon = Zulan the Colossus,
+   Ordained Praetorian = Valadrion, Lamian = Medusa, Auryon = Ember Wyrm, Sir Peleus = Archknight,
+   Tartarean Pantocrator = Hades (all user-confirmed 2026-09-22). The **Axial Urge**
+   unlock items are `Incarnation_icon_NN` for the heart's number: `344` → `icon_17`, `356` →
+   `icon_29` (matched as the heart's 3rd unlock material). The in-game medallion has a rarity-coloured rim
+   the sprite lacks, so match on the inner disc only. First/second/third piece = top/left/right
+   slot. `Incarnation_icon_NN` (20×20) are the matching unlock materials, same numbering. The set
+   effect texts are `120401` Bouldarch, `120407` Lamian, `120415` Tartarean Pantocrator.
+   Sprites `33`/`34` are missing, so do not extend the formula past `32` without a check.
 4. **Skills referenced by numeric id have no sprite of their own.** Icons are named after
    the skill-*tree* key (`SX_P1_22_200`), never the `200xxx` id, so a numeric reference
    finds nothing. `build_guide.Data.skill_tree_icon()` bridges the two on the Chinese
@@ -202,12 +219,12 @@ fall back on. Do not rank-align these — ask instead. One lead worth checking: 
   of **both** `101591` Sangrilok Twinblades and `101593` Sangrilok Longbow, and `111061`
   ("…gain Final Verdict…") is `101628` Valkyrian Scepter. Two facts follow: the mapping
   is **not** one-to-one, since one text serves several items, and it is not derivable
-  from either id. 17 more pairs were read off screenshots on 2026-09-22 (e.g. `102452`
+  from either id. 21 more pairs were read off screenshots on 2026-09-22 (e.g. `102452`
   → `110549`, `102453` → `111161`, `108701` → `110567`, `108708` → `111081`) and still
   show no pattern: neighbouring items land thousands of keys apart. So these are
   **collected, not derived** — [guide/effect_map.json](guide/effect_map.json) holds every
   confirmed pair with its Lv.1 `{n}` values, and `build_equipment.py` prefers it over
-  `effect_key()`, failing if the two ever disagree (they agree on all three legendaries
+  `effect_key()`, failing if the two ever disagree (they agree on all twelve legendaries
   checked).
 - `95xxx`/`96xxx` — parsing `"<name> Affixia"` does yield a per-item index for 156 items
   (a different set from the skill route, including the `108726`-`108730` cores), but the text

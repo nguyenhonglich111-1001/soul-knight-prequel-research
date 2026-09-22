@@ -2,7 +2,7 @@
 
 **Status:** the broken formula is gone (2026-09-22). Equipment icons now come from the `ITEM_*`
 alias rule, or from a hand-checked table ([guide/icon_map.json](guide/icon_map.json)), or not at
-all. What's still open is **coverage**: 215 of 806 rows have no icon, and more screenshots are
+all. What's still open is **coverage**: 156 of 806 rows have no icon, and more screenshots are
 the only way to close that.
 
 ## The bug
@@ -71,7 +71,8 @@ Voidlock materials.
    neither computes a sprite name from an ID. `equipment.json` records `icon_source`
    (`alias` / `confirmed` / `derived`).
 
-Counts: 591 of 806 rows have an icon (549 alias, 22 confirmed, 20 derived). Before the fix it was
+Counts: 650 of 806 equipment rows have an icon (549 alias, 36 confirmed, 65 derived). The map
+also holds 32 Axial Incarnate pieces and 2 Axial Urges (see CLAUDE.md). Before the fix it was
 665, but 115 of those came from the formula.
 
 ## Getting more
@@ -94,9 +95,16 @@ every `{n}` filled in. Record that in [guide/effect_map.json](guide/effect_map.j
 inside a run of consecutive IDs, so that two screenshots with equal offsets settle everything
 between them:
 
-- **Weapons** have one confirmed item, `101644` Firmament's Caprice → `1644000` (offset 0). One
-  more weapon with offset 0 fills everything between the two; ones near both ends of
-  `101591`-`101655` settle up to 60 items. The gourd at `1646000` and the moon at `1647000` hint
+- **Weapons** are offset 0 wherever checked: `101591`, `101615`, `101619`, `101621`, `101643`,
+  `101644`, `101655` (screenshots). The block breaks into three runs where both items and sprites are contiguous:
+  `101591`-`101615` (**filled**), `101619`-`101641` (filled up to `101621`), `101643`-`101655`
+  (**filled** to `101635`); `101617`/`101618` have no item. **The offset breaks at `101636`**:
+  Tome of True Martial has no sprite, and from there the art runs one behind the ID —
+  `101637` Branding Twinlash → `1636`, `101638` Sheol's Gavel → `1637`, `101639` Searing Gyves
+  → `1638` (screenshots). A contact sheet labelled by ID put the wrong names on exactly these,
+  which is how it was caught — never trust a derived label past a known gap. Open:
+  `101640`-`101642` against unclaimed `1639`-`1641` (Moiraic Wheel and Lethean Knell are not in
+  the user's codex). The gourd at `1646000` and the moon at `1647000` hint
   that Panthalassic Gourd (`101646`) and Argent Lunarium (`101647`) are offset 0 as well.
 - **Mech gear is the `84xx` series**, not `75xx`. The 8 sprites `ItemIcon_7501000`-`7508000`
   are the Voidlock materials (localization keys `7501`-`7508`, Lesser Voidlock … Voidal Armor
@@ -107,7 +115,9 @@ between them:
   (`9300` / `9400`+). Only `107401` Rusty Gear is open; `8200` is the candidate.
 - **Helm** `103445`-`103463` and **armor** `102446`-`102451`: one screenshot near the low end of
   each would extend the derived runs.
-- **Necklace** `106729`-`106732`: one screenshot in the middle resolves the ambiguous gap.
+- **Necklace** `106729`-`106732` are the four Axial Keystones, which the user does not see in the
+  game — likely unreleased. The gap stays blank. Codex neighbours checked instead: Helheim Tether
+  `106725` → `6452`, Einheri Icon `106735` → `6460`. The codex order is **not** ID order.
 
 ## Known limits, stated rather than hidden
 

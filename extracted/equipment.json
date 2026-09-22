@@ -6990,14 +6990,16 @@
    "Portuguese (Brazil)": "Lâminas Duplas Sangrilok",
    "Spanish (Latin America)": "Hojas gemelas sánguidas"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1591000.png",
+  "icon_source": "confirmed",
   "skill_ids": null,
   "rarity_hint": null,
   "effect_key": "110421",
   "effect": "You become $kuangnu$ whenever you’ve taken damage equal to {0}% of your max life.",
   "effect_source": "confirmed",
-  "effect_values_lv1": null
+  "effect_values_lv1": [
+   25
+  ]
  },
  {
   "id": 101592,
@@ -7018,8 +7020,8 @@
    "Portuguese (Brazil)": "Espada e Escudo Sangrilok",
    "Spanish (Latin America)": "Espada y escudo sánguidos"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1592000.png",
+  "icon_source": "derived",
   "skill_ids": null,
   "rarity_hint": null,
   "effect_key": null,
@@ -7046,8 +7048,8 @@
    "Portuguese (Brazil)": "Arco Longo Sangrilok",
    "Spanish (Latin America)": "Arco largo sánguido"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1593000.png",
+  "icon_source": "derived",
   "skill_ids": null,
   "rarity_hint": null,
   "effect_key": "110421",
@@ -7074,8 +7076,8 @@
    "Portuguese (Brazil)": "Roleta da Rifa",
    "Spanish (Latin America)": "Ruleta de rifa"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1594000.png",
+  "icon_source": "derived",
   "skill_ids": [
    "1500001",
    "1550001",
@@ -7106,8 +7108,8 @@
    "Portuguese (Brazil)": "Guardião Verdejante",
    "Spanish (Latin America)": "Guardián frondoso"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1595000.png",
+  "icon_source": "derived",
   "skill_ids": null,
   "rarity_hint": null,
   "effect_key": null,
@@ -7134,8 +7136,8 @@
    "Portuguese (Brazil)": "Espata do colosso de fogo",
    "Spanish (Latin America)": "Espata del coloso ígneo"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1596000.png",
+  "icon_source": "derived",
   "skill_ids": [
    "1500021"
   ],
@@ -7164,8 +7166,8 @@
    "Portuguese (Brazil)": "Arco-harpa: Cadenza",
    "Spanish (Latin America)": "Arco de arpa: cadenza"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1597000.png",
+  "icon_source": "derived",
   "skill_ids": [
    "1500031",
    "1550004"
@@ -7195,8 +7197,8 @@
    "Portuguese (Brazil)": "Arco de trepadeira espectral",
    "Spanish (Latin America)": "Enredadera espectral"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1598000.png",
+  "icon_source": "derived",
   "skill_ids": [
    "1500041"
   ],
@@ -7225,8 +7227,8 @@
    "Portuguese (Brazil)": "Eletrodos incrustados pelo gelo",
    "Spanish (Latin America)": "Electrodos incrustados con hielo"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1599000.png",
+  "icon_source": "derived",
   "skill_ids": [
    "1500051",
    "1550007"
@@ -7256,8 +7258,8 @@
    "Portuguese (Brazil)": "Canga alma",
    "Spanish (Latin America)": "Cangue de almas"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1600000.png",
+  "icon_source": "derived",
   "skill_ids": [
    "1500061",
    "1550005"
@@ -7287,8 +7289,8 @@
    "Portuguese (Brazil)": "Foculon",
    "Spanish (Latin America)": "Fóculo"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1601000.png",
+  "icon_source": "derived",
   "skill_ids": [
    "1500071",
    "1550008",
@@ -7320,8 +7322,8 @@
    "Portuguese (Brazil)": "Farpa de Fantasium",
    "Spanish (Latin America)": "Astillador de fantasía"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1602000.png",
+  "icon_source": "derived",
   "skill_ids": [
    "1500081",
    "1550009"
@@ -7351,8 +7353,8 @@
    "Portuguese (Brazil)": "Vontade de Sierra",
    "Spanish (Latin America)": "Voluntad aserradora"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1603000.png",
+  "icon_source": "derived",
   "skill_ids": [
    "1500091"
   ],
@@ -7381,8 +7383,8 @@
    "Portuguese (Brazil)": "Fragmento de Evolução",
    "Spanish (Latin America)": "Lota evolutiva"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1604000.png",
+  "icon_source": "derived",
   "skill_ids": [
    "1500101",
    "1550011"
@@ -7412,8 +7414,8 @@
    "Portuguese (Brazil)": "Pollux Castor",
    "Spanish (Latin America)": "Pólux Cástor"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1605000.png",
+  "icon_source": "derived",
   "skill_ids": [
    "1500111"
   ],
@@ -7442,8 +7444,8 @@
    "Portuguese (Brazil)": "Espinhos Negros Abandonados",
    "Spanish (Latin America)": "Lanzanegra prohibida"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1606000.png",
+  "icon_source": "derived",
   "skill_ids": [
    "1500121"
   ],
@@ -7472,8 +7474,8 @@
    "Portuguese (Brazil)": "Ossuário de Haliphar",
    "Spanish (Latin America)": "Osario de Halifar"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1607000.png",
+  "icon_source": "derived",
   "skill_ids": [
    "1500131"
   ],
@@ -7502,8 +7504,8 @@
    "Portuguese (Brazil)": "Totem Eldmarrow",
    "Spanish (Latin America)": "Tótem de tuétano"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1608000.png",
+  "icon_source": "derived",
   "skill_ids": [
    "1500141"
   ],
@@ -7532,8 +7534,8 @@
    "Portuguese (Brazil)": "Obturador com Luz de Fundo",
    "Spanish (Latin America)": "Persiana retrolumínica"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1609000.png",
+  "icon_source": "derived",
   "skill_ids": [
    "1500151"
   ],
@@ -7562,8 +7564,8 @@
    "Portuguese (Brazil)": "Aperto Sufocante",
    "Spanish (Latin America)": "Agarre estrangulador"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1610000.png",
+  "icon_source": "derived",
   "skill_ids": [
    "1500161"
   ],
@@ -7592,8 +7594,8 @@
    "Portuguese (Brazil)": "Pistilos murchos",
    "Spanish (Latin America)": "Marchitaflores"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1611000.png",
+  "icon_source": "derived",
   "skill_ids": [
    "1500171"
   ],
@@ -7622,8 +7624,8 @@
    "Portuguese (Brazil)": "Lâmina do Reino: Pyraxis",
    "Spanish (Latin America)": "Cuchilla monárquica: piraxis"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1612000.png",
+  "icon_source": "derived",
   "skill_ids": [
    "1500181"
   ],
@@ -7652,8 +7654,8 @@
    "Portuguese (Brazil)": "Caduceu do Templo",
    "Spanish (Latin America)": "Caduceo del templo"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1613000.png",
+  "icon_source": "derived",
   "skill_ids": [
    "1500191"
   ],
@@ -7682,8 +7684,8 @@
    "Portuguese (Brazil)": "Guardião Verdejante",
    "Spanish (Latin America)": "Verso frondoso"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1614000.png",
+  "icon_source": "derived",
   "skill_ids": [
    "1500201"
   ],
@@ -7712,8 +7714,8 @@
    "Portuguese (Brazil)": "Arco-harpa: Obscuro",
    "Spanish (Latin America)": "Arco de arpa: oscuridad"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1615000.png",
+  "icon_source": "confirmed",
   "skill_ids": [
    "1500211",
    "1500221",
@@ -7722,8 +7724,10 @@
   "rarity_hint": "legendary",
   "effect_key": "130022",
   "effect": "Casting Nightpiercer grants {0} stacks of $xianlv$, and if a homing arrow is already present when you do so, you no longer fire a new arrow but instead refresh the current one’s duration. In addition, damaging an enemy with Atrophic Barrage or Precision Barrage inflicts {1} and {2} stacks of $xielv$ on them, respectively; each stack of either $xianlv$ or $xielv$ increases the total damage of your homing arrows by {3}%.",
-  "effect_source": "skill-link",
-  "effect_values_lv1": null
+  "effect_source": "confirmed",
+  "effect_values_lv1": [
+   6
+  ]
  },
  {
   "id": 101616,
@@ -7772,15 +7776,15 @@
    "Portuguese (Brazil)": "Ira Gélida",
    "Spanish (Latin America)": "Furia helada"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1619000.png",
+  "icon_source": "confirmed",
   "skill_ids": [
    "1500241"
   ],
   "rarity_hint": "legendary",
   "effect_key": "130025",
   "effect": "Icicles from Stormshatter are no longer projected; instead, they deal damage directly to the target. Each icicle converts into {0} $bingpo$, and any crit you deal with Cold Damage also has a {1}% chance to trigger Stormshatter’s effects. While $bingpo$ exists, Stormshatter’s total damage is increased by {2}%, but dealing Shock Damage consumes {3} $bingpo$.",
-  "effect_source": "skill-link",
+  "effect_source": "confirmed",
   "effect_values_lv1": null
  },
  {
@@ -7802,8 +7806,8 @@
    "Portuguese (Brazil)": "Lâminas Abençoadas",
    "Spanish (Latin America)": "Cuchillas benditas"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1620000.png",
+  "icon_source": "derived",
   "skill_ids": [
    "1500251"
   ],
@@ -7832,16 +7836,19 @@
    "Portuguese (Brazil)": "Karmapulta de Cinzas",
    "Spanish (Latin America)": "Catapulta kármica"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1621000.png",
+  "icon_source": "confirmed",
   "skill_ids": [
    "1500261"
   ],
   "rarity_hint": "legendary",
   "effect_key": "130027",
   "effect": "The heatwave from Bomb Voyage! now cokerizes enemies. Cokerized enemies take {0}% increased total damage from Adhesive Gunpowder and are instantly executed if their life falls below {1}%.",
-  "effect_source": "skill-link",
-  "effect_values_lv1": null
+  "effect_source": "confirmed",
+  "effect_values_lv1": [
+   180,
+   20
+  ]
  },
  {
   "id": 101622,
@@ -7862,8 +7869,8 @@
    "Portuguese (Brazil)": "Alerta Térmico",
    "Spanish (Latin America)": "Alerta de calor"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1622000.png",
+  "icon_source": "derived",
   "skill_ids": [
    "1500271"
   ],
@@ -7892,8 +7899,8 @@
    "Portuguese (Brazil)": "Políbole Explode-nuvens",
    "Spanish (Latin America)": "Expulsor de nubarrones"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1623000.png",
+  "icon_source": "derived",
   "skill_ids": [
    "1500281"
   ],
@@ -7922,8 +7929,8 @@
    "Portuguese (Brazil)": "Cisão Telúrica",
    "Spanish (Latin America)": "Ruptura telúrica"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1624000.png",
+  "icon_source": "derived",
   "skill_ids": [
    "1500291"
   ],
@@ -7952,8 +7959,8 @@
    "Portuguese (Brazil)": "Ressonância Dourada",
    "Spanish (Latin America)": "Resonancia de oro"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1625000.png",
+  "icon_source": "derived",
   "skill_ids": [
    "1500301"
   ],
@@ -7982,8 +7989,8 @@
    "Portuguese (Brazil)": "Cortina Anemoiana",
    "Spanish (Latin America)": "Cortana anemónica"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1626000.png",
+  "icon_source": "derived",
   "skill_ids": [
    "1500311"
   ],
@@ -8012,8 +8019,8 @@
    "Portuguese (Brazil)": "Lança e Escudo de Valquíria",
    "Spanish (Latin America)": "Lanza y escudo de valquiria"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1627000.png",
+  "icon_source": "derived",
   "skill_ids": null,
   "rarity_hint": null,
   "effect_key": null,
@@ -8040,8 +8047,8 @@
    "Portuguese (Brazil)": "Cetro de Valquíria",
    "Spanish (Latin America)": "Cetro de valquiria"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1628000.png",
+  "icon_source": "derived",
   "skill_ids": null,
   "rarity_hint": null,
   "effect_key": "111061",
@@ -8068,8 +8075,8 @@
    "Portuguese (Brazil)": "Arco Longo de Valquíria",
    "Spanish (Latin America)": "Arco largo de valquiria"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1629000.png",
+  "icon_source": "derived",
   "skill_ids": null,
   "rarity_hint": null,
   "effect_key": null,
@@ -8096,8 +8103,8 @@
    "Portuguese (Brazil)": "Afrogênio",
    "Spanish (Latin America)": "Anadiómena"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1630000.png",
+  "icon_source": "derived",
   "skill_ids": [
    "1500321"
   ],
@@ -8126,16 +8133,19 @@
    "Portuguese (Brazil)": "Abertura carbonizada",
    "Spanish (Latin America)": "Apertura carbonizada"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1631000.png",
+  "icon_source": "confirmed",
   "skill_ids": [
    "1500331"
   ],
   "rarity_hint": "legendary",
   "effect_key": "130034",
   "effect": "Your Excantation: Iridescence deals {0}% more damage and the number of your concentrated attacks is increased by {1}.",
-  "effect_source": "skill-link",
-  "effect_values_lv1": null
+  "effect_source": "confirmed",
+  "effect_values_lv1": [
+   44,
+   3
+  ]
  },
  {
   "id": 101632,
@@ -8156,8 +8166,8 @@
    "Portuguese (Brazil)": "Leme sideral",
    "Spanish (Latin America)": "Timón sidereal"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1632000.png",
+  "icon_source": "derived",
   "skill_ids": [
    "1500341"
   ],
@@ -8186,8 +8196,8 @@
    "Portuguese (Brazil)": "Binário dipolar",
    "Spanish (Latin America)": "Binario dipolar"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1633000.png",
+  "icon_source": "derived",
   "skill_ids": [
    "1500351"
   ],
@@ -8216,16 +8226,19 @@
    "Portuguese (Brazil)": "Eólico fulguroso",
    "Spanish (Latin America)": "Fulgor eólico"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1634000.png",
+  "icon_source": "confirmed",
   "skill_ids": [
    "1500361"
   ],
   "rarity_hint": "legendary",
   "effect_key": "130037",
   "effect": "Tornado Storm deals {0}% more damage. The tornado shifts towards enemies every {1}s.",
-  "effect_source": "skill-link",
-  "effect_values_lv1": null
+  "effect_source": "confirmed",
+  "effect_values_lv1": [
+   80,
+   0.6
+  ]
  },
  {
   "id": 101635,
@@ -8246,16 +8259,18 @@
    "Portuguese (Brazil)": "Cicatriz de gelo",
    "Spanish (Latin America)": "Francopunzador"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1635000.png",
+  "icon_source": "confirmed",
   "skill_ids": [
    "1500371"
   ],
   "rarity_hint": "legendary",
   "effect_key": "130038",
   "effect": "Frost Shot deals {0}% more damage. Ice shards curve to nearby tornadoes after-launch.",
-  "effect_source": "skill-link",
-  "effect_values_lv1": null
+  "effect_source": "confirmed",
+  "effect_values_lv1": [
+   60
+  ]
  },
  {
   "id": 101636,
@@ -8304,16 +8319,19 @@
    "Portuguese (Brazil)": "Corte Duplo Marcante",
    "Spanish (Latin America)": "Doble estigma"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1636000.png",
+  "icon_source": "confirmed",
   "skill_ids": [
    "1500381"
   ],
   "rarity_hint": "legendary",
   "effect_key": "130039",
   "effect": "Molten Scourge deals {0}% more damage, and Iron Slag splatters’ travel time is reduced by {1}%.",
-  "effect_source": "skill-link",
-  "effect_values_lv1": null
+  "effect_source": "confirmed",
+  "effect_values_lv1": [
+   140,
+   25
+  ]
  },
  {
   "id": 101638,
@@ -8334,16 +8352,19 @@
    "Portuguese (Brazil)": "Martelo de Sheol",
    "Spanish (Latin America)": "Mazo de Sheol"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1637000.png",
+  "icon_source": "confirmed",
   "skill_ids": [
    "1500391"
   ],
   "rarity_hint": "legendary",
   "effect_key": "130040",
   "effect": "Cruciation deals {0}% more damage, and the eruption AoE of Earth Spikes is {1}% larger.",
-  "effect_source": "skill-link",
-  "effect_values_lv1": null
+  "effect_source": "confirmed",
+  "effect_values_lv1": [
+   120,
+   20
+  ]
  },
  {
   "id": 101639,
@@ -8364,16 +8385,18 @@
    "Portuguese (Brazil)": "Grilhões Causticantes",
    "Spanish (Latin America)": "Grilletes abrasadores"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1638000.png",
+  "icon_source": "confirmed",
   "skill_ids": [
    "1500401"
   ],
   "rarity_hint": "legendary",
   "effect_key": "130041",
   "effect": "Hellscream deals {0}% more damage, and the priming interval for Echoes is now affected by your skill CD speed.",
-  "effect_source": "skill-link",
-  "effect_values_lv1": null
+  "effect_source": "confirmed",
+  "effect_values_lv1": [
+   80
+  ]
  },
  {
   "id": 101640,
@@ -8484,8 +8507,8 @@
    "Portuguese (Brazil)": "Paradoxo do Avô",
    "Spanish (Latin America)": "Grandfather Paradox"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1643000.png",
+  "icon_source": "confirmed",
   "skill_ids": [
    "1500441"
   ],
@@ -8493,7 +8516,9 @@
   "effect_key": "130045",
   "effect": "Scattershot deals {0}% more damage. The effects of Piercing Arrows no longer require piercing an enemy to trigger.",
   "effect_source": "confirmed",
-  "effect_values_lv1": null
+  "effect_values_lv1": [
+   100
+  ]
  },
  {
   "id": 101644,
@@ -8544,8 +8569,8 @@
    "Portuguese (Brazil)": "O Orrery",
    "Spanish (Latin America)": "The Orrery"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1645000.png",
+  "icon_source": "derived",
   "skill_ids": [
    "1500461"
   ],
@@ -8574,8 +8599,8 @@
    "Portuguese (Brazil)": "Cabaça Panthalássica",
    "Spanish (Latin America)": "Panthalassic Gourd"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1646000.png",
+  "icon_source": "derived",
   "skill_ids": [
    "1500471",
    "1550044"
@@ -8605,8 +8630,8 @@
    "Portuguese (Brazil)": "Lunário Argênteo",
    "Spanish (Latin America)": "Argent Lunarium"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1647000.png",
+  "icon_source": "derived",
   "skill_ids": [
    "1500481",
    "1500491",
@@ -8639,8 +8664,8 @@
    "Portuguese (Brazil)": "Sombra Viridiana",
    "Spanish (Latin America)": "Viridian Shade"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1648000.png",
+  "icon_source": "derived",
   "skill_ids": null,
   "rarity_hint": null,
   "effect_key": null,
@@ -8667,8 +8692,8 @@
    "Portuguese (Brazil)": "Nuvens Azuis do Firmamento",
    "Spanish (Latin America)": "Nube cerúlea del firmamento"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1649000.png",
+  "icon_source": "derived",
   "skill_ids": null,
   "rarity_hint": null,
   "effect_key": null,
@@ -8695,8 +8720,8 @@
    "Portuguese (Brazil)": "Sóis Gêmeos no Vazio",
    "Spanish (Latin America)": "Doble astro en el vacío"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1650000.png",
+  "icon_source": "derived",
   "skill_ids": null,
   "rarity_hint": null,
   "effect_key": null,
@@ -8723,8 +8748,8 @@
    "Portuguese (Brazil)": "Yaoguang Aprisiona-céus",
    "Spanish (Latin America)": "Yaoguang aprisionacielos"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1651000.png",
+  "icon_source": "derived",
   "skill_ids": null,
   "rarity_hint": null,
   "effect_key": null,
@@ -8751,8 +8776,8 @@
    "Portuguese (Brazil)": "Dez Mil Brasas ao Fio",
    "Spanish (Latin America)": "Filo de las diez mil brasas"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1652000.png",
+  "icon_source": "derived",
   "skill_ids": null,
   "rarity_hint": null,
   "effect_key": null,
@@ -8779,8 +8804,8 @@
    "Portuguese (Brazil)": "Fogo Rompante Fende-terra",
    "Spanish (Latin America)": "Fisura ardiente de la pradera"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1653000.png",
+  "icon_source": "derived",
   "skill_ids": null,
   "rarity_hint": null,
   "effect_key": null,
@@ -8807,8 +8832,8 @@
    "Portuguese (Brazil)": "Lâmina Furiosa Queima-mundo",
    "Spanish (Latin America)": "Hoja furiosa quemamundos"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1654000.png",
+  "icon_source": "derived",
   "skill_ids": null,
   "rarity_hint": null,
   "effect_key": null,
@@ -8835,14 +8860,17 @@
    "Portuguese (Brazil)": "Lança de Prata Brilhante",
    "Spanish (Latin America)": "Lanza de plata brillante"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_1655000.png",
+  "icon_source": "confirmed",
   "skill_ids": null,
   "rarity_hint": null,
-  "effect_key": null,
-  "effect": null,
-  "effect_source": null,
-  "effect_values_lv1": null
+  "effect_key": "111981",
+  "effect": "Hitting an enemy afflicted with Vulnerable increases your Attack Power Bonus by {0}% for {1}s.",
+  "effect_source": "confirmed",
+  "effect_values_lv1": [
+   6.5,
+   3
+  ]
  },
  {
   "id": 101700,
@@ -20850,14 +20878,18 @@
    "Portuguese (Brazil)": "Cordão de Helheim",
    "Spanish (Latin America)": "Cadena de Helheim"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_6452000.png",
+  "icon_source": "confirmed",
   "skill_ids": null,
   "rarity_hint": null,
-  "effect_key": null,
-  "effect": null,
-  "effect_source": null,
-  "effect_values_lv1": null
+  "effect_key": "110559",
+  "effect": "When you deal damage to an enemy, they take {1}% bonus damage every {0}s, stacking up to {2} times.",
+  "effect_source": "confirmed",
+  "effect_values_lv1": [
+   0.5,
+   1,
+   10
+  ]
  },
  {
   "id": 106726,
@@ -21136,14 +21168,19 @@
    "Portuguese (Brazil)": "Ícone de Einheri",
    "Spanish (Latin America)": "Ícono de Einheri"
   },
-  "icon": null,
-  "icon_source": null,
+  "icon": "ItemIcon/ItemIcon_6460000.png",
+  "icon_source": "confirmed",
   "skill_ids": null,
   "rarity_hint": null,
-  "effect_key": null,
-  "effect": null,
-  "effect_source": null,
-  "effect_values_lv1": null
+  "effect_key": "111041",
+  "effect": "Crits grant a stack of Mark of the Einherjar ({0}s CD, max {1} stacks). Upon reaching max stacks, you gain the Einheri form (gain {2}% Attack Power bonus, fully restore mana, and consume no mana when casting skills for {3}s. You cannot gain additional Marks of the Einherjar during this time).",
+  "effect_source": "confirmed",
+  "effect_values_lv1": [
+   1,
+   3,
+   16,
+   3
+  ]
  },
  {
   "id": 106736,

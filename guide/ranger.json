@@ -36,7 +36,9 @@
     "binwei": "Critically Injured",
     "jisu": "Swift",
     "yingyan": "Eagle Eye",
-    "yishang": "Vulnerable"
+    "yishang": "Vulnerable",
+    "xianlv": "Symphonia",
+    "bingpo": "Frost Essence"
   },
   "sections": [
     {
@@ -275,20 +277,38 @@
           "items": [
             {
               "key": "356",
-              "desc_key": "1356",
+              "desc_key": "120415",
+              "values": {"0": "20", "2": "0.5"},
               "as_written": "hades",
+              "pieces": [
+                {"key": "68847", "slot": "Top slot"},
+                {"key": "68848", "slot": "Left slot"},
+                {"key": "68849", "slot": "Right slot"}
+              ],
               "note": "Kuma's pick once you unlock it."
             },
             {
               "key": "344",
-              "desc_key": "1344",
+              "desc_key": "120407",
+              "values": {"0": "3/6/10", "1": "6", "2": "3"},
               "as_written": "medusa",
+              "pieces": [
+                {"key": "68835", "slot": "Top slot"},
+                {"key": "68836", "slot": "Left slot"},
+                {"key": "68837", "slot": "Right slot"}
+              ],
               "note": "Use this first — best ranged damage of the ones you can get early."
             },
             {
               "key": "328",
-              "desc_key": "1328",
-              "as_written": "boar king"
+              "desc_key": "120401",
+              "values": {"0": "2/4/8", "1": "1/2/3", "2": "1/2/3", "3": "5"},
+              "as_written": "boar king",
+              "pieces": [
+                {"key": "68819", "slot": "Top slot"},
+                {"key": "68820", "slot": "Left slot"},
+                {"key": "68821", "slot": "Right slot"}
+              ]
             }
           ],
           "footnote": "In-game these are named after the Incarnate, not the boss: Hades is the Tartarean Pantocrator, Medusa is Lamian, Boar King is Bouldarch."
