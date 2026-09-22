@@ -52,6 +52,28 @@ prints the winner, its score and which item currently claims it:
 python tools/match_screenshot_icons.py "Soul knight prequel"/*.PNG
 ```
 
+A **screen recording** of the user tapping › through a codex category is the cheapest way to
+collect a whole slot (non-weapon legendary descriptions can only be linked this way). Frames
+come out already landscape at 2868x1320, so the matcher works on them unchanged; the text has
+to be read by eye from name + effect-panel crops, then found in the localization by phrase:
+
+```bash
+FF=$(python -c "import imageio_ffmpeg as f; print(f.get_ffmpeg_exe())")   # pip install imageio-ffmpeg
+"$FF" -i "Soul knight prequel/<video>.mp4" -vf fps=4 frames/f_%03d.png
+python tools/match_screenshot_icons.py frames/*.png --top 1
+```
+
+The first one (2026-09-22) covered all 26 legendary necklaces in 17 s; the second (75 s,
+sampled at 10 fps and split into stable pages by frame differencing) covered 113 legendaries
+across Helm, Armor, Boots, Ring, Mech Core and Cubis Core; 19 screenshots (IMG_6280-6298)
+then filled every roster name the video skipped, so all legendary armor, helm, boots, ring,
+gear and core pieces in the `Affixia` roster now have their text. The five Clockgears and both
+Pandora's Arks are `108xxx` ids shown in the **Mech Core** tab with `84xx` sprites
+(`108717` Darkness → `8409` … `108724` Nigmahex → `8416`), like `108719`/`108725`/`108728`
+before them. Several effect texts have 2-4
+near-duplicate keys (older wording, a "Chip" twin, an alternate version); pick the one whose
+wording matches the frame, never the first regex hit.
+
 ```bash
 python tools/extract_named_sprites.py --prefix EBF_ --folder EBF   # Fatebound icons
 python tools/extract_named_sprites.py --prefix icn_equip_ item_rate_frame_s_
@@ -206,6 +228,21 @@ their `Desc` field holds an effect name rather than an item name (`1500531` is `
 not a product), and 27 legendary-range weapons have no skill link, so there is no bijection to
 fall back on. Do not rank-align these — ask instead. One lead worth checking: `130024` says
 "your weapon become Immaterial and **Anumbral**", and `101616` **Anumbral Blade** has no link.
+
+**Why only weapons link automatically (researched 2026-09-22).** Every slot has legendary
+skill prefabs (`LegendEquipSkill/<armor|head|shoes|ring|lace|other>/…`: 24 armor `24xxxxx`,
+26 helm `34xxxxx`, 20 boots `44xxxxx`, 35 ring `54xxxxx`, 31 necklace `64000x1`, plus
+`71`/`72`/`90` families), but unlike `1500xxx` their `RGSkill` has **no `Desc`**, their buffs
+carry no loc key, and every number is `cfg: [0, <prefab id>]`, i.e. from the encrypted config.
+So there is nothing to join an item or a text on. The `"<name> Affixia"` list (`95xxx`, 156
+items that match equipment) *is* the legendary roster — 26 necklaces, 30 rings, 31 cores, … —
+but its order does not predict the text key either. What the confirmed pairs do show: text
+keys in `110xxx`-`112xxx` were handed out roughly **chronologically** (necklaces `106441` <
+`106725` < `106728` < `106733` < `106735` get increasing keys; the dense `11054x`-`11057x`
+block is one patch — `110560` names Warp Drive = `107701`, `110561` Vitality, `110563`
+Clockwork, `110567` Hellhound Claw `108701`), with exceptions (`102453` → `111161` jumps far
+ahead of `102452` → `110549`). Good enough to *propose* candidates, never to assert them.
+Gear texts in that block are the old "Chip" wording; the codex shows the "talent skill" twin.
 
 **Where equipment descriptions are *not*.** All four of these were checked and are dead ends:
 
