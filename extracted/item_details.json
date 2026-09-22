@@ -6943,10 +6943,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_2447000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110991",
+  "effect": "Increases the AoE of all your skills by {0}%, but reduces their damage by {1}%."
  },
  {
   "id": 102446,
@@ -6961,10 +6961,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_2451000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111361",
+  "effect": "For every {0}% of max life lost, gain {1}% damage reduction. Gain {2}% Skill DMG when Critically Injured."
  },
  {
   "id": 102447,
@@ -6979,10 +6979,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_2452000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110532",
+  "effect": "Immune to Dark Ailment, and increase Dark Resistance by {0}%."
  },
  {
   "id": 102448,
@@ -6997,10 +6997,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_2453000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110533",
+  "effect": "Immune to Fire Ailment, and increase Fire Resistance by {0}%"
  },
  {
   "id": 102449,
@@ -7015,10 +7015,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_2454000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110951",
+  "effect": "Gain {0}% damage reduction. The effect doubles when only 1 enemy is nearby."
  },
  {
   "id": 102450,
@@ -7033,10 +7033,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_2455000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111511",
+  "effect": "Every {0}s, deal {2}% Fire Damage to all enemies within {1}m; Dealing Fire Damage applies $zhuore$, with a {3}s CD per target."
  },
  {
   "id": 102451,
@@ -7051,10 +7051,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_2456000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110545",
+  "effect": "Your damage reduction is increased by {0}% when not $jiankang$, and twice as much when $binwei$."
  },
  {
   "id": 102452,
@@ -7161,8 +7161,8 @@
   "alias": null,
   "icon": "ItemIcon/ItemIcon_2462000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110891",
+  "effect": "Every {0}s, your next skill cast creates a circle that grants {1}% damage reduction and {2}% increased skill damage to those within the circle. The magic circle lasts for {3}s."
  },
  {
   "id": 102458,
@@ -7215,8 +7215,8 @@
   "alias": null,
   "icon": "ItemIcon/ItemIcon_2465000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111011",
+  "effect": "Gain {0}% Skill DMG, but all resistances are reduced by {1}%."
  },
  {
   "id": 102461,
@@ -7233,8 +7233,8 @@
   "alias": null,
   "icon": "ItemIcon/ItemIcon_2466000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111501",
+  "effect": "When applying $diaoling$, instantly apply max stacks; For every stack of $diaoling$ on an enemy, you deal {0}% more Poison Damage to them."
  },
  {
   "id": 102462,
@@ -7267,7 +7267,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_2468000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -7285,7 +7285,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_2469000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -7303,10 +7303,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_2470000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111891",
+  "effect": "Every {0}s, become cursed by Pandora's Box for {1}s. While cursed, your damage taken is increased by {2}%, but you gain {3}% Skill DMG and {4}% crit damage. When True Damage Reduction exceeds {5}%, the curse's duration is increased by {6}s."
  },
  {
   "id": 102466,
@@ -7321,10 +7321,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_2469000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111991",
+  "effect": "While taking no damage, gain 1 stack of $sijierdong$ every {0}s. The effect of $sijierdong$ is increased by {1}%."
  },
  {
   "id": 102467,
@@ -7339,10 +7339,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_2472000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "112001",
+  "effect": "Gain 1 stack of $shirupozhu$ for every {0} kills in your current kill streak. At the start of combat, you immediately gain {1} stacks of $shirupozhu$."
  },
  {
   "id": 103000,
@@ -7647,8 +7647,8 @@
   "alias": "ITEM_CL_H1_004",
   "icon": "ItemIcon_CL/ItemIcon_CL_H1_004.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111521",
+  "effect": "If a target has max stacks of $zhuore$, you deal {0}% more Fire Damage to the enemy. Each stack of $zhuore$ further increases this damage multiplier by {1}%."
  },
  {
   "id": 103405,
@@ -8383,10 +8383,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_3448000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110181",
+  "effect": "Your skills CDs are {0}% shorter, but their mana cost is increased by {1}%."
  },
  {
   "id": 103446,
@@ -8401,10 +8401,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_3449000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110201",
+  "effect": "Your skills cost {0}% less mana, but their AoE is reduced by {1}%."
  },
  {
   "id": 103447,
@@ -8419,10 +8419,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_3450000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110281",
+  "effect": "Whenever no damaging skill is used by you for {0}s, all surrounding allies become $kuangnu$."
  },
  {
   "id": 103448,
@@ -8437,10 +8437,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_3451000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111341",
+  "effect": "You take damage equal to {0}% of your max life per second, but gain shields equal to {1}% of your max life, increased by {2}% if you are $binwei$; The total shields from this effect cannot exceed {3}% of your max life."
  },
  {
   "id": 103449,
@@ -8455,10 +8455,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_3452000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110931",
+  "effect": "Increases close-range damage by {0}% . Effect doubles when only 1 enemy is nearby."
  },
  {
   "id": 103450,
@@ -8473,10 +8473,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_3453000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111491",
+  "effect": "Every {0}s, disgorge {1} venomous fangs, dealing {2}% Poison Damage; Dealing Poison Damage applies $diaoling$, with a {3}s CD per target, and increases the max stack limit of $diaoling$ by {4}."
  },
  {
   "id": 103451,
@@ -8491,10 +8491,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_3454000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110544",
+  "effect": "Your All Damage is increased by {0}%, and an additional {2}% if you’ve taken no damage for the past {1}s."
  },
  {
   "id": 103452,
@@ -8509,10 +8509,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_3455000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110584",
+  "effect": "When casting a skill, each insufficient point of mana costs {0}% of your current life instead."
  },
  {
   "id": 103453,
@@ -8527,7 +8527,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_3456000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -8545,7 +8545,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_3457000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -8563,7 +8563,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_3458000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -8581,10 +8581,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_3459000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110831",
+  "effect": "After using an attack skill, a random minion gains {0}% bonus damage for {2}s, stacking up to {1} time(s). This effect can trigger up to {4} time(s) every {3}s."
  },
  {
   "id": 103457,
@@ -8599,7 +8599,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_3460000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -8617,7 +8617,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_3461000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -8635,7 +8635,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_3462000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -8653,10 +8653,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_3463000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111001",
+  "effect": "Every {0}s, mark an enemy within {1}m, causing them to take {2}% increased damage for {3}s. This effect will always prioritize Bosses, Vanguards, or Elites."
  },
  {
   "id": 103461,
@@ -8671,10 +8671,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_3464000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111391",
+  "effect": "After blocking damage, gain bonus damage for yourself and your minions by {0}% for {1}s; If your actual block chance exceeds {2}%, this effect is boosted by {3}% and will also trigger automatically every {4}s."
  },
  {
   "id": 103462,
@@ -8689,10 +8689,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_3465000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111421",
+  "effect": "Every {0}s, consume all stacks of $anyong$ on you to grant {1}% total Dark Damage increase to yourself and your minions per stack for {2}s; Additionally, your $anyong$ acquisition amount is increased by {3}%."
  },
  {
   "id": 103463,
@@ -8707,10 +8707,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_3466000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111431",
+  "effect": "Upon scoring a crit, each stack of $xianyao$ increases the total Light Damage of that hit by {0}%."
  },
  {
   "id": 103464,
@@ -8727,8 +8727,8 @@
   "alias": null,
   "icon": "ItemIcon/ItemIcon_3467000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111481",
+  "effect": "Every {0}s, dealing damage to an enemy will simultaneously drop {1} hailstones on the target, dealing {2}% AoE Cold Damage, applying Cold Ailment, and granting {3} stacks of $ningbing$ to yourself and your minions."
  },
  {
   "id": 103465,
@@ -8763,8 +8763,8 @@
   "alias": null,
   "icon": "ItemIcon/ItemIcon_3469000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111831",
+  "effect": "Increases bonus damage by {0}% and movement speed by {1}%, but you can no longer gain shields."
  },
  {
   "id": 103467,
@@ -8781,8 +8781,8 @@
   "alias": null,
   "icon": "ItemIcon/ItemIcon_3470000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111901",
+  "effect": "For each Fatestone equipped, All Damage is increased by {0}%. If 6 Fatestones are currently equipped, gain an additional {1}% All Damage."
  },
  {
   "id": 103468,
@@ -8817,8 +8817,8 @@
   "alias": null,
   "icon": "ItemIcon/ItemIcon_3473000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "112021",
+  "effect": "Hitting an enemy with a skill increases Skill DMG by {0}% and Skill Mana Cost by {1}%, stacking up to {2} times. While within a Yellow Crucible, the Mana Cost penalty is negated and the Skill DMG bonus is increased by {3}%."
  },
  {
   "id": 104000,
@@ -9177,8 +9177,8 @@
   "alias": "ITEM_CL_S1_007",
   "icon": "ItemIcon_CL/ItemIcon_CL_S1_007.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110221",
+  "effect": "You receive $jisu$ upon casting any skill."
  },
  {
   "id": 104408,
@@ -9859,10 +9859,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_4445000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110211",
+  "effect": "Your movement speed is reduced by {0}%, but your movement skills move you {1}% further."
  },
  {
   "id": 104446,
@@ -9877,10 +9877,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_4448000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110540",
+  "effect": "Increase {0} ATK when moving."
  },
  {
   "id": 104700,
@@ -9913,10 +9913,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_4449000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110543",
+  "effect": "Upon using any skill, you deal {1}% physical damage to enemies within {0}m, with a {2}s CD."
  },
  {
   "id": 104702,
@@ -9931,10 +9931,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_4450000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110546",
+  "effect": "Your bonus damage is increased by {1}% for each enemy within {0}m, stacking up to {2} times."
  },
  {
   "id": 104703,
@@ -9949,10 +9949,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_4451000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110550",
+  "effect": "Whenever you slay an enemy, your movement speed is increased by {0}% and bonus damage by {1}% for {2}s, stacking up to {3} times; however, when you have no stacks of the effect, you lose {4} mana/s."
  },
  {
   "id": 104704,
@@ -9967,10 +9967,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_4452000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110554",
+  "effect": "Your minions will take damage only once every {0}s."
  },
  {
   "id": 104705,
@@ -9985,10 +9985,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_4453000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110555",
+  "effect": "Upon entering a boss fight, you and your minions gain {0}% bonus damage for {1}s. Unequipping this equipment piece removes the bonus."
  },
  {
   "id": 104706,
@@ -10003,7 +10003,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_4454000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -10021,7 +10021,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_4455000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -10039,10 +10039,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_4456000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110731",
+  "effect": "You gain {0} stacks of $lianji$ with every charge-up attack, and each stack of $lianji$ increases the damage of your charge-up attacks by {1}%. (Design from the Ereborn Legacy event)"
  },
  {
   "id": 104709,
@@ -10111,10 +10111,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_4461000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111031",
+  "effect": "Using dash grants a {0}% damage bonus for {1}s, stacking up to {2} times."
  },
  {
   "id": 104713,
@@ -10129,10 +10129,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_4462000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111441",
+  "effect": "Upon reaching max stacks of $xudian$, you and your minions deal {0}% more Shock Damage, and each stack of $xudian$ further increases this damage multiplier by {1}% for {2}s; While this state is active, you cannot gain new stacks of $xudian$."
  },
  {
   "id": 104714,
@@ -10147,7 +10147,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_4463000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -10165,10 +10165,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_4464000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111851",
+  "effect": "During this combat encounter, gain 1 stack of Preystalker for every {0} enemies defeated: increases DMG to Elites by {1}% and movement speed by {2}%, stacking up to {3} times.\nWithin Pandora's Labyrinth, defeating an Elite or Vanguard monster inside the Gloom enhances the effect of each Preystalker stack by {4}%, up to a max of {5}%."
  },
  {
   "id": 104716,
@@ -10183,10 +10183,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_4465000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111921",
+  "effect": "While moving, gain 1 stack of [Calamity’s Approach] every {0}s. Each stack increases damage bonus by {1}% and movement speed by {2}%, stacking up to {3} times and lasting for {4}s. Gaining a new stack refreshes the duration. For each Lvl. 3 Fatebound equipped, the damage bonus provided by [Calamity's Approach] is increased by {5}%, up to a max of {6}%."
  },
  {
   "id": 104717,
@@ -10201,10 +10201,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_4466000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "112031",
+  "effect": "If your Natural Resistances or Elemental Resistances exceed {0}%, you gain immunity to the corresponding Status Ailment and a {1}% DMG increase for that specific damage type."
  },
  {
   "id": 105000,
@@ -10473,8 +10473,8 @@
   "alias": "ITEM_CL_R_002",
   "icon": "ItemIcon_CL/ItemIcon_CL_R_002.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110041",
+  "effect": "Any non-crit damage you deal is increased by {0}%."
  },
  {
   "id": 105403,
@@ -10545,8 +10545,8 @@
   "alias": "ITEM_CL_R_006",
   "icon": "ItemIcon_CL/ItemIcon_CL_R_006.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111211",
+  "effect": "Using a statue fully restores life, and the statues’ durations are increased by {0}%."
  },
  {
   "id": 105407,
@@ -11155,10 +11155,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_5440000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110151",
+  "effect": "Your crit chance is increased by {0}%, but crit damage reduced by {1}%."
  },
  {
   "id": 105441,
@@ -11173,10 +11173,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_5441000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110161",
+  "effect": "The damage from your skills is increased by {0}%, but their AoE is reduced by {1}%."
  },
  {
   "id": 105442,
@@ -11191,10 +11191,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_5442000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110261",
+  "effect": "Any Ailment you inflict also inflicts $yishang$."
  },
  {
   "id": 105443,
@@ -11209,10 +11209,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_5443000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110301",
+  "effect": "Whenever you deal physical damage to a target, their DEF is reduced by {0}."
  },
  {
   "id": 105444,
@@ -11227,10 +11227,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_5444000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111371",
+  "effect": "For every {0}% of max life lost, gain {1}% mana cost reduction and a {2}% Attack Power bonus."
  },
  {
   "id": 105445,
@@ -11245,10 +11245,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_5445000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110441",
+  "effect": "You heal for {0}% of your max life whenever you defeat an enemy."
  },
  {
   "id": 105700,
@@ -11319,8 +11319,8 @@
   "alias": "ITEM_CS_R_LSC",
   "icon": "ItemIcon_CS/ItemIcon_CS_R_LSC.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110481",
+  "effect": "When unarmed or equipped with fist weapons, every normal attack you perform releases {0} senbon needles that deal {1}% Piercing damage. For each time a same enemy is struck by your senbon, the damage dealt to them is increased by {2}%."
  },
  {
   "id": 105704,
@@ -11337,8 +11337,8 @@
   "alias": "ITEM_CS_R_YJZ",
   "icon": "ItemIcon_CS/ItemIcon_CS_R_YJZ.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110451",
+  "effect": "Whenever you’re attacked, the damage taken takes effect gradually over the course of {0}s."
  },
  {
   "id": 105705,
@@ -11355,8 +11355,8 @@
   "alias": "ITEM_CS_R_YJL",
   "icon": "ItemIcon_CS/ItemIcon_CS_R_YJL.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110461",
+  "effect": "You gain {1}% bonus damage for {0}s anytime you crit, but your crits no longer deal any extra damage."
  },
  {
   "id": 105706,
@@ -11373,8 +11373,8 @@
   "alias": "ITEM_CS_R_YJH",
   "icon": "ItemIcon_CS/ItemIcon_CS_R_YJH.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110471",
+  "effect": "The remaining CD on all your other skills is reduced by {0}% of the CD of any skill you’ve used recently."
  },
  {
   "id": 105707,
@@ -11443,10 +11443,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_5450000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110536",
+  "effect": "Mana regen increases by {0} per second when you are $jiankang$."
  },
  {
   "id": 105711,
@@ -11461,10 +11461,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_5451000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111231",
+  "effect": "After using a skill, if your mana is below {0}%, restore {1} mana; this effect has a {2}s CD."
  },
  {
   "id": 105712,
@@ -11497,10 +11497,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_5453000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110556",
+  "effect": "Slaying an enemy triggers an explosion, dealing {1}% physical damage to enemies within {0}m."
  },
  {
   "id": 105714,
@@ -11533,10 +11533,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_5454000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110557",
+  "effect": "For each allied unit on the battlefield, your All Damage increases by {0}%, stacking up to {1} times."
  },
  {
   "id": 105716,
@@ -11659,10 +11659,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_5460000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110851",
+  "effect": "Gain {1}% increased physical damage for every {0} mana put on reserve, up to a maximum of {2}%."
  },
  {
   "id": 105723,
@@ -11677,10 +11677,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_5461000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110861",
+  "effect": "Gain {1}% increased elemental damage for every {0} mana put on reserve, up to a maximum of {2}%."
  },
  {
   "id": 105724,
@@ -11695,7 +11695,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_5462000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -11713,10 +11713,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_5463000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110881",
+  "effect": "Every {0}s, consume {1} mana to gain a shield equal to {2}% of max life and {3}% close-range damage for {4}s. Does not trigger if mana is below {5}%."
  },
  {
   "id": 105726,
@@ -11731,10 +11731,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_5464000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111051",
+  "effect": "When mana is full, gain {0}% bonus damage every second, lasting for {2}s and stacking up to {1} times."
  },
  {
   "id": 105727,
@@ -11767,10 +11767,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_5465000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111381",
+  "effect": "For every {0}% actual dodge chance, gain bonus damage for yourself and your minions by {1}%, up to {2}%; After a successful dodge, movement speed is increased by {3}%."
  },
  {
   "id": 105729,
@@ -11785,10 +11785,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_5466000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111461",
+  "effect": "Upon reaching max stacks of $renxin$, all stacks are consumed to increase total physical damage for yourself and your minions by {0}% per stack for {1}s, with a {2}s CD; Additionally, your $renxin$ acquisition amount is increased by {3}%."
  },
  {
   "id": 105730,
@@ -11803,10 +11803,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_5467000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111471",
+  "effect": "After every {0} skill casts, triggers a chain lightning that deals {2}% Shock Damage to up to {1} enemies and grant {3} stacks of $xudian$ to yourself and your minions; The chain lightning has a {4}s CD."
  },
  {
   "id": 105731,
@@ -11821,7 +11821,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_5468000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -11839,10 +11839,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_5469000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111931",
+  "effect": "When dealing damage to an enemy afflicted with a Status Ailiment, gain a damage bonus corresponding to that ailment's type, increasing your damage for that type by {0}% for {1}s."
  },
  {
   "id": 105733,
@@ -11857,7 +11857,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_5470000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -11875,10 +11875,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_5471000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "112041",
+  "effect": "DMG Bonus is increased by {0}%. The max stack limit for $xianyao$ +{1}."
  },
  {
   "id": 105735,
@@ -11893,10 +11893,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_5472000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "112051",
+  "effect": "DMG Bonus is increased by {0}%. The max stack limit for $zhuore$ +{1}."
  },
  {
   "id": 105736,
@@ -11911,10 +11911,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_5473000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "112061",
+  "effect": "Immune to $heianyichang$. Dark Damage is increased by {0}%."
  },
  {
   "id": 105737,
@@ -11929,10 +11929,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_5474000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "112071",
+  "effect": "DMG Bonus is increased by {0}%. Upon taking fatal damage, you do not die immediately; instead, you enter a $beishuiyizhan$. Gaining this state has a {1}s CD."
  },
  {
   "id": 106000,
@@ -12165,8 +12165,8 @@
   "alias": "ITEM_CL_L_000",
   "icon": "ItemIcon_CL/ItemIcon_CL_L_000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111551",
+  "effect": "Every {0}s, release {1} homing dark orbs that deal {2}% Dark Damage on impact and grant {3} stacks of $anyong$ to yourself and your minions."
  },
  {
   "id": 106401,
@@ -12237,8 +12237,8 @@
   "alias": "ITEM_CL_L_004",
   "icon": "ItemIcon_CL/ItemIcon_CL_L_004.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111191",
+  "effect": "You are always considered to be $binwei$, and your damage is increased by {0}%."
  },
  {
   "id": 106405,
@@ -12291,8 +12291,8 @@
   "alias": "ITEM_CB_L_EQB",
   "icon": "ItemIcon_CB/ItemIcon_CB_L_EQB.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "120001",
+  "effect": "The crit chance of allies within {0}m is increased by {1}%, but your own crit damage is reduced by {2}%."
  },
  {
   "id": 106408,
@@ -12309,8 +12309,8 @@
   "alias": "ITEM_CB_L_YZW",
   "icon": "ItemIcon_CB/ItemIcon_CB_L_YZW.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "120401",
+  "effect": "Whenever you deal damage, gain 1 stack of Recklessness (0.2s CD). Each stack of Recklessness grants {0}% bonus ATK, {1}% skill CD speed, and {2}% movement speed, stacking up to {3} times and lasting for {4}s."
  },
  {
   "id": 106409,
@@ -12327,8 +12327,8 @@
   "alias": "ITEM_CB_L_DTL",
   "icon": "ItemIcon_CB/ItemIcon_CB_L_DTL.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "120021",
+  "effect": "Every {0}s, you block the next incoming attack, releasing {1} projectiles that deal {2}% Piercing damage."
  },
  {
   "id": 106410,
@@ -12883,10 +12883,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_6440000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110171",
+  "effect": "The damage from your skills is increased by {0}%, but their CDs are {1}% longer."
  },
  {
   "id": 106441,
@@ -12919,10 +12919,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_6442000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111201",
+  "effect": "$kuangnu$ can now stack 1 additional time; while $kuangnu$, movement speed is increased by {0}%."
  },
  {
   "id": 106443,
@@ -12937,10 +12937,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_6443000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110351",
+  "effect": "Your mana regen is increased by {0}/s when you have any shields."
  },
  {
   "id": 106444,
@@ -12955,10 +12955,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_6444000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111541",
+  "effect": "Every {0}s, call down a pillar of light within {1}m of yourself, dealing {2}% Light Damage that is guaranteed to crit; On scoring a crit, grant {3} stacks of $xianyao$ to yourself and your minions with a {4}s CD."
  },
  {
   "id": 106700,
@@ -13279,10 +13279,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon_CS/ItemIcon_CS_L_HS_FIRE.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110491",
+  "effect": "Whenever you deal or take Fire Damage, you gain {0}% bonus Fire Damage for {2}s, stacking up to {1} times."
  },
  {
   "id": 106718,
@@ -13297,10 +13297,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon_CS/ItemIcon_CS_L_HS_ICE.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110921",
+  "effect": "Increase crit damage by {0}%. Non-crit attacks against enemies with Cold Ailment or Freeze have a {1}% chance to become crits."
  },
  {
   "id": 106719,
@@ -13315,10 +13315,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon_CS/ItemIcon_CS_L_HS_ELE.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110511",
+  "effect": "All damage types, except Shock Damage, that you deal to enemies afflicted with Shock Ailment is increased by a total of {0}%."
  },
  {
   "id": 106720,
@@ -13333,10 +13333,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon_CS/ItemIcon_CS_L_HS_POI.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110521",
+  "effect": "Whenever you inflict Poison Ailment on a target, the damage they deal is reduced by {0}% for {1}s, and their attacks have a {2}% chance to miss."
  },
  {
   "id": 106721,
@@ -13351,10 +13351,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon_CS/ItemIcon_CS_L_HS_DARK.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110531",
+  "effect": "Your Dark Damage is increased by {0}%, but Dark Resistance reduced by {1}%."
  },
  {
   "id": 106722,
@@ -13387,10 +13387,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_6450000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110971",
+  "effect": "When mana is above {0}%, using a skill triggers Sage Ascendance: +{1}% damage, +{2}% mana cost for {3}s. Ends early if mana falls below {4}%. Cooldown: {5}s."
  },
  {
   "id": 106724,
@@ -13405,10 +13405,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_6451000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110558",
+  "effect": "After slaying an enemy, you gain {0} Attack Power for {1}s, stacking up to {2} times."
  },
  {
   "id": 106725,
@@ -13639,10 +13639,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_6461000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111401",
+  "effect": "Total damage for yourself and your minions is increased by {0}%; If your Ignore Enemy DEF stat is higher than the enemy’s defense, this effect is increased by {1}%."
  },
  {
   "id": 106738,
@@ -13657,10 +13657,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_6462000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111451",
+  "effect": "Deal {0}% more Cold Damage to enemies afflicted with the Cold Ailment status. For each stack of $ningbing$ you possess, the effect of the DMG Multiplier of Cold Damage is increased by {1}%."
  },
  {
   "id": 106739,
@@ -13711,10 +13711,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_6464000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111911",
+  "effect": "Every two skill casts, Skill DMG is increased by {0}% for {1}s. For each Lvl. 2 Fatebound and above active on you, this Skill DMG bonus is further increased by {2}%, up to a max of {3}%."
  },
  {
   "id": 106742,
@@ -13729,10 +13729,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_6465000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111841",
+  "effect": "Hitting an enemy with a skill increases Skill DMG by {0}% and decreases damage taken by {1}%. Stacks up to {2} times and lasts for {3}s. Within Pandora's Labyrinth, the max stack limit is increased by {4} for every Gloomquartz inserted."
  },
  {
   "id": 106743,
@@ -13765,10 +13765,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_6466000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "112081",
+  "effect": "Dealing damage reduces projectile size and skill AoE by {0}%, but increases DMG to Bosses by {1}% for {2}s. Stacks up to {3} times. This effect has a {4}s CD."
  },
  {
   "id": 106745,
@@ -13783,10 +13783,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_6467000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "112091",
+  "effect": "If your Hit Chance is below {0}%, it is increased to {1}%. If your Hit Chance exceeds {2}%, every {3}% of excess Hit Chance grants a {4}% DMG Bonus, up to a max of {5}%."
  },
  {
   "id": 106746,
@@ -13801,10 +13801,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_6468000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "112101",
+  "effect": "Each stack of $sijierdong$ increases Skill DMG by {0}%. Taking damage no longer causes you to lose $sijierdong$ stacks."
  },
  {
   "id": 106747,
@@ -13819,10 +13819,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_6469000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "112111",
+  "effect": "DMG Bonus is increased by {0}%. If you possess the Legendary effect of [Wen Chou's Thimble], automatically trigger a $beishuiyizhan$ every {1}s. During a $beishuiyizhan$, your DMG Bonus is increased by an additional {2}%."
  },
  {
   "id": 106748,
@@ -13875,8 +13875,8 @@
   "alias": null,
   "icon": "ItemIcon/ItemIcon_8300000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111321",
+  "effect": "Your ATK is increased by {0} for {1}s each time you use a talent skill."
  },
  {
   "id": 107701,
@@ -13893,8 +13893,8 @@
   "alias": null,
   "icon": "ItemIcon/ItemIcon_8400000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111251",
+  "effect": "You can pull up to {1} enemies within {0}m to your side when using the Proximal Warp Drive talent skill. Damage dealt to them is increased by {2}%, and defeating them progresses {3}% of the skill’s CD."
  },
  {
   "id": 107702,
@@ -13929,8 +13929,8 @@
   "alias": null,
   "icon": "ItemIcon/ItemIcon_8402000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111271",
+  "effect": "Instantly defeat Vulnerable enemies if their life falls below {0}% when using the Mirror Mimicry talent skill. Bosses are instantly defeated if their life falls below {1}%."
  },
  {
   "id": 107704,
@@ -13965,8 +13965,8 @@
   "alias": null,
   "icon": "ItemIcon/ItemIcon_8404000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111291",
+  "effect": "Reduce enemy DEF by {0}% within the range when using the Nebula Barrier talent skill. Affected allies and enemies will retain this effect even after leaving its range, lasting until the effect expires."
  },
  {
   "id": 107706,
@@ -13983,8 +13983,8 @@
   "alias": null,
   "icon": "ItemIcon/ItemIcon_8405000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111301",
+  "effect": "Remove all your stats ailments when using talent skills. Gain ailment immunity for {0}s if successful, while all stats resistances increase by {1}% for {2}s if not."
  },
  {
   "id": 107707,
@@ -14001,8 +14001,8 @@
   "alias": null,
   "icon": "ItemIcon/ItemIcon_8406000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111311",
+  "effect": "Reduce the movement speed and attack speed of enemies by {1}% within {0}m and increase their damage taken by {2}% when using talent skills. Your movement speed also increase by {3}% for {4}s."
  },
  {
   "id": 107708,
@@ -14071,10 +14071,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_9300000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110586",
+  "effect": "You and your minions gain {0}% bonus damage."
  },
  {
   "id": 108701,
@@ -14109,8 +14109,8 @@
   "alias": null,
   "icon": "ItemIcon/ItemIcon_9401000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110568",
+  "effect": "When your crit damage exceeds {0}%, for every additional {1}%, you and your minions gain a {2}% bonus damage, up to a maximum of {3}% (excludes stats added by buffs, Legendary effects, and skill effects)."
  },
  {
   "id": 108703,
@@ -14127,8 +14127,8 @@
   "alias": null,
   "icon": "ItemIcon/ItemIcon_9402000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110582",
+  "effect": "When your main stat exceed {0}, you and your minions gain a {1}% bonus damage (excludes stats added by buffs, Legendary effects, and skill effects)."
  },
  {
   "id": 108704,
@@ -14145,8 +14145,8 @@
   "alias": null,
   "icon": "ItemIcon/ItemIcon_9403000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110581",
+  "effect": "When DMG to Boss exceeds {0}%, you and your minions gain a {1}% bonus damage (excludes stats added by buffs, Legendary effects, and skill effects)."
  },
  {
   "id": 108705,
@@ -14163,8 +14163,8 @@
   "alias": null,
   "icon": "ItemIcon/ItemIcon_9404000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110571",
+  "effect": "You and your minions gain {0}% bonus damage in Enigmine."
  },
  {
   "id": 108706,
@@ -14181,8 +14181,8 @@
   "alias": null,
   "icon": "ItemIcon/ItemIcon_9405000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110572",
+  "effect": "You and your minions gain {0}% bonus damage in Proving Grounds."
  },
  {
   "id": 108707,
@@ -14199,8 +14199,8 @@
   "alias": null,
   "icon": "ItemIcon/ItemIcon_9406000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110701",
+  "effect": "When you have more than {0}% natural resistance, elemental resistance or physical resistance, both you and your minions gain {1}% bonus damage. (Design from the Ereborn Legacy event)"
  },
  {
   "id": 108708,
@@ -14233,10 +14233,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_9409000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111691",
+  "effect": "For every {0}s Hog Wild is active, you and your minions gain a stacking effect that each stack increases bonus damage by {1}%, stacking up to {2} times and lasting for {3}s."
  },
  {
   "id": 108710,
@@ -14251,10 +14251,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_9410000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111701",
+  "effect": "While within the Crystal Domain, you and your minions gain a stacking effect that each stack increases bonus damage by {1}% every {0}s, stacking up to {2} times and lasting {3}s."
  },
  {
   "id": 108711,
@@ -14269,10 +14269,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_9411000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111711",
+  "effect": "Upon receiving the Colossal Courage effect, you and your minions gain a stacking effect that each stack increases bonus damage by {1}% every {0}s, stacking up to {2} times and lasting {3}s."
  },
  {
   "id": 108712,
@@ -14287,10 +14287,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_9412000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111721",
+  "effect": "For each enemy you inflict with Petrifying Gaze, you and your minions gain a stacking effect that each stack increases bonus damage by {0}%, stacking up to {1} times and lasting for {2}s."
  },
  {
   "id": 108713,
@@ -14305,10 +14305,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_9413000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111731",
+  "effect": "Upon gaining full stacks of Martial Prowess, you and your minion gain a stacking effect that each stack increases bonus damage by {1}% every {0}s, stacking up to {2} times and lasting {3}s."
  },
  {
   "id": 108714,
@@ -14323,10 +14323,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_9414000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111741",
+  "effect": "Once you enter the Chivalric Avatar state, it remains permanently active for the rest of the battle, granting a {0}% bonus damage for you and your minions."
  },
  {
   "id": 108715,
@@ -14341,10 +14341,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_9415000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111751",
+  "effect": "Once you enter the Firewyrm Incarnate state, it remains permanently active for the rest of the battle, granting a {0}% bonus damage for you and your minions."
  },
  {
   "id": 108716,
@@ -14359,10 +14359,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_9416000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111761",
+  "effect": "Once you enter the Chthonic Descent state, it remains permanently active for the rest of the battle, granting a {0}% bonus damage for you and your minions."
  },
  {
   "id": 108717,
@@ -14377,10 +14377,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_8409000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111771",
+  "effect": "When using Talent Skills, receive the Statue of Darkness’ blessing: Generates a black hole that pulls enemies within {0}m to its center for {1}s.\nAffected enemies take {3}% more damage for {2}s; CD: {4}s."
  },
  {
   "id": 108718,
@@ -14395,10 +14395,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_8410000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111781",
+  "effect": "When using Talent Skills, receive the Statue of the Thief’s blessing: Movement speed is increased by {0}%, and while moving, nearby enemies are knocked back; Lasts for {1}s with a CD of {2}s."
  },
  {
   "id": 108719,
@@ -14413,10 +14413,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_8411000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111791",
+  "effect": "When using Talent Skills, receive the Statue of the Aegis’s blessing: Physical size is increased by {0}%, skills’ AoE is increased by {1}%, and damage taken is reduced by {2}%; Lasts for {3}s with a CD of {4}s."
  },
  {
   "id": 108720,
@@ -14431,10 +14431,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_8412000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111801",
+  "effect": "When using Talent Skills, receive the Statue of Fire’s blessing: Attacks call down a meteor, dealing {0}% Fire Damage to struck enemies and they take {1}% more damage for {2}s, with a CD of {3}s."
  },
  {
   "id": 108721,
@@ -14449,10 +14449,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_8413000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111811",
+  "effect": "When using Talent Skills, receive the Statue of the Archer’s blessing: Fires 3 bullets per second, with each bullet dealing {0}% Physical Damage to struck enemies and they take {1}% more damage for {2}s, with a CD of {3}s."
  },
  {
   "id": 108722,
@@ -14467,10 +14467,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_8414000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111821",
+  "effect": "When using Talent Skills, receive the Statue of Lightning’s blessing: Summons a lightning orb that follows you, whose emitted chain lightning deals {1}% Shock Damage every {0}s and the struck enemies take {2}% more damage for {3}s, with a CD of {4}s."
  },
  {
   "id": 108723,
@@ -14485,10 +14485,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_8415000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111861",
+  "effect": "When using a Talent Skill, summons Pandora in her demonic aspect to pry open the Box's maw with her scythe, spewing Gloom. Enemies caught in the Gloom take {0}% Dark Damage, and hit enemies take {1}% more damage for {2}s. This effect has a {3}s CD. Within the Heart of Calamity, the DMG Multiplier of damage taken by enemies is increased by {4}%."
  },
  {
   "id": 108724,
@@ -14503,10 +14503,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_8416000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111871",
+  "effect": "When using a Talent Skill, summons a Chthonic Handmaiden to levitate and play her instrument. While playing, she continuously fires musical notes that strike the ground, dealing {0}% Dark Damage within the range, and hit enemies take {1}% more damage for {2}s. This effect has a {3}s CD. Within Pandora's Labyrinth, the DMG Multiplier of damage taken by enemies is increased by {4}%."
  },
  {
   "id": 108725,
@@ -14521,10 +14521,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_8417000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111881",
+  "effect": "When using a Talent Skill, summons Pandora in her demonic aspect to unleash a stationary 3-hit slash combo. Each slash deals {0}% Dark Damage, and hit enemies take {1}% more damage for {2}s. This effect has a {3}s CD. Within the Proving Grounds, the DMG Multiplier of damage taken by enemies is increased by {4}%."
  },
  {
   "id": 108726,
@@ -14537,12 +14537,12 @@
   "armor_class": null,
   "family": null,
   "tier": null,
-  "class": null,
+  "class": "Storm line",
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_9417000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111951",
+  "effect": "The effect of [Zero Shatter] is now permanently active during combat. After an ice pillar erupts from the ground, the damage bonus for yourself and your minions is increased by {0}% for {1}s."
  },
  {
   "id": 108727,
@@ -14557,10 +14557,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_9418000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111961",
+  "effect": "Once you enter the [Sepulchered Remains] state, it remains permanently active for the rest of the battle. While active, you and your minions gain a {0}% Damage Bonus."
  },
  {
   "id": 108728,
@@ -14575,10 +14575,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_8418000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "112121",
+  "effect": "The effect of Nebula Barrier is changed to: Generates a {0}m aura that follows the player. All allies within the aura gain a {1}% All Damage increase and {2}% damage reduction."
  },
  {
   "id": 108729,
@@ -14593,10 +14593,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_9419000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "112131",
+  "effect": "Within Pandora's Labyrinth, your damage bonus is increased by {0}% for every level of your highest-level Reward Pack, up to a max increase of {1}%."
  },
  {
   "id": 108730,
@@ -14611,9 +14611,9 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_9420000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "112141",
+  "effect": "Your pillars of light now instantly apply max stacks of [Lightbrand]. After calling down a pillar of light, the damage bonus for yourself and your minions is increased by {0}% for {1}s."
  }
 ]

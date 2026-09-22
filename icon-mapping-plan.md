@@ -2,7 +2,7 @@
 
 **Status:** the broken formula is gone (2026-09-22). Equipment icons now come from the `ITEM_*`
 alias rule, or from a hand-checked table ([guide/icon_map.json](guide/icon_map.json)), or not at
-all. What's still open is **coverage**: 153 of 806 rows have no icon, and more screenshots are
+all. What's still open is **coverage**: 43 of 806 rows have no icon, and more screenshots are
 the only way to close that.
 
 ## The bug
@@ -71,7 +71,7 @@ Voidlock materials.
    neither computes a sprite name from an ID. `equipment.json` records `icon_source`
    (`alias` / `confirmed` / `derived`).
 
-Counts: 653 of 806 equipment rows have an icon (549 alias, 40 confirmed, 64 derived). The map
+Counts: 767 of 806 equipment rows have an icon (549 alias, 154 confirmed, 64 derived). The map
 also holds 32 Axial Incarnate pieces and 2 Axial Urges (see CLAUDE.md). Before the fix it was
 665, but 115 of those came from the formula.
 
@@ -126,8 +126,13 @@ between them:
 
 ## Known limits, stated rather than hidden
 
-- `derived` rests on the art never being numbered backwards against the IDs. No check has
-  contradicted that, and `--check` fails if one ever does.
+- `derived` rests on the art not running backwards inside a gap. It does once:
+  `102465` Pandora's Gossamer Silks -> `2470`, `102466` Overcoat of the Vagrant Wyrm -> `2469`
+  (codex video, 2026-09-22). The video also re-covered dozens of derived entries and
+  contradicted none, so the risk is small but real; `build_icon_map.py` reports such pairs.
+- The codex **tab**, not the ID, says Mech vs Cubis Core: `108719` Clockgear of the Aegis,
+  `108725` Pandora's Ark - Trinathema and `108728` Octagram Matrix are Mech Cores drawn from
+  the `84xx` series. Derivation groups by sprite series for that reason.
 - ~140 equipment icons aren't in the APK at all (the game downloads them). No mapping will
   produce those.
 - If Chillyroom adds or removes art in a patch, sprite numbers shift. Re-run `--check` after

@@ -11,7 +11,7 @@ Unity 2022.3 (Addressables). Its content sits in ~465 `.bundle` files in
 | `localization_all.json` | Every string the game shows, 28,703 keys, 13 languages. `{ "<key>": { "English": "...", "Chinese": "...", ... } }` |
 | `items.json` | 1,490 `ITEM_*` items: `id`, `prefix`, `key`, `name`, `description`, `names` / `descriptions` (all languages), `icon` |
 | `items_numeric.json` | 16,908 numeric-key entries (most weapons, armor, consumables, UI text). Same fields as above, plus `description_id` |
-| `equipment.json` | 806 equipment rows: `id`, `slot`, `name`, `names`, `icon`, `icon_source`, `skill_ids`, `rarity_hint`, `effect`, `effect_key`, `effect_source`, `effect_values_lv1` (653 have an icon, 69 have effect text) |
+| `equipment.json` | 806 equipment rows: `id`, `slot`, `name`, `names`, `icon`, `icon_source`, `skill_ids`, `rarity_hint`, `effect`, `effect_key`, `effect_source`, `effect_values_lv1` (767 have an icon, 201 have effect text) |
 | `item_details.json` | 806 rows with everything derivable per item: `category`, `weapon_type` (+ `weapon_type_source`: alias / codex / name-guess), `weapon_class`, `armor_class`, `family`, `tier`, `class`, `effect` |
 | `skill_links.json` | 64 legendary items joined to the skill prefab that implements them (`item_id`, `skill_id`, `bundle`) |
 | `prefabs/*.json` | 18,182 prefabs with every `MonoBehaviour` field: skills, buffs, bullets, characters, stages, UI |
@@ -120,7 +120,7 @@ Spatha of the Fire Colossus). `build_equipment.effect_key()` applies it, and `eq
 now carries `effect` and `effect_key`.
 
 This fills **46 of 806** equipment rows, which between them previously had *zero* descriptions.
-Another 23 come from [guide/effect_map.json](guide/effect_map.json): item -> effect-key pairs read
+Another 152 come from [guide/effect_map.json](guide/effect_map.json): item -> effect-key pairs read
 off in-game screenshots, with the Lv.1 values of `{0}`, `{1}`, ... alongside. Those keys sit in
 `110xxx`-`112xxx` and follow no id pattern, so they can only be collected, not derived.
 11 of the 57 `130xxx` texts remain unassigned: their prefabs exist but carry an effect name
@@ -175,15 +175,15 @@ game, you can: a few spot checks against what is actually on screen are worth mo
 amount of further digging, and that is how the icon-mapping bug below was found. Contact sheets
 for pointing at are generated into `extracted/_sheets/`.
 
-- **153 of 806 equipment rows have no icon.** The alias rule covers 549 and the hand-checked
-  table 104; the rest are left blank on purpose, because the real item -> icon table is in the
+- **43 of 806 equipment rows have no icon.** The alias rule covers 549 and the hand-checked
+  table 214; the rest are left blank on purpose, because the real item -> icon table is in the
   encrypted Luban config (zero `ItemIcon_` strings in `global-metadata.dat`, zero `ItemIcon`
   paths in the Addressables catalog, zero references across all 18,182 prefab dumps). The old
   "drop the `100`, append `000`" rule filled 115 of them; of the 18 since checked, it was right once. A
   codex screenshot per item closes the gap -- `tools/match_screenshot_icons.py` identifies the
   sprite. See [icon-mapping-plan.md](icon-mapping-plan.md).
 - **Only 46 of 806 equipment rows have machine-derivable description text.** Those 46 come from
-  the `130xxx` rule above; 23 more are hand-checked (`guide/effect_map.json`). Ruled out as sources: `ITEM_<suffix>_D` (0 of 550), the
+  the `130xxx` rule above; 152 more are hand-checked (`guide/effect_map.json`). Ruled out as sources: `ITEM_<suffix>_D` (0 of 550), the
   `148xxx`/`149xxx` name block, and `95xxx`/`96xxx` (a per-item index for 156 items, but it only
   reaches fragment boilerplate).
 - **`110001`-`112171` does hold more effect text, but the item link is unsolved.** Nothing in it

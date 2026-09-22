@@ -9,8 +9,10 @@ kept under `confirmed`. This script never edits those. It only derives the items
     102454 -> 2459  and  102462 -> 2467        (same offset, +5)
     => 102455..102461 -> 2460..2466            (7 items, 7 sprites, all present)
 
-That assumes the art numbers never run backwards against the item IDs, which every
-confirmed pair so far bears out (the check below fails if one ever does). When the two
+That assumes the art numbers do not run backwards *inside* the gap. They can: the
+2026-09-22 codex video showed `102465` -> `2470` but `102466` -> `2469`. Such pairs are
+reported as notes (never derived across), and every derived entry that video later
+covered -- dozens -- matched, so the assumption holds almost everywhere. When the two
 ends disagree on the offset, a sprite is missing somewhere in between and there is no
 telling where, so nothing is derived: `106728 -> 6454` and `106733 -> 6458` leave four
 items for three sprites.
@@ -38,16 +40,19 @@ NUMERIC = re.compile(r'^ItemIcon_(\d+)000$')
 def derive(confirmed, equipment, sprites):
     """`derived` entries and the problems found, from the confirmed pairs alone."""
     derived, problems, gaps = {}, [], []
+    # Group by slot *and* the sprite series' leading digit: a few `1087xx` items are Mech
+    # Cores drawn from the `84xx` gear series, not the `94xx` Cubis Core one.
     by_slot = {}
     for key, entry in confirmed.items():
         m = NUMERIC.match(entry['icon'])
         if key.isdigit() and m:
-            by_slot.setdefault(slot_of(int(key)), []).append((int(key), int(m.group(1))))
+            series = f'{slot_of(int(key))}/{m.group(1)[0]}xxx'
+            by_slot.setdefault(series, []).append((int(key), int(m.group(1))))
     for slot, pairs in sorted(by_slot.items()):
         pairs.sort()
         for (a, sa), (b, sb) in zip(pairs, pairs[1:]):
             if sb <= sa:
-                problems.append(f'{slot}: {a}->{sa} and {b}->{sb} run backwards')
+                gaps.append(f'{slot}: {a}->{sa} and {b}->{sb} run backwards (confirmed both; not derived across)')
                 continue
             if b - a == 1:
                 continue
