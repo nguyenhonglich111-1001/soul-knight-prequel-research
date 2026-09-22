@@ -3,12 +3,14 @@
 
 Combines, per item:
   * `id`, `slot`, `name` and `names` (13 languages)  -- from localization_all.json
-  * `icon`                                           -- from items_numeric.json
+  * `icon` / `icon_source`                           -- guide/icon_map.json first (hand-checked
+                                                        or derived from checked pairs), then
+                                                        the `ITEM_*` alias rule
   * `skill_id`                                       -- from skill_links.json
   * `rarity_hint`                                    -- "legendary" when a skill prefab
                                                         implements the item
-  * `effect` / `effect_key`                          -- the legendary's effect text, via
-                                                        `effect_key()` below
+  * `effect` / `effect_key` / `effect_source`       -- guide/effect_map.json first (checked
+                                                        in game), then `effect_key()` below
 
 The slot comes from the ID's third digit. That mapping is not guesswork: the legendary
 skill prefabs are filed as `Assets/RGPrefab/Skill/LegendEquipSkill/<slot>/<skill id>/`,
@@ -67,9 +69,8 @@ def icon_by_alias(name, byen, icons):
     its icon is `ItemIcon_CL_S1_000.png`. This is self-verifying, because the name has to
     match in both directions, and it covers 550 of 806 rows.
 
-    The other 115 rows fall back to `ItemIcon_<(id-100000)*1000>` in `items_numeric.json`,
-    which is **wrong** -- see icon-mapping-plan.md. The two rules are disjoint (no item
-    resolves under both), so nothing here is contaminated by that."""
+    Items it cannot reach take their icon from `guide/icon_map.json` or get none. There
+    is no arithmetic link from an item ID to a sprite number -- see icon-mapping-plan.md."""
     for key in byen.get(name, ()):
         if key.startswith('ITEM_'):
             path = icons.get('ItemIcon_' + key[len('ITEM_'):])
@@ -89,6 +90,8 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('--out', default='extracted')
+    ap.add_argument('--guide-dir', default='guide',
+                    help='where icon_map.json and effect_map.json live')
     args = ap.parse_args()
 
     def load(name, default=None):
@@ -112,15 +115,39 @@ def main():
         if en:
             byen.setdefault(en, []).append(key)
     icons = icon_table(args.out)
+    sprite_path = {os.path.basename(p)[:-4]: p for p in icons.values()}
 
-    rows = []
+    def guide_map(name):
+        path = os.path.join(args.guide_dir, name)
+        return json.load(open(path, encoding='utf8')) if os.path.exists(path) else {}
+    icon_map = guide_map('icon_map.json')
+    effect_map = guide_map('effect_map.json').get('confirmed', {})
+
+    def mapped_icon(nid):
+        for source in ('confirmed', 'derived'):
+            entry = icon_map.get(source, {}).get(str(nid))
+            if entry:
+                return sprite_path.get(entry['icon']), source
+        return None, None
+
+    rows, disagree = [], []
     for nid, row in sorted(numeric.items()):
         slot = slot_of(nid)
         if slot is None:
             continue
         skills = by_item.get(nid)
-        icon = row['icon'] or icon_by_alias(row['name'], byen, icons)
-        ekey = effect_key(skills)
+        icon, icon_source = mapped_icon(nid)
+        if not icon:
+            icon, icon_source = row['icon'], 'key'
+            if not icon:
+                icon = icon_by_alias(row['name'], byen, icons)
+                icon_source = 'alias' if icon else None
+        ekey, effect_source = effect_key(skills), 'skill-link'
+        checked = effect_map.get(str(nid))
+        if checked:
+            if ekey and ekey != checked['key']:
+                disagree.append(f'{nid}: game says {checked["key"]}, effect_key() says {ekey}')
+            ekey, effect_source = checked['key'], 'confirmed'
         effect = (strings.get(ekey, {}).get('English') or '').strip() or None if ekey else None
         rows.append({
             'id': nid,
@@ -128,10 +155,13 @@ def main():
             'name': row['name'],
             'names': row['names'],
             'icon': icon,
+            'icon_source': icon_source,
             'skill_ids': skills,
             'rarity_hint': 'legendary' if skills else None,
             'effect_key': ekey if effect else None,
             'effect': effect,
+            'effect_source': effect_source if effect else None,
+            'effect_values_lv1': (checked or {}).get('lv1'),
         })
 
     path = os.path.join(args.out, 'equipment.json')
@@ -142,9 +172,15 @@ def main():
     per_slot = Counter(r['slot'] for r in rows)
     print(f'{len(rows)} equipment rows -> {path}')
     print('  by slot:   ', dict(per_slot))
-    print('  with icon: ', sum(1 for r in rows if r['icon']))
+    print('  with icon: ', sum(1 for r in rows if r['icon']),
+          dict(Counter(r['icon_source'] for r in rows if r['icon'])))
     print('  with skill:', sum(1 for r in rows if r['skill_ids']))
-    print('  with effect:', sum(1 for r in rows if r['effect']))
+    print('  with effect:', sum(1 for r in rows if r['effect']),
+          dict(Counter(r['effect_source'] for r in rows if r['effect'])))
+    for d in disagree:
+        print('  EFFECT DISAGREES:', d)
+    if disagree:
+        sys.exit(1)
 
 
 if __name__ == '__main__':

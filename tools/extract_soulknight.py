@@ -317,19 +317,13 @@ def icon_folder(name):
 def icon_candidates(nid):
     """Sprite names that may hold item `nid`'s icon, best guess first.
 
-    **The equipment branch is known wrong.** It assumes `10SNNNN` is drawn by the sprite
-    `ItemIcon_<NNNNN>000` -- the ID with its leading `100` dropped and three zeroes
-    appended, `101643` -> `ItemIcon_1643000`. No such arithmetic link exists. Verified
-    against the game: `103467` Tophat of Six Splendors is `ItemIcon_3470000`, not
-    `3467000`. The item IDs and the art numbers are two sequences that align by rank with
-    an arbitrary per-slot offset, and the real table is in the encrypted Luban config. See
-    icon-mapping-plan.md for the evidence and the replacement.
-
-    Smaller IDs are used verbatim, under several prefixes depending on which UI first
-    showed the item; those are unaffected."""
+    The ID is used verbatim, under several prefixes depending on which UI first showed
+    the item. There is deliberately **no** equipment branch: an earlier one mapped
+    `10SNNNN` to `ItemIcon_<NNNNN>000` (`101643` -> `ItemIcon_1643000`), and no such
+    arithmetic link exists -- `103467` Tophat of Six Splendors is `ItemIcon_3470000`.
+    Equipment icons come from `guide/icon_map.json` (hand-checked) and the `ITEM_*`
+    alias rule, both applied in build_equipment.py. See icon-mapping-plan.md."""
     yield f'ItemIcon_{nid}'
-    if nid >= 100000:
-        yield f'ItemIcon_{(nid - 100000) * 1000}'
     yield f'ItemIcon_spt_{nid}'
     yield f'ICON_SP_{nid}'
     yield f'UI_SkillIcon_{nid}'

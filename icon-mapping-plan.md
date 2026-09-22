@@ -1,162 +1,110 @@
 # Fixing the numeric item → icon mapping
 
-**Status:** not started. Written 2026-09-21, after the `Tophat of Six Splendors` icon was found
-to be wrong in the rendered guide.
+**Status:** the broken formula is gone (2026-09-22). Equipment icons now come from the `ITEM_*`
+alias rule, or from a hand-checked table ([guide/icon_map.json](guide/icon_map.json)), or not at
+all. What's still open is **coverage**: 226 of 806 rows have no icon, and more screenshots are
+the only way to close that.
 
 ## The bug
 
 `icon_candidates()` in [extract_soulknight.py](tools/extract_soulknight.py) and
-`Data.icon_path()` in [build_guide.py](tools/build_guide.py) both assume an arithmetic link
+`Data.icon_path()` in [build_guide.py](tools/build_guide.py) both assumed an arithmetic link
 between an item's numeric ID and its sprite's number:
 
 ```
 103467  ->  (103467 - 100000) * 1000  ->  ItemIcon_3467000
 ```
 
-**No such link exists.** It was inferred from the two numbers looking similar and was never
-checked against the game. It is wrong, and it has been wrong since the first extraction.
+**No such link exists.** It was inferred because the two numbers look alike, and nobody checked
+it against the game. It filled 115 equipment rows. Of the 18 of those since checked in game, it
+was right **once** (`106441` Censurer's Necklace really is `6441000`).
 
-Confirmed wrong by four in-game observations (helmets, reported 2026-09-21):
+The real table is in the encrypted Luban config. `global-metadata.dat`, the Addressables catalog
+and all 18,182 prefab dumps have zero references to it, so it can't be derived. It can only be
+observed.
 
-| Item | ID | Formula says | Actually |
-|---|---|---|---|
-| Frostbound Hood | `103464` | `3464000` | **`3467000`** |
-| Tophat of Six Splendors | `103467` | `3467000` | **`3470000`** |
-| Crown of the Martial Saint | `103468` | `3468000` | **`3472000`** |
-| Rebellion-Queller's Headdress | `103469` | `3469000` | **`3473000`** |
+## The second hypothesis, also wrong: rank alignment
 
-Note the offset is `+3` for the first two and `+4` for the last two. No constant-offset formula
-can be correct.
+The first draft of this plan proposed aligning each slot's alias-less items against its sprites
+**by rank**. It reproduced the four helmet observations, but that was a coincidence of which
+items had been checked. Against the 10 numeric items from the 2026-09-22 screenshots it got
+**2 right**:
 
-## Why it went unnoticed
+| Item | ID | Game | Formula | Rank |
+|---|---|---|---|---|
+| Crown of the Martial Saint | `103468` | `3472` | 3468 | 3472 ✓ |
+| Plumesilk Vestments | `102452` | `2457` | 2452 | 2456 |
+| Garment of Immortality | `102453` | `2458` | 2453 | 2457 |
+| Starforged Battlegarb | `102454` | `2459` | 2454 | 2458 |
+| Bloodoath Overcoat | `102462` | `2467` | 2462 | 2466 |
+| Huntsman's Boots | `104709` | `4457` | — | 4457 ✓ |
+| Welkin-Jade Thimble | `105712` | `5452` | — | 5445 |
+| Censurer's Necklace | `106441` | `6441` | 6441 ✓ | — |
+| Fettered Fury | `106728` | `6454` | — | 6441 |
+| Heart Pendant | `106733` | `6458` | — | 6451 |
+| Hellhound Claw | `108701` | **`9400`** | — | — |
+| Leaf of Yggdrasil | `108708` | **`9407`** | — | — |
 
-The two number series run close together (`3448` against `103448`), so every wrong assignment
-still landed on *a helmet* — just the wrong one, three places along. Nothing looked broken until
-someone who knew the items compared them against the game.
+Cores aren't even in the `8xxx` sprite series the plan assumed. They are `94xx`, which the
+survey never looked at, and it wrongly rejected the whole slot.
 
-## The real link is not recoverable
+## What replaced it
 
-The item → icon table lives in the encrypted Luban config (`code_dll.bundle`, see
-[CLAUDE.md](CLAUDE.md) "What is and is not decrypted"). Searched and came up empty:
+1. **`guide/icon_map.json`, `confirmed`**: pairs checked against the game. 17 entries: the four
+   helmets from 2026-09-21, and 14 codex screenshots from 2026-09-22 (Crown of the Martial Saint
+   is in both). No tool rewrites them.
+2. **`derived`**: `tools/build_icon_map.py` fills items that sit between two confirmed pairs of
+   the same slot. It only does this when both ends have **the same offset** and every item and
+   sprite in between exists. Then the gap has exactly as many items as sprites, and (assuming
+   the art never runs backwards against the IDs, which every check so far bears out) there is
+   only one way to fill it. That gives 15 items: `103465`-`103466`, `102455`-`102461` and
+   `108702`-`108707`. When the offsets differ, a sprite was skipped somewhere inside and the
+   script leaves the whole gap blank: `106728` → `6454` and `106733` → `6458` leave four
+   necklaces for three sprites.
+3. **`--check`** re-derives and fails on any drift, on a confirmed sprite that isn't extracted,
+   on pairs that run backwards, and on a confirmed entry the alias rule contradicts. Both
+   screenshots that the alias rule also covers (`104400`, `ITEM_CL_H3_006`) agree with it.
+4. **Everything else gets no icon.** `build_equipment.py` and `build_guide.py` read the map;
+   neither computes a sprite name from an ID. `equipment.json` records `icon_source`
+   (`alias` / `confirmed` / `derived`).
 
-| Source | Result |
-|---|---|
-| `global-metadata.dat` (16 MB plaintext) | **0** hits for `ItemIcon_`, `iconId`, `GetItemIcon` |
-| `asset_catalog.json` (46,983 addresses) | **0** asset paths containing `ItemIcon` |
-| All 18,182 prefab dumps | **0** references to any `ItemIcon_*` name |
+Counts: 580 of 806 rows have an icon (549 alias, 16 confirmed, 15 derived). Before the fix it was
+665, but 115 of those came from the formula.
 
-So the mapping cannot be derived. It can only be *inferred* structurally, then verified by eye.
+## Getting more
 
-## What the structure actually is
+**Screenshot the Codex of Equipment page**, one item per shot, at any resolution. Then run:
 
-Two independent sequences that run in parallel and drift: the item IDs, and the art asset
-numbers. They line up **by rank**, not by arithmetic.
-
-For helmets the fit is exact — 25 sprites against 25 items that have no `ITEM_*` alias:
-
-```
-sprites  3448 3449 3450 3451 ... 3468 3469 3470 [3471 missing] 3472 3473   (25)
-items  103445 ...................................................103469   (25)
-```
-
-That reproduces all four observations above, and it also explains the three sprites that had no
-owner (`3448`/`3449`/`3450`) and the three helm items that showed `icon: null`
-(`103445` Lament of the Fallen, `103446` Rapture of the Fallen, `103447` Tribal Headdress).
-
-Slot 7 is the clearest proof that there is no formula at all: 8 sprites numbered `7501`-`7508`
-against 8 items numbered `107702`-`107709`. The offset is `-201`, arbitrary and slot-specific.
-
-## Per-slot survey
-
-`rule-1 rows` is how many equipment rows currently take an icon from the broken formula. The
-other 550 of 806 rows go through the `ITEM_*` alias, which is self-verifying (the English name
-matches in both directions) and is **not affected by any of this**.
-
-The blast radius really is exactly those 115 rows. Both `build_guide.Data.icon_path()` and
-`items_numeric.json` try the broken formula *before* the alias, which would be a second bug if
-the two ever collided — but they never do: of all 806 equipment items, **zero** resolve under
-both rules. The formula only ever fires where the alias has nothing to say.
-
-| Slot | rule-1 rows | sprites | sprite numbers | alias-less tail | verdict |
-|---|---|---|---|---|---|
-| helm | 22 | 25 | `3448`-`3473`, gap `3471` | `103445`-`103469`, contiguous | **confirmed** by 4 observations |
-| armor | 18 | 22 | `2447`, `2451`-`2470`, `2472` | `102446`-`102467`, contiguous | plausible, unverified |
-| necklace | 5 | 22 | `6440`-`6469`, 8 gaps | `106727`-`106748`, contiguous | plausible, unverified |
-| gear | 1 | 8 | `7501`-`7508`, no gaps | `107702`-`107709`, contiguous | plausible, unverified |
-| weapon | 61 | 63 | `1591`-`1655`, gaps `1616` `1642` | `101591`-`101655`, **not contiguous** | risky |
-| boots | 1 | 19 | `4445`-`4466`, 3 gaps | `104445`-`104717`, **not contiguous** | risky — tail spans 272 IDs |
-| ring | 6 | 31 | `5440`-`5474`, gaps `5446`-`5449` | `105444`-`105737`, **not contiguous** | risky — tail spans 293 IDs |
-| core | 1 | 21 | `8200`, `8300`, `8400`-`8418` | `108710`-`108730`, contiguous | **reject** — sprites are three separate runs, not one sequence |
-
-## Plan
-
-### 1. Derive the mapping by rank, per slot
-
-For each slot: take the numeric sprites in that slot's range, take the items with no `ITEM_*`
-alias, align the last *N* items to the *N* sprites in order. Helm already reproduces all four
-observations with no special-casing.
-
-### 2. Freeze it in `guide/icon_map.json`, do not recompute at build time
-
-The generator writes the file once; `build_equipment.py` and `build_guide.py` *read* it.
-
-This is the point of the whole exercise. Rank alignment is an inference, and an inference that
-silently re-derives itself on every build is exactly how the original bug survived. Freezing it
-means a change in the data shows up as a diff rather than as different pixels.
-
-Shape:
-
-```json
-{
-  "generated": "2026-09-21",
-  "derived": { "103467": "ItemIcon_3470000" },
-  "confirmed": { "103464": "ItemIcon_3467000" },
-  "rejected": { "108710": "slot 8 sprites are three separate runs" }
-}
+```bash
+python tools/match_screenshot_icons.py "Soul knight prequel"/*.PNG
 ```
 
-`confirmed` entries are hand-checked against the game and the generator **never** overwrites
-them. `derived` is regenerable. `rejected` items render the missing-icon placeholder.
+It pixel-matches the icon against every extracted 20×20 item sprite. A correct match scores
+0–31 and the runner-up 55+. The tool prints the winning sprite, the item that currently claims
+it, and `UNSURE` when the gap is too small. Read the item name off the screenshot, add a
+`confirmed` entry, and run `build_icon_map.py`, then `build_equipment.py` and `build_guide.py`.
 
-### 3. Add `--check` to the generator
+The same screenshot also shows the item's legendary effect with every `$token$` expanded and
+every `{n}` filled in. Record that in [guide/effect_map.json](guide/effect_map.json).
 
-Re-derives and compares against the frozen file. Fails loudly on any disagreement, and fails on
-any `confirmed` entry the derivation contradicts. This is the regression test the repo does not
-otherwise have.
+**Which items to ask for.** Pick the ones that bracket the most unknowns. The best picks sit just
+inside a run of consecutive IDs, so that two screenshots with equal offsets settle everything
+between them:
 
-### 4. Verify by eye, slot by slot
+- **Weapons** have no confirmed pair at all. Screenshots at both ends of `101591`-`101655` would
+  settle up to 60 items in one go, if the offsets match. Firmament's Caprice (`101644`) is in the
+  guide and currently has no icon.
+- **Mech gear** has 8 sprites `7501`-`7508` and no checks. Vitality Gear (`107702`) is in the
+  guide.
+- **Helm** `103445`-`103463` and **armor** `102446`-`102451`: one screenshot near the low end of
+  each would extend the derived runs.
+- **Necklace** `106729`-`106732`: one screenshot in the middle resolves the ambiguous gap.
 
-Contact sheets, as used to find this bug — `extracted/_sheets/helm_proposed.png` is the helm one.
-Nothing graduates from `derived` to `confirmed` without a human looking at it.
+## Known limits, stated rather than hidden
 
-**Ask.** The user plays the game and is the only source of truth here; the whole bug surfaced
-from one observation and was pinned down by four. Hand over a labelled sheet with the current
-answer already on it and ask which cells are wrong — that is a few seconds of their time and it
-is the only thing that can turn `derived` into `confirmed`. Do not sit on an inference because
-asking felt like an interruption.
-
-Order: helm (21 entries still unchecked), then armor, necklace, gear. **Weapon, boots and ring
-should render the placeholder until checked** — their alias-less tails are far too spread out
-for rank alignment to be trustworthy, and a wrong icon is worse than no icon. Core is rejected
-outright.
-
-### 5. Propagate
-
-Re-run `build_equipment.py` and `build_guide.py`, republish the artifact, and correct the
-"Finding an item's icon" sections in [CLAUDE.md](CLAUDE.md) and [README.md](README.md) — both
-currently state the broken rule as fact.
-
-## Verification
-
-1. `--check` passes on a clean tree.
-2. The four observed helmets resolve to `3467000` / `3470000` / `3472000` / `3473000`.
-3. `build_equipment.py` prints a `with icon` count that drops (weapon/boots/ring/core move to
-   placeholder) rather than rises — a rise would mean guesses were added.
-4. The guide's Early-gear block shows the right hat.
-
-## Known limits, to state rather than hide
-
-- The mapping stays an inference for every slot no human has checked.
-- ~140 equipment icons are genuinely absent from the APK and no mapping will conjure them.
-- If Chillyroom adds or removes art in a patch, every `derived` entry in that slot shifts.
-  That is what `--check` is for.
+- `derived` rests on the art never being numbered backwards against the IDs. No check has
+  contradicted that, and `--check` fails if one ever does.
+- ~140 equipment icons aren't in the APK at all (the game downloads them). No mapping will
+  produce those.
+- If Chillyroom adds or removes art in a patch, sprite numbers shift. Re-run `--check` after
+  re-extracting a new APK, and spot-check a couple of confirmed items.

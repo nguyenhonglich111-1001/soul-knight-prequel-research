@@ -4494,10 +4494,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1591000.png",
+  "icon": null,
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110421",
+  "effect": "You become $kuangnu$ whenever you’ve taken damage equal to {0}% of your max life."
  },
  {
   "id": 101592,
@@ -4512,7 +4512,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1592000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -4530,10 +4530,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1593000.png",
+  "icon": null,
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110421",
+  "effect": "You become $kuangnu$ whenever you’ve taken damage equal to {0}% of your max life."
  },
  {
   "id": 101594,
@@ -4548,7 +4548,7 @@
   "tier": "legendary",
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1594000.png",
+  "icon": null,
   "skill_ids": [
    "1500001",
    "1550001",
@@ -4570,7 +4570,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1595000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -4588,7 +4588,7 @@
   "tier": "legendary",
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1596000.png",
+  "icon": null,
   "skill_ids": [
    "1500021"
   ],
@@ -4608,7 +4608,7 @@
   "tier": "legendary",
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1597000.png",
+  "icon": null,
   "skill_ids": [
    "1500031",
    "1550004"
@@ -4629,7 +4629,7 @@
   "tier": "legendary",
   "class": "Druid",
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1598000.png",
+  "icon": null,
   "skill_ids": [
    "1500041"
   ],
@@ -4649,7 +4649,7 @@
   "tier": "legendary",
   "class": "Stormblade",
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1599000.png",
+  "icon": null,
   "skill_ids": [
    "1500051",
    "1550007"
@@ -4670,7 +4670,7 @@
   "tier": "legendary",
   "class": "Soulkeeper",
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1600000.png",
+  "icon": null,
   "skill_ids": [
    "1500061",
    "1550005"
@@ -4691,7 +4691,7 @@
   "tier": "legendary",
   "class": "Elementalist",
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1601000.png",
+  "icon": null,
   "skill_ids": [
    "1500071",
    "1550008",
@@ -4714,7 +4714,7 @@
   "tier": "legendary",
   "class": "Assassin",
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1602000.png",
+  "icon": null,
   "skill_ids": [
    "1500081",
    "1550009"
@@ -4735,7 +4735,7 @@
   "tier": "legendary",
   "class": "Bastion",
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1603000.png",
+  "icon": null,
   "skill_ids": [
    "1500091"
   ],
@@ -4755,7 +4755,7 @@
   "tier": "legendary",
   "class": "Lifebinder",
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1604000.png",
+  "icon": null,
   "skill_ids": [
    "1500101",
    "1550011"
@@ -4776,7 +4776,7 @@
   "tier": "legendary",
   "class": "Riftvoker",
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1605000.png",
+  "icon": null,
   "skill_ids": [
    "1500111"
   ],
@@ -4796,7 +4796,7 @@
   "tier": "legendary",
   "class": "Shinobi",
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1606000.png",
+  "icon": null,
   "skill_ids": [
    "1500121"
   ],
@@ -4816,7 +4816,7 @@
   "tier": "legendary",
   "class": "Necromancer",
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1607000.png",
+  "icon": null,
   "skill_ids": [
    "1500131"
   ],
@@ -4836,7 +4836,7 @@
   "tier": "legendary",
   "class": "Stormshaman",
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1608000.png",
+  "icon": null,
   "skill_ids": [
    "1500141"
   ],
@@ -4856,7 +4856,7 @@
   "tier": "legendary",
   "class": "Heliomancer",
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1609000.png",
+  "icon": null,
   "skill_ids": [
    "1500151"
   ],
@@ -4876,7 +4876,7 @@
   "tier": "legendary",
   "class": "Dreadknight",
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1610000.png",
+  "icon": null,
   "skill_ids": [
    "1500161"
   ],
@@ -4896,7 +4896,7 @@
   "tier": "legendary",
   "class": "Farstrider",
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1611000.png",
+  "icon": null,
   "skill_ids": [
    "1500171"
   ],
@@ -4916,7 +4916,7 @@
   "tier": "legendary",
   "class": "Heretic",
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1612000.png",
+  "icon": null,
   "skill_ids": [
    "1500181"
   ],
@@ -4936,7 +4936,7 @@
   "tier": "legendary",
   "class": "Paragon",
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1613000.png",
+  "icon": null,
   "skill_ids": [
    "1500191"
   ],
@@ -4956,7 +4956,7 @@
   "tier": "legendary",
   "class": "Ranger",
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1614000.png",
+  "icon": null,
   "skill_ids": [
    "1500201"
   ],
@@ -4976,7 +4976,7 @@
   "tier": "legendary",
   "class": "Dark Ranger",
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1615000.png",
+  "icon": null,
   "skill_ids": [
    "1500211",
    "1500221",
@@ -5016,7 +5016,7 @@
   "tier": "legendary",
   "class": "Storm line",
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1619000.png",
+  "icon": null,
   "skill_ids": [
    "1500241"
   ],
@@ -5036,7 +5036,7 @@
   "tier": "legendary",
   "class": "Vindicator",
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1620000.png",
+  "icon": null,
   "skill_ids": [
    "1500251"
   ],
@@ -5056,7 +5056,7 @@
   "tier": "legendary",
   "class": "Artillerist",
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1621000.png",
+  "icon": null,
   "skill_ids": [
    "1500261"
   ],
@@ -5076,7 +5076,7 @@
   "tier": "legendary",
   "class": "Artillerist",
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1622000.png",
+  "icon": null,
   "skill_ids": [
    "1500271"
   ],
@@ -5096,7 +5096,7 @@
   "tier": "legendary",
   "class": "Artillerist",
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1623000.png",
+  "icon": null,
   "skill_ids": [
    "1500281"
   ],
@@ -5116,7 +5116,7 @@
   "tier": "legendary",
   "class": "Wildwalker",
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1624000.png",
+  "icon": null,
   "skill_ids": [
    "1500291"
   ],
@@ -5136,7 +5136,7 @@
   "tier": "legendary",
   "class": "Wildwalker",
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1625000.png",
+  "icon": null,
   "skill_ids": [
    "1500301"
   ],
@@ -5156,7 +5156,7 @@
   "tier": "legendary",
   "class": "Wildwalker",
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1626000.png",
+  "icon": null,
   "skill_ids": [
    "1500311"
   ],
@@ -5176,7 +5176,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1627000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -5194,10 +5194,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1628000.png",
+  "icon": null,
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111061",
+  "effect": "Increases damage by {0}%. After defeating {1} enemies, gain Final Verdict (total damage increased by {2}% for {3}s). Using an Awakened skill also grants Final Verdict."
  },
  {
   "id": 101629,
@@ -5212,7 +5212,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1629000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -5230,7 +5230,7 @@
   "tier": "legendary",
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1630000.png",
+  "icon": null,
   "skill_ids": [
    "1500321"
   ],
@@ -5250,7 +5250,7 @@
   "tier": "legendary",
   "class": "Astral Mage",
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1631000.png",
+  "icon": null,
   "skill_ids": [
    "1500331"
   ],
@@ -5270,7 +5270,7 @@
   "tier": "legendary",
   "class": "Astral Mage",
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1632000.png",
+  "icon": null,
   "skill_ids": [
    "1500341"
   ],
@@ -5290,7 +5290,7 @@
   "tier": "legendary",
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1633000.png",
+  "icon": null,
   "skill_ids": [
    "1500351"
   ],
@@ -5310,7 +5310,7 @@
   "tier": "legendary",
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1634000.png",
+  "icon": null,
   "skill_ids": [
    "1500361"
   ],
@@ -5330,7 +5330,7 @@
   "tier": "legendary",
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1635000.png",
+  "icon": null,
   "skill_ids": [
    "1500371"
   ],
@@ -5350,7 +5350,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1636000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -5368,7 +5368,7 @@
   "tier": "legendary",
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1637000.png",
+  "icon": null,
   "skill_ids": [
    "1500381"
   ],
@@ -5388,7 +5388,7 @@
   "tier": "legendary",
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1638000.png",
+  "icon": null,
   "skill_ids": [
    "1500391"
   ],
@@ -5408,7 +5408,7 @@
   "tier": "legendary",
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1639000.png",
+  "icon": null,
   "skill_ids": [
    "1500401"
   ],
@@ -5428,7 +5428,7 @@
   "tier": "legendary",
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1640000.png",
+  "icon": null,
   "skill_ids": [
    "1500411"
   ],
@@ -5448,7 +5448,7 @@
   "tier": "legendary",
   "class": "Warliege",
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1641000.png",
+  "icon": null,
   "skill_ids": [
    "1500421"
   ],
@@ -5488,7 +5488,7 @@
   "tier": "legendary",
   "class": "Ranger",
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1643000.png",
+  "icon": null,
   "skill_ids": [
    "1500441"
   ],
@@ -5508,7 +5508,7 @@
   "tier": "legendary",
   "class": "Archer line",
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1644000.png",
+  "icon": null,
   "skill_ids": [
    "1500451"
   ],
@@ -5528,7 +5528,7 @@
   "tier": "legendary",
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1645000.png",
+  "icon": null,
   "skill_ids": [
    "1500461"
   ],
@@ -5548,7 +5548,7 @@
   "tier": "legendary",
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1646000.png",
+  "icon": null,
   "skill_ids": [
    "1500471",
    "1550044"
@@ -5569,7 +5569,7 @@
   "tier": "legendary",
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1647000.png",
+  "icon": null,
   "skill_ids": [
    "1500481",
    "1500491",
@@ -5593,7 +5593,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1648000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -5611,7 +5611,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1649000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -5629,7 +5629,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1650000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -5647,7 +5647,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1651000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -5665,7 +5665,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1652000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -5683,7 +5683,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1653000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -5701,7 +5701,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1654000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -5719,7 +5719,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_1655000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -6979,7 +6979,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_2447000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -7051,7 +7051,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_2451000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -7069,10 +7069,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_2452000.png",
+  "icon": "ItemIcon/ItemIcon_2457000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110549",
+  "effect": "Your skill damage is increased by {0}% when $jiankang$, but you take {1}% increased damage when $binwei$."
  },
  {
   "id": 102453,
@@ -7087,10 +7087,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_2453000.png",
+  "icon": "ItemIcon/ItemIcon_2458000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111161",
+  "effect": "Regen {0}% life every second, increased by {2}% if not hit for {1}s."
  },
  {
   "id": 102454,
@@ -7105,10 +7105,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_2454000.png",
+  "icon": "ItemIcon/ItemIcon_2459000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110552",
+  "effect": "You and your minions gain {0}% skill DMG and a shield equal to {1}% of max life for {2}s when not $jiankang$."
  },
  {
   "id": 102455,
@@ -7123,7 +7123,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_2455000.png",
+  "icon": "ItemIcon/ItemIcon_2460000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -7141,7 +7141,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_2456000.png",
+  "icon": "ItemIcon/ItemIcon_2461000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -7159,7 +7159,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_2457000.png",
+  "icon": "ItemIcon/ItemIcon_2462000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -7177,7 +7177,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_2458000.png",
+  "icon": "ItemIcon/ItemIcon_2463000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -7195,7 +7195,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_2459000.png",
+  "icon": "ItemIcon/ItemIcon_2464000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -7213,7 +7213,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_2460000.png",
+  "icon": "ItemIcon/ItemIcon_2465000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -7231,7 +7231,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_2461000.png",
+  "icon": "ItemIcon/ItemIcon_2466000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -7249,10 +7249,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_2462000.png",
+  "icon": "ItemIcon/ItemIcon_2467000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111681",
+  "effect": "Each time you spend mana, gain 1 stack of Bloodoath, stacking up to {2} times and lasting {3}s; Each stack increases Skill DMG by {0}%, but also increases damage taken by {1}%."
  },
  {
   "id": 102463,
@@ -7267,7 +7267,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_2463000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -7285,7 +7285,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_2464000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -7303,7 +7303,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_2465000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -7321,7 +7321,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_2466000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -7339,7 +7339,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_2467000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -8437,7 +8437,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_3448000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -8455,7 +8455,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_3449000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -8473,7 +8473,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_3450000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -8491,7 +8491,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_3451000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -8509,7 +8509,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_3452000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -8527,7 +8527,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_3453000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -8545,7 +8545,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_3454000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -8563,7 +8563,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_3455000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -8581,7 +8581,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_3456000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -8599,7 +8599,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_3457000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -8617,7 +8617,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_3458000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -8635,7 +8635,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_3459000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -8653,7 +8653,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_3460000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -8671,7 +8671,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_3461000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -8689,7 +8689,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_3462000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -8707,7 +8707,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_3463000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -8725,7 +8725,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_3464000.png",
+  "icon": "ItemIcon/ItemIcon_3467000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -8743,7 +8743,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_3465000.png",
+  "icon": "ItemIcon/ItemIcon_3468000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -8761,7 +8761,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_3466000.png",
+  "icon": "ItemIcon/ItemIcon_3469000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -8779,7 +8779,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_3467000.png",
+  "icon": "ItemIcon/ItemIcon_3470000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -8797,10 +8797,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_3468000.png",
+  "icon": "ItemIcon/ItemIcon_3472000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "112011",
+  "effect": "For every enemy within {0}m, All Damage is increased by {1}%, stacking up to {2} times. The presence of a Boss instantly grants max stacks."
  },
  {
   "id": 103469,
@@ -8815,7 +8815,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_3469000.png",
+  "icon": "ItemIcon/ItemIcon_3473000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -9051,8 +9051,8 @@
   "alias": "ITEM_CL_S1_000",
   "icon": "ItemIcon_CL/ItemIcon_CL_S1_000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111171",
+  "effect": "When there are no enemies within {0}m, gain $zhuanzhu$, $jisu$, and $yingyan$ every second, but these effects only last for {1}s."
  },
  {
   "id": 104401,
@@ -9859,7 +9859,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_4445000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -10057,10 +10057,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_4457000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110911",
+  "effect": "Increases bonus damage by {0}%. Gain Concentration for every {1}m moved."
  },
  {
   "id": 104710,
@@ -11155,7 +11155,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_5440000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -11173,7 +11173,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_5441000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -11191,7 +11191,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_5442000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -11209,7 +11209,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_5443000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -11227,7 +11227,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_5444000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -11245,7 +11245,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_5445000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -11479,10 +11479,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_5452000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110548",
+  "effect": "Your bonus damage is increased by {0}% at the cost of {1} mana/s."
  },
  {
   "id": 105713,
@@ -12883,7 +12883,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_6440000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -12903,8 +12903,8 @@
   "alias": null,
   "icon": "ItemIcon/ItemIcon_6441000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110241",
+  "effect": "The effect of $yishang$ increases by {0}% in total."
  },
  {
   "id": 106442,
@@ -12919,7 +12919,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_6442000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -12937,7 +12937,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_6443000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -12955,7 +12955,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_6444000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -13477,10 +13477,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_6454000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110671",
+  "effect": "You gain 1 stack of Bloodthirst whenever you lose life, increasing your crit damage by {0}% for {1}s, stacking up to {2} times. (Design from the Ereborn Legacy event)"
  },
  {
   "id": 106729,
@@ -13567,10 +13567,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_6458000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110901",
+  "effect": "+1 max $zhuanzhu$ stack. Gain {0}% increased skill damage when at 2+ $zhuanzhu$ stacks."
  },
  {
   "id": 106734,
@@ -13873,7 +13873,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_7501000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -14053,7 +14053,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": "ItemIcon/ItemIcon_8401000.png",
+  "icon": null,
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -14089,10 +14089,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_9400000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "110567",
+  "effect": "When All Damage exceeds {0}%, for every additional {1}%, you and your minions gain a {2}% bonus damage, up to a maximum of {3}% (excludes stats added by buffs, Legendary effects, and skill effects)."
  },
  {
   "id": 108702,
@@ -14107,7 +14107,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_9401000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -14125,7 +14125,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_9402000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -14143,7 +14143,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_9403000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -14161,7 +14161,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_9404000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -14179,7 +14179,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_9405000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -14197,7 +14197,7 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_9406000.png",
   "skill_ids": null,
   "effect_key": null,
   "effect": null
@@ -14215,10 +14215,10 @@
   "tier": null,
   "class": null,
   "alias": null,
-  "icon": null,
+  "icon": "ItemIcon/ItemIcon_9407000.png",
   "skill_ids": null,
-  "effect_key": null,
-  "effect": null
+  "effect_key": "111081",
+  "effect": "When your Soul Power reaches {0}, gain a {1}% damage bonus. For every additional {2} points of Soul Power, gain an extra {3}% damage bonus, up to a maximum of {4}%."
  },
  {
   "id": 108709,

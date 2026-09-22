@@ -1,0 +1,25 @@
+{
+ "about": "Item -> effect-text key, hand-checked against the game. build_equipment.py prefers these over effect_key() and fails if the two ever disagree. `lv1` is what the codex shows for {0}, {1}, ... at effect Lv.1 (equipment level 60, Normal tier); the encrypted config fills these in, so the screenshot is the only source. No id arithmetic links item to key -- see CLAUDE.md.",
+ "confirmed": {
+  "101591": {"key": "110421", "name": "Sangrilok Twinblades", "source": "user report 2026-09-21"},
+  "101593": {"key": "110421", "name": "Sangrilok Longbow", "source": "user report 2026-09-21"},
+  "101628": {"key": "111061", "name": "Valkyrian Scepter", "source": "user report 2026-09-21"},
+  "101642": {"key": "130044", "name": "Iron Maidenfan", "source": "user report; also effect_key() of skill 1500431"},
+  "101643": {"key": "130045", "name": "Grandfather Paradox", "source": "user report; also effect_key() of skill 1500441"},
+  "101644": {"key": "130046", "name": "Firmament's Caprice", "source": "user report; also effect_key() of skill 1500451"},
+  "102452": {"key": "110549", "name": "Plumesilk Vestments", "source": "screenshot IMG_6188", "lv1": [12, 15]},
+  "102453": {"key": "111161", "name": "Garment of Immortality", "source": "screenshot IMG_6187", "lv1": [3, 5, 50]},
+  "102454": {"key": "110552", "name": "Starforged Battlegarb", "source": "screenshot IMG_6189", "lv1": [13.5, 6.5, 10]},
+  "102462": {"key": "111681", "name": "Bloodoath Overcoat", "source": "screenshot IMG_6186", "lv1": [5, 6, 3, 3]},
+  "103468": {"key": "112011", "name": "Crown of the Martial Saint", "source": "screenshot IMG_6184", "lv1": [12, 2, 6]},
+  "104400": {"key": "111171", "name": "Orion's Galoshes", "source": "screenshot IMG_6190", "lv1": [6, 1]},
+  "104709": {"key": "110911", "name": "Huntsman's Boots", "source": "screenshot IMG_6191", "lv1": [13.5, 12]},
+  "105712": {"key": "110548", "name": "Welkin-Jade Thimble", "source": "screenshot IMG_6195", "lv1": [12, 2]},
+  "106441": {"key": "110241", "name": "Censurer's Necklace", "source": "screenshot IMG_6192", "lv1": [8]},
+  "106728": {"key": "110671", "name": "Fettered Fury", "source": "screenshot IMG_6194", "lv1": [4, 3, 5]},
+  "106733": {"key": "110901", "name": "Heart Pendant", "source": "screenshot IMG_6193", "lv1": [13.5]},
+  "108701": {"key": "110567", "name": "Hellhound Claw", "source": "screenshot IMG_6197", "lv1": [120, 1.5, 1, 21.5]},
+  "108708": {"key": "111081", "name": "Leaf of Yggdrasil", "source": "screenshot IMG_6198", "lv1": [500, 8, 150, 1.5, 15]},
+  "ITEM_CL_H3_006": {"key": "110021", "name": "Bishop's Biretta", "source": "screenshot IMG_6185", "lv1": [5.5, 13.5]}
+ }
+}

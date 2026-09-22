@@ -11,7 +11,7 @@ Unity 2022.3 (Addressables). Its content sits in ~465 `.bundle` files in
 | `localization_all.json` | Every string the game shows, 28,703 keys, 13 languages. `{ "<key>": { "English": "...", "Chinese": "...", ... } }` |
 | `items.json` | 1,490 `ITEM_*` items: `id`, `prefix`, `key`, `name`, `description`, `names` / `descriptions` (all languages), `icon` |
 | `items_numeric.json` | 16,908 numeric-key entries (most weapons, armor, consumables, UI text). Same fields as above, plus `description_id` |
-| `equipment.json` | 806 equipment rows: `id`, `slot`, `name`, `names`, `icon`, `skill_ids`, `rarity_hint`, `effect`, `effect_key` (665 have an icon, 46 have effect text) |
+| `equipment.json` | 806 equipment rows: `id`, `slot`, `name`, `names`, `icon`, `icon_source`, `skill_ids`, `rarity_hint`, `effect`, `effect_key`, `effect_source`, `effect_values_lv1` (580 have an icon, 62 have effect text) |
 | `item_details.json` | 806 rows with everything derivable per item: `category`, `weapon_type`, `weapon_class`, `armor_class`, `family`, `tier`, `class`, `effect` |
 | `skill_links.json` | 64 legendary items joined to the skill prefab that implements them (`item_id`, `skill_id`, `bundle`) |
 | `prefabs/*.json` | 18,182 prefabs with every `MonoBehaviour` field: skills, buffs, bullets, characters, stages, UI |
@@ -59,20 +59,21 @@ print([i for i in items if 'Paradox' in i['name']])
   their IDs use the *same* leading digit (`1......` weapon, `2......` armor, ...), and the 7xxx /
   8xxx name blocks say so themselves (Rusty / Arcane / Vitality **Gear**; Leaf of Yggdrasil and
   the other **cores**). `equipment.json` labels every row from this.
-- **Finding an equipment icon: one rule that works, one that is broken.**
-  - *Works.* Look the English name up again in the localization -- most items *also* exist under
+- **Finding an equipment icon: an alias rule, plus a hand-checked table for the rest.**
+  - *Alias.* Look the English name up again in the localization -- most items *also* exist under
     a textual `ITEM_<suffix>` key, and the icon is then `ItemIcon_<suffix>`. "Orion's Galoshes"
     is both `104400` and `ITEM_CL_S1_000`, giving `ItemIcon_CL_S1_000.png`. This covers 550 of
     the 806 rows and is self-verifying, because the English name has to match in both
     directions. `build_equipment.icon_by_alias()` does this.
+  - *Checked table.* For the rest there is **no rule**: an item ID and its sprite number are
+    not linked by any arithmetic (`103467` Tophat of Six Splendors is `ItemIcon_3470000`; the
+    cores are `94xx`, not `87xx`), and the real table is in the encrypted config.
+    [guide/icon_map.json](guide/icon_map.json) holds pairs confirmed against in-game screenshots,
+    plus items that sit between two confirmed pairs with the same offset.
+    `tools/build_icon_map.py` fills the latter and `--check` guards the file. Everything else
+    gets no icon -- a wrong icon is worse than none. See [icon-mapping-plan.md](icon-mapping-plan.md).
   - *Also works.* A few sprites are simply named after their key, which is how every Fatebound
     icon resolves (`EBF_SCATTERING`).
-  - **Broken -- do not trust.** For the 115 rows the alias misses, the tools still fall back to
-    "drop the leading `100` and append three zeroes" (`101643` -> `ItemIcon_1643000`). There is
-    no arithmetic link between an item ID and its sprite number. Checked against the game,
-    `103467` Tophat of Six Splendors is `ItemIcon_3470000`, not `3467000`. The two number series
-    align by **rank**, not by value, with an arbitrary per-slot offset, so no formula can fix
-    it. See [icon-mapping-plan.md](icon-mapping-plan.md).
   - Items with IDs below `10000` use the ID verbatim under one of `ItemIcon_`, `ItemIcon_spt_`,
     `ICON_SP_`, `UI_SkillIcon_` or `UI_BF_`; `icon_candidates()` tries all of those.
   - *Skills are different again.* A skill's icon is named after its skill-**tree** key
@@ -119,6 +120,9 @@ Spatha of the Fire Colossus). `build_equipment.effect_key()` applies it, and `eq
 now carries `effect` and `effect_key`.
 
 This fills **46 of 806** equipment rows, which between them previously had *zero* descriptions.
+Another 16 come from [guide/effect_map.json](guide/effect_map.json): item -> effect-key pairs read
+off in-game screenshots, with the Lv.1 values of `{0}`, `{1}`, ... alongside. Those keys sit in
+`110xxx`-`112xxx` and follow no id pattern, so they can only be collected, not derived.
 11 of the 57 `130xxx` texts remain unassigned: their prefabs exist but carry an effect name
 rather than an item name in `Desc`, and 27 legendary-range weapons have no skill link, so there
 is no bijection to fall back on.
@@ -171,21 +175,23 @@ game, you can: a few spot checks against what is actually on screen are worth mo
 amount of further digging, and that is how the icon-mapping bug below was found. Contact sheets
 for pointing at are generated into `extracted/_sheets/`.
 
-- **The numeric item -> icon mapping is wrong for 115 of 806 equipment rows.** The rule the
-  tools use is an arithmetic guess that does not hold; the real table is in the encrypted Luban
-  config and is not recoverable (zero `ItemIcon_` strings in `global-metadata.dat`, zero
-  `ItemIcon` paths in the Addressables catalog, zero references across all 18,182 prefab dumps).
-  The 550 rows that resolve through the `ITEM_*` name alias are fine. Fix plan and the evidence:
-  [icon-mapping-plan.md](icon-mapping-plan.md).
+- **226 of 806 equipment rows have no icon.** The alias rule covers 549 and the hand-checked
+  table 31; the rest are left blank on purpose, because the real item -> icon table is in the
+  encrypted Luban config (zero `ItemIcon_` strings in `global-metadata.dat`, zero `ItemIcon`
+  paths in the Addressables catalog, zero references across all 18,182 prefab dumps). The old
+  "drop the `100`, append `000`" rule filled 115 of them; of the 18 since checked, it was right once. A
+  codex screenshot per item closes the gap -- `tools/match_screenshot_icons.py` identifies the
+  sprite. See [icon-mapping-plan.md](icon-mapping-plan.md).
 - **Only 46 of 806 equipment rows have machine-derivable description text.** Those 46 come from
-  the `130xxx` rule above. Ruled out as sources: `ITEM_<suffix>_D` (0 of 550), the
+  the `130xxx` rule above; 16 more are hand-checked (`guide/effect_map.json`). Ruled out as sources: `ITEM_<suffix>_D` (0 of 550), the
   `148xxx`/`149xxx` name block, and `95xxx`/`96xxx` (a per-item index for 156 items, but it only
   reaches fragment boilerplate).
 - **`110001`-`112171` does hold more effect text, but the item link is unsolved.** Nothing in it
   joins to an item by name, yet it demonstrably describes items: `110421` is the effect of *both*
   `101591` Sangrilok Twinblades and `101593` Sangrilok Longbow, and `111061` is `101628`
-  Valkyrian Scepter (all three confirmed in-game). So one text can serve several items, and the
-  two known pairs share no offset. More confirmed pairs are needed before a rule is worth trying.
+  Valkyrian Scepter (all three confirmed in-game). So one text can serve several items. 14 more
+  pairs came from screenshots on 2026-09-22 (`110021`, `110241`, `110548`, ... `112011`) and still
+  show no id pattern, so the pairs live in `guide/effect_map.json` rather than in a rule.
 - **Rarity is not in the APK at all.** Only the six labels exist (`ITEM_RATE_0`-`_5`); no
   per-item rarity field appears anywhere. `item_details.json` carries a `tier` proxy instead,
   derived from the alias family code, with `legendary` asserted only for the 46 items that have
@@ -222,7 +228,7 @@ for pointing at are generated into `extracted/_sheets/`.
   localized name (e.g. weapons `101649`-`101655`, rings `105446`-`105474`) -- unreleased content
   whose art shipped early.
 
-Four things the earlier version of this file listed as gaps are now fixed:
+Three things the earlier version of this file listed as gaps are now fixed:
 
 - **`skp_loc_s13_bin` is readable.** It is an ordinary table XORed with a repeating 120-byte key.
   Every table begins with the same `"Key"<TAB>"Type"<TAB>"English"<TAB>...` header row, so
@@ -231,8 +237,6 @@ Four things the earlier version of this file listed as gaps are now fixed:
   affix blocks, and 32 more equipment names. `deobfuscate()` in the extractor does this automatically.
 - **`global-metadata.dat` is not encrypted.** Only its 0x108-byte header is scrambled; everything
   after it, including the whole string-literal table, is plaintext and greppable as-is.
-- **Numeric equipment does have icons** -- 328 item rows are now linked, up from 23. See the icon
-  naming rule under "Key naming" above.
 - **Category labels are solved.** The slot is the third digit of the ID; `equipment.json` carries it.
 
 ## How to run it again
@@ -246,6 +250,7 @@ Four things the earlier version of this file listed as gaps are now fixed:
    python tools/extract_soulknight.py --skip-icons  # text + catalog + item tables only
    python tools/extract_skill_links.py              # skill_links.json      (~5 min)
    python tools/dump_prefabs.py                     # prefabs/*.json        (~20 min)
+   python tools/build_icon_map.py                   # guide/icon_map.json   (instant; --check)
    python tools/build_equipment.py                  # equipment.json        (instant)
    python tools/build_indexes.py                    # buffs/characters/loc_refs (instant)
    python tools/build_item_details.py               # item_details.json     (instant)

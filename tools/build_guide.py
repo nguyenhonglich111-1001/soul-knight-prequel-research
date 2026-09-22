@@ -58,8 +58,12 @@ class Data:
         # Legendary effect text, keyed by item id. `build_equipment.effect_key()` derives
         # it from the item's skill prefab; it is the only description equipment has.
         eq = os.path.join(out, 'equipment.json')
-        self.effects = {str(r['id']): r['effect'] for r in
-                        json.load(open(eq, encoding='utf8'))} if os.path.exists(eq) else {}
+        eq = json.load(open(eq, encoding='utf8')) if os.path.exists(eq) else []
+        self.effects = {str(r['id']): r['effect'] for r in eq}
+        # Equipment icons as build_equipment.py settled them: guide/icon_map.json (checked
+        # in game, or derived from checked pairs) before the `ITEM_*` alias rule.
+        self.equip_icons = {str(r['id']): os.path.join(out, 'icons', r['icon'])
+                            for r in eq if r['icon']}
         self.by_en = collections.defaultdict(list)
         for key, row in self.loc.items():
             en = row.get('English')
@@ -106,20 +110,16 @@ class Data:
         return self.icons.get(tree) if tree else None
 
     def icon_path(self, key, name):
-        """Sprite named after the key -> item-id icon -> `ITEM_*` alias icon.
+        """Sprite named after the key -> equipment.json's icon -> `ITEM_*` alias icon.
 
-        The middle step is **known wrong** -- there is no arithmetic link between an item ID
-        and its sprite number, so the 115 rows that reach it get someone else's icon. See
-        icon-mapping-plan.md. It is still here because removing it would leave those rows
-        blank without fixing anything; the plan replaces it with a frozen, eye-checked map.
-        The order is harmless in practice: no item resolves under both rules (checked, 0 of
-        806), so the reliable alias rule never loses to the broken one."""
+        Never computes a sprite name from an item ID: there is no arithmetic link between
+        the two (`103467` is `ItemIcon_3470000`). An item with no checked icon gets the
+        placeholder, which is the point -- a wrong icon is worse than none. See
+        icon-mapping-plan.md."""
         if key in self.icons:
             return self.icons[key]
-        if key.isdigit() and 100000 <= int(key) < 110000:
-            direct = f'ItemIcon_{(int(key) - 100000) * 1000}'
-            if direct in self.icons:
-                return self.icons[direct]
+        if key in self.equip_icons:
+            return self.equip_icons[key]
         for alias in self.by_en.get(name or '', ()):
             if alias.startswith('ITEM_'):
                 path = self.icons.get('ItemIcon_' + alias[len('ITEM_'):])

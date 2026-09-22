@@ -1,0 +1,40 @@
+{
+ "about": "Item -> icon sprite for equipment the ITEM_* alias rule cannot reach. `confirmed` is hand-checked against the game and is never rewritten by tools/build_icon_map.py; `derived` is regenerated from it. See icon-mapping-plan.md.",
+ "generated": "2026-09-22",
+ "confirmed": {
+  "102452": {"icon": "ItemIcon_2457000", "name": "Plumesilk Vestments", "source": "screenshot IMG_6188, pixel match 0"},
+  "102453": {"icon": "ItemIcon_2458000", "name": "Garment of Immortality", "source": "screenshot IMG_6187, pixel match 0"},
+  "102454": {"icon": "ItemIcon_2459000", "name": "Starforged Battlegarb", "source": "screenshot IMG_6189, pixel match 0"},
+  "102462": {"icon": "ItemIcon_2467000", "name": "Bloodoath Overcoat", "source": "screenshot IMG_6186, pixel match 31"},
+  "103464": {"icon": "ItemIcon_3467000", "name": "Frostbound Hood", "source": "user report 2026-09-21"},
+  "103467": {"icon": "ItemIcon_3470000", "name": "Tophat of Six Splendors", "source": "user report 2026-09-21"},
+  "103468": {"icon": "ItemIcon_3472000", "name": "Crown of the Martial Saint", "source": "user report 2026-09-21; screenshot IMG_6184, pixel match 0"},
+  "103469": {"icon": "ItemIcon_3473000", "name": "Rebellion-Queller's Headdress", "source": "user report 2026-09-21"},
+  "104400": {"icon": "ItemIcon_CL_S1_000", "name": "Orion's Galoshes", "source": "screenshot IMG_6190, pixel match 7 (also the alias rule's answer)"},
+  "104709": {"icon": "ItemIcon_4457000", "name": "Huntsman's Boots", "source": "screenshot IMG_6191, pixel match 16"},
+  "105712": {"icon": "ItemIcon_5452000", "name": "Welkin-Jade Thimble", "source": "screenshot IMG_6195, pixel match 9"},
+  "106441": {"icon": "ItemIcon_6441000", "name": "Censurer's Necklace", "source": "screenshot IMG_6192, pixel match 12"},
+  "106728": {"icon": "ItemIcon_6454000", "name": "Fettered Fury", "source": "screenshot IMG_6194, pixel match 23"},
+  "106733": {"icon": "ItemIcon_6458000", "name": "Heart Pendant", "source": "screenshot IMG_6193, pixel match 29"},
+  "108701": {"icon": "ItemIcon_9400000", "name": "Hellhound Claw", "source": "screenshot IMG_6197, pixel match 0"},
+  "108708": {"icon": "ItemIcon_9407000", "name": "Leaf of Yggdrasil", "source": "screenshot IMG_6198, pixel match 21"},
+  "ITEM_CL_H3_006": {"icon": "ItemIcon_CL_H3_006", "name": "Bishop's Biretta", "source": "screenshot IMG_6185, pixel match 12 (also the alias rule's answer)"}
+ },
+ "derived": {
+  "102455": {"icon": "ItemIcon_2460000", "name": "Wasteland Cuirass", "between": ["102454", "102462"]},
+  "102456": {"icon": "ItemIcon_2461000", "name": "Radioactive Battlegarb", "between": ["102454", "102462"]},
+  "102457": {"icon": "ItemIcon_2462000", "name": "Gentleman’s Jacket", "between": ["102454", "102462"]},
+  "102458": {"icon": "ItemIcon_2463000", "name": "Noel Wrecks’ Coat", "between": ["102454", "102462"]},
+  "102459": {"icon": "ItemIcon_2464000", "name": "Hare-Trigger Temper’s Mantle", "between": ["102454", "102462"]},
+  "102460": {"icon": "ItemIcon_2465000", "name": "Ensorcelled Wardrobe", "between": ["102454", "102462"]},
+  "102461": {"icon": "ItemIcon_2466000", "name": "Godswood Plate", "between": ["102454", "102462"]},
+  "103465": {"icon": "ItemIcon_3468000", "name": "Underlord's Visor", "between": ["103464", "103467"]},
+  "103466": {"icon": "ItemIcon_3469000", "name": "Harrier’s Headguard", "between": ["103464", "103467"]},
+  "108702": {"icon": "ItemIcon_9401000", "name": "Ophidian Gaze", "between": ["108701", "108708"]},
+  "108703": {"icon": "ItemIcon_9402000", "name": "Sol Tablet", "between": ["108701", "108708"]},
+  "108704": {"icon": "ItemIcon_9403000", "name": "Scarab Fossil", "between": ["108701", "108708"]},
+  "108705": {"icon": "ItemIcon_9404000", "name": "Antiquated Compass", "between": ["108701", "108708"]},
+  "108706": {"icon": "ItemIcon_9405000", "name": "Shard of Celestial Wing", "between": ["108701", "108708"]},
+  "108707": {"icon": "ItemIcon_9406000", "name": "The Lacuna", "between": ["108701", "108708"]}
+ }
+}

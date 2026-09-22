@@ -31,7 +31,12 @@
     "zhanyi": "Battle Intent",
     "shuxingyichang": "status ailment",
     "juexin": "Resolve",
-    "lianji": "Combo"
+    "lianji": "Combo",
+    "jiankang": "Healthy",
+    "binwei": "Critically Injured",
+    "jisu": "Swift",
+    "yingyan": "Eagle Eye",
+    "yishang": "Vulnerable"
   },
   "sections": [
     {

@@ -16,7 +16,7 @@ pipeline stage and checking its printed counts and its JSON output.
 - `guide/` — hand-written guide content (prose + keys into `extracted/`), rendered to HTML by
   `tools/build_guide.py`. The only hand-authored data in the repo; everything else is derived.
 - `README.md` — the user-facing guide. Keep it in sync when the pipeline's counts change.
-- `icon-mapping-plan.md` — the open fix for the broken numeric item → icon rule (see below).
+- `icon-mapping-plan.md` — how equipment icons outside the alias rule are settled (see below).
 
 ## Commands
 
@@ -27,14 +27,15 @@ python tools/extract_soulknight.py               # stages 1-5; icons take 15-30 
 python tools/extract_soulknight.py --skip-icons  # text + catalog + item tables only
 python tools/extract_skill_links.py              # skill_links.json      (~5 min)
 python tools/dump_prefabs.py                     # prefabs/*.json        (~20 min)
+python tools/build_icon_map.py                   # guide/icon_map.json   (instant; --check)
 python tools/build_equipment.py                  # equipment.json        (instant)
 python tools/build_indexes.py                    # named_prefabs/buffs/… (instant)
 python tools/build_item_details.py               # item_details.json     (instant)
 python tools/build_guide.py                      # range-guide.html      (instant)
 ```
 
-Order matters: `build_equipment.py` reads `localization_all.json`, `items_numeric.json` and
-`skill_links.json`; `build_indexes.py` reads `localization_all.json` and `prefabs/`;
+Order matters: `build_equipment.py` reads `localization_all.json`, `items_numeric.json`,
+`skill_links.json`, `guide/icon_map.json` and `guide/effect_map.json`; `build_indexes.py` reads `localization_all.json` and `prefabs/`;
 `build_guide.py` reads `guide/*.json`, `localization_all.json`, `items_numeric.json`,
 `equipment.json` (for legendary effect text) and `extracted/icons/`, so it runs after
 `build_equipment.py`.
@@ -42,6 +43,14 @@ Order matters: `build_equipment.py` reads `localization_all.json`, `items_numeri
 `extract_named_sprites.py` exports sprites the main extractor's `ICON_PATTERN` never matched,
 without re-running its 30-minute pass — it consults `sprite_index.json` and opens only the
 bundles that actually hold the names asked for:
+
+New in-game screenshots of the Codex of Equipment are turned into `confirmed` entries with
+`match_screenshot_icons.py`, which pixel-matches the icon against every extracted sprite and
+prints the winner, its score and which item currently claims it:
+
+```bash
+python tools/match_screenshot_icons.py "Soul knight prequel"/*.PNG
+```
 
 ```bash
 python tools/extract_named_sprites.py --prefix EBF_ --folder EBF   # Fatebound icons
@@ -96,26 +105,33 @@ they never touch the APK.
 legendary skill prefabs, which live in `Assets/RGPrefab/Skill/LegendEquipSkill/<slot>/<skill
 id>/` and reuse the same leading digit, and by the 7xxx/8xxx name blocks themselves (Rusty /
 Arcane / Vitality **Gear**; Leaf of Yggdrasil and the other **cores**). IDs below `10000` use
-the ID verbatim under one of five prefixes — see `icon_candidates()`, whose *numeric* branch is
-the broken rule described below.
+the ID verbatim under one of five prefixes — see `icon_candidates()`. Careful: the *sprite*
+numbers do not follow the slot digit everywhere — core icons are `ItemIcon_94xx000`
+(`108701` Hellhound Claw is `9400000`), not `87xx` or `84xx`.
 
-**Finding an item's icon.** Two rules that work, and one that is **known broken** — see
-[icon-mapping-plan.md](icon-mapping-plan.md) for the fix.
+**Finding an item's icon.** See [icon-mapping-plan.md](icon-mapping-plan.md) for the history.
 
-1. **BROKEN — do not trust.** `build_equipment.icon_by_alias()` and
-   `build_guide.Data.icon_path()` still fall back to "drop the leading `100`, append three
-   zeroes" (`101643` → `ItemIcon_1643000`) for the 115 of 806 rows that rule 2 misses. There is
-   no arithmetic link between an item ID and its sprite number. Verified against the game:
-   `103467` Tophat of Six Splendors is `ItemIcon_3470000`, not `3467000`; `103468` is `3472000`,
-   not `3468000`. The offset is `+3` for some items in the block and `+4` for others, so no
-   constant offset can ever be right. The two series align **by rank**, not by value, and the
-   per-slot offset is arbitrary — slot 7 is 8 sprites numbered `7501`-`7508` against 8 items
-   numbered `107702`-`107709`.
+1. **There is no ID → sprite-number rule. Do not write one.** The old fallback, "drop the
+   leading `100`, append three zeroes" (`101643` → `ItemIcon_1643000`), was removed on
+   2026-09-22; of the 18 items since checked in game it was right once. Nor do the two series
+   align by rank per slot — that was the next hypothesis, and it got 2 of 10 checks right
+   (armor lands one short on every checked item). The offset drifts inside a block: helm is
+   `+3` at `103464`/`103467` and `+4` at `103468`/`103469`; armor is `+5` from `102452` to
+   `102462`. Equipment the alias rule misses gets its icon from
+   [guide/icon_map.json](guide/icon_map.json) or gets **none**:
+   - `confirmed` — hand-checked against the game (screenshot + `match_screenshot_icons.py`).
+     Never rewritten by a tool.
+   - `derived` — `build_icon_map.py` fills items between two confirmed pairs of the same slot,
+     **only** when both ends have the same offset and every item and sprite in between exists.
+     Unequal offsets mean a skipped sprite somewhere inside, and it does not guess where.
+   - `build_icon_map.py --check` re-derives and fails on drift, on a confirmed sprite that is
+     not extracted, on pairs that run backwards, and on a confirmed entry the alias rule
+     contradicts.
 2. Look the English name up again in the localization: most items *also* exist under a textual
    `ITEM_<suffix>` key, and the icon is then `ItemIcon_<suffix>`. "Orion's Galoshes" is both
    `104400` and `ITEM_CL_S1_000`, giving `ItemIcon_CL_S1_000.png`. This is the rule that
    works — it is self-verifying, because the English name has to match in both directions, and
-   it covers 550 rows.
+   it covers 550 rows. Two screenshots agree with it (`104400`, `ITEM_CL_H3_006`).
 3. Some sprites are simply named after their key — every Fatebound icon is the sprite named
    after its buff id, e.g. `EBF_SCATTERING`.
 4. **Skills referenced by numeric id have no sprite of their own.** Icons are named after
@@ -126,8 +142,9 @@ the broken rule described below.
 The real item → icon table is in the encrypted Luban config and **cannot be recovered**. Do not
 go looking again: `global-metadata.dat` has zero hits for `ItemIcon_`, `iconId` or
 `GetItemIcon`; the Addressables catalog has zero asset paths containing `ItemIcon`; and the
-18,182 prefab dumps contain zero `ItemIcon_*` references. The only route left is structural
-inference plus a human checking contact sheets against the game.
+18,182 prefab dumps contain zero `ItemIcon_*` references. The only route left is the user
+screenshotting the Codex of Equipment page for the item — one screenshot settles one item
+exactly, and two with equal offsets can settle everything between them.
 
 Why this survived so long: the two number series run close together (`3448` against `103448`),
 so a wrong assignment still lands on *a helmet* — just the wrong one, three places along.
@@ -178,8 +195,13 @@ fall back on. Do not rank-align these — ask instead. One lead worth checking: 
   of **both** `101591` Sangrilok Twinblades and `101593` Sangrilok Longbow, and `111061`
   ("…gain Final Verdict…") is `101628` Valkyrian Scepter. Two facts follow: the mapping
   is **not** one-to-one, since one text serves several items, and it is not derivable
-  from either id — `101591`→`110421` and `101628`→`111061` share no offset. Unsolved;
-  collect more confirmed pairs before attempting a rule.
+  from either id. 14 more pairs were read off screenshots on 2026-09-22 (e.g. `102452`
+  → `110549`, `102453` → `111161`, `108701` → `110567`, `108708` → `111081`) and still
+  show no pattern: neighbouring items land thousands of keys apart. So these are
+  **collected, not derived** — [guide/effect_map.json](guide/effect_map.json) holds every
+  confirmed pair with its Lv.1 `{n}` values, and `build_equipment.py` prefers it over
+  `effect_key()`, failing if the two ever disagree (they agree on all three legendaries
+  checked).
 - `95xxx`/`96xxx` — parsing `"<name> Affixia"` does yield a per-item index for 156 items
   (a different set from the skill route, including the `108726`-`108730` cores), but the text
   it reaches is fragment boilerplate, not the item's effect.
@@ -192,7 +214,10 @@ in game those items show *rolled* affixes drawn from the `11xxxx` pool by the co
 encrypted config tables — unrecoverable. `$token$` is a glossary reference (`$kuangnu$`) whose
 term table is *also* encrypted. The tokens can be partly recovered from the German and Russian
 columns, which often expand them inline as `Berserker ($kuangnu$)`; `guide/ranger.json` keeps a
-hand-checked glossary of the ones that mattered.
+hand-checked glossary of the ones that mattered. In-game screenshots settle both: the codex
+shows effect text with every token expanded and every `{n}` filled in. That is how `jiankang`
+Healthy, `binwei` Critically Injured, `jisu` Swift, `yingyan` Eagle Eye and `yishang`
+Vulnerable were recovered, and where the `lv1` values in `effect_map.json` come from.
 
 **The `ITEM_*` alias key encodes type, armor class and content tier.** The alias that
 `icon_by_alias()` uses for icons is `ITEM_<W|C><tier?>_<code><digit?>_<id>`, and every
