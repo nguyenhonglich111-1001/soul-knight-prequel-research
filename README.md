@@ -43,6 +43,8 @@ python -c "import json;s=json.load(open('extracted/1.13.0/localization_all.json'
 ## Guide
 
 Edit `guide/*.json`, then run `python tools/build_guide.py` to regenerate `range-guide.html`.
+The item-synergy page is `python tools/build_guide.py --guide guide/synergies.json -o
+synergy-guide.html`.
 `python tools/export_guide_png.py` cuts it into Discord-sized PNGs in
 `extracted/_sheets/guide_png/` (needs `pip install playwright`; it uses the installed Edge).
 

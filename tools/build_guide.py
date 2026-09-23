@@ -400,7 +400,7 @@ class Renderer:
             rows = {}  # slot -> [card html], in first-seen order
             for e in b['items']:
                 slot, rank = e.get('slot'), None
-                if slot and counts[slot] > 1:
+                if slot and counts[slot] > 1 and b.get('ranked', True):
                     seen[slot] += 1
                     rank = ORDINALS[min(seen[slot], len(ORDINALS)) - 1]
                 if b.get('by_slot') and slot:
@@ -427,7 +427,7 @@ class Renderer:
 
     def render(self):
         g = self.g
-        cls = self.d.text(g['class_key']) or 'Ranger'
+        cls = g.get('kicker') or self.d.text(g.get('class_key', '')) or 'Ranger'
         nav = ''.join(
             f'<a href="#{s["id"]}">{html.escape(s["title"].split("—")[0].strip())}</a>'
             for s in g['sections']
@@ -441,7 +441,13 @@ class Renderer:
                 f'<span class="tag">{html.escape(s.get("tag", ""))}</span></div>{body}</section>'
             )
         tldr = ''.join(f'<li>{self.rt(x)}</li>' for x in g.get('tldr', []))
-        src = g['source']
+        src = g.get('source')
+        byline = (
+            f'Written by <b>{html.escape(src["author"])}</b>, {html.escape(src["posted"])}. '
+            f'{self.rt(src["note"])}'
+            if src
+            else self.rt(g.get('byline', ''))
+        )
         return PAGE.format(
             page_title=html.escape(g.get('page_title', g['title'])),
             title=html.escape(g['title']),
@@ -452,9 +458,7 @@ class Renderer:
             reading_note=self.rt(g.get('reading_note', '')),
             sections=''.join(secs),
             limits=self.rt(g['limits']),
-            author=html.escape(src['author']),
-            posted=html.escape(src['posted']),
-            src_note=self.rt(src['note']),
+            byline=byline,
             legendary=RARITY[4][1],
             insane=RARITY[5][1],
             epic=RARITY[3][1],
@@ -674,7 +678,7 @@ footer code {{ font-family:var(--mono); font-size:13px; color:var(--dim); }}
   <div class="kicker">{cls} &middot; Soul Knight Prequel</div>
   <h1>{title}</h1>
   <p class="sub">{subtitle}</p>
-  <p class="byline">Written by <b>{author}</b>, {posted}. {src_note}</p>
+  <p class="byline">{byline}</p>
 </header>
 <nav>{nav}</nav>
 

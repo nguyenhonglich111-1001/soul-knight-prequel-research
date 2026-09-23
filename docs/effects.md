@@ -104,6 +104,17 @@ together with its Lv.1 `{n}` values.
 - **Many effect texts have 2-4 near-duplicate keys:** older wording, a Chip twin, or an
   alternate version. Pick the one whose wording matches the screenshot, never the first
   regex hit.
+- **`111561`-`111679` are Forged Affixes (熔铸词缀), not item effects.** They step by 2
+  (description at `N`, name at `N+1`), sit between legendary blocks that step by 10, and no
+  item owns them. Proof: `95229` "Frostshock Thunder Affixia" / `96229` "Fragments obtained by
+  dismantling the Frostshock Thunder Forged Affix" (2026-09-24). Families by wording:
+  - `$keyword$`'s effects changed to …: Bone-Deep Torment, Polar Extremes, Frostshock Thunder.
+  - Possessing a keyword or hitting an ailing enemy (one per damage type): Pyrekindled,
+    Snowburied, Thundertrailed, Marroweaten, Worldbright, Shadowvouring, Mountcleaving.
+  - "If you also possess …" sets, Han vs Yellow Turbans: Mandate of the Han, Motley Mob, ….
+  - `<keyword>: Ascension` (effect +{0}%): Lambent, Voltcharged, Gelid, Bladeheart.
+
+  Which slot or forge category each rolls on is not in the text; ask the user.
 
 ## Dead ends: do not search these again
 

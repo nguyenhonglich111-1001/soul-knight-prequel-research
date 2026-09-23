@@ -1,0 +1,333 @@
+{
+  "title": "Item Synergies",
+  "page_title": "Soul Knight Synergy Codex",
+  "subtitle": "Soul Knight Prequel 1.13.0 — which legendary effects feed each other",
+  "kicker": "Equipment",
+  "byline": "Built from the game's own effect text for the 201 items whose legendary effect is known. Hover or tap an underlined keyword to see its in-game rules.",
+  "reading_note": "Each combo is a set of items that fit in **different slots**, so you can wear them together, unless a note says it competes for a slot. A combo usually has one item that builds a stack or state and one or more that pay off on it. The notes say which is which.",
+  "tldr": [
+    "Every element has an engine: one item builds its keyword stacks, another cashes them in. Fire covers five slots on its own.",
+    "Murmuring Ring turns any ailment into $yishang$. Pair it with Censurer's Necklace and any ailment source.",
+    "Low-life builds: Exothermal Necklace makes you permanently $binwei$, which turns on half a dozen armor, helm and ring effects.",
+    "Traumatic Spiral + Noxia Sinistrorum: the ring's crit-damage penalty stops mattering.",
+    "The numbers are hidden in encrypted config. This page shows what works together, not how much."
+  ],
+  "glossary": {},
+  "sections": [
+    {
+      "id": "elements",
+      "title": "Elemental engines",
+      "tag": "Builder → payoff",
+      "blocks": [
+        {
+          "type": "prose",
+          "text": "Each element has a keyword that stacks on you or on the enemy. One item generates the stacks; the others spend them or scale off them."
+        },
+        {
+          "type": "cards",
+          "kind": "equipment",
+          "title": "Fire — Scorched",
+          "ranked": false,
+          "items": [
+            {"slot": "Armor", "key": "102450", "note": "**Builder.** Pulses Fire Damage, and any Fire Damage you deal applies $zhuore$."},
+            {"slot": "Helmet", "key": "103404", "note": "**Payoff.** Big Fire Damage bonus against enemies at max $zhuore$, more per stack."},
+            {"slot": "Ring", "key": "105735", "note": "**Amplifier.** Raises the $zhuore$ cap, so Infernal Mask gets more stacks to count."},
+            {"slot": "Necklace", "key": "106717", "note": "**Payoff.** Every Fire hit stacks more Fire Damage."},
+            {"slot": "Cubis core", "key": "108720", "note": "**Extra source.** Talent skills rain meteors: more Fire Damage, and the enemy takes more damage."}
+          ]
+        },
+        {
+          "type": "cards",
+          "kind": "equipment",
+          "title": "Poison — Blighted",
+          "ranked": false,
+          "items": [
+            {"slot": "Helmet", "key": "103450", "note": "**Builder.** Venom fangs apply $diaoling$ and raise its stack cap."},
+            {"slot": "Armor", "key": "102461", "note": "**Payoff.** $diaoling$ lands at max stacks at once, and each stack adds Poison Damage."},
+            {"slot": "Necklace", "key": "106720", "note": "**Defense.** Poisoned enemies hit weaker and miss."},
+            {"slot": "Ring", "key": "105442", "note": "**Bonus.** Your poison also applies $yishang$."}
+          ]
+        },
+        {
+          "type": "cards",
+          "kind": "equipment",
+          "title": "Cold — Gelid",
+          "ranked": false,
+          "items": [
+            {"slot": "Helmet", "key": "103464", "note": "**Builder.** Hailstones apply $binglengyichang$ and give you and your minions $ningbing$."},
+            {"slot": "Necklace", "key": "106738", "note": "**Payoff.** More Cold Damage against enemies with $binglengyichang$, scaling with your $ningbing$."},
+            {"slot": "Ring", "key": "105732", "note": "**Payoff.** Hitting an ailing enemy boosts that element's damage."},
+            {"slot": "Necklace", "key": "106718", "note": "**Alternative** to the Pendant (same slot): crits more often against Cold or Frozen enemies."}
+          ]
+        },
+        {
+          "type": "cards",
+          "kind": "equipment",
+          "title": "Shock — Voltcharged",
+          "ranked": false,
+          "items": [
+            {"slot": "Ring", "key": "105730", "note": "**Builder.** Every few skill casts, chain lightning gives you and your minions $xudian$."},
+            {"slot": "Boots", "key": "104713", "note": "**Payoff.** At max $xudian$, a large Shock Damage multiplier for you and your minions."},
+            {"slot": "Necklace", "key": "106719", "note": "**Payoff.** Everything except Shock hits harder on enemies with $dianjiyichang$."},
+            {"slot": "Cubis core", "key": "108722", "note": "**Extra source.** Talent skills summon a lightning orb; struck enemies take more damage."}
+          ]
+        },
+        {
+          "type": "cards",
+          "kind": "equipment",
+          "title": "Dark — Darksurge",
+          "ranked": false,
+          "items": [
+            {"slot": "Necklace", "key": "106400", "note": "**Builder.** Homing dark orbs give you and your minions $anyong$."},
+            {"slot": "Helmet", "key": "103462", "note": "**Payoff.** Periodically spends all $anyong$ for a Dark Damage burst, and you gain it faster."},
+            {"slot": "Ring", "key": "105736", "note": "**Payoff.** More Dark Damage; immune to $heianyichang$."},
+            {"slot": "Cubis core", "key": "108723", "note": "**Extra source.** Talent skills unleash Dark Damage that makes enemies take more damage. The other Pandora's Ark cores work too."}
+          ]
+        },
+        {
+          "type": "cards",
+          "kind": "equipment",
+          "title": "Light — Lambent",
+          "ranked": false,
+          "items": [
+            {"slot": "Necklace", "key": "106444", "note": "**Builder.** A light pillar that always crits; crits give you and your minions $xianyao$."},
+            {"slot": "Helmet", "key": "103463", "note": "**Payoff.** On crit, each $xianyao$ stack boosts that hit's Light Damage."},
+            {"slot": "Ring", "key": "105734", "note": "**Amplifier.** Raises the $xianyao$ cap."}
+          ]
+        },
+        {
+          "type": "cards",
+          "kind": "equipment",
+          "title": "Physical — Bladeheart",
+          "ranked": false,
+          "items": [
+            {"slot": "Boots", "key": "ITEM_CL_S1_010", "note": "**Builder.** Moving unleashes slashes and gives you and your minions $renxin$."},
+            {"slot": "Ring", "key": "105729", "note": "**Payoff.** At max $renxin$, spends all stacks for a big physical damage boost."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "keywords",
+      "title": "Keyword combos",
+      "tag": "Shared keyword",
+      "blocks": [
+        {
+          "type": "cards",
+          "kind": "equipment",
+          "title": "Vulnerable",
+          "ranked": false,
+          "items": [
+            {"slot": "Ring", "key": "105442", "note": "**Builder.** Any ailment you apply also applies $yishang$."},
+            {"slot": "Necklace", "key": "106441", "note": "**Amplifier.** $yishang$ is stronger."},
+            {"slot": "Weapon", "key": "101655", "note": "**Payoff.** Hitting a $yishang$ enemy raises your Attack Power."},
+            {"slot": "Mech gear", "key": "107703", "note": "**Finisher.** The Mirror Mimicry talent skill executes low-life $yishang$ enemies."},
+            {"slot": "Helmet", "key": "103464", "note": "**Ailment source.** Its hailstones apply $binglengyichang$, which the ring turns into $yishang$."}
+          ]
+        },
+        {
+          "type": "cards",
+          "kind": "equipment",
+          "title": "Berserk",
+          "ranked": false,
+          "items": [
+            {"slot": "Helmet", "key": "103447", "note": "**Builder.** Go a few seconds without a damaging skill and all allies become $kuangnu$."},
+            {"slot": "Weapon", "key": "101591", "note": "**Builder.** $kuangnu$ after taking enough damage (also on Sangrilok Longbow)."},
+            {"slot": "Necklace", "key": "106442", "note": "**Amplifier.** $kuangnu$ stacks once more and adds movement speed."}
+          ]
+        },
+        {
+          "type": "cards",
+          "kind": "equipment",
+          "title": "Concentration, Swift and Eagle Eye",
+          "ranked": false,
+          "items": [
+            {"slot": "Necklace", "key": "106733", "note": "**Payoff.** +1 max $zhuanzhu$ stack, and skill damage at 2+ stacks."},
+            {"slot": "Boots", "key": "104400", "note": "**Builder.** $zhuanzhu$, $jisu$ and $yingyan$ every second while no enemy is close. Suits ranged builds."},
+            {"slot": "Boots", "key": "104709", "note": "**Alternative builder** (same slot): $zhuanzhu$ for distance moved."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "life",
+      "title": "Life-state builds",
+      "tag": "Healthy vs injured",
+      "blocks": [
+        {
+          "type": "cards",
+          "kind": "equipment",
+          "title": "Low life — Critically Injured",
+          "ranked": false,
+          "items": [
+            {"slot": "Necklace", "key": "106404", "note": "**Enabler.** You always count as $binwei$, plus a damage bonus."},
+            {"slot": "Armor", "key": "102451", "note": "**Payoff.** Damage reduction when not $jiankang$, doubled when $binwei$."},
+            {"slot": "Armor", "key": "102446", "note": "**Alternative** (same slot): skill damage when $binwei$, damage reduction per % life lost."},
+            {"slot": "Helmet", "key": "103448", "note": "**Payoff.** Life-drain for shields; bigger shields when $binwei$."},
+            {"slot": "Ring", "key": "105444", "note": "**Payoff.** Cheaper skills and more Attack Power per % life lost."},
+            {"slot": "Weapon", "key": "101593", "note": "**Payoff.** $kuangnu$ after taking damage (also on Sangrilok Twinblades)."}
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warn",
+          "text": "Exothermal Necklace says you are considered $binwei$. Whether effects that check for “not $jiankang$” (Starforged Battlegarb) also accept this is not stated."
+        },
+        {
+          "type": "cards",
+          "kind": "equipment",
+          "title": "Stay unhit — Looming Hour",
+          "ranked": false,
+          "items": [
+            {"slot": "Armor", "key": "102466", "note": "**Builder.** Gain $sijierdong$ while taking no damage; its effect is stronger."},
+            {"slot": "Necklace", "key": "106746", "note": "**Payoff and fix.** Each stack adds Skill DMG, and taking damage no longer removes stacks. A designed pair."},
+            {"slot": "Helmet", "key": "103451", "note": "**Payoff.** More All Damage if you haven't been hit recently."},
+            {"slot": "Ring", "key": "105710", "note": "**Payoff.** Mana regen while $jiankang$."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "crit",
+      "title": "Crit builds",
+      "tag": "Two directions",
+      "blocks": [
+        {
+          "type": "cards",
+          "kind": "equipment",
+          "title": "Crit often, ignore crit damage",
+          "ranked": false,
+          "items": [
+            {"slot": "Ring", "key": "105705", "note": "**Core.** Crits give bonus damage but deal no extra crit damage."},
+            {"slot": "Ring", "key": "105440", "note": "**Partner.** More crit chance; its crit-damage penalty no longer matters with Traumatic Spiral."},
+            {"slot": "Necklace", "key": "106735", "note": "**Payoff.** Crits build toward a free-mana form."}
+          ]
+        },
+        {
+          "type": "cards",
+          "kind": "equipment",
+          "title": "Stack crit damage",
+          "ranked": false,
+          "items": [
+            {"slot": "Cubis core", "key": "108702", "note": "**Payoff.** Bonus damage for crit damage above a threshold."},
+            {"slot": "Armor", "key": "102465", "note": "**Source.** Periodic curse: take more damage, but gain Skill DMG and crit damage."},
+            {"slot": "Necklace", "key": "106728", "note": "**Source.** Losing life stacks crit damage. Pairs with the curse above."},
+            {"slot": "Necklace", "key": "106718", "note": "**Alternative** (same slot): flat crit damage, more crits against Cold enemies."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "roles",
+      "title": "Playstyle sets",
+      "tag": "Same trigger",
+      "blocks": [
+        {
+          "type": "cards",
+          "kind": "equipment",
+          "title": "Minions",
+          "ranked": false,
+          "items": [
+            {"slot": "Boots", "key": "104704", "note": "Minions take damage only once every few seconds."},
+            {"slot": "Helmet", "key": "103456", "note": "Attack skills buff a random minion."},
+            {"slot": "Ring", "key": "105715", "note": "All Damage per allied unit on the field."},
+            {"slot": "Armor", "key": "102454", "note": "You and your minions get skill damage and a shield when not $jiankang$."},
+            {"slot": "Necklace", "key": "106737", "note": "Total damage for you and your minions."},
+            {"slot": "Cubis core", "key": "108501", "note": "Bonus damage for you and your minions."}
+          ]
+        },
+        {
+          "type": "cards",
+          "kind": "equipment",
+          "title": "Kill chains — clearing dungeons",
+          "ranked": false,
+          "items": [
+            {"slot": "Boots", "key": "104703", "note": "Kills stack movement speed and bonus damage."},
+            {"slot": "Necklace", "key": "106724", "note": "Kills stack Attack Power."},
+            {"slot": "Ring", "key": "105713", "note": "Kills explode for physical damage, which feeds the next kill."},
+            {"slot": "Armor", "key": "102467", "note": "Kill streaks stack $shirupozhu$."}
+          ]
+        },
+        {
+          "type": "cards",
+          "kind": "equipment",
+          "title": "One target — bosses",
+          "ranked": false,
+          "items": [
+            {"slot": "Armor", "key": "102449", "note": "Damage reduction, doubled with only 1 enemy near."},
+            {"slot": "Helmet", "key": "103449", "note": "Close-range damage, doubled with only 1 enemy near. A matching pair with the armor."},
+            {"slot": "Necklace", "key": "106744", "note": "Trades AoE for damage to bosses."},
+            {"slot": "Cubis core", "key": "108704", "note": "Bonus damage once your Damage to Boss passes a threshold."},
+            {"slot": "Boots", "key": "104705", "note": "Bonus damage for you and your minions at the start of a boss fight."}
+          ]
+        },
+        {
+          "type": "cards",
+          "kind": "equipment",
+          "title": "Many targets — crowds",
+          "ranked": false,
+          "items": [
+            {"slot": "Helmet", "key": "103468", "note": "All Damage per enemy near you; bosses count as max."},
+            {"slot": "Boots", "key": "104702", "note": "Bonus damage per enemy near you."}
+          ]
+        },
+        {
+          "type": "cards",
+          "kind": "equipment",
+          "title": "Shields fuel mana",
+          "ranked": false,
+          "items": [
+            {"slot": "Necklace", "key": "106443", "note": "**Payoff.** Mana regen while you have any shield."},
+            {"slot": "Ring", "key": "105725", "note": "**Builder.** Spends mana for a shield and close-range damage."},
+            {"slot": "Helmet", "key": "103448", "note": "**Builder.** Drains life for a steady shield."}
+          ]
+        },
+        {
+          "type": "cards",
+          "kind": "equipment",
+          "title": "Resistance thresholds",
+          "ranked": false,
+          "items": [
+            {"slot": "Boots", "key": "104717", "note": "**Payoff.** Past a resistance threshold: immune to that ailment, plus damage of that type."},
+            {"slot": "Cubis core", "key": "108707", "note": "**Payoff.** Bonus damage past a resistance threshold."},
+            {"slot": "Armor", "key": "102448", "note": "**Source.** Fire resistance, and immune to $huoyanyichang$. Umbral Robe does the same for Dark."}
+          ]
+        },
+        {
+          "type": "cards",
+          "kind": "equipment",
+          "title": "Named pair",
+          "ranked": false,
+          "items": [
+            {"slot": "Necklace", "key": "106747", "note": "With Wen Chou's Thimble equipped, triggers $beishuiyizhan$ automatically, with extra damage during it."},
+            {"slot": "Ring", "key": "105737", "note": "Survive fatal damage by entering $beishuiyizhan$."}
+          ]
+        },
+        {
+          "type": "cards",
+          "kind": "equipment",
+          "title": "Talent skills",
+          "ranked": false,
+          "items": [
+            {"slot": "Mech gear", "key": "107707", "note": "Talent skills slow enemies and make them take more damage."},
+            {"slot": "Cubis core", "key": "108717", "note": "Talent skills open a black hole; pulled enemies take more damage. Every Clockgear core triggers the same way."},
+            {"slot": "Ring", "key": "105406", "note": "**Unconfirmed.** “Using a statue” restores life and lengthens statues. The Clockgear buffs are statue blessings, but the text doesn't confirm they count."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "avoid",
+      "title": "Don't combine",
+      "tag": "Anti-synergy",
+      "blocks": [
+        {
+          "type": "callout",
+          "tone": "warn",
+          "text": "**Harrier's Headguard** (no shields) turns off every shield item: Mana Pump, Guardsman Badge, Sangrilok Helm, Starforged Battlegarb.\n**Welkin-Jade Thimble** drains mana, while **Cirque of Omniscience** and **Celesturgy Locket** want it high.\n**Exothermal Necklace** keeps you $binwei$, which switches off **Plumesilk Vestments** and **Vitality Ring** (they need $jiankang$).\n**Grimhowl Choker** and **Noxia Sinistrorum** cut crit damage, so keep them out of crit-damage builds.\n**Ensorcelled Wardrobe** lowers resistances, which works against **The Lacuna** and **Dauntless Wartreads**.\n**Knight's Relic** pieces (1 enemy near) and **Crown of the Martial Saint** (many enemies near) pull opposite ways."
+        }
+      ]
+    }
+  ],
+  "limits": "Every combo comes from the item effect text in the 1.13.0 APK. Only 201 of 806 equipment pieces have a known legendary effect, so more combos exist. Numbers in gold were read off in-game codex screenshots; `?` values live in encrypted config, so this page shows which effects work together, not how strong they are. Nothing here was tested in game."
+}

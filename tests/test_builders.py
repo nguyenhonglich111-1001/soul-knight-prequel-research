@@ -122,6 +122,21 @@ def test_rich_values_and_glossary():
     assert 'term-unknown' in out and 'nope' in out
 
 
+def test_cards_rank_repeated_slots_unless_ranked_false():
+    class D:
+        icons, terms = {}, {}
+
+        def resolve(self, e):
+            return {'name': e['key'], 'desc': None, 'icon': None, 'values': None}
+
+    r = BG.Renderer(D(), {'glossary': {}})
+    items = [{'slot': 'Ring', 'key': 'a'}, {'slot': 'Ring', 'key': 'b'}]
+    ranked = r.block({'type': 'cards', 'kind': 'equipment', 'items': items})
+    assert 'class="rank">best<' in ranked and 'class="rank">2nd<' in ranked
+    combo = r.block({'type': 'cards', 'kind': 'equipment', 'items': items, 'ranked': False})
+    assert 'class="rank"' not in combo
+
+
 def test_rich_glossary_term_gets_rules_text_tooltip():
     swift = {'name': 'Swift', 'description': 'Movement speed is increased by {0}% for *{1}*s.'}
     out = BG.rich('Grants $jisu$.', {'jisu': swift})
