@@ -81,7 +81,7 @@ def icon_by_alias(name, byen, icons):
     match in both directions, and it covers 550 of 806 rows.
 
     Items it cannot reach take their icon from `guide/icon_map.json` or get none. There
-    is no arithmetic link from an item ID to a sprite number -- see icon-mapping-plan.md."""
+    is no arithmetic link from an item ID to a sprite number -- see docs/icons.md."""
     for key in byen.get(name, ()):
         if key.startswith('ITEM_'):
             path = icons.get('ItemIcon_' + key[len('ITEM_') :])

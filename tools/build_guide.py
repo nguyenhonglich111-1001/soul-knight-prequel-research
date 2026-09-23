@@ -119,7 +119,7 @@ class Data:
             if cn and key in self.icons and TREE_KEY.match(key):
                 self.by_cn.setdefault(CN_SEP.sub('', cn.strip()), key)
         # Hand-checked key -> sprite pairs for things whose sprite is not named after
-        # their key (Axial Incarnate pieces are `Incarnation_NN`). See icon-mapping-plan.md.
+        # their key (Axial Incarnate pieces are `Incarnation_NN`). See docs/icons.md.
         imap = os.path.join(
             os.path.dirname(os.path.abspath(__file__)), '..', 'guide', 'icon_map.json'
         )
@@ -166,7 +166,7 @@ class Data:
         Never computes a sprite name from an item ID: there is no arithmetic link between
         the two (`103467` is `ItemIcon_3470000`). An item with no checked icon gets the
         placeholder, which is the point -- a wrong icon is worse than none. See
-        icon-mapping-plan.md."""
+        docs/icons.md."""
         if key in self.icons:
             return self.icons[key]
         if key in self.equip_icons:

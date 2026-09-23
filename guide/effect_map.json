@@ -1,5 +1,5 @@
 {
- "about": "Item -> effect-text key, hand-checked against the game. build_equipment.py prefers these over effect_key() and fails if the two ever disagree. `lv1` is what the codex shows for {0}, {1}, ... at effect Lv.1 (equipment level 60, Normal tier); the encrypted config fills these in, so the screenshot is the only source. No id arithmetic links item to key -- see CLAUDE.md.",
+ "about": "Item -> effect-text key, hand-checked against the game. build_equipment.py prefers these over effect_key() and fails if the two ever disagree. `lv1` is what the codex shows for {0}, {1}, ... at effect Lv.1 (equipment level 60, Normal tier); the encrypted config fills these in, so the screenshot is the only source. No id arithmetic links item to key -- see docs/effects.md.",
  "confirmed": {
   "101591": {"key": "110421", "name": "Sangrilok Twinblades", "source": "user report 2026-09-21; screenshot IMG_6249", "lv1": [25]},
   "101593": {"key": "110421", "name": "Sangrilok Longbow", "source": "user report 2026-09-21"},

@@ -21,7 +21,7 @@ import versions
 
 TOOLS = os.path.dirname(os.path.abspath(__file__))
 
-# (name, script, extra args, takes --apk-dir, fatal). Order matters: see CLAUDE.md.
+# (name, script, extra args, takes --apk-dir, fatal). Order matters: see "Commands" in CLAUDE.md.
 # build_icon_map exits 1 when a confirmed sprite is missing or disagrees with the alias
 # rule. On a new version that is a finding for version_diff to explain, not a reason to
 # stop before the report is written.

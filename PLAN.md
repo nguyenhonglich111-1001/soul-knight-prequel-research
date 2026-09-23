@@ -104,13 +104,20 @@ Done. Notes from doing it:
 
 ## Phase 4 — Context engineering (docs)
 
-- [ ] Research Anthropic's current Claude Code guidance: CLAUDE.md size, `@imports`,
-      path-scoped `.claude/rules/`, project skills.
-- [ ] CLAUDE.md: 31 KB (~8k tokens per session) → ~120 lines: what the repo is,
-      commands, hard "don'ts", and a map of where each topic lives.
-- [ ] Move domain knowledge to on-demand `docs/*.md` (icons, effect text, IDs, bundles,
-      decryption dead ends); merge `icon-mapping-plan.md` into `docs/icons.md`.
-- [ ] Screenshot/recording workflow → project skill (loads only when used).
-- [ ] README → short how-to for the user.
-- [ ] Check every fact has a new home before deleting the old text; measure the
-      always-loaded token count before and after.
+- [x] Research Anthropic's current Claude Code guidance (code.claude.com/docs/en/memory):
+      keep CLAUDE.md under 200 lines; `@imports` still load at launch (no saving);
+      `.claude/rules/*.md` with `paths:` load only when matching files are read; skills
+      load only when relevant.
+- [x] CLAUDE.md: 478 lines / 33 KB (~8.5k tokens every session) → 96 lines / 5 KB
+      (~1.3k tokens): what the repo is, layout, commands, dev loop, hard rules, asking the
+      user, and a table of where each topic lives.
+- [x] Domain knowledge → on-demand `docs/`: `icons.md` (merged with the old
+      `icon-mapping-plan.md`), `effects.md`, `data-model.md`, `extraction.md`.
+- [x] `.claude/rules/extractors.md`: extractor invariants, scoped to the extractor files.
+- [x] Screenshot/recording workflow → `.claude/skills/codex-screenshots/`.
+- [x] README → a short how-to for the user (309 → 65 lines).
+- [x] Coverage check: every backticked token and 4-7 digit number of the three old files
+      was searched for in the new ones; the misses were rewording or formatting fragments,
+      except the numeric block ranges and the Luban-location note, which were added back.
+      References to `icon-mapping-plan.md` / "see CLAUDE.md" in tools and `guide/*.json`
+      now point at `docs/`.

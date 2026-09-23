@@ -1,5 +1,5 @@
 {
- "about": "Key -> icon sprite for anything whose sprite is not named after its key: equipment the ITEM_* alias rule cannot reach, and Axial Incarnate pieces (Incarnation_NN). `confirmed` is hand-checked against the game and is never rewritten by tools/build_icon_map.py; `derived` is regenerated from it. See icon-mapping-plan.md.",
+ "about": "Key -> icon sprite for anything whose sprite is not named after its key: equipment the ITEM_* alias rule cannot reach, and Axial Incarnate pieces (Incarnation_NN). `confirmed` is hand-checked against the game and is never rewritten by tools/build_icon_map.py; `derived` is regenerated from it. See docs/icons.md.",
  "generated": "2026-09-22",
  "confirmed": {
   "101591": {"icon": "ItemIcon_1591000", "name": "Sangrilok Twinblades", "source": "screenshot IMG_6249, pixel match 9"},

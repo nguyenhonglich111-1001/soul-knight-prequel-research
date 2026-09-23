@@ -17,7 +17,7 @@ ends disagree on the offset, a sprite is missing somewhere in between and there 
 telling where, so nothing is derived: `106728 -> 6454` and `106733 -> 6458` leave four
 items for three sprites.
 
-Why not align whole slots by rank, as icon-mapping-plan.md first proposed: it was tested
+Why not align whole slots by rank, as was first proposed (docs/icons.md): it was tested
 against 10 in-game observations and got 2 right. Armor lands one sprite short on all four
 checked items, and the cores are not even in the `8xxx` series -- they are `94xx`.
 

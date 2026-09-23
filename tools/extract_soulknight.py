@@ -441,7 +441,7 @@ def icon_candidates(nid):
     `10SNNNN` to `ItemIcon_<NNNNN>000` (`101643` -> `ItemIcon_1643000`), and no such
     arithmetic link exists -- `103467` Tophat of Six Splendors is `ItemIcon_3470000`.
     Equipment icons come from `guide/icon_map.json` (hand-checked) and the `ITEM_*`
-    alias rule, both applied in build_equipment.py. See icon-mapping-plan.md."""
+    alias rule, both applied in build_equipment.py. See docs/icons.md."""
     yield f'ItemIcon_{nid}'
     yield f'ItemIcon_spt_{nid}'
     yield f'ICON_SP_{nid}'
