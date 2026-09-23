@@ -45,8 +45,9 @@ The `build_*` stages are pure joins over the JSON and run instantly. What each o
   `guide/icon_map` and `guide/effect_map`.
 - `build_indexes` reads `localization_all` and `prefabs/`.
 - `build_glossary` reads `localization_all` and the `glossary` of `guide/*.json`.
-- `build_guide` reads `guide/*.json`, `localization_all`, `items_numeric`, `equipment` and
-  `icons/`.
+- `build_guide` reads `guide/*.json`, `localization_all`, `items_numeric`, `equipment`,
+  `glossary` and `icons/`. Every `$token$` keyword on a guide page gets its in-game rules text
+  as a tooltip; write `$jisu$` (not "Swift") in guide prose to get one.
 
 ## Dev loop
 

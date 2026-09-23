@@ -122,6 +122,16 @@ def test_rich_values_and_glossary():
     assert 'term-unknown' in out and 'nope' in out
 
 
+def test_rich_glossary_term_gets_rules_text_tooltip():
+    swift = {'name': 'Swift', 'description': 'Movement speed is increased by {0}% for *{1}*s.'}
+    out = BG.rich('Grants $jisu$.', {'jisu': swift})
+    assert '<span class="term has-tip" tabindex="0">Swift<span class="tip"' in out
+    assert '<b>Swift</b>Movement speed is increased by <span class="unk">?</span>%' in out
+    assert '<em><span class="unk">?</span></em>s.' in out
+    # no description -> plain term, no tooltip
+    assert BG.rich('$x$', {'x': {'name': 'X', 'description': ''}}) == '<span class="term">X</span>'
+
+
 def test_rich_empty_and_newlines():
     assert BG.rich('', {}) == ''
     assert BG.rich('a\nb **c** `d`', {}) == 'a<br>b <strong>c</strong> <code>d</code>'

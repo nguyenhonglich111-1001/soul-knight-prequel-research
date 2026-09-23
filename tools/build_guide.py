@@ -54,6 +54,7 @@ TERM_TAG = re.compile(r'\$([A-Za-z0-9_]+)\$')
 SLOT_TAG = re.compile(r'\{(\d+)\}')
 BOLD_TAG = re.compile(r'\*\*(.+?)\*\*')
 CODE_TAG = re.compile(r'`([^`]+)`')
+EMPH_TAG = re.compile(r'\*([^*]+)\*')  # the game's own emphasis: *Deadlock*
 
 # A skill referenced by its numeric id has no sprite of its own -- icons are named after
 # the skill-*tree* key. The two are joined by their Chinese, which is identical apart
@@ -129,6 +130,12 @@ class Data:
             for part in ('confirmed', 'derived')
             for k, v in imap.get(part, {}).items()
             if v['icon'] in self.icons
+        }
+        # `$token$` -> the keyword's in-game name and rules text (tools/build_glossary.py).
+        gl = os.path.join(out, 'glossary.json')
+        gl = json.load(open(gl, encoding='utf8'))['glossary'] if os.path.exists(gl) else {}
+        self.terms = {
+            t: {'name': g['name'], 'description': g['description']} for t, g in gl.items()
         }
         self._b64 = {}
 
@@ -221,14 +228,37 @@ class Data:
 # --------------------------------------------------------------------------- text
 
 
+def term_html(token, glossary):
+    """A `$token$` as its keyword, with the keyword's rules text as a hover/tap tooltip.
+
+    `glossary[token]` is `{name, description}` (from glossary.json) or a bare name."""
+    entry = glossary.get(token)
+    if entry is None:
+        return (
+            f'<span class="term term-unknown" title="glossary term not recovered">'
+            f'{html.escape(token)}</span>'
+        )
+    if isinstance(entry, str):
+        return f'<span class="term">{html.escape(entry)}</span>'
+    name = html.escape(entry['name'])
+    if not entry.get('description'):
+        return f'<span class="term">{name}</span>'
+    desc = html.escape(entry['description'])
+    desc = SLOT_TAG.sub('<span class="unk">?</span>', desc)
+    desc = EMPH_TAG.sub(r'<em>\1</em>', desc).replace('\n', '<br>')
+    return (
+        f'<span class="term has-tip" tabindex="0">{name}'
+        f'<span class="tip" role="tooltip"><b>{name}</b>{desc}</span></span>'
+    )
+
+
 def rich(text, glossary, values=None):
     """Game markup and guide markup -> HTML.
 
     `<color=#RRGGBBAA>` is Unity's rich text. `{0}` is a value the game fills in from the
     encrypted config tables, so it can only be shown as an unknown. `$token$` is a
-    glossary reference whose term table is also encrypted -- `glossary` in the guide file
-    supplies the ones that could be recovered from context. `values` fills `{n}` with what
-    an in-game screenshot showed, where the guide file records it."""
+    glossary keyword, shown by `term_html()` with its rules text as a tooltip. `values`
+    fills `{n}` with what an in-game screenshot showed, where the guide file records it."""
     if not text:
         return ''
     out = html.escape(text)
@@ -243,15 +273,7 @@ def rich(text, glossary, values=None):
         ),
         out,
     )
-    out = TERM_TAG.sub(
-        lambda m: (
-            f'<span class="term">{html.escape(glossary[m.group(1)])}</span>'
-            if m.group(1) in glossary
-            else f'<span class="term term-unknown" title="glossary term not recovered">'
-            f'{html.escape(m.group(1))}</span>'
-        ),
-        out,
-    )
+    out = TERM_TAG.sub(lambda m: term_html(m.group(1), glossary), out)
     out = BOLD_TAG.sub(r'<strong>\1</strong>', out)
     out = CODE_TAG.sub(r'<code>\1</code>', out)
     return out.replace('\n', '<br>')
@@ -264,7 +286,9 @@ class Renderer:
     def __init__(self, data, guide):
         self.d = data
         self.g = guide
-        self.glossary = guide.get('glossary', {})
+        # The game's keyword names and rules text; the guide's hand-made glossary only fills
+        # tokens the game data does not resolve.
+        self.glossary = {**guide.get('glossary', {}), **data.terms}
         self.unresolved = []
         self.no_icon = []
 
@@ -606,6 +630,20 @@ code {{ font-family:var(--mono); font-size:.87em; color:var(--charmed);
 .piece-slot {{ font-size:11px; color:var(--faint); }}
 .term {{ color:var(--charmed); font-weight:600; }}
 .term-unknown {{ color:var(--faint); font-style:italic; cursor:help; }}
+.has-tip {{ position:relative; cursor:help; text-decoration:underline dotted; text-underline-offset:3px; }}
+.has-tip:focus {{ outline:none; }}
+.tip {{
+  display:none; position:absolute; left:50%; bottom:calc(100% + 8px);
+  transform:translateX(calc(-50% + var(--dx, 0px)));
+  width:max-content; max-width:min(300px, 78vw); z-index:20;
+  background:var(--panel2); border:1px solid var(--line); border-radius:8px;
+  padding:9px 11px; box-shadow:0 6px 20px rgba(0,0,0,.45);
+  color:#cbd0e0; font-size:13px; font-weight:400; line-height:1.45; text-align:left;
+  font-style:normal; white-space:normal;
+}}
+.tip b {{ display:block; color:var(--charmed); margin-bottom:3px; }}
+.has-tip:hover .tip, .has-tip:focus .tip {{ display:block; }}
+.tip.below {{ bottom:auto; top:calc(100% + 8px); }}
 
 .callout {{
   border-radius:12px; padding:14px 18px; margin:20px 0; font-size:15px;
@@ -649,6 +687,23 @@ footer code {{ font-family:var(--mono); font-size:13px; color:var(--dim); }}
   <p>{limits}</p>
 </footer>
 </div>
+<script>
+// Keep a keyword tooltip on screen: shift it sideways, or drop it below the keyword.
+function placeTip(e) {{
+  const term = e.target.closest && e.target.closest('.has-tip');
+  if (!term) return;
+  const tip = term.querySelector('.tip'), pad = 8;
+  tip.style.setProperty('--dx', '0px');
+  tip.classList.remove('below');
+  let r = tip.getBoundingClientRect();
+  if (r.top < pad) {{ tip.classList.add('below'); r = tip.getBoundingClientRect(); }}
+  const dx = r.left < pad ? pad - r.left
+    : r.right > innerWidth - pad ? innerWidth - pad - r.right : 0;
+  tip.style.setProperty('--dx', dx + 'px');
+}}
+document.addEventListener('mouseover', placeTip);
+document.addEventListener('focusin', placeTip);
+</script>
 """
 
 STANDALONE = """<!doctype html>
