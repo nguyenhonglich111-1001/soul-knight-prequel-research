@@ -1,3 +1,5 @@
+import build_glossary as BGL
+
 import build_equipment as BE
 import build_guide as BG
 import build_icon_map as BI
@@ -123,3 +125,49 @@ def test_rich_values_and_glossary():
 def test_rich_empty_and_newlines():
     assert BG.rich('', {}) == ''
     assert BG.rich('a\nb **c** `d`', {}) == 'a<br>b <strong>c</strong> <code>d</code>'
+
+
+# --------------------------------------------------------------------------- build_glossary
+
+TERMS = {
+    '206013': '易伤',
+    '206022': '流血',
+    '206032': '急速',
+    '206054': '健康',
+    '206055': '濒危',
+    '206098': '鹰眼',
+    '206108': '虚·辐光',
+    '206112': '凛风',
+}
+
+
+def test_glossary_matches_screenshot_confirmed_tokens():
+    # All five were read off the in-game codex (docs/effects.md).
+    found = BGL.match(['jiankang', 'binwei', 'jisu', 'yingyan', 'yishang'], TERMS)
+    assert {t: k for t, (k, _) in found.items()} == {
+        'jiankang': '206054',
+        'binwei': '206055',
+        'jisu': '206032',
+        'yingyan': '206098',
+        'yishang': '206013',
+    }
+    assert {how for _, how in found.values()} == {'exact'}
+
+
+def test_glossary_handles_separators_polyphones_and_typos():
+    found = BGL.match(['xu_fuguang', 'liuxue', 'lingfeng'], TERMS)
+    assert found['xu_fuguang'] == ('206108', 'exact')  # 虚·辐光, `_` for `·`
+    assert found['liuxue'][0] == '206022'  # 血 is read xue or xie
+    assert found['lingfeng'] == ('206112', 'near')  # the game's typo for 凛风 linfeng
+
+
+def test_glossary_leaves_ambiguous_and_distant_tokens_unmatched():
+    assert BGL.match(['jisu'], {'1': '急速', '2': '疾速'}) == {}
+    assert BGL.match(['daxue'], {'206023': '大出血'}) == {}  # a whole syllable is missing
+
+
+def test_one_edit_apart():
+    assert BGL.one_edit_apart('lingfeng', 'linfeng')
+    assert BGL.one_edit_apart('abc', 'abd')
+    assert not BGL.one_edit_apart('abc', 'abc')
+    assert not BGL.one_edit_apart('daxue', 'dachuxue')

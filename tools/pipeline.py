@@ -53,6 +53,7 @@ STAGES = [
     ('build_icon_map', 'build_icon_map.py', [], False, False),
     ('build_equipment', 'build_equipment.py', [], False, True),
     ('build_indexes', 'build_indexes.py', [], False, True),
+    ('build_glossary', 'build_glossary.py', [], False, True),
     ('build_item_details', 'build_item_details.py', [], False, True),
     ('build_guide', 'build_guide.py', [], False, True),
 ]

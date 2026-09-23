@@ -16,6 +16,7 @@ STAGES = [
     ['build_icon_map.py', '--check'],
     ['build_equipment.py'],
     ['build_indexes.py'],
+    ['build_glossary.py'],
     ['build_item_details.py'],
     ['build_guide.py'],
 ]

@@ -18,12 +18,12 @@ into `extracted/<version>/`. A hand-written guide in `guide/` is rendered from t
 
 ## Commands
 
-Python 3.10+, `pip install UnityPy`. **On Windows, always set `PYTHONIOENCODING=utf-8`**,
+Python 3.10+, `pip install UnityPy pypinyin`. **On Windows, always set `PYTHONIOENCODING=utf-8`**,
 otherwise printing any Chinese string crashes with `UnicodeEncodeError`.
 
 ```bash
 python tools/unpack_apk.py            # new .apk/.xapk/.apks/.zip in root -> soul-knight-prequel-<v>/
-python tools/pipeline.py              # all 11 stages -> extracted/<v>/ (~90 s cold), then version_diff
+python tools/pipeline.py              # all 12 stages -> extracted/<v>/ (~90 s cold), then version_diff
 python tools/pipeline.py --list       # stage names; --from <stage> resumes there
 python tools/version_diff.py [old new]   # -> extracted/<new>/changes_from_<old>.md + "Your action"
 python tools/build_icon_map.py --check   # guard guide/icon_map.json
@@ -36,13 +36,15 @@ Stage order matters:
 1. The extractors run first: `extract_soulknight`, `extract_named_sprites` ×3,
    `extract_skill_links`, `dump_prefabs`.
 2. `build_icon_map` runs next.
-3. Then `build_equipment` → `build_indexes` → `build_item_details` → `build_guide`.
+3. Then `build_equipment` → `build_indexes` → `build_glossary` → `build_item_details` →
+   `build_guide`.
 
 The `build_*` stages are pure joins over the JSON and run instantly. What each one reads:
 
 - `build_equipment` reads `localization_all`, `items_numeric`, `skill_links`,
   `guide/icon_map` and `guide/effect_map`.
 - `build_indexes` reads `localization_all` and `prefabs/`.
+- `build_glossary` reads `localization_all` and the `glossary` of `guide/*.json`.
 - `build_guide` reads `guide/*.json`, `localization_all`, `items_numeric`, `equipment` and
   `icons/`.
 
@@ -93,7 +95,7 @@ icon belongs to an item, what `{0}` resolves to, whether a name matches the scre
 | Read before working on… | File |
 |---|---|
 | icons, `icon_map.json`, sprite series, Axial Incarnates | `docs/icons.md` |
-| descriptions, legendary effects, `effect_map.json`, `$token$`/`{0}`, dead ends | `docs/effects.md` |
+| descriptions, legendary effects, `effect_map.json`, `$token$` glossary/`{0}`, dead ends | `docs/effects.md` |
 | output files, ID schemes, `ITEM_*` alias, class/rarity, prefab fields, Chinese cross-check | `docs/data-model.md` |
 | extractor internals, bundle variants, cache, decryption status, single-stage re-runs | `docs/extraction.md` |
 | screenshots, recordings, codex grids, asking the user | `.claude/skills/codex-screenshots/` |

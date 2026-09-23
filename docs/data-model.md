@@ -17,6 +17,7 @@ querying the output or when touching `build_equipment.py`, `build_item_details.p
 | `prefabs/*.json` | 18,182 prefabs with every MonoBehaviour field (`skill` 7,808, `stage` 5,966, `buff` 1,894, `ui` 728, and the rest) |
 | `named_prefabs.json` | 2,368 prefabs whose name is a loc key (1,186 also have a description) |
 | `buffs.json` / `characters.json` | 2,412 buffs (279 named) / 1,169 characters (125 named; `is_boss`, `camp`, `race`) |
+| `glossary.json` | 128 `$token$`s → term key, name and rules text in 13 languages, `match` (`exact` / `near` / `guide`), `uses` |
 | `loc_refs.json` | 1,854 prefabs → the loc keys they reference, and through which field |
 | `numeric_ranges.json` | Numeric keys grouped into blocks, with a sample of each |
 | `icons/` | ~5,660 PNGs, one subfolder per name prefix; `icon` fields are relative to it |
@@ -173,7 +174,8 @@ caused one wrong call and solved three problems:
     game shows the `200xxx` one.
   - All four Rain of Arrows variants pair this way (`山` Ourea, `狮` Leonar, `林` Syl, `炎`
     Geddon), and only branch 22 disagrees in English.
-- **The `$token$` glossary** was recovered from German and Russian.
+- **The `$token$` glossary** was first recovered from German and Russian (now automatic, see
+  `docs/effects.md`).
 - **`Data.skill_tree_icon()`** joins numeric skill ids to their tree icons on Chinese.
 
 So normalise and compare `Chinese` (strip ` ·・:：`) whenever an English mismatch is about to

@@ -36,6 +36,7 @@ python -c "import json;s=json.load(open('extracted/1.13.0/localization_all.json'
 | Weapon type, armor class, tier, class | `item_details.json` |
 | Other items | `items.json` (`ITEM_*`), `items_numeric.json` (numeric keys) |
 | Skills, buffs, characters with names | `named_prefabs.json`, `buffs.json`, `characters.json` |
+| Keywords (`$jisu$` = Swift) and their rules text | `glossary.json` (128 tokens) |
 | Raw game logic | `prefabs/*.json` (18,182 prefabs) |
 | Icons | `icons/` |
 
@@ -60,6 +61,6 @@ Details for each: `docs/`.
 ## Setup
 
 - Python 3.10+.
-- Run `pip install UnityPy`.
+- Run `pip install UnityPy pypinyin`.
 - For development, run `pip install ruff pre-commit pytest && pre-commit install`. Every commit
   is then linted, formatted and tested.

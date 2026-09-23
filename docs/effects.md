@@ -121,10 +121,19 @@ together with its Lv.1 `{n}` values.
 ## `$token$` and `{0}`
 
 - **`{0}`** is a value the game fills in from the encrypted config, so it cannot be recovered.
-- **`$token$`** is a glossary reference (`$kuangnu$`) whose term table is also encrypted. It can
-  be partly recovered from the German and Russian columns, which often expand tokens inline as
-  `Berserker ($kuangnu$)`. `guide/ranger.json` keeps a hand-checked glossary of the ones that
-  mattered.
+- **`$token$`** is a glossary reference (`$kuangnu$`). The token table is encrypted, but it is
+  not needed (found 2026-09-24; `tools/build_glossary.py` -> `glossary.json`):
+  - **The token is the pinyin of the term's Chinese**, and the terms are keys `206001`-`206136`
+    (`$jisu$` = `206032` 急速 Swift). 122 of 128 tokens match exactly one term.
+  - The rest: `_` separators (`xu_fuguang` = 虚·辐光), polyphones (流血 read *liuxue*), one
+    game typo (`lingfeng` = 凛风 *lin*feng) and `daxue` = 大出血 Exsanguinate (a syllable
+    dropped; taken from the hand-checked `guide/ranger.json` glossary, which German
+    "Verbluten" and Russian "обескровливание" agree with).
+  - **Each term's rules text is its key + 500** (`206532`: "Movement speed is increased by
+    {0}% for {1}s."). All 136 pairs were read side by side and every one fits, and the user
+    confirmed in game (2026-09-24) that the tooltip text matches. `206699`-`206701`
+    are extra variants with no term.
+  - The screenshot-confirmed tokens below all come out right.
 - **Screenshots settle both.** The codex shows effect text with every token expanded and every
   `{n}` filled in. That is how these tokens were recovered:
   - `jiankang` Healthy
