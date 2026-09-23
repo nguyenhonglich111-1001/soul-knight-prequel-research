@@ -24,15 +24,17 @@ checked items, and the cores are not even in the `8xxx` series -- they are `94xx
     python tools/build_icon_map.py           # rewrite `derived`
     python tools/build_icon_map.py --check   # compare against the frozen file; exit 1 on drift
 """
+
 import argparse
 import datetime
+import itertools
 import json
 import os
 import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from build_equipment import icon_by_alias, icon_table, slot_of  # noqa: E402
+from build_equipment import icon_by_alias, icon_table, slot_of
 
 NUMERIC = re.compile(r'^ItemIcon_(\d+)000$')
 
@@ -50,35 +52,47 @@ def derive(confirmed, equipment, sprites):
             by_slot.setdefault(series, []).append((int(key), int(m.group(1))))
     for slot, pairs in sorted(by_slot.items()):
         pairs.sort()
-        for (a, sa), (b, sb) in zip(pairs, pairs[1:]):
+        for (a, sa), (b, sb) in itertools.pairwise(pairs):
             if sb <= sa:
-                gaps.append(f'{slot}: {a}->{sa} and {b}->{sb} run backwards (confirmed both; not derived across)')
+                gaps.append(
+                    f'{slot}: {a}->{sa} and {b}->{sb} run backwards (confirmed both; not derived across)'
+                )
                 continue
             if b - a == 1:
                 continue
             ids = range(a + 1, b)
             nums = range(sa + 1, sb)
             if b - a != sb - sa:
-                gaps.append(f'{slot}: {a}->{sa} .. {b}->{sb}: {len(ids)} items, '
-                            f'{len(nums)} sprite numbers -- ambiguous, left out')
+                gaps.append(
+                    f'{slot}: {a}->{sa} .. {b}->{sb}: {len(ids)} items, '
+                    f'{len(nums)} sprite numbers -- ambiguous, left out'
+                )
                 continue
-            missing = [i for i in ids if i not in equipment] + \
-                      [f'ItemIcon_{n}000' for n in nums if f'ItemIcon_{n}000' not in sprites]
+            missing = [i for i in ids if i not in equipment] + [
+                f'ItemIcon_{n}000' for n in nums if f'ItemIcon_{n}000' not in sprites
+            ]
             if missing:
                 gaps.append(f'{slot}: {a}..{b}: not contiguous ({", ".join(map(str, missing))})')
                 continue
             for i, n in zip(ids, nums):
-                derived[str(i)] = {'icon': f'ItemIcon_{n}000', 'name': equipment[i],
-                                   'between': [str(a), str(b)]}
+                derived[str(i)] = {
+                    'icon': f'ItemIcon_{n}000',
+                    'name': equipment[i],
+                    'between': [str(a), str(b)],
+                }
     return derived, problems, gaps
 
 
 def write_map(path, data):
     """One entry per line, sorted, so a change shows up as a one-line diff."""
+
     def block(entries):
-        rows = [f'  {json.dumps(k)}: {json.dumps(v, ensure_ascii=False)}'
-                for k, v in sorted(entries.items())]
+        rows = [
+            f'  {json.dumps(k)}: {json.dumps(v, ensure_ascii=False)}'
+            for k, v in sorted(entries.items())
+        ]
         return '{\n' + ',\n'.join(rows) + '\n }' if rows else '{}'
+
     head = {k: v for k, v in data.items() if k not in ('confirmed', 'derived')}
     lines = [f' {json.dumps(k)}: {json.dumps(v, ensure_ascii=False)}' for k, v in head.items()]
     lines += [f' "confirmed": {block(data["confirmed"])}', f' "derived": {block(data["derived"])}']
@@ -87,12 +101,16 @@ def write_map(path, data):
 
 
 def main():
-    ap = argparse.ArgumentParser(description=__doc__,
-                                 formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap = argparse.ArgumentParser(
+        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
+    )
     ap.add_argument('--out', default='extracted')
     ap.add_argument('--map', default=os.path.join('guide', 'icon_map.json'))
-    ap.add_argument('--check', action='store_true',
-                    help='re-derive and compare against the frozen file instead of writing it')
+    ap.add_argument(
+        '--check',
+        action='store_true',
+        help='re-derive and compare against the frozen file instead of writing it',
+    )
     args = ap.parse_args()
 
     frozen = json.load(open(args.map, encoding='utf8'))
@@ -133,8 +151,10 @@ def main():
         frozen['derived'] = derived
         write_map(args.map, frozen)
 
-    print(f'{len(confirmed)} confirmed, {len(derived)} derived'
-          + ('' if args.check else f' -> {args.map}'))
+    print(
+        f'{len(confirmed)} confirmed, {len(derived)} derived'
+        + ('' if args.check else f' -> {args.map}')
+    )
     for p in problems:
         print('  PROBLEM:', p)
     if problems:

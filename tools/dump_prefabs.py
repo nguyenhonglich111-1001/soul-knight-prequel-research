@@ -25,8 +25,8 @@ Field values are passed through as the type tree gives them, with three compacti
     the `lv` values will be zero);
   * empty strings, empty lists and Unity boilerplate fields are omitted.
 """
-import argparse
 
+import argparse
 import glob
 import json
 import os
@@ -37,26 +37,36 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from extract_soulknight import shipped_bundles
 
 BUNDLE_HASH = re.compile(r'_[0-9a-f]{32}\.bundle$')
-BOILERPLATE = {'m_GameObject', 'm_Enabled', 'm_Script', 'm_Name', 'm_EditorHideFlags',
-               'm_EditorClassIdentifier', 'm_ObjectHideFlags', 'm_PrefabInstance',
-               'm_PrefabAsset', 'm_CorrespondingSourceObject'}
+BOILERPLATE = {
+    'm_GameObject',
+    'm_Enabled',
+    'm_Script',
+    'm_Name',
+    'm_EditorHideFlags',
+    'm_EditorClassIdentifier',
+    'm_ObjectHideFlags',
+    'm_PrefabInstance',
+    'm_PrefabAsset',
+    'm_CorrespondingSourceObject',
+}
 PARAM_KEYS = {'v0', 'v1', 'v2', 'v3', 'parameterType', 'configureId'}
 
 GROUPS = {
-    'buff':   ('buff_all',),
-    'skill':  ('skill_',),
-    'obj':    ('obj_misc', 'misc_'),
-    'stage':  ('stage_',),
-    'char':   ('anim_',),
-    'ui':     ('ui_',),
-    'home':   ('homedecorate_',),
-    'skin':   ('skin_', 'skincoloroverrides'),
-    'scene':  ('scenes_',),
+    'buff': ('buff_all',),
+    'skill': ('skill_',),
+    'obj': ('obj_misc', 'misc_'),
+    'stage': ('stage_',),
+    'char': ('anim_',),
+    'ui': ('ui_',),
+    'home': ('homedecorate_',),
+    'skin': ('skin_', 'skincoloroverrides'),
+    'scene': ('scenes_',),
 }
 
 
 def unity(*paths):
     import UnityPy
+
     return UnityPy.load(*paths)
 
 
@@ -81,7 +91,7 @@ def pick_bundles(asset_dir, prefixes):
         if not name.startswith(prefixes):
             continue
         if shipped and os.path.basename(f) in shipped:
-            seen[name] = f                     # catalog pick always wins
+            seen[name] = f  # catalog pick always wins
         elif name not in seen:
             seen[name] = f
     return list(seen.values())
@@ -112,7 +122,7 @@ def compact(value, names):
             if value['m_FileID'] == 0 and pid in names:
                 ref['$name'] = names[pid]
             return ref
-        if PARAM_KEYS <= keys:
+        if keys >= PARAM_KEYS:
             out = {'lv': [value['v0'], value['v1'], value['v2'], value['v3']]}
             if value.get('configureId'):
                 out['cfg'] = [value.get('configureType'), value['configureId']]
@@ -186,7 +196,7 @@ def dump_bundle(path, mono, out_rows):
                 if sub is not None:
                     children.append(sub)
         if not comps and not children:
-            return None                       # pure presentation branch
+            return None  # pure presentation branch
         row = {'name': g.get('m_Name', '')}
         if comps:
             row['components'] = comps
@@ -195,9 +205,9 @@ def dump_bundle(path, mono, out_rows):
         return row
 
     base = logical(path)
-    for pid, t in trees.items():
+    for t in trees.values():
         if 'm_Children' not in t or t.get('m_Father', {}).get('m_PathID'):
-            continue                          # only prefab roots
+            continue  # only prefab roots
         row = node(t['m_GameObject']['m_PathID'])
         if row is not None:
             row['bundle'] = base
@@ -205,8 +215,9 @@ def dump_bundle(path, mono, out_rows):
 
 
 def main():
-    ap = argparse.ArgumentParser(description=__doc__,
-                                 formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap = argparse.ArgumentParser(
+        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
+    )
     ap.add_argument('--apk-dir', default='soul-knight-prequel-1-13-0')
     ap.add_argument('--out', default='extracted')
     ap.add_argument('--groups', nargs='*', default=None, choices=sorted(GROUPS))
@@ -227,7 +238,7 @@ def main():
     dest = os.path.join(args.out, 'prefabs')
     os.makedirs(dest, exist_ok=True)
 
-    for group in (args.groups or sorted(GROUPS)):
+    for group in args.groups or sorted(GROUPS):
         files = pick_bundles(asset_dir, GROUPS[group])
         rows = []
         for i, f in enumerate(files, 1):
@@ -239,8 +250,10 @@ def main():
         path = os.path.join(dest, group + '.json')
         with open(path, 'w', encoding='utf8') as fh:
             json.dump(rows, fh, ensure_ascii=False, separators=(',', ':'))
-        print(f'{group}: {len(rows)} prefabs -> {path} '
-              f'({os.path.getsize(path)/1e6:.1f} MB)', flush=True)
+        print(
+            f'{group}: {len(rows)} prefabs -> {path} ({os.path.getsize(path) / 1e6:.1f} MB)',
+            flush=True,
+        )
 
 
 if __name__ == '__main__':

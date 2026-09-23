@@ -15,6 +15,7 @@ Other resolutions are scaled from the width; a small jitter search absorbs round
 
     python tools/match_screenshot_icons.py "Soul knight prequel"/*.PNG
 """
+
 import argparse
 import glob
 import json
@@ -44,14 +45,15 @@ def load_sprites(root):
 def score(px, opaque, s, ox, oy):
     err = 0
     for x, y, c in opaque:
-        q = px[int(ox + (x + .5) * s), int(oy + (y + .5) * s)]
+        q = px[int(ox + (x + 0.5) * s), int(oy + (y + 0.5) * s)]
         err += abs(q[0] - c[0]) + abs(q[1] - c[1]) + abs(q[2] - c[2])
     return err / len(opaque)
 
 
 def main():
-    ap = argparse.ArgumentParser(description=__doc__,
-                                 formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap = argparse.ArgumentParser(
+        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
+    )
     ap.add_argument('screenshots', nargs='+')
     ap.add_argument('--out', default='extracted')
     ap.add_argument('--top', type=int, default=3)
@@ -63,7 +65,9 @@ def main():
     if os.path.exists(eq):
         for r in json.load(open(eq, encoding='utf8')):
             if r['icon']:
-                claimed.setdefault(os.path.basename(r['icon'])[:-4], []).append(f"{r['id']} {r['name']}")
+                claimed.setdefault(os.path.basename(r['icon'])[:-4], []).append(
+                    f'{r["id"]} {r["name"]}'
+                )
     print(f'{len(sprites)} sprites')
 
     for path in args.screenshots:
@@ -71,16 +75,22 @@ def main():
         k = shot.size[0] / REF_W
         s, ox, oy = SCALE * k, OX * k, OY * k
         px = shot.load()
-        ranked = sorted((min(score(px, op, s, ox + dx, oy + dy)
-                             for dx in (-2, 0, 2) for dy in (-2, 0, 2)), name)
-                        for name, op in sprites.items())
+        ranked = sorted(
+            (
+                min(score(px, op, s, ox + dx, oy + dy) for dx in (-2, 0, 2) for dy in (-2, 0, 2)),
+                name,
+            )
+            for name, op in sprites.items()
+        )
         best, name = ranked[0]
         gap = ranked[1][0] - best
         verdict = 'OK' if best < 40 and gap > 30 else 'UNSURE -- look at it'
         owner = '; '.join(claimed.get(name, ['unclaimed']))
-        print(f'{os.path.basename(path)}: {name} (score {best:.0f}, next +{gap:.0f}) {verdict}'
-              f'  [currently: {owner}]')
-        for e, n in ranked[1:args.top]:
+        print(
+            f'{os.path.basename(path)}: {name} (score {best:.0f}, next +{gap:.0f}) {verdict}'
+            f'  [currently: {owner}]'
+        )
+        for e, n in ranked[1 : args.top]:
             print(f'    {n} {e:.0f}')
 
 

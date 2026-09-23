@@ -35,6 +35,10 @@ python tools/build_guide.py                      # range-guide.html      (instan
 python tools/export_guide_png.py                 # guide -> Discord PNGs (pip install playwright)
 ```
 
+Dev loop: `pip install ruff pre-commit pytest && pre-commit install` once. Every commit then
+runs `ruff check --fix`, `ruff format` and the fast tests. `python -m pytest -m ""` also runs
+the slow test, which rebuilds the instant stages and fails if any committed output changes.
+
 `export_guide_png.py` writes `extracted/_sheets/guide_png/{desktop,phone}/`: the guide cut
 between elements into pieces ≤1400 CSS px tall at 2x, because Discord blurs one full-page
 screenshot (~10,000 px) beyond reading. It drives the system Edge (`channel='msedge'`), so

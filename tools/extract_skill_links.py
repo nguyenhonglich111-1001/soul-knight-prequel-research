@@ -17,13 +17,13 @@ localization_all.json therefore recovers the item -> skill link.
 Slot digit of the skill id: 1 weapon, 2 armor, 3 helm, 4 boots, 5 ring, 6 necklace,
 7 core, 9 relic -- the same slot order as the 101xxx/102xxx/... name blocks.
 """
+
 import argparse
 import collections
 import glob
 import json
 import os
 import re
-import struct
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -35,6 +35,7 @@ ITEM_ID = re.compile(r'^10[1-9]\d{3}$|^1[0-9]{5}$')
 
 def unity(*paths):
     import UnityPy
+
     return UnityPy.load(*paths)
 
 
@@ -52,8 +53,14 @@ def _shipped(asset_dir, paths):
 
 
 def bundles(asset_dir):
-    return _shipped(asset_dir, [f for f in sorted(glob.glob(os.path.join(asset_dir, '*.bundle')))
-                                if not os.path.basename(f).startswith(SKIP_PREFIX)])
+    return _shipped(
+        asset_dir,
+        [
+            f
+            for f in sorted(glob.glob(os.path.join(asset_dir, '*.bundle')))
+            if not os.path.basename(f).startswith(SKIP_PREFIX)
+        ],
+    )
 
 
 def monoscript_bundles(asset_dir):
@@ -104,9 +111,11 @@ def collect(asset_dir, verbose=True):
             except Exception:
                 continue
             if name and name not in found:
-                found[name] = {'desc': desc.strip(),
-                               'class': scripts.get(t.get('m_Script', {}).get('m_PathID')),
-                               'bundle': base}
+                found[name] = {
+                    'desc': desc.strip(),
+                    'class': scripts.get(t.get('m_Script', {}).get('m_PathID')),
+                    'bundle': base,
+                }
         if verbose and i % 25 == 0:
             print(f'    {i}/{len(files)} bundles, {len(found)} labelled prefabs', flush=True)
     return found
@@ -127,14 +136,16 @@ def link(found, strings):
         if not items:
             continue
         item = min(items, key=int)
-        links.append({
-            'item_id': int(item),
-            'item_name': strings[item].get('English', ''),
-            'item_name_cn': strings[item].get('Chinese', ''),
-            'skill_id': skill_id,
-            'skill_class': info['class'],
-            'bundle': info['bundle'],
-        })
+        links.append(
+            {
+                'item_id': int(item),
+                'item_name': strings[item].get('English', ''),
+                'item_name_cn': strings[item].get('Chinese', ''),
+                'skill_id': skill_id,
+                'skill_class': info['class'],
+                'bundle': info['bundle'],
+            }
+        )
     links.sort(key=lambda r: (r['item_id'], r['skill_id']))
     return links
 
@@ -155,7 +166,7 @@ def dump(asset_dir, skill_id):
         print(f'# {skill_id}  ({os.path.basename(f)})')
         scripts = script_names(env)
 
-        def walk(go_pid, depth=0):
+        def walk(go_pid, depth=0, objs=objs, scripts=scripts):
             g = objs[go_pid].read_typetree()
             print('  ' * depth + '* ' + g['m_Name'])
             tr = None
@@ -169,13 +180,17 @@ def dump(asset_dir, skill_id):
                     continue
                 t = co.read_typetree()
                 cls = scripts.get(t.get('m_Script', {}).get('m_PathID'), '?')
-                body = {k: v for k, v in t.items()
-                        if k not in ('m_GameObject', 'm_Enabled', 'm_Script', 'm_Name')}
+                body = {
+                    k: v
+                    for k, v in t.items()
+                    if k not in ('m_GameObject', 'm_Enabled', 'm_Script', 'm_Name')
+                }
                 print('  ' * depth + f'  - {cls}: ' + json.dumps(body, ensure_ascii=False))
             if tr is not None:
                 for ch in tr.read_typetree()['m_Children']:
-                    walk(objs[ch['m_PathID']].read_typetree()['m_GameObject']['m_PathID'],
-                         depth + 1)
+                    walk(
+                        objs[ch['m_PathID']].read_typetree()['m_GameObject']['m_PathID'], depth + 1
+                    )
 
         walk(target.path_id)
         return
@@ -183,8 +198,9 @@ def dump(asset_dir, skill_id):
 
 
 def main():
-    ap = argparse.ArgumentParser(description=__doc__,
-                                 formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap = argparse.ArgumentParser(
+        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
+    )
     ap.add_argument('--apk-dir', default='soul-knight-prequel-1-13-0')
     ap.add_argument('--out', default='extracted')
     ap.add_argument('--dump', metavar='SKILL_ID', help='print one prefab instead')

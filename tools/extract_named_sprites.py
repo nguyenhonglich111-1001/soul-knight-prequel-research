@@ -14,6 +14,7 @@ which is what `extract_soulknight.export_sprites` requires to decode them correc
     python tools/extract_named_sprites.py --prefix EBF_ --folder EBF
     python tools/extract_named_sprites.py --names-file wanted.txt
 """
+
 import argparse
 import json
 import os
@@ -29,11 +30,16 @@ def folder_for(name, forced=None):
 
 
 def main():
-    ap = argparse.ArgumentParser(description=__doc__,
-                                 formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap = argparse.ArgumentParser(
+        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
+    )
     ap.add_argument('names', nargs='*', help='exact sprite names')
-    ap.add_argument('--prefix', nargs='*', default=[],
-                    help='every indexed sprite whose name starts with one of these')
+    ap.add_argument(
+        '--prefix',
+        nargs='*',
+        default=[],
+        help='every indexed sprite whose name starts with one of these',
+    )
     ap.add_argument('--names-file', help='file with one sprite name per line')
     ap.add_argument('--asset-dir', default='soul-knight-prequel-1-13-0/assets/Asset')
     ap.add_argument('--out', default='extracted')
@@ -55,9 +61,13 @@ def main():
     missing = sorted(want - known)
     want &= known
     if not args.force:
-        skip = {n for n in want
-                if os.path.exists(os.path.join(args.out, 'icons',
-                                                folder_for(n, args.folder), n + '.png'))}
+        skip = {
+            n
+            for n in want
+            if os.path.exists(
+                os.path.join(args.out, 'icons', folder_for(n, args.folder), n + '.png')
+            )
+        }
         want -= skip
         if skip:
             print(f'{len(skip)} already exported, skipping (use --force to redo)')
@@ -69,8 +79,12 @@ def main():
     # unnecessary, it actively corrupts the output.
     sources = sorted(b for b, names in index.items() if want & set(names))
     print(f'{len(want)} sprites wanted, in {len(sources)} bundles; loading...', flush=True)
-    done, failed = E.export_sprites([os.path.join(args.asset_dir, b) for b in sources],
-                                    want.__contains__, args.out, folder=args.folder)
+    done, _failed = E.export_sprites(
+        [os.path.join(args.asset_dir, b) for b in sources],
+        want.__contains__,
+        args.out,
+        folder=args.folder,
+    )
 
     print(f'exported {len(done)} sprites')
     unresolved = sorted(want - done)

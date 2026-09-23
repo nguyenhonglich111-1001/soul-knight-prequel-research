@@ -21,6 +21,7 @@ Writes:
 
     python tools/build_indexes.py
 """
+
 import argparse
 import collections
 import json
@@ -52,8 +53,9 @@ def walk_strings(value, field, out):
 
 
 def main():
-    ap = argparse.ArgumentParser(description=__doc__,
-                                 formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap = argparse.ArgumentParser(
+        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
+    )
     ap.add_argument('--out', default='extracted')
     args = ap.parse_args()
 
@@ -74,56 +76,75 @@ def main():
             key = prefab.get('name')
             if key in loc:
                 desc = loc.get(key + '_D', {})
-                named.append({
-                    'prefab': key, 'group': group,
-                    'name': loc[key].get('English', ''),
-                    'names': loc[key],
-                    'description': desc.get('English', ''),
-                    'descriptions': desc or None,
-                    'components': sorted({c.get('$type') for _, _, c
-                                          in iter_components(prefab)}),
-                })
+                named.append(
+                    {
+                        'prefab': key,
+                        'group': group,
+                        'name': loc[key].get('English', ''),
+                        'names': loc[key],
+                        'description': desc.get('English', ''),
+                        'descriptions': desc or None,
+                        'components': sorted(
+                            {c.get('$type') for _, _, c in iter_components(prefab)}
+                        ),
+                    }
+                )
             seen = collections.defaultdict(set)
             for root, node, comp in iter_components(prefab):
                 kind = comp.get('$type', '')
                 if kind in BUFF_TYPES or kind.startswith('RGBuff_'):
                     bid = comp.get('buff_id')
                     if bid:
-                        buffs.append({
-                            'buff_id': bid,
-                            'name': text(bid),
-                            'prefab': root, 'group': group,
-                            'buff_type': comp.get('buff_type'),
-                            'priority': comp.get('_priority'),
-                            'show_icon': comp.get('show_icon'),
-                            'components': sorted({c.get('$type') for _, _, c in
-                                                  iter_components(prefab)} - {kind}),
-                        })
+                        buffs.append(
+                            {
+                                'buff_id': bid,
+                                'name': text(bid),
+                                'prefab': root,
+                                'group': group,
+                                'buff_type': comp.get('buff_type'),
+                                'priority': comp.get('_priority'),
+                                'show_icon': comp.get('show_icon'),
+                                'components': sorted(
+                                    {c.get('$type') for _, _, c in iter_components(prefab)} - {kind}
+                                ),
+                            }
+                        )
                 if kind == 'RGCharacter' or kind.startswith('RGCharacter'):
                     spec = comp.get('specificName')
-                    chars.append({
-                        'prefab': root, 'node': node, 'group': group,
-                        'specific_name': spec,
-                        'name': text(spec) if spec else None,
-                        'is_boss': comp.get('isBoss'),
-                        'camp': comp.get('camp'),
-                        'race': comp.get('_race'),
-                        'char_type': comp.get('char_type'),
-                        'attribute_template': comp.get('_charAttributeTemplate'),
-                    })
+                    chars.append(
+                        {
+                            'prefab': root,
+                            'node': node,
+                            'group': group,
+                            'specific_name': spec,
+                            'name': text(spec) if spec else None,
+                            'is_boss': comp.get('isBoss'),
+                            'camp': comp.get('camp'),
+                            'race': comp.get('_race'),
+                            'char_type': comp.get('char_type'),
+                            'attribute_template': comp.get('_charAttributeTemplate'),
+                        }
+                    )
                 found = []
                 walk_strings(comp, '', found)
                 for field, value in found:
                     if field not in ('$type', '$name') and value in loc:
                         seen[value].add(field)
             if seen:
-                refs.append({
-                    'prefab': prefab.get('name'), 'group': group,
-                    'keys': {k: sorted(v) for k, v in sorted(seen.items())},
-                })
+                refs.append(
+                    {
+                        'prefab': prefab.get('name'),
+                        'group': group,
+                        'keys': {k: sorted(v) for k, v in sorted(seen.items())},
+                    }
+                )
 
-    for name, rows in (('named_prefabs.json', named), ('buffs.json', buffs),
-                       ('characters.json', chars), ('loc_refs.json', refs)):
+    for name, rows in (
+        ('named_prefabs.json', named),
+        ('buffs.json', buffs),
+        ('characters.json', chars),
+        ('loc_refs.json', refs),
+    ):
         path = os.path.join(args.out, name)
         with open(path, 'w', encoding='utf8') as fh:
             json.dump(rows, fh, ensure_ascii=False, indent=1)

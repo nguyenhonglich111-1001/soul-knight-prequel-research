@@ -1,0 +1,27 @@
+line-length = 100
+target-version = "py310"
+extend-exclude = ["soul-knight-prequel-*", "extracted", "Soul knight prequel", "*.md"]
+
+[lint]
+# Ruff 0.16 defaults plus: bugbear, pyupgrade, import order, simplify, comprehensions.
+extend-select = ["B", "UP", "I", "SIM", "C4"]
+ignore = [
+    "E731",    # lambda assignment: used deliberately for short predicates
+    "SIM108",  # ternary rewrites hurt readability of the multi-line if/else here
+    "B905",    # zip(strict=): the zips here pair equal-length header/row lists on purpose
+    # Unity objects that fail to parse are skipped on purpose -- one bad object must not
+    # abort a 200-bundle pass -- so broad `except Exception: continue/pass` is the idiom.
+    "BLE001", "S110", "S112", "SIM105",
+    "SIM115",  # json.load(open(...)) in short-lived scripts; the file closes on refcount
+    "DTZ011",  # date.today() stamps a local-date note, timezone is irrelevant
+]
+
+[lint.isort]
+known-first-party = [
+    "extract_soulknight", "dump_prefabs", "extract_skill_links", "build_equipment",
+    "build_indexes", "build_item_details", "build_icon_map", "build_guide",
+    "extract_named_sprites", "match_screenshot_icons", "export_guide_png",
+]
+
+[format]
+quote-style = "single"

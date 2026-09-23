@@ -15,6 +15,7 @@ per-item rarity field appears anywhere. `tier` below is the closest honest proxy
     PYTHONIOENCODING=utf-8 python tools/build_item_details.py
     PYTHONIOENCODING=utf-8 python tools/build_item_details.py --slot weapon --tier legendary
 """
+
 import argparse
 import collections
 import json
@@ -23,21 +24,43 @@ import re
 import sys
 
 # The game's own names, from `Const_ItemType_*`.
-CATEGORY = {'weapon': 'Weapon', 'armor': 'Armor', 'helm': 'Helm', 'boots': 'Boots',
-            'ring': 'Ring', 'necklace': 'Necklace',
-            'gear': 'Mech Core', 'core': 'Cubis Core'}
+CATEGORY = {
+    'weapon': 'Weapon',
+    'armor': 'Armor',
+    'helm': 'Helm',
+    'boots': 'Boots',
+    'ring': 'Ring',
+    'necklace': 'Necklace',
+    'gear': 'Mech Core',
+    'core': 'Cubis Core',
+}
 
 # Alias code -> `Const_ItemType_*` label. All twelve weapon types are covered.
-WEAPON_TYPE = {'SS': 'Sword & Shield', 'GS': 'Greatsword', 'DS': 'Dual Blades',
-               'LS': 'Spear & Shield', 'SP': 'Spear', 'CB': 'Crossbow', 'BW': 'Bow',
-               'SQ': 'Dual Pistols', 'ST': 'Staff', 'BK': 'Focus', 'MR': 'Bangle',
-               'QT': 'Fist Weapon'}
+WEAPON_TYPE = {
+    'SS': 'Sword & Shield',
+    'GS': 'Greatsword',
+    'DS': 'Dual Blades',
+    'LS': 'Spear & Shield',
+    'SP': 'Spear',
+    'CB': 'Crossbow',
+    'BW': 'Bow',
+    'SQ': 'Dual Pistols',
+    'ST': 'Staff',
+    'BK': 'Focus',
+    'MR': 'Bangle',
+    'QT': 'Fist Weapon',
+}
 
 # `206501`-`206503` group the twelve types into three classes.
-WEAPON_CLASS = {t: c for c, ts in (
-    ('Melee', ('Sword & Shield', 'Spear & Shield', 'Greatsword', 'Dual Blades', 'Spear')),
-    ('Ranged', ('Bow', 'Crossbow', 'Dual Pistols')),
-    ('Casting', ('Staff', 'Focus', 'Bangle'))) for t in ts}
+WEAPON_CLASS = {
+    t: c
+    for c, ts in (
+        ('Melee', ('Sword & Shield', 'Spear & Shield', 'Greatsword', 'Dual Blades', 'Spear')),
+        ('Ranged', ('Bow', 'Crossbow', 'Dual Pistols')),
+        ('Casting', ('Staff', 'Focus', 'Bangle')),
+    )
+    for t in ts
+}
 
 # Second letter of the family code, read off the ID blocks and the item names:
 #   (none) the starting/shop gear      B  boss drops (Grimhowl*, *of the Boar King)
@@ -56,18 +79,29 @@ MODIFIER = {'1': 'GUARD', '2': 'ROBBER', '3': 'NATURAL', '4': 'FLAME', '5': 'DAR
 SPEC = re.compile(r'^SX_P1_(\d)(\d)_\d+$')
 # `S_P1_<line>0_<node>` is the shared line tree above the five specializations.
 BASE = re.compile(r'^S_P1_(\d)0_\d+$')
-LINE_LABEL = {'1': 'Warrior', '2': 'Archer', '3': 'Psychic',
-              '4': 'Storm', '5': 'Light'}
+LINE_LABEL = {'1': 'Warrior', '2': 'Archer', '3': 'Psychic', '4': 'Storm', '5': 'Light'}
 
 # Only used when there is no alias -- which is exactly the legendary block. Guesses from
 # the English name, so it is reported separately from the alias-derived answer.
-NAME_HINTS = [('Sword & Shield', 'Sword & Shield'), ('Spear & Shield', 'Spear & Shield'),
-              ('Crossbow', 'Crossbow'), ('Longbow', 'Bow'), ('Bow', 'Bow'),
-              ('Greatsword', 'Greatsword'), ('Twinblades', 'Dual Blades'),
-              ('Dual Blades', 'Dual Blades'), ('Knuckles', 'Fist Weapon'),
-              ('Pistols', 'Dual Pistols'), ('Scepter', 'Staff'), ('Staff', 'Staff'),
-              ('Tome', 'Focus'), ('Grimoire', 'Focus'), ('Bangle', 'Bangle'),
-              ('Spear', 'Spear'), ('Lance', 'Spear')]
+NAME_HINTS = [
+    ('Sword & Shield', 'Sword & Shield'),
+    ('Spear & Shield', 'Spear & Shield'),
+    ('Crossbow', 'Crossbow'),
+    ('Longbow', 'Bow'),
+    ('Bow', 'Bow'),
+    ('Greatsword', 'Greatsword'),
+    ('Twinblades', 'Dual Blades'),
+    ('Dual Blades', 'Dual Blades'),
+    ('Knuckles', 'Fist Weapon'),
+    ('Pistols', 'Dual Pistols'),
+    ('Scepter', 'Staff'),
+    ('Staff', 'Staff'),
+    ('Tome', 'Focus'),
+    ('Grimoire', 'Focus'),
+    ('Bangle', 'Bangle'),
+    ('Spear', 'Spear'),
+    ('Lance', 'Spear'),
+]
 
 
 def type_from_name(name):
@@ -86,14 +120,14 @@ def class_index(loc):
     out = {}
     for key, row in loc.items():
         name = (row.get('English') or '').strip()
-        if len(name) <= 3:                # short names match far too loosely
+        if len(name) <= 3:  # short names match far too loosely
             continue
         m = SPEC.match(key)
         if m:
             ck = f'Info_CLASS_{LINE[m.group(1)]}_{MODIFIER[m.group(2)]}'
             label = (loc.get(ck, {}).get('English') or '').strip()
             if label:
-                out[name] = label         # specialization wins over a line match
+                out[name] = label  # specialization wins over a line match
             continue
         b = BASE.match(key)
         if b:
@@ -122,7 +156,9 @@ def build(out):
     cidx = class_index(loc)
     # Weapon types read off the in-game codex tabs (guide/weapon_types.json). They beat a
     # name guess; an alias type is from the item's own key, so a disagreement is reported.
-    wt = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'guide', 'weapon_types.json')
+    wt = os.path.join(
+        os.path.dirname(os.path.abspath(__file__)), '..', 'guide', 'weapon_types.json'
+    )
     codex = json.load(open(wt, encoding='utf8'))['confirmed'] if os.path.exists(wt) else {}
 
     rows = []
@@ -136,38 +172,40 @@ def build(out):
         source = 'alias' if wtype else None
         seen = codex.get(str(r['id']), {}).get('type')
         if seen and wtype and seen != wtype:
-            print(f"  CODEX DISAGREES: {r['id']} {r['name']}: alias {wtype}, codex tab {seen}")
+            print(f'  CODEX DISAGREES: {r["id"]} {r["name"]}: alias {wtype}, codex tab {seen}')
         if seen and not wtype:
             wtype, source = seen, 'codex'
         if r['slot'] == 'weapon' and not wtype:
             wtype = type_from_name(r['name'])
             source = 'name-guess' if wtype else None
-        rows.append({
-            'id': r['id'],
-            'name': r['name'],
-            'name_cn': r['names'].get('Chinese'),
-            'category': CATEGORY[r['slot']],
-            'weapon_type': wtype,
-            'weapon_type_source': source,
-            'weapon_class': WEAPON_CLASS.get(wtype),
-            'armor_class': int(digit) if digit else None,
-            'family': fam,
-            # A LegendEquipSkill prefab is proof of the tier; the family code is a proxy.
-            'tier': 'legendary' if r['skill_ids'] else (
-                FAMILY.get(fam[1:]) if fam else None),
-            'class': class_of(r.get('effect') or '', cidx),
-            'alias': alias,
-            'icon': r['icon'],
-            'skill_ids': r['skill_ids'],
-            'effect_key': r.get('effect_key'),
-            'effect': r.get('effect'),
-        })
+        rows.append(
+            {
+                'id': r['id'],
+                'name': r['name'],
+                'name_cn': r['names'].get('Chinese'),
+                'category': CATEGORY[r['slot']],
+                'weapon_type': wtype,
+                'weapon_type_source': source,
+                'weapon_class': WEAPON_CLASS.get(wtype),
+                'armor_class': int(digit) if digit else None,
+                'family': fam,
+                # A LegendEquipSkill prefab is proof of the tier; the family code is a proxy.
+                'tier': 'legendary' if r['skill_ids'] else (FAMILY.get(fam[1:]) if fam else None),
+                'class': class_of(r.get('effect') or '', cidx),
+                'alias': alias,
+                'icon': r['icon'],
+                'skill_ids': r['skill_ids'],
+                'effect_key': r.get('effect_key'),
+                'effect': r.get('effect'),
+            }
+        )
     return rows
 
 
 def main():
-    ap = argparse.ArgumentParser(description=__doc__,
-                                 formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap = argparse.ArgumentParser(
+        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
+    )
     ap.add_argument('--out', default='extracted')
     ap.add_argument('--slot', help='print only this category, e.g. weapon')
     ap.add_argument('--tier', help='print only this tier: legendary/latest/boss/named/base')
@@ -180,24 +218,38 @@ def main():
     with open(path, 'w', encoding='utf8') as fh:
         json.dump(rows, fh, ensure_ascii=False, indent=1)
     print(f'{len(rows)} rows -> {path}')
-    for field in ('weapon_type', 'weapon_class', 'armor_class', 'family', 'tier',
-                  'class', 'effect'):
+    for field in (
+        'weapon_type',
+        'weapon_class',
+        'armor_class',
+        'family',
+        'tier',
+        'class',
+        'effect',
+    ):
         print(f'  with {field:18}: {sum(1 for r in rows if r[field])}')
     print('  tiers:', dict(collections.Counter(r['tier'] for r in rows).most_common()))
-    print('  weapon types:',
-          dict(collections.Counter(r['weapon_type'] for r in rows if r['weapon_type'])))
+    print(
+        '  weapon types:',
+        dict(collections.Counter(r['weapon_type'] for r in rows if r['weapon_type'])),
+    )
 
-    sel = [r for r in rows
-           if (not args.slot or r['category'].lower() == args.slot.lower())
-           and (not args.tier or r['tier'] == args.tier)]
+    sel = [
+        r
+        for r in rows
+        if (not args.slot or r['category'].lower() == args.slot.lower())
+        and (not args.tier or r['tier'] == args.tier)
+    ]
     if args.slot or args.tier:
         print(f'\n{len(sel)} matching rows\n')
         print(f'{"id":>7}  {"name":32} {"type":14} {"class":14} {"tier":10} effect')
         for r in sel:
             eff = (r['effect'] or '')[:40]
             src = '?' if r['weapon_type_source'] == 'name-guess' else ' '
-            print(f'{r["id"]:>7}  {r["name"][:30]:32} {str(r["weapon_type"] or "-")[:13]:13}{src} '
-                  f'{str(r["class"] or "-")[:14]:14} {str(r["tier"] or "-"):10} {eff}')
+            print(
+                f'{r["id"]:>7}  {r["name"][:30]:32} {str(r["weapon_type"] or "-")[:13]:13}{src} '
+                f'{str(r["class"] or "-")[:14]:14} {r["tier"] or "-"!s:10} {eff}'
+            )
 
 
 if __name__ == '__main__':

@@ -23,11 +23,10 @@ item -> effect-ID mapping, which live in the Luban config tables inside the encr
 code_dll/code_aot bundles or on the game server. For the item -> skill-prefab link, and for
 the per-level numbers that prefabs do carry, see tools/extract_skill_links.py.
 """
+
 import argparse
 import base64
-import collections
 import glob
-import gzip
 import json
 import os
 import re
@@ -38,7 +37,8 @@ import sys
 
 ICON_PATTERN = re.compile(
     r'^(ItemIcon_|ICON_|UI_SkillIcon|UI_Pet|UI_Spirit|UI_BF|UI_ES|icn_com|'
-    r'SX_P\d|S_P\d|S_C_|S_\d|SKIN_WEAPON_)')
+    r'SX_P\d|S_P\d|S_C_|S_\d|SKIN_WEAPON_)'
+)
 
 # Bundles that never contain sprites/text we need (skipped to save time).
 SKIP_BUNDLES = ('videos_', 'audio_', 'localization', 'spine_', 'stage_')
@@ -52,6 +52,7 @@ _RECORD_START = re.compile(r'\r?\n(?="[^"\t\r\n]*"\t"[^"\t\r\n]*"\t)')
 
 def unity(*paths):
     import UnityPy
+
     return UnityPy.load(*paths)
 
 
@@ -60,8 +61,8 @@ def textasset_bytes(obj):
     raw = obj.get_raw_data()
     name_len = struct.unpack('<I', raw[:4])[0]
     pos = (4 + name_len + 3) & ~3
-    size = struct.unpack('<I', raw[pos:pos + 4])[0]
-    return raw[4:4 + name_len].decode('utf8', 'replace'), raw[pos + 4:pos + 4 + size]
+    size = struct.unpack('<I', raw[pos : pos + 4])[0]
+    return raw[4 : 4 + name_len].decode('utf8', 'replace'), raw[pos + 4 : pos + 4 + size]
 
 
 def deobfuscate(data, header):
@@ -70,8 +71,10 @@ def deobfuscate(data, header):
     Every table starts with the same `"Key" TAB "Type" TAB "English" ...` header row, so
     `cipher ^ header` *is* the key stream; it repeats with a period of 120 bytes."""
     ks = bytes(a ^ b for a, b in zip(data, header))
-    key = next((ks[:p] for p in range(1, len(ks))
-                if all(ks[i] == ks[i + p] for i in range(len(ks) - p))), None)
+    key = next(
+        (ks[:p] for p in range(1, len(ks)) if all(ks[i] == ks[i + p] for i in range(len(ks) - p))),
+        None,
+    )
     if key is None:
         return None
     plain = bytes(b ^ key[i % len(key)] for i, b in enumerate(data))
@@ -99,6 +102,7 @@ def parse_tsv(text):
 
 # --------------------------------------------------------------------------- stage 1
 
+
 def stage_localization(asset_dir, out):
     # Pass 1: read the raw TextAssets. Plain tables are used to learn the header row,
     # which is then the known plaintext that unlocks the obfuscated ones.
@@ -111,7 +115,7 @@ def stage_localization(asset_dir, out):
             name, data = textasset_bytes(o)
             tables.append((name, data))
             if header_bytes is None and data.startswith(b'"Key"'):
-                header_bytes = data[:data.index(b'\n') + 1]
+                header_bytes = data[: data.index(b'\n') + 1]
 
     strings, langs, skipped, decoded = {}, None, [], []
     for name, data in tables:
@@ -140,6 +144,7 @@ def stage_localization(asset_dir, out):
 
 # --------------------------------------------------------------------------- stage 2
 
+
 def stage_catalog(apk_dir, out):
     """aa/catalog.json is an Addressables ContentCatalogData; decode key -> asset path."""
     j = json.load(open(os.path.join(apk_dir, 'assets', 'aa', 'catalog.json'), encoding='utf8'))
@@ -147,23 +152,23 @@ def stage_catalog(apk_dir, out):
     bd = base64.b64decode(j['m_BucketDataString'])
     ed = base64.b64decode(j['m_EntryDataString'])
     ids = j['m_InternalIds']
-    nk, = struct.unpack_from('<i', bd, 0)
+    (nk,) = struct.unpack_from('<i', bd, 0)
     pos, buckets = 4, []
     for _ in range(nk):
         kpos, n = struct.unpack_from('<ii', bd, pos)
         pos += 8
-        entries = struct.unpack_from('<%di' % n, bd, pos)
+        entries = struct.unpack_from(f'<{n}i', bd, pos)
         pos += 4 * n
         t = kd[kpos]
-        if t in (0, 1):                                   # ascii / utf16 string
-            ln, = struct.unpack_from('<i', kd, kpos + 1)
-            key = kd[kpos + 5:kpos + 5 + ln].decode('utf8' if t == 0 else 'utf16')
-        elif t in (4, 5):                                 # int key
+        if t in (0, 1):  # ascii / utf16 string
+            (ln,) = struct.unpack_from('<i', kd, kpos + 1)
+            key = kd[kpos + 5 : kpos + 5 + ln].decode('utf8' if t == 0 else 'utf16')
+        elif t in (4, 5):  # int key
             key = str(struct.unpack_from('<i', kd, kpos + 1)[0])
         else:
             continue
         buckets.append((key, entries))
-    ne, = struct.unpack_from('<i', ed, 0)
+    (ne,) = struct.unpack_from('<i', ed, 0)
     entry = [struct.unpack_from('<7i', ed, 4 + 28 * i) for i in range(ne)]
     catalog = {}
     for key, ents in buckets:
@@ -177,6 +182,7 @@ def stage_catalog(apk_dir, out):
 
 
 # --------------------------------------------------------------------------- stage 3
+
 
 def shipped_bundles(asset_dir):
     """Basenames of the bundles the Addressables catalog actually points at, or `None`
@@ -205,9 +211,12 @@ def bundle_files(asset_dir, pattern='*.bundle', skip=True):
     those families by name -- `localization_*` is both in SKIP_BUNDLES and stage 1's
     whole input."""
     shipped = shipped_bundles(asset_dir)
-    return [f for f in sorted(glob.glob(os.path.join(asset_dir, pattern)))
-            if not (skip and any(s in os.path.basename(f) for s in SKIP_BUNDLES))
-            and (shipped is None or os.path.basename(f) in shipped)]
+    return [
+        f
+        for f in sorted(glob.glob(os.path.join(asset_dir, pattern)))
+        if not (skip and any(s in os.path.basename(f) for s in SKIP_BUNDLES))
+        and (shipped is None or os.path.basename(f) in shipped)
+    ]
 
 
 def stage_sprite_index(asset_dir, out):
@@ -230,6 +239,7 @@ def stage_sprite_index(asset_dir, out):
 
 
 # --------------------------------------------------------------------------- stage 4
+
 
 def sprite_folder(name, forced=None):
     """`icons/<family>/<name>.png`, where the family is the name's leading alpha run(s).
@@ -298,8 +308,9 @@ def stage_icons(asset_dir, out, index, all_sprites=False):
         if i % 10 == 0 or i == total:
             print(f'    {i}/{total} bundles, {n} icons', flush=True)
 
-    done, failed = export_sprites([os.path.join(asset_dir, b) for b in files],
-                                  want, out, progress=tick)
+    done, failed = export_sprites(
+        [os.path.join(asset_dir, b) for b in files], want, out, progress=tick
+    )
     unresolved = sorted(failed)
     with open(os.path.join(out, 'icons_unresolved.json'), 'w') as fh:
         json.dump(unresolved, fh, indent=1)
@@ -308,6 +319,7 @@ def stage_icons(asset_dir, out, index, all_sprites=False):
 
 
 # --------------------------------------------------------------------------- stage 5
+
 
 def icon_folder(name):
     m = re.match(r'^([A-Za-z]+(?:_[A-Za-z]+)?)', name)
@@ -350,13 +362,18 @@ def stage_items(strings, sprite_names, out):
         if not m or key.endswith(('_D', '_Info')):
             continue
         icon = first_icon(('ItemIcon_' + key[5:], 'ICON_SP_' + key[5:]))
-        items.append({
-            'id': key[5:], 'prefix': m.group(1), 'key': key,
-            'name': names['English'],
-            'description': strings.get(key + '_D', {}).get('English', ''),
-            'names': names, 'descriptions': strings.get(key + '_D', {}),
-            'icon': icon,
-        })
+        items.append(
+            {
+                'id': key[5:],
+                'prefix': m.group(1),
+                'key': key,
+                'name': names['English'],
+                'description': strings.get(key + '_D', {}).get('English', ''),
+                'names': names,
+                'descriptions': strings.get(key + '_D', {}),
+                'icon': icon,
+            }
+        )
     with open(os.path.join(out, 'items.json'), 'w', encoding='utf8') as fh:
         json.dump(items, fh, ensure_ascii=False, indent=1)
 
@@ -366,12 +383,17 @@ def stage_items(strings, sprite_names, out):
     for nid, names in sorted(numeric.items()):
         desc_id = next((nid + off for lo, hi, off in NUMERIC_DESC_RULES if lo <= nid <= hi), None)
         desc = strings.get(str(desc_id), {}) if desc_id else {}
-        rows.append({
-            'id': nid, 'name': names['English'], 'names': names,
-            'description': desc.get('English', ''), 'descriptions': desc,
-            'description_id': desc_id if desc else None,
-            'icon': first_icon(icon_candidates(nid)),
-        })
+        rows.append(
+            {
+                'id': nid,
+                'name': names['English'],
+                'names': names,
+                'description': desc.get('English', ''),
+                'descriptions': desc,
+                'description_id': desc_id if desc else None,
+                'icon': first_icon(icon_candidates(nid)),
+            }
+        )
     with open(os.path.join(out, 'items_numeric.json'), 'w', encoding='utf8') as fh:
         json.dump(rows, fh, ensure_ascii=False, indent=1)
 
@@ -384,24 +406,39 @@ def stage_items(strings, sprite_names, out):
             start = nid
         prev = nid
     ranges.append((start, prev))
-    summary = [{'from': a, 'to': b, 'count': sum(1 for n in numeric if a <= n <= b),
-                'sample': numeric[a]['English'][:80]} for a, b in ranges]
+    summary = [
+        {
+            'from': a,
+            'to': b,
+            'count': sum(1 for n in numeric if a <= n <= b),
+            'sample': numeric[a]['English'][:80],
+        }
+        for a, b in ranges
+    ]
     with open(os.path.join(out, 'numeric_ranges.json'), 'w', encoding='utf8') as fh:
         json.dump(summary, fh, ensure_ascii=False, indent=1)
-    print(f"[5] items.json={len(items)}  items_numeric.json={len(rows)} "
-          f"(with icon: {sum(1 for r in rows if r['icon'])}, "
-          f"with description: {sum(1 for r in rows if r['description'])})")
+    print(
+        f'[5] items.json={len(items)}  items_numeric.json={len(rows)} '
+        f'(with icon: {sum(1 for r in rows if r["icon"])}, '
+        f'with description: {sum(1 for r in rows if r["description"])})'
+    )
 
 
 # --------------------------------------------------------------------------- main
 
+
 def main():
-    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap = argparse.ArgumentParser(
+        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
+    )
     ap.add_argument('--apk-dir', default='soul-knight-prequel-1-13-0')
     ap.add_argument('--out', default='extracted')
     ap.add_argument('--skip-icons', action='store_true')
-    ap.add_argument('--all-sprites', action='store_true',
-                    help='export every sprite, not just icons (~112k files, hours)')
+    ap.add_argument(
+        '--all-sprites',
+        action='store_true',
+        help='export every sprite, not just icons (~112k files, hours)',
+    )
     args = ap.parse_args()
 
     asset_dir = os.path.join(args.apk_dir, 'assets', 'Asset')

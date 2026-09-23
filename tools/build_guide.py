@@ -9,6 +9,7 @@ one portable file, and prints what it could not resolve instead of quietly dropp
     PYTHONIOENCODING=utf-8 python tools/build_guide.py
     PYTHONIOENCODING=utf-8 python tools/build_guide.py --guide guide/ranger.json -o out.html
 """
+
 import argparse
 import base64
 import collections
@@ -19,20 +20,34 @@ import re
 import sys
 
 # The game's own rarity palette, from the `ITEM_RATE_*` strings.
-RARITY = {0: ('Common', '#F5F5F5'), 1: ('Charmed', '#61E382'), 2: ('Rare', '#3FBBEC'),
-          3: ('Epic', '#8E2AC1'), 4: ('Legendary', '#FAAA3F'), 5: ('Insane', '#E85048')}
+RARITY = {
+    0: ('Common', '#F5F5F5'),
+    1: ('Charmed', '#61E382'),
+    2: ('Rare', '#3FBBEC'),
+    3: ('Epic', '#8E2AC1'),
+    4: ('Legendary', '#FAAA3F'),
+    5: ('Insane', '#E85048'),
+}
 
 ORDINALS = ['best', '2nd', '3rd', '4th', '5th']
 
-SLOT_ICON = {'Weapon': 'icn_equip_weapon', 'Helmet': 'icn_equip_helmet',
-             'Armor': 'icn_equip_armor', 'Boots': 'icn_equip_shoes',
-             'Ring': 'icn_equip_ring', 'Necklace': 'icn_equip_necklace',
-             # The game's own labels: Const_ItemType_CHARMS1 is "Mech Core" (机核) and
-             # CHARMS2 is "Cubis Core" (魔核). These were the wrong way round.
-             'Cubis core': 'icn_equip_charms2', 'Mech gear': 'icn_equip_charms1'}
+SLOT_ICON = {
+    'Weapon': 'icn_equip_weapon',
+    'Helmet': 'icn_equip_helmet',
+    'Armor': 'icn_equip_armor',
+    'Boots': 'icn_equip_shoes',
+    'Ring': 'icn_equip_ring',
+    'Necklace': 'icn_equip_necklace',
+    # The game's own labels: Const_ItemType_CHARMS1 is "Mech Core" (机核) and
+    # CHARMS2 is "Cubis Core" (魔核). These were the wrong way round.
+    'Cubis core': 'icn_equip_charms2',
+    'Mech gear': 'icn_equip_charms1',
+}
 
 # Unity rich text, matched *after* html.escape has turned its angle brackets into entities.
-COLOR_TAG = re.compile(r'&lt;color=#([0-9A-Fa-f]{6})[0-9A-Fa-f]{0,2}&gt;(.*?)&lt;/color&gt;', re.S)
+COLOR_TAG = re.compile(
+    r'&lt;color=#([0-9A-Fa-f]{6})[0-9A-Fa-f]{0,2}&gt;(.*?)&lt;/color&gt;', re.DOTALL
+)
 TERM_TAG = re.compile(r'\$([A-Za-z0-9_]+)\$')
 SLOT_TAG = re.compile(r'\{(\d+)\}')
 BOLD_TAG = re.compile(r'\*\*(.+?)\*\*')
@@ -53,20 +68,24 @@ class Data:
 
     def __init__(self, out):
         self.loc = json.load(open(os.path.join(out, 'localization_all.json'), encoding='utf8'))
-        self.numeric = {str(r['id']): r for r in
-                        json.load(open(os.path.join(out, 'items_numeric.json'), encoding='utf8'))}
+        self.numeric = {
+            str(r['id']): r
+            for r in json.load(open(os.path.join(out, 'items_numeric.json'), encoding='utf8'))
+        }
         # Legendary effect text, keyed by item id. `build_equipment.effect_key()` derives
         # it from the item's skill prefab; it is the only description equipment has.
         eq = os.path.join(out, 'equipment.json')
         eq = json.load(open(eq, encoding='utf8')) if os.path.exists(eq) else []
         self.effects = {str(r['id']): r['effect'] for r in eq}
         # Lv.1 `{n}` values read off the codex, positional: [v0, v1, ...] fills {0}, {1}, ...
-        self.effect_values = {str(r['id']): r['effect_values_lv1'] for r in eq
-                              if r.get('effect_values_lv1')}
+        self.effect_values = {
+            str(r['id']): r['effect_values_lv1'] for r in eq if r.get('effect_values_lv1')
+        }
         # effect_map.json also holds items only known by their `ITEM_*` key (Bishop's
         # Biretta), which have no numeric equipment row for build_equipment.py to fill.
-        emap = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'guide',
-                            'effect_map.json')
+        emap = os.path.join(
+            os.path.dirname(os.path.abspath(__file__)), '..', 'guide', 'effect_map.json'
+        )
         if os.path.exists(emap):
             for k, v in json.load(open(emap, encoding='utf8'))['confirmed'].items():
                 text = (self.loc.get(v['key']) or {}).get('English')
@@ -76,17 +95,21 @@ class Data:
                     self.effect_values[k] = v['lv1']
         # Equipment icons as build_equipment.py settled them: guide/icon_map.json (checked
         # in game, or derived from checked pairs) before the `ITEM_*` alias rule.
-        self.equip_icons = {str(r['id']): os.path.join(out, 'icons', r['icon'])
-                            for r in eq if r['icon']}
+        self.equip_icons = {
+            str(r['id']): os.path.join(out, 'icons', r['icon']) for r in eq if r['icon']
+        }
         self.by_en = collections.defaultdict(list)
         for key, row in self.loc.items():
             en = row.get('English')
             if en:
                 self.by_en[en].append(key)
         root = os.path.join(out, 'icons')
-        self.icons = {f[:-4]: os.path.join(root, d, f)
-                      for d in os.listdir(root)
-                      for f in os.listdir(os.path.join(root, d)) if f.endswith('.png')}
+        self.icons = {
+            f[:-4]: os.path.join(root, d, f)
+            for d in os.listdir(root)
+            for f in os.listdir(os.path.join(root, d))
+            if f.endswith('.png')
+        }
         # normalised Chinese -> skill-tree key that owns a sprite
         self.by_cn = {}
         for key, row in self.loc.items():
@@ -95,11 +118,16 @@ class Data:
                 self.by_cn.setdefault(CN_SEP.sub('', cn.strip()), key)
         # Hand-checked key -> sprite pairs for things whose sprite is not named after
         # their key (Axial Incarnate pieces are `Incarnation_NN`). See icon-mapping-plan.md.
-        imap = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'guide', 'icon_map.json')
+        imap = os.path.join(
+            os.path.dirname(os.path.abspath(__file__)), '..', 'guide', 'icon_map.json'
+        )
         imap = json.load(open(imap, encoding='utf8')) if os.path.exists(imap) else {}
-        self.mapped_icons = {k: self.icons[v['icon']]
-                             for part in ('confirmed', 'derived')
-                             for k, v in imap.get(part, {}).items() if v['icon'] in self.icons}
+        self.mapped_icons = {
+            k: self.icons[v['icon']]
+            for part in ('confirmed', 'derived')
+            for k, v in imap.get(part, {}).items()
+            if v['icon'] in self.icons
+        }
         self._b64 = {}
 
     def text(self, key):
@@ -145,7 +173,7 @@ class Data:
             return self.mapped_icons[key]
         for alias in self.by_en.get(name or '', ()):
             if alias.startswith('ITEM_'):
-                path = self.icons.get('ItemIcon_' + alias[len('ITEM_'):])
+                path = self.icons.get('ItemIcon_' + alias[len('ITEM_') :])
                 if path:
                     return path
         return self.skill_tree_icon(key)
@@ -174,12 +202,18 @@ class Data:
         if not desc:
             desc = self.effects.get(key) or None
             if desc and self.effect_values.get(key):
-                values = {str(i): (f'{v:g}' if isinstance(v, (int, float)) else v)
-                          for i, v in enumerate(self.effect_values[key])}
+                values = {
+                    str(i): (f'{v:g}' if isinstance(v, (int, float)) else v)
+                    for i, v in enumerate(self.effect_values[key])
+                }
         path = self.icon_path(key, name)
-        return {'name': name, 'desc': desc, 'values': values,
-                'icon': self.data_uri(path) if path else None,
-                'icon_name': os.path.basename(path) if path else None}
+        return {
+            'name': name,
+            'desc': desc,
+            'values': values,
+            'icon': self.data_uri(path) if path else None,
+            'icon_name': os.path.basename(path) if path else None,
+        }
 
 
 # --------------------------------------------------------------------------- text
@@ -199,15 +233,23 @@ def rich(text, glossary, values=None):
     out = COLOR_TAG.sub(r'<span style="color:#\1">\2</span>', out)
     values = values or {}
     out = SLOT_TAG.sub(
-        lambda m: (f'<span class="val" title="read off an in-game screenshot">'
-                   f'{html.escape(str(values[m.group(1)]))}</span>' if m.group(1) in values
-                   else '<span class="unk" title="value lives in the encrypted config">?</span>'),
-        out)
+        lambda m: (
+            f'<span class="val" title="read off an in-game screenshot">'
+            f'{html.escape(str(values[m.group(1)]))}</span>'
+            if m.group(1) in values
+            else '<span class="unk" title="value lives in the encrypted config">?</span>'
+        ),
+        out,
+    )
     out = TERM_TAG.sub(
-        lambda m: (f'<span class="term">{html.escape(glossary[m.group(1)])}</span>'
-                   if m.group(1) in glossary
-                   else f'<span class="term term-unknown" title="glossary term not recovered">'
-                        f'{html.escape(m.group(1))}</span>'), out)
+        lambda m: (
+            f'<span class="term">{html.escape(glossary[m.group(1)])}</span>'
+            if m.group(1) in glossary
+            else f'<span class="term term-unknown" title="glossary term not recovered">'
+            f'{html.escape(m.group(1))}</span>'
+        ),
+        out,
+    )
     out = BOLD_TAG.sub(r'<strong>\1</strong>', out)
     out = CODE_TAG.sub(r'<code>\1</code>', out)
     return out.replace('\n', '<br>')
@@ -237,26 +279,36 @@ class Renderer:
             name = r['name'] or e['key']
             # "Lamian: Ghastly Malocchio" -> "Ghastly Malocchio"; the card already names Lamian.
             short = name.split(':', 1)[1].strip() if ':' in name else name
-            icon = (f'<img class="ic" src="{r["icon"]}" alt="">' if r['icon']
-                    else '<span class="ic-missing" title="icon not shipped in this APK"></span>')
-            slot = f'<span class="piece-slot">{html.escape(e["slot"])}</span>' if e.get('slot') else ''
-            tiles.append(f'<div class="piece">{icon}<span class="piece-name">'
-                         f'{html.escape(short)}</span>{slot}</div>')
+            icon = (
+                f'<img class="ic" src="{r["icon"]}" alt="">'
+                if r['icon']
+                else '<span class="ic-missing" title="icon not shipped in this APK"></span>'
+            )
+            slot = (
+                f'<span class="piece-slot">{html.escape(e["slot"])}</span>' if e.get('slot') else ''
+            )
+            tiles.append(
+                f'<div class="piece">{icon}<span class="piece-name">'
+                f'{html.escape(short)}</span>{slot}</div>'
+            )
         return f'<div class="pieces">{"".join(tiles)}</div>'
 
     def card(self, entry, kind, rank=None, show_slot=True):
         r = self.d.resolve(entry)
         shown = entry.get('as_written')
         if entry.get('key') and not r['name']:
-            self.unresolved.append(f"{entry['key']} (key not in localization)")
+            self.unresolved.append(f'{entry["key"]} (key not in localization)')
         if not entry.get('key'):
-            self.unresolved.append(f"{shown or '?'} (no key in guide file)")
+            self.unresolved.append(f'{shown or "?"} (no key in guide file)')
         elif not r['icon']:
-            self.no_icon.append(f"{r['name'] or entry['key']}")
+            self.no_icon.append(f'{r["name"] or entry["key"]}')
 
         name = r['name'] or shown or 'Unknown'
-        icon = (f'<img class="ic" src="{r["icon"]}" alt="">' if r['icon']
-                else '<span class="ic-missing" title="icon not shipped in this APK"></span>')
+        icon = (
+            f'<img class="ic" src="{r["icon"]}" alt="">'
+            if r['icon']
+            else '<span class="ic-missing" title="icon not shipped in this APK"></span>'
+        )
         slot = entry.get('slot')
         slot_uri = None
         if slot and SLOT_ICON.get(slot) in self.d.icons:
@@ -279,7 +331,9 @@ class Renderer:
             bits.append(f'<div class="meta">{"".join(meta)}</div>')
         bits.append('</div></div>')
         if r['desc']:
-            bits.append(f'<p class="desc">{self.rt(r["desc"], entry.get("values") or r["values"])}</p>')
+            bits.append(
+                f'<p class="desc">{self.rt(r["desc"], entry.get("values") or r["values"])}</p>'
+            )
         if entry.get('pieces'):
             bits.append(self.pieces(entry['pieces']))
         if entry.get('note'):
@@ -293,8 +347,7 @@ class Renderer:
         if kind == 'prose':
             return f'{head}<p class="prose">{self.rt(b["text"])}</p>'
         if kind == 'callout':
-            return (f'<div class="callout {b.get("tone", "tip")}">'
-                    f'<p>{self.rt(b["text"])}</p></div>')
+            return f'<div class="callout {b.get("tone", "tip")}"><p>{self.rt(b["text"])}</p></div>'
         if kind == 'steps':
             rows = []
             for i, step in enumerate(b['items'], 1):
@@ -302,13 +355,15 @@ class Renderer:
                 if step.get('key'):
                     name = self.d.text(step['key'])
                     if not name:
-                        self.unresolved.append(f"{step['key']} (step reference)")
+                        self.unresolved.append(f'{step["key"]} (step reference)')
                     elif name.lower() not in step['text'].lower():
                         # The prose usually names the place already; only add the chip when
                         # the in-game name differs from what the guide wrote.
                         extra = f'<span class="chip">{html.escape(name)}</span>'
-                rows.append(f'<li><span class="n">{i}</span>'
-                            f'<span class="t">{self.rt(step["text"])}{extra}</span></li>')
+                rows.append(
+                    f'<li><span class="n">{i}</span>'
+                    f'<span class="t">{self.rt(step["text"])}{extra}</span></li>'
+                )
             return f'{head}<ol class="steps">{"".join(rows)}</ol>'
         if kind == 'cards':
             # Kuma's lists are ranked best-first within a slot, which is invisible once the
@@ -326,15 +381,20 @@ class Renderer:
                     rows.setdefault(slot, []).append(self.card(e, b['kind'], rank, show_slot=False))
                 else:
                     cards.append(self.card(e, b['kind'], rank))
-            foot = (f'<p class="foot">{self.rt(b["footnote"])}</p>' if b.get('footnote') else '')
+            foot = f'<p class="foot">{self.rt(b["footnote"])}</p>' if b.get('footnote') else ''
             if rows:
                 # One line per slot, best pick leftmost, so the ranking reads left to right.
                 lines = []
                 for slot, row in rows.items():
-                    pip = (f'<img class="pip" src="{self.d.data_uri(self.d.icons[SLOT_ICON[slot]])}" alt="">'
-                           if SLOT_ICON.get(slot) in self.d.icons else '')
-                    lines.append(f'<div class="slotrow"><div class="slotlabel">{pip}'
-                                 f'{html.escape(slot)}</div><div class="rowcards">{"".join(row)}</div></div>')
+                    pip = (
+                        f'<img class="pip" src="{self.d.data_uri(self.d.icons[SLOT_ICON[slot]])}" alt="">'
+                        if SLOT_ICON.get(slot) in self.d.icons
+                        else ''
+                    )
+                    lines.append(
+                        f'<div class="slotrow"><div class="slotlabel">{pip}'
+                        f'{html.escape(slot)}</div><div class="rowcards">{"".join(row)}</div></div>'
+                    )
                 return f'{head}<div class="slotrows">{"".join(lines)}</div>{foot}'
             return f'{head}<div class="grid">{"".join(cards)}</div>{foot}'
         raise ValueError(f'unknown block type {kind!r}')
@@ -342,15 +402,18 @@ class Renderer:
     def render(self):
         g = self.g
         cls = self.d.text(g['class_key']) or 'Ranger'
-        nav = ''.join(f'<a href="#{s["id"]}">{html.escape(s["title"].split("—")[0].strip())}</a>'
-                      for s in g['sections'])
+        nav = ''.join(
+            f'<a href="#{s["id"]}">{html.escape(s["title"].split("—")[0].strip())}</a>'
+            for s in g['sections']
+        )
         secs = []
         for s in g['sections']:
             body = ''.join(self.block(b) for b in s['blocks'])
             secs.append(
                 f'<section id="{s["id"]}"><div class="sec-head">'
                 f'<h2>{html.escape(s["title"])}</h2>'
-                f'<span class="tag">{html.escape(s.get("tag", ""))}</span></div>{body}</section>')
+                f'<span class="tag">{html.escape(s.get("tag", ""))}</span></div>{body}</section>'
+            )
         tldr = ''.join(f'<li>{self.rt(x)}</li>' for x in g.get('tldr', []))
         src = g['source']
         return PAGE.format(
@@ -366,8 +429,12 @@ class Renderer:
             author=html.escape(src['author']),
             posted=html.escape(src['posted']),
             src_note=self.rt(src['note']),
-            legendary=RARITY[4][1], insane=RARITY[5][1], epic=RARITY[3][1],
-            rare=RARITY[2][1], charmed=RARITY[1][1])
+            legendary=RARITY[4][1],
+            insane=RARITY[5][1],
+            epic=RARITY[3][1],
+            rare=RARITY[2][1],
+            charmed=RARITY[1][1],
+        )
 
 
 # The page is emitted as a fragment -- `<title>`, `<style>`, then content -- because that
@@ -596,13 +663,15 @@ STANDALONE = """<!doctype html>
 
 
 def main():
-    ap = argparse.ArgumentParser(description=__doc__,
-                                 formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap = argparse.ArgumentParser(
+        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
+    )
     ap.add_argument('--guide', default='guide/ranger.json')
     ap.add_argument('--out', default='extracted', help='directory holding the extracted JSON')
     ap.add_argument('-o', '--output', default='range-guide.html')
-    ap.add_argument('--fragment',
-                    help='also write the bare title+style+content form, for publishing')
+    ap.add_argument(
+        '--fragment', help='also write the bare title+style+content form, for publishing'
+    )
     args = ap.parse_args()
 
     if not os.path.isdir(args.out):
@@ -622,10 +691,11 @@ def main():
             fh.write(text)
         print(f'{path}: {len(text) / 1024:.0f} KB')
 
-    print(f'{page.count("data:image/png;base64,")} inlined icons '
-          f'({len(data._b64)} distinct)')
-    for label, rows in (('with no icon shipped', renderer.no_icon),
-                        ('unresolved', renderer.unresolved)):
+    print(f'{page.count("data:image/png;base64,")} inlined icons ({len(data._b64)} distinct)')
+    for label, rows in (
+        ('with no icon shipped', renderer.no_icon),
+        ('unresolved', renderer.unresolved),
+    ):
         if rows:
             names = sorted(set(rows))
             print(f'  {len(names)} {label}: {", ".join(names)}')

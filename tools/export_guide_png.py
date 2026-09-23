@@ -14,6 +14,7 @@ browser download needed). Writes both layouts by default:
     python tools/export_guide_png.py                    # desktop + phone
     python tools/export_guide_png.py --layout phone
 """
+
 import argparse
 import os
 import shutil
@@ -103,8 +104,11 @@ def export(page, html_path, layout, width, limit, out_dir):
             bottom = min(p[-1]['bottom'] + pad, below - 3)
             suffix = f'_{chr(97 + i)}' if len(pieces) > 1 else ''
             path = os.path.join(folder, f'{n:02d}_{group}{suffix}.png')
-            page.screenshot(path=path, full_page=True,
-                            clip={'x': 0, 'y': top, 'width': width, 'height': bottom - top})
+            page.screenshot(
+                path=path,
+                full_page=True,
+                clip={'x': 0, 'y': top, 'width': width, 'height': bottom - top},
+            )
             print(f'  {path}  {width * 2}x{round((bottom - top) * 2)}')
     return n
 

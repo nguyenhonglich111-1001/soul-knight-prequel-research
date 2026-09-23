@@ -19,13 +19,22 @@ and the skill IDs use the *same* leading digit -- weapon skills are `1......`, a
 
     python tools/build_equipment.py
 """
+
 import argparse
 import json
 import os
 import sys
 
-SLOTS = {1: 'weapon', 2: 'armor', 3: 'helm', 4: 'boots', 5: 'ring', 6: 'necklace',
-         7: 'gear', 8: 'core'}
+SLOTS = {
+    1: 'weapon',
+    2: 'armor',
+    3: 'helm',
+    4: 'boots',
+    5: 'ring',
+    6: 'necklace',
+    7: 'gear',
+    8: 'core',
+}
 
 # `1500xxx` skill prefabs step by 10; the `130xxx` effect-text block is numbered densely
 # from 1. So the two line up by index, not by value.
@@ -73,7 +82,7 @@ def icon_by_alias(name, byen, icons):
     is no arithmetic link from an item ID to a sprite number -- see icon-mapping-plan.md."""
     for key in byen.get(name, ()):
         if key.startswith('ITEM_'):
-            path = icons.get('ItemIcon_' + key[len('ITEM_'):])
+            path = icons.get('ItemIcon_' + key[len('ITEM_') :])
             if path:
                 return path
     return None
@@ -82,16 +91,22 @@ def icon_by_alias(name, byen, icons):
 def icon_table(out):
     """`sprite name -> 'folder/file.png'` for every exported icon."""
     root = os.path.join(out, 'icons')
-    return {f[:-4]: f'{d}/{f}' for d in os.listdir(root)
-            for f in os.listdir(os.path.join(root, d)) if f.endswith('.png')}
+    return {
+        f[:-4]: f'{d}/{f}'
+        for d in os.listdir(root)
+        for f in os.listdir(os.path.join(root, d))
+        if f.endswith('.png')
+    }
 
 
 def main():
-    ap = argparse.ArgumentParser(description=__doc__,
-                                 formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap = argparse.ArgumentParser(
+        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
+    )
     ap.add_argument('--out', default='extracted')
-    ap.add_argument('--guide-dir', default='guide',
-                    help='where icon_map.json and effect_map.json live')
+    ap.add_argument(
+        '--guide-dir', default='guide', help='where icon_map.json and effect_map.json live'
+    )
     args = ap.parse_args()
 
     def load(name, default=None):
@@ -120,6 +135,7 @@ def main():
     def guide_map(name):
         path = os.path.join(args.guide_dir, name)
         return json.load(open(path, encoding='utf8')) if os.path.exists(path) else {}
+
     icon_map = guide_map('icon_map.json')
     effect_map = guide_map('effect_map.json').get('confirmed', {})
 
@@ -149,34 +165,43 @@ def main():
                 disagree.append(f'{nid}: game says {checked["key"]}, effect_key() says {ekey}')
             ekey, effect_source = checked['key'], 'confirmed'
         effect = (strings.get(ekey, {}).get('English') or '').strip() or None if ekey else None
-        rows.append({
-            'id': nid,
-            'slot': slot,
-            'name': row['name'],
-            'names': row['names'],
-            'icon': icon,
-            'icon_source': icon_source,
-            'skill_ids': skills,
-            'rarity_hint': 'legendary' if skills else None,
-            'effect_key': ekey if effect else None,
-            'effect': effect,
-            'effect_source': effect_source if effect else None,
-            'effect_values_lv1': (checked or {}).get('lv1'),
-        })
+        rows.append(
+            {
+                'id': nid,
+                'slot': slot,
+                'name': row['name'],
+                'names': row['names'],
+                'icon': icon,
+                'icon_source': icon_source,
+                'skill_ids': skills,
+                'rarity_hint': 'legendary' if skills else None,
+                'effect_key': ekey if effect else None,
+                'effect': effect,
+                'effect_source': effect_source if effect else None,
+                'effect_values_lv1': (checked or {}).get('lv1'),
+            }
+        )
 
     path = os.path.join(args.out, 'equipment.json')
     with open(path, 'w', encoding='utf8') as fh:
         json.dump(rows, fh, ensure_ascii=False, indent=1)
 
     from collections import Counter
+
     per_slot = Counter(r['slot'] for r in rows)
     print(f'{len(rows)} equipment rows -> {path}')
     print('  by slot:   ', dict(per_slot))
-    print('  with icon: ', sum(1 for r in rows if r['icon']),
-          dict(Counter(r['icon_source'] for r in rows if r['icon'])))
+    print(
+        '  with icon: ',
+        sum(1 for r in rows if r['icon']),
+        dict(Counter(r['icon_source'] for r in rows if r['icon'])),
+    )
     print('  with skill:', sum(1 for r in rows if r['skill_ids']))
-    print('  with effect:', sum(1 for r in rows if r['effect']),
-          dict(Counter(r['effect_source'] for r in rows if r['effect'])))
+    print(
+        '  with effect:',
+        sum(1 for r in rows if r['effect']),
+        dict(Counter(r['effect_source'] for r in rows if r['effect'])),
+    )
     for d in disagree:
         print('  EFFECT DISAGREES:', d)
     if disagree:
