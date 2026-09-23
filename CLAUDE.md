@@ -32,7 +32,13 @@ python tools/build_equipment.py                  # equipment.json        (instan
 python tools/build_indexes.py                    # named_prefabs/buffs/… (instant)
 python tools/build_item_details.py               # item_details.json     (instant)
 python tools/build_guide.py                      # range-guide.html      (instant)
+python tools/export_guide_png.py                 # guide -> Discord PNGs (pip install playwright)
 ```
+
+`export_guide_png.py` writes `extracted/_sheets/guide_png/{desktop,phone}/`: the guide cut
+between elements into pieces ≤1400 CSS px tall at 2x, because Discord blurs one full-page
+screenshot (~10,000 px) beyond reading. It drives the system Edge (`channel='msedge'`), so
+Playwright needs no browser download.
 
 Order matters: `build_equipment.py` reads `localization_all.json`, `items_numeric.json`,
 `skill_links.json`, `guide/icon_map.json` and `guide/effect_map.json`; `build_indexes.py` reads `localization_all.json` and `prefabs/`;
