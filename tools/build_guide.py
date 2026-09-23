@@ -478,6 +478,7 @@ family=IBM+Plex+Sans:ital,wght@0,400;0,600;1,400&display=swap">
    icons are pixel sprites drawn to sit on a dark ground. Every colour is painted
    explicitly so the page holds whatever theme the host is in. */
 :root {{
+  color-scheme:dark;
   --bg:#14151c; --panel:#1c1e28; --panel2:#242734; --line:#31364a;
   --fg:#e8eaf2; --dim:#99a0b8; --faint:#6b7288;
   --legendary:{legendary}; --insane:{insane}; --epic:{epic};
