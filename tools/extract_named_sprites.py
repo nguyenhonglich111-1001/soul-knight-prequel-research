@@ -21,6 +21,8 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import versions
+
 import extract_soulknight as E
 
 
@@ -41,11 +43,15 @@ def main():
         help='every indexed sprite whose name starts with one of these',
     )
     ap.add_argument('--names-file', help='file with one sprite name per line')
-    ap.add_argument('--asset-dir', default='soul-knight-prequel-1-13-0/assets/Asset')
-    ap.add_argument('--out', default='extracted')
+    ap.add_argument(
+        '--apk-dir', help='unpacked APK folder (default: newest soul-knight-prequel-*/)'
+    )
+    ap.add_argument('--out', help='output folder (default: extracted/<that APK version>/)')
     ap.add_argument('--folder', help='write everything into extracted/icons/<folder>')
     ap.add_argument('--force', action='store_true', help='re-export already-written PNGs')
     args = ap.parse_args()
+    versions.resolve_extract_args(args)
+    asset_dir = os.path.join(args.apk_dir, 'assets', 'Asset')
 
     index = json.load(open(os.path.join(args.out, 'sprite_index.json'), encoding='utf8'))
     known = {n for names in index.values() for n in names}
@@ -80,7 +86,7 @@ def main():
     sources = sorted(b for b, names in index.items() if want & set(names))
     print(f'{len(want)} sprites wanted, in {len(sources)} bundles; loading...', flush=True)
     done, _failed = E.export_sprites(
-        [os.path.join(args.asset_dir, b) for b in sources],
+        [os.path.join(asset_dir, b) for b in sources],
         want.__contains__,
         args.out,
         folder=args.folder,

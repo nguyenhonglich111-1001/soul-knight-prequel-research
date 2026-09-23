@@ -35,6 +35,8 @@ import struct
 import sys
 from functools import partial
 
+import versions
+
 import parallel
 from parallel import every, map_bundles
 
@@ -536,8 +538,10 @@ def main():
     ap = argparse.ArgumentParser(
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
     )
-    ap.add_argument('--apk-dir', default='soul-knight-prequel-1-13-0')
-    ap.add_argument('--out', default='extracted')
+    ap.add_argument(
+        '--apk-dir', help='unpacked APK folder (default: newest soul-knight-prequel-*/)'
+    )
+    ap.add_argument('--out', help='output folder (default: extracted/<that APK version>/)')
     ap.add_argument('--skip-icons', action='store_true')
     ap.add_argument(
         '--all-sprites',
@@ -547,6 +551,7 @@ def main():
     parallel.add_arguments(ap)
     args = ap.parse_args()
     parallel.configure(args)
+    versions.resolve_extract_args(args)
 
     asset_dir = os.path.join(args.apk_dir, 'assets', 'Asset')
     if not os.path.isdir(asset_dir):

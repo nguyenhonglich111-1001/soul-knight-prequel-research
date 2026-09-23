@@ -23,6 +23,8 @@ import os
 import re
 import sys
 
+import versions
+
 # The game's own names, from `Const_ItemType_*`.
 CATEGORY = {
     'weapon': 'Weapon',
@@ -206,10 +208,11 @@ def main():
     ap = argparse.ArgumentParser(
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
     )
-    ap.add_argument('--out', default='extracted')
+    ap.add_argument('--out', help='extracted version folder (default: newest extracted/<version>/)')
     ap.add_argument('--slot', help='print only this category, e.g. weapon')
     ap.add_argument('--tier', help='print only this tier: legendary/latest/boss/named/base')
     args = ap.parse_args()
+    versions.resolve_out_arg(args)
     if not os.path.isdir(args.out):
         sys.exit(f'missing {args.out} -- run the extraction pipeline first')
 

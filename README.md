@@ -4,7 +4,7 @@ Everything here was read out of the unpacked APK (`soul-knight-prequel-1-13-0/`)
 Unity 2022.3 (Addressables). Its content sits in ~465 `.bundle` files in
 `soul-knight-prequel-1-13-0/assets/Asset/`.
 
-## What is in `extracted/`
+## What is in `extracted/<version>/`
 
 | File / folder | What it is |
 |---|---|
@@ -24,23 +24,23 @@ Unity 2022.3 (Addressables). Its content sits in ~465 `.bundle` files in
 | `asset_catalog.json` | Addressables catalog: address -> asset path in the original Unity project (prefabs, anims, sprites) |
 | `sprite_index.json` | Sprite name -> the bundle(s) it lives in (65,194 sprites across 209 bundles; only the variants the game ships are indexed) |
 
-`icon` in the item files is a path relative to `extracted/icons/`, or `null` if no icon was found.
+`icon` in the item files is a path relative to `extracted/<version>/icons/`, or `null` if no icon was found.
 
 ## How to look things up
 
-**Search text (VS Code):** search `extracted/localization_all.json` for a word. The line above
+**Search text (VS Code):** search `extracted/1.13.0/localization_all.json` for a word. The line above
 the match is the key.
 
 **Search from a terminal:**
 ```powershell
 # find every key whose English text contains a word
-python -c "import json;s=json.load(open('extracted/localization_all.json',encoding='utf8'));[print(k,'|',v['English'][:100]) for k,v in s.items() if 'paradox' in v['English'].lower()]"
+python -c "import json;s=json.load(open('extracted/1.13.0/localization_all.json',encoding='utf8'));[print(k,'|',v['English'][:100]) for k,v in s.items() if 'paradox' in v['English'].lower()]"
 ```
 
 **Look up one item:**
 ```python
 import json
-items = json.load(open('extracted/items_numeric.json', encoding='utf8'))
+items = json.load(open('extracted/1.13.0/items_numeric.json', encoding='utf8'))
 print([i for i in items if 'Paradox' in i['name']])
 ```
 
@@ -132,7 +132,7 @@ root `RGSkill` component keeps the designers' own Chinese label in its `Desc` fi
 is the item's Chinese name, so it joins straight onto the `Chinese` column of the localization
 table. `--dump <skill id>` prints one prefab's whole component tree, values included.
 
-## `extracted/prefabs/` -- the game logic itself
+## `extracted/<version>/prefabs/` -- the game logic itself
 
 Every bundle still ships its Unity **type trees**, so `UnityPy`'s `read_typetree()` returns each
 `MonoBehaviour` field by name. `tools/dump_prefabs.py` walks all of them and writes the
@@ -201,7 +201,7 @@ for pointing at are generated into `extracted/_sheets/`.
   referenced in `global-metadata.dat`). Those `.bytes` tables are not in Addressables, not in
   `Resources`, and not in any of the 468 bundles -- the only place left is `code_dll.bundle`, or
   the server. So drop rates, prices, enemy HP/ATK and the legendary effect lookup all stay out of
-  reach for now. What IS available is every prefab-side number: see `extracted/prefabs/`.
+  reach for now. What IS available is every prefab-side number: see `extracted/<version>/prefabs/`.
 - **`code_dll.bundle` / `code_aot.bundle` are encrypted and I did not crack them.** What is known:
   - They are *not* in the Addressables catalog, and only the two stock providers are registered,
     so they are loaded by the game's own bootstrap, not by a custom Addressables provider.
@@ -241,25 +241,20 @@ Three things the earlier version of this file listed as gaps are now fixed:
 
 ## How to run it again
 
-1. Unzip the APK folder so that `soul-knight-prequel-1-13-0/assets/Asset/*.bundle` exists.
-   (The `.zip` is the same file as the `.apk`; it is a normal zip.)
-2. Install Python 3.10+ and the one dependency: `pip install UnityPy`
-3. From the project root:
+1. Install Python 3.10+ and the dependency: `pip install UnityPy`
+2. Put the game download (`.apk`, `.xapk`, `.apks`, or a `.zip` of the unpacked folder) in the
+   project root, then from the project root:
    ```powershell
-   python tools/extract_soulknight.py               # everything            (~35 s)
-   python tools/extract_soulknight.py --skip-icons  # text + catalog + item tables only
-   python tools/extract_skill_links.py              # skill_links.json      (~15 s)
-   python tools/dump_prefabs.py                     # prefabs/*.json        (~25 s)
-   python tools/build_icon_map.py                   # guide/icon_map.json   (instant; --check)
-   python tools/build_equipment.py                  # equipment.json        (instant)
-   python tools/build_indexes.py                    # buffs/characters/loc_refs (instant)
-   python tools/build_item_details.py               # item_details.json     (instant)
-   python tools/build_guide.py                      # range-guide.html      (instant)
+   python tools/unpack_apk.py       # -> soul-knight-prequel-<version>/ (version read from the APK)
+   python tools/pipeline.py         # every stage -> extracted/<version>/   (~90 s; ~35 s re-run)
    ```
-   The last three read the output of the first three, so run them last.
-   `python tools/extract_named_sprites.py --prefix EBF_ --folder EBF` exports sprites the icon
-   name filter never matched, without re-running the full pass.
-   Options: `--apk-dir <folder>` and `--out <folder>` (defaults: `soul-knight-prequel-1-13-0`, `extracted`).
+   With an older version already extracted, `pipeline.py` finishes with `version_diff.py`:
+   new, removed and renamed equipment, hand-mapped entries that no longer match, confirmed
+   icons whose pixels changed, and a short list of codex pages to screenshot. It is written
+   to `extracted/<new>/changes_from_<old>.md`, with a contact sheet of new icons in
+   `extracted/_sheets/`.
+3. Single stages: `python tools/pipeline.py --list`, then `--from <stage>` to resume. Every tool
+   also runs on its own and defaults to the newest version; `--apk-dir` / `--out` override.
 
 ## What the script does, and why
 

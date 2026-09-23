@@ -21,6 +21,7 @@ import glob
 import json
 import os
 
+import versions
 from PIL import Image
 
 REF_W, SCALE, OX, OY = 2868, 5.2, 448, 158
@@ -55,9 +56,10 @@ def main():
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
     )
     ap.add_argument('screenshots', nargs='+')
-    ap.add_argument('--out', default='extracted')
+    ap.add_argument('--out', help='extracted version folder (default: newest extracted/<version>/)')
     ap.add_argument('--top', type=int, default=3)
     args = ap.parse_args()
+    versions.resolve_out_arg(args)
 
     sprites = load_sprites(os.path.join(args.out, 'icons'))
     claimed = {}

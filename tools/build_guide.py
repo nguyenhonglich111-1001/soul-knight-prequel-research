@@ -19,6 +19,8 @@ import os
 import re
 import sys
 
+import versions
+
 # The game's own rarity palette, from the `ITEM_RATE_*` strings.
 RARITY = {
     0: ('Common', '#F5F5F5'),
@@ -667,12 +669,13 @@ def main():
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
     )
     ap.add_argument('--guide', default='guide/ranger.json')
-    ap.add_argument('--out', default='extracted', help='directory holding the extracted JSON')
+    ap.add_argument('--out', help='extracted version folder (default: newest extracted/<version>/)')
     ap.add_argument('-o', '--output', default='range-guide.html')
     ap.add_argument(
         '--fragment', help='also write the bare title+style+content form, for publishing'
     )
     args = ap.parse_args()
+    versions.resolve_out_arg(args)
 
     if not os.path.isdir(args.out):
         sys.exit(f'missing {args.out} -- run the extraction pipeline first')

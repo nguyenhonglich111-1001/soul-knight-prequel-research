@@ -1,6 +1,9 @@
-soul-knight-prequel-1-13-0/
-soul-knight-prequel-1-13-0*/
-soul-knight-prequel-1-13-0.zip
+# Game downloads and their unpacked folders (one per version, see tools/versions.py)
+soul-knight-prequel-*/
+*.apk
+*.xapk
+*.apks
+soul-knight-prequel-*.zip
 Soul knight prequel/
 
 

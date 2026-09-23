@@ -25,6 +25,8 @@ import json
 import os
 import sys
 
+import versions
+
 SLOTS = {
     1: 'weapon',
     2: 'armor',
@@ -103,11 +105,12 @@ def main():
     ap = argparse.ArgumentParser(
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
     )
-    ap.add_argument('--out', default='extracted')
+    ap.add_argument('--out', help='extracted version folder (default: newest extracted/<version>/)')
     ap.add_argument(
         '--guide-dir', default='guide', help='where icon_map.json and effect_map.json live'
     )
     args = ap.parse_args()
+    versions.resolve_out_arg(args)
 
     def load(name, default=None):
         path = os.path.join(args.out, name)

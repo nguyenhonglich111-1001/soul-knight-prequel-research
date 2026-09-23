@@ -33,6 +33,8 @@ import os
 import re
 import sys
 
+import versions
+
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from build_equipment import icon_by_alias, icon_table, slot_of
 
@@ -104,7 +106,7 @@ def main():
     ap = argparse.ArgumentParser(
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
     )
-    ap.add_argument('--out', default='extracted')
+    ap.add_argument('--out', help='extracted version folder (default: newest extracted/<version>/)')
     ap.add_argument('--map', default=os.path.join('guide', 'icon_map.json'))
     ap.add_argument(
         '--check',
@@ -112,6 +114,7 @@ def main():
         help='re-derive and compare against the frozen file instead of writing it',
     )
     args = ap.parse_args()
+    versions.resolve_out_arg(args)
 
     frozen = json.load(open(args.map, encoding='utf8'))
     confirmed = frozen['confirmed']
@@ -147,7 +150,8 @@ def main():
             if a != b:
                 problems.append(f'derived {key}: frozen {a}, re-derived {b}')
     else:
-        frozen['generated'] = datetime.date.today().isoformat()
+        if frozen.get('derived') != derived:  # re-running unchanged leaves the file alone
+            frozen['generated'] = datetime.date.today().isoformat()
         frozen['derived'] = derived
         write_map(args.map, frozen)
 

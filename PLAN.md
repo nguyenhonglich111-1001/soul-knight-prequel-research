@@ -68,20 +68,39 @@ Short answer: **no full re-capture.** Hand data (`guide/icon_map.json`,
 `effect_map.json`, `weapon_types.json`) is keyed on item IDs, loc keys and sprite names,
 which patches normally keep. Only new items and flagged changes need screenshots.
 
-- [ ] `tools/unpack_apk.py`: `.apk`/`.xapk`/`.zip` in the root → read the version →
+- [x] `tools/unpack_apk.py`: `.apk`/`.xapk`/`.zip` in the root → read the version →
       unpack to `soul-knight-prequel-<version>/`. Tools default to the newest folder.
-- [ ] Move current output to `extracted/1.13.0/` with `git mv` (renames, no size cost);
+- [x] Move current output to `extracted/1.13.0/` with `git mv` (renames, no size cost);
       `extracted/_sheets/` stays shared. Every tool takes the version's output dir.
-- [ ] `tools/pipeline.py`: one command runs every stage in order.
-- [ ] `tools/version_diff.py <old> <new>` reports:
+- [x] `tools/pipeline.py`: one command runs every stage in order.
+- [x] `tools/version_diff.py <old> <new>` reports:
   - new / removed equipment;
   - changed text on loc keys used by `effect_map.json` or the guide;
   - confirmed sprites whose **pixels** changed (catches silent reassignment);
   - confirmed sprites that disappeared;
   - ends with a short "Your action" capture list + contact sheet of only new items.
-- [ ] Test: 1.13.0 vs itself → zero changes; vs a deliberately altered copy → each
+- [x] Test: 1.13.0 vs itself → zero changes; vs a deliberately altered copy → each
       change detected.
 - Trade-off: each new version adds ~130 MB of new files to the repo.
+
+Done. Notes from doing it:
+
+- Version comes from the game's own `assets/bundleVersionData.txt`; fallback is a small
+  AXML parser for `versionName` (checked on the real 1.13.0 manifest), then the XAPK's
+  `manifest.json`, then `--version`.
+- Split APKs are merged into base without overwriting it (each split has its own
+  `AndroidManifest.xml`). Zip-slip paths are refused.
+- The pipeline reproduces the committed 1.13.0 output exactly: after moving it to
+  `extracted/1.13.0/` and re-running every stage, git shows 5,680 pure renames and no
+  content change.
+- `build_icon_map` stamped today's date into `guide/icon_map.json` on every run; it now
+  only does so when the derived entries change. In the pipeline it is non-fatal, so a
+  missing confirmed sprite on a new version ends in the diff report instead of a stop.
+- Self-diff of 1.13.0 first reported 28 "renamed" hand-mapped items: the maps type `'`,
+  the game has `’`. Names are now compared with quotes, case and spacing normalised.
+- 17 new tests: synthetic apk/wrapped-zip/xapk unpacking, zip-slip, version lookup, every
+  diff category on synthetic data, and a slow test on the real 1.13.0 data (clean against
+  itself; an altered copy reports each alteration). Mutation check: 6 of 6 caught.
 
 ## Phase 4 — Context engineering (docs)
 

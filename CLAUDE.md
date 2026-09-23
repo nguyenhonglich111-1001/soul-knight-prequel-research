@@ -9,10 +9,11 @@ unpacked Soul Knight Prequel 1.13.0 Android APK and write readable JSON into `ex
 There is no build, no lint config and no test suite — "running the code" means running a
 pipeline stage and checking its printed counts and its JSON output.
 
-- `soul-knight-prequel-1-13-0/` — the already-unpacked APK. Do not re-unzip it; the `.apk` and
-  `.zip` at the repo root are the same 634 MB file and are only kept as the source.
-- `tools/` — the pipeline scripts.
-- `extracted/` — ~132 MB of generated JSON plus 5,544 PNG icons. All of it is regenerable.
+- `soul-knight-prequel-<a-b-c>/` — one unpacked APK per game version (git-ignored). Made by
+  `tools/unpack_apk.py`; do not re-unzip by hand.
+- `tools/` — the pipeline scripts. Every tool defaults to the newest version (`tools/versions.py`).
+- `extracted/<a.b.c>/` — one version's output: ~132 MB of JSON plus ~5,660 PNG icons, all
+  regenerable. `extracted/_sheets/` (contact sheets, guide PNGs) is shared across versions.
 - `guide/` — hand-written guide content (prose + keys into `extracted/`), rendered to HTML by
   `tools/build_guide.py`. The only hand-authored data in the repo; everything else is derived.
 - `README.md` — the user-facing guide. Keep it in sync when the pipeline's counts change.
@@ -21,6 +22,14 @@ pipeline stage and checking its printed counts and its JSON output.
 ## Commands
 
 Only dependency: `pip install UnityPy` (everything else is stdlib). Python 3.10+.
+
+```bash
+python tools/unpack_apk.py                       # new .apk/.xapk/.zip in root -> soul-knight-prequel-<v>/
+python tools/pipeline.py                         # every stage below, in order (~90 s cold)
+python tools/version_diff.py [old new]           # changes + what to screenshot -> extracted/<new>/changes_from_<old>.md
+```
+
+The stages one by one (each takes `--out extracted/<version>`, extractors also `--apk-dir`):
 
 ```bash
 python tools/extract_soulknight.py               # stages 1-5          (~35 s cold)
@@ -111,9 +120,9 @@ To re-run a single stage without the rest, import the module rather than adding 
 ```python
 import sys, json; sys.path.insert(0, 'tools')
 import extract_soulknight as E
-s = E.stage_localization('soul-knight-prequel-1-13-0/assets/Asset', 'extracted')
-sprites = {n for v in json.load(open('extracted/sprite_index.json')).values() for n in v}
-E.stage_items(s, sprites, 'extracted')
+s = E.stage_localization('soul-knight-prequel-1-13-0/assets/Asset', 'extracted/1.13.0')
+sprites = {n for v in json.load(open('extracted/1.13.0/sprite_index.json')).values() for n in v}
+E.stage_items(s, sprites, 'extracted/1.13.0')
 ```
 
 **On Windows, always run with `PYTHONIOENCODING=utf-8`.** Printing any Chinese string crashes

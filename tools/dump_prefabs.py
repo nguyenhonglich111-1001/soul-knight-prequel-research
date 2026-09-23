@@ -36,6 +36,8 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from functools import partial
 
+import versions
+
 import parallel
 from extract_soulknight import shipped_bundles
 from parallel import cache_tag, every, map_bundles
@@ -244,13 +246,16 @@ def main():
     ap = argparse.ArgumentParser(
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
     )
-    ap.add_argument('--apk-dir', default='soul-knight-prequel-1-13-0')
-    ap.add_argument('--out', default='extracted')
+    ap.add_argument(
+        '--apk-dir', help='unpacked APK folder (default: newest soul-knight-prequel-*/)'
+    )
+    ap.add_argument('--out', help='output folder (default: extracted/<that APK version>/)')
     ap.add_argument('--groups', nargs='*', default=None, choices=sorted(GROUPS))
     ap.add_argument('--list', action='store_true')
     parallel.add_arguments(ap)
     args = ap.parse_args()
     parallel.configure(args)
+    versions.resolve_extract_args(args)
 
     asset_dir = os.path.join(args.apk_dir, 'assets', 'Asset')
     if not os.path.isdir(asset_dir):

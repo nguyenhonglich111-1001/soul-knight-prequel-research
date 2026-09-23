@@ -28,6 +28,8 @@ import json
 import os
 import sys
 
+import versions
+
 BUFF_TYPES = ('RGBuff',)
 
 
@@ -56,8 +58,9 @@ def main():
     ap = argparse.ArgumentParser(
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
     )
-    ap.add_argument('--out', default='extracted')
+    ap.add_argument('--out', help='extracted version folder (default: newest extracted/<version>/)')
     args = ap.parse_args()
+    versions.resolve_out_arg(args)
 
     loc_path = os.path.join(args.out, 'localization_all.json')
     prefab_dir = os.path.join(args.out, 'prefabs')
