@@ -35,16 +35,32 @@ Decisions already made by the user:
 
 ## Phase 2 — Speed without changing results
 
-- [ ] Baseline: time each slow script once (background) and profile it.
-- [ ] Same-output test: after a re-run, JSON and PNGs must be byte-identical
+- [x] Baseline: time each slow script once (background) and profile it.
+- [x] Same-output test: after a re-run, JSON and PNGs must be byte-identical
       (`git status extracted/` clean). This is the gate for this phase.
-- [ ] Parallelise bundle processing (`ProcessPoolExecutor`). Safe: one bundle per
+- [x] Parallelise bundle processing (`ProcessPoolExecutor`). Safe: one bundle per
       UnityPy environment is already the rule and stays the rule.
-- [ ] Merge stages 3 + 4 so each bundle is opened once.
-- [ ] Per-bundle cache keyed by the hashed filename: unchanged bundles are skipped on
+- [x] Merge stages 3 + 4 so each bundle is opened once.
+- [x] Per-bundle cache keyed by the hashed filename: unchanged bundles are skipped on
       re-runs and on new APK versions.
-- [ ] Build the MonoScript name table once, not per bundle.
-- [ ] Report measured before/after times (expected: ~4-6x cold, near-instant warm).
+- [x] Build the MonoScript name table once, not per bundle.
+- [x] Report measured before/after times (expected: ~4-6x cold, near-instant warm).
+- [x] Found while profiling: UnityPy re-parses a sprite's whole SpriteAtlas for every
+      sprite it crops; one bundle took 364 s of the icon pass. `_share_atlas()` parses
+      it once per bundle (104 s -> 6 s on `ui-dynamic_common`).
+
+Results (8 cores, 7 workers):
+
+| script | before | after, cold | after, warm |
+|---|---|---|---|
+| extract_soulknight | 561 s | 33 s | 15 s |
+| extract_skill_links | 30 s | 13 s | 3 s |
+| dump_prefabs | 51 s | 26 s | 16 s |
+| **total** | **642 s** | **72 s (8.9x)** | **34 s** |
+
+All 5,409 output files byte-identical to the baseline, cold and warm; the baseline in
+turn matched the committed `extracted/`. `extract_named_sprites` re-export of the 121
+`EBF_*` icons also identical.
 
 ## Phase 3 — New APK versions without re-capturing everything
 

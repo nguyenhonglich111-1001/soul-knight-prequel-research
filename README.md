@@ -246,10 +246,10 @@ Three things the earlier version of this file listed as gaps are now fixed:
 2. Install Python 3.10+ and the one dependency: `pip install UnityPy`
 3. From the project root:
    ```powershell
-   python tools/extract_soulknight.py               # everything (icons take a long time)
+   python tools/extract_soulknight.py               # everything            (~35 s)
    python tools/extract_soulknight.py --skip-icons  # text + catalog + item tables only
-   python tools/extract_skill_links.py              # skill_links.json      (~5 min)
-   python tools/dump_prefabs.py                     # prefabs/*.json        (~20 min)
+   python tools/extract_skill_links.py              # skill_links.json      (~15 s)
+   python tools/dump_prefabs.py                     # prefabs/*.json        (~25 s)
    python tools/build_icon_map.py                   # guide/icon_map.json   (instant; --check)
    python tools/build_equipment.py                  # equipment.json        (instant)
    python tools/build_indexes.py                    # buffs/characters/loc_refs (instant)

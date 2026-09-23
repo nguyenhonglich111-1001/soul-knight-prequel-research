@@ -20,7 +20,7 @@ ignore = [
 known-first-party = [
     "extract_soulknight", "dump_prefabs", "extract_skill_links", "build_equipment",
     "build_indexes", "build_item_details", "build_icon_map", "build_guide",
-    "extract_named_sprites", "match_screenshot_icons", "export_guide_png",
+    "extract_named_sprites", "match_screenshot_icons", "export_guide_png", "parallel",
 ]
 
 [format]

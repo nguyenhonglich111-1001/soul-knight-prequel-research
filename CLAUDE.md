@@ -23,10 +23,10 @@ pipeline stage and checking its printed counts and its JSON output.
 Only dependency: `pip install UnityPy` (everything else is stdlib). Python 3.10+.
 
 ```bash
-python tools/extract_soulknight.py               # stages 1-5; icons take 15-30 min
+python tools/extract_soulknight.py               # stages 1-5          (~35 s cold)
 python tools/extract_soulknight.py --skip-icons  # text + catalog + item tables only
-python tools/extract_skill_links.py              # skill_links.json      (~5 min)
-python tools/dump_prefabs.py                     # prefabs/*.json        (~20 min)
+python tools/extract_skill_links.py              # skill_links.json      (~15 s)
+python tools/dump_prefabs.py                     # prefabs/*.json        (~25 s)
 python tools/build_icon_map.py                   # guide/icon_map.json   (instant; --check)
 python tools/build_equipment.py                  # equipment.json        (instant)
 python tools/build_indexes.py                    # named_prefabs/buffs/… (instant)
@@ -34,6 +34,14 @@ python tools/build_item_details.py               # item_details.json     (instan
 python tools/build_guide.py                      # range-guide.html      (instant)
 python tools/export_guide_png.py                 # guide -> Discord PNGs (pip install playwright)
 ```
+
+The three extractors read bundles in parallel (`tools/parallel.py`, CPUs - 1 workers) and
+cache each bundle's result in `.cache/`, keyed by the bundle's hashed file name plus the
+extractor's own source, so a warm re-run takes ~35 s for all three and a new APK only
+re-reads changed bundles. `--no-cache` / `--workers N` on each. Results are merged in
+bundle order, so output is byte-identical to a sequential run (checked on all 5,409 files).
+Cold time was 642 s before this; 364 s of it was one bundle, because UnityPy re-parses a
+sprite's whole SpriteAtlas for every sprite it crops -- `_share_atlas()` parses it once.
 
 Dev loop: `pip install ruff pre-commit pytest && pre-commit install` once. Every commit then
 runs `ruff check --fix`, `ruff format` and the fast tests. `python -m pytest -m ""` also runs

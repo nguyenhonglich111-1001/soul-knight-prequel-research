@@ -27,7 +27,11 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from functools import partial
+
+import parallel
 from extract_soulknight import shipped_bundles
+from parallel import cache_tag, every, map_bundles
 
 SKIP_PREFIX = ('audio_', 'videos_', 'spine_', 'texture_', 'fonts_', 'localization', 'code_')
 ITEM_ID = re.compile(r'^10[1-9]\d{3}$|^1[0-9]{5}$')
@@ -79,45 +83,63 @@ def script_names(env):
     return out
 
 
-def collect(asset_dir, verbose=True):
-    """{prefab name: {desc, class, bundle}} for every prefab whose root has a `Desc`."""
-    mono = monoscript_bundles(asset_dir)
-    files = bundles(asset_dir)
-    found = {}
-    for i, f in enumerate(files, 1):
-        base = os.path.basename(f)
-        try:
-            env = unity(f, *mono)
-        except Exception as e:
-            print(f'    skipped {base}: {e}', file=sys.stderr)
+def labelled_prefabs(path, mono_names):
+    """Worker: `[(prefab name, desc, class)]` for one bundle, in object order, or the
+    load error as a string."""
+    try:
+        env = unity(path)
+    except Exception as e:
+        return str(e)
+    # Same precedence as loading both files into one environment: the monoscripts
+    # bundle's entries win over any the bundle carries itself.
+    scripts = {**script_names(env), **mono_names}
+    objs = {o.path_id: o for o in env.objects}
+    out = []
+    for o in env.objects:
+        if o.type.name != 'MonoBehaviour':
             continue
-        scripts = script_names(env)
-        objs = {o.path_id: o for o in env.objects}
-        for o in env.objects:
-            if o.type.name != 'MonoBehaviour':
-                continue
-            try:
-                t = o.read_typetree()
-            except Exception:
-                continue
-            desc = t.get('Desc')
-            if not isinstance(desc, str) or not desc.strip():
-                continue
-            go = objs.get(t.get('m_GameObject', {}).get('m_PathID'))
-            if go is None or go.type.name != 'GameObject':
-                continue
-            try:
-                name = go.read_typetree().get('m_Name', '')
-            except Exception:
-                continue
-            if name and name not in found:
-                found[name] = {
-                    'desc': desc.strip(),
-                    'class': scripts.get(t.get('m_Script', {}).get('m_PathID')),
-                    'bundle': base,
-                }
-        if verbose and i % 25 == 0:
-            print(f'    {i}/{len(files)} bundles, {len(found)} labelled prefabs', flush=True)
+        try:
+            t = o.read_typetree()
+        except Exception:
+            continue
+        desc = t.get('Desc')
+        if not isinstance(desc, str) or not desc.strip():
+            continue
+        go = objs.get(t.get('m_GameObject', {}).get('m_PathID'))
+        if go is None or go.type.name != 'GameObject':
+            continue
+        try:
+            name = go.read_typetree().get('m_Name', '')
+        except Exception:
+            continue
+        if name:
+            out.append((name, desc.strip(), scripts.get(t.get('m_Script', {}).get('m_PathID'))))
+    return out
+
+
+def collect(asset_dir, verbose=True):
+    """{prefab name: {desc, class, bundle}} for every prefab whose root has a `Desc`.
+
+    Bundles are read in parallel; the first bundle in filename order still wins."""
+    mono = monoscript_bundles(asset_dir)
+    mono_names = script_names(unity(*mono))
+    files = bundles(asset_dir)
+    results = map_bundles(
+        partial(labelled_prefabs, mono_names=mono_names),
+        files,
+        tag=cache_tag('skill-labels', *map(os.path.basename, mono)),
+        progress=every(50) if verbose else None,
+        cacheable=lambda got: not isinstance(got, str),  # a load error is retried next run
+    )
+    found = {}
+    for f, got in zip(files, results):
+        base = os.path.basename(f)
+        if isinstance(got, str):
+            print(f'    skipped {base}: {got}', file=sys.stderr)
+            continue
+        for name, desc, cls in got:
+            if name not in found:
+                found[name] = {'desc': desc, 'class': cls, 'bundle': base}
     return found
 
 
@@ -204,7 +226,9 @@ def main():
     ap.add_argument('--apk-dir', default='soul-knight-prequel-1-13-0')
     ap.add_argument('--out', default='extracted')
     ap.add_argument('--dump', metavar='SKILL_ID', help='print one prefab instead')
+    parallel.add_arguments(ap)
     args = ap.parse_args()
+    parallel.configure(args)
 
     asset_dir = os.path.join(args.apk_dir, 'assets', 'Asset')
     if not os.path.isdir(asset_dir):

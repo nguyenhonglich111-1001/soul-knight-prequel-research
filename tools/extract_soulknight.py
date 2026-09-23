@@ -11,7 +11,7 @@ Stages (each writes into --out):
     1. localization_all.json   every string, all languages, keyed by the game's own key
     2. asset_catalog.json      Addressables catalog: address -> asset path in the Unity project
     3. sprite_index.json       sprite name -> bundle(s) it lives in
-    4. icons/                  PNG export of icon-like sprites (slow: ~15-30 min;
+    4. icons/                  PNG export of icon-like sprites (~35 s with stage 3;
                                --all-sprites exports all ~112k sprites instead)
     5. items.json              'ITEM_*' style items joined with names/descriptions/icon
        items_numeric.json      numeric-ID items joined with names/descriptions/icon
@@ -27,11 +27,16 @@ the per-level numbers that prefabs do carry, see tools/extract_skill_links.py.
 import argparse
 import base64
 import glob
+import io
 import json
 import os
 import re
 import struct
 import sys
+from functools import partial
+
+import parallel
+from parallel import every, map_bundles
 
 # --------------------------------------------------------------------------- helpers
 
@@ -103,16 +108,18 @@ def parse_tsv(text):
 # --------------------------------------------------------------------------- stage 1
 
 
+def read_textassets(path):
+    """`[(name, raw bytes)]` for every TextAsset in one bundle, in object order."""
+    return [textasset_bytes(o) for o in unity(path).objects if o.type.name == 'TextAsset']
+
+
 def stage_localization(asset_dir, out):
     # Pass 1: read the raw TextAssets. Plain tables are used to learn the header row,
     # which is then the known plaintext that unlocks the obfuscated ones.
     tables, header_bytes = [], None
-    for f in bundle_files(asset_dir, 'localization_*.bundle', skip=False):
-        env = unity(f)
-        for o in env.objects:
-            if o.type.name != 'TextAsset':
-                continue
-            name, data = textasset_bytes(o)
+    files = bundle_files(asset_dir, 'localization_*.bundle', skip=False)
+    for bundle_tables in map_bundles(read_textassets, files, tag='textassets-v1'):
+        for name, data in bundle_tables:
             tables.append((name, data))
             if header_bytes is None and data.startswith(b'"Key"'):
                 header_bytes = data[: data.index(b'\n') + 1]
@@ -219,25 +226,6 @@ def bundle_files(asset_dir, pattern='*.bundle', skip=True):
     ]
 
 
-def stage_sprite_index(asset_dir, out):
-    index = {}
-    for f in bundle_files(asset_dir):
-        env = unity(f)
-        names = []
-        for o in env.objects:
-            if o.type.name == 'Sprite':
-                try:
-                    names.append(o.read().m_Name)
-                except Exception:
-                    pass
-        if names:
-            index[os.path.basename(f)] = names
-    with open(os.path.join(out, 'sprite_index.json'), 'w') as fh:
-        json.dump(index, fh)
-    print(f'[3] {sum(len(v) for v in index.values())} sprites in {len(index)} bundles')
-    return index
-
-
 # --------------------------------------------------------------------------- stage 4
 
 
@@ -253,7 +241,132 @@ def sprite_folder(name, forced=None):
     return m.group(1) if m else 'misc'
 
 
-def export_sprites(paths, want, out, folder=None, progress=None):
+def want_all(_name):
+    return True
+
+
+class _ParsedAtlas:
+    """Stands in for a sprite's `m_SpriteAtlas` pointer, handing back an atlas that was
+    already parsed. UnityPy's `get_image_from_sprite` only ever tests the pointer for
+    truth and calls `deref_parse_as_object()` on it."""
+
+    def __init__(self, atlas):
+        self.atlas = atlas
+
+    def __bool__(self):
+        return True
+
+    def deref_parse_as_object(self, *_):
+        return self.atlas
+
+
+def _share_atlas(sprite, atlases):
+    """Parse each SpriteAtlas once per bundle instead of once per sprite.
+
+    UnityPy re-parses the whole atlas -- render-data map included -- for every sprite it
+    crops, which makes a bundle quadratic: `texture_atlas_assets_obj_player` (9,504
+    sprites, 3,119 icons) took 364 s of a 373 s run. The pixels are unchanged; only the
+    repeated parse goes."""
+    from UnityPy.enums import ClassIDType
+
+    ptr = sprite.m_SpriteAtlas
+    if ptr:
+        key = (id(sprite.assets_file), ptr.m_FileID, ptr.m_PathID)
+        if key not in atlases:
+            atlases[key] = ptr.deref_parse_as_object()
+    elif sprite.m_AtlasTags:
+        # No direct pointer: UnityPy then looks the atlas up by name among the sprite's
+        # own file's objects. Same lookup, done once per tag.
+        tag = sprite.m_AtlasTags[0]
+        key = (id(sprite.assets_file), tag)
+        if key not in atlases:
+            atlases[key] = next(
+                (
+                    obj.parse_as_object()
+                    for obj in sprite.assets_file.objects.values()
+                    if obj.type == ClassIDType.SpriteAtlas and obj.peek_name() == tag
+                ),
+                None,
+            )
+    else:
+        return
+    if atlases[key] is not None:
+        sprite.m_SpriteAtlas = _ParsedAtlas(atlases[key])
+
+
+def scan_bundle(path, want=None):
+    """One bundle's sprites: `(names, images)`, both in object order.
+
+    `names` is every readable sprite name (the sprite index). `images` holds
+    `(name, png bytes, None)` or `(name, None, error)` for each sprite `want` accepts;
+    a name is not decoded again in this bundle once it has succeeded. PNGs come back as
+    bytes so that the parent, not the worker, decides which bundle's copy wins."""
+    names, images, ok, atlases = [], [], set(), {}
+    for o in unity(path).objects:
+        if o.type.name != 'Sprite':
+            continue
+        try:
+            sprite = o.read()
+            name = sprite.m_Name
+        except Exception:
+            continue
+        names.append(name)
+        if want is None or name in ok or not want(name):
+            continue
+        try:
+            _share_atlas(sprite, atlases)
+            image = sprite.image
+        except Exception as e:  # not packed here -> another bundle may have it
+            images.append((name, None, str(e)[:60]))
+            continue
+        buf = io.BytesIO()
+        image.save(buf, format='PNG')
+        images.append((name, buf.getvalue(), None))
+        ok.add(name)
+    return names, images
+
+
+class SpriteWriter:
+    """Writes `scan_bundle` PNGs as bundles arrive, in bundle order; first bundle wins.
+
+    Fed one bundle at a time (`add`), so a run never holds more than one bundle's PNG
+    bytes -- `--all-sprites` would otherwise keep gigabytes in memory."""
+
+    def __init__(self, out, folder=None):
+        self.out, self.folder = out, folder
+        self.done, self._failed = set(), {}
+
+    def add(self, scan):
+        """Write one bundle's images; return its sprite names (all a caller keeps)."""
+        names, images = scan
+        for name, png, err in images:
+            if name in self.done:
+                continue
+            if png is None:
+                self._failed[name] = err
+                continue
+            d = os.path.join(self.out, 'icons', sprite_folder(name, self.folder))
+            os.makedirs(d, exist_ok=True)
+            with open(os.path.join(d, name + '.png'), 'wb') as fh:
+                fh.write(png)
+            self.done.add(name)
+        return names
+
+    @property
+    def failed(self):
+        """`{name: error}` for names that no bundle so far could decode."""
+        return {k: v for k, v in self._failed.items() if k not in self.done}
+
+
+def write_sprites(scans, out, folder=None):
+    """`(done, failed)` after writing every scan in order -- see `SpriteWriter`."""
+    writer = SpriteWriter(out, folder)
+    for scan in scans:
+        writer.add(scan)
+    return writer.done, writer.failed
+
+
+def export_sprites(paths, want, out, folder=None, progress=None, tag=None):
     """Write every sprite whose name satisfies `want`, **one bundle per environment**.
 
     Loading one bundle at a time is not a memory optimisation, it is the correctness
@@ -271,51 +384,43 @@ def export_sprites(paths, want, out, folder=None, progress=None):
     packed into; its copies in other bundles carry `m_RD.texture` == PathID 0 and fail
     either way.
     """
-    done, failed = set(), {}
-    for i, path in enumerate(paths, 1):
-        for o in unity(path).objects:
-            if o.type.name != 'Sprite':
-                continue
-            try:
-                sprite = o.read()
-                name = sprite.m_Name
-            except Exception:
-                continue
-            if name in done or not want(name):
-                continue
-            try:
-                image = sprite.image
-            except Exception as e:  # not packed here -> another bundle may have it
-                failed[name] = str(e)[:60]
-                continue
-            d = os.path.join(out, 'icons', sprite_folder(name, folder))
-            os.makedirs(d, exist_ok=True)
-            image.save(os.path.join(d, name + '.png'))
-            done.add(name)
-        if progress:
-            progress(i, len(paths), len(done))
-    return done, {k: v for k, v in failed.items() if k not in done}
-
-
-def stage_icons(asset_dir, out, index, all_sprites=False):
-    """`all_sprites` drops the icon name filter and exports every sprite in the game
-    (~112k files, several GB, hours) instead of the ~5.4k icon-like ones."""
-    want = (lambda n: True) if all_sprites else ICON_PATTERN.match
-    files = [b for b, names in index.items() if any(want(n) for n in names)]
-    print(f'[4] scanning {len(files)} bundles one at a time (slow)...', flush=True)
-
-    def tick(i, total, n):
-        if i % 10 == 0 or i == total:
-            print(f'    {i}/{total} bundles, {n} icons', flush=True)
-
-    done, failed = export_sprites(
-        [os.path.join(asset_dir, b) for b in files], want, out, progress=tick
+    writer = SpriteWriter(out, folder)
+    map_bundles(
+        partial(scan_bundle, want=want), paths, tag=tag, progress=progress, consume=writer.add
     )
-    unresolved = sorted(failed)
-    with open(os.path.join(out, 'icons_unresolved.json'), 'w') as fh:
-        json.dump(unresolved, fh, indent=1)
-    print(f'[4] {len(done)} icons written, {len(unresolved)} could not be decoded')
-    return done
+    return writer.done, writer.failed
+
+
+def stage_sprites(asset_dir, out, icons=True, all_sprites=False):
+    """Stages 3 and 4 in one pass: every bundle is opened once, for its sprite names and,
+    unless `icons` is off, for the PNGs of the icon-like ones.
+
+    `all_sprites` drops the icon name filter and exports every sprite in the game
+    (~112k files, several GB, hours) instead of the ~5.4k icon-like ones; that run is
+    not cached, the cache would be as large as the output."""
+    files = bundle_files(asset_dir)
+    if not icons:
+        want, tag = None, 'sprites-names-v1'
+    elif all_sprites:
+        want, tag = want_all, None
+    else:
+        want, tag = ICON_PATTERN.match, 'sprites-icons-v1'
+    print(f'[3] scanning {len(files)} bundles in parallel...', flush=True)
+    writer = SpriteWriter(out)
+    names_per_bundle = map_bundles(
+        partial(scan_bundle, want=want), files, tag=tag, progress=every(25), consume=writer.add
+    )
+
+    index = {os.path.basename(f): names for f, names in zip(files, names_per_bundle) if names}
+    with open(os.path.join(out, 'sprite_index.json'), 'w') as fh:
+        json.dump(index, fh)
+    print(f'[3] {sum(len(v) for v in index.values())} sprites in {len(index)} bundles')
+    if icons:
+        done, unresolved = writer.done, sorted(writer.failed)
+        with open(os.path.join(out, 'icons_unresolved.json'), 'w') as fh:
+            json.dump(unresolved, fh, indent=1)
+        print(f'[4] {len(done)} icons written, {len(unresolved)} could not be decoded')
+    return index
 
 
 # --------------------------------------------------------------------------- stage 5
@@ -439,7 +544,9 @@ def main():
         action='store_true',
         help='export every sprite, not just icons (~112k files, hours)',
     )
+    parallel.add_arguments(ap)
     args = ap.parse_args()
+    parallel.configure(args)
 
     asset_dir = os.path.join(args.apk_dir, 'assets', 'Asset')
     if not os.path.isdir(asset_dir):
@@ -448,9 +555,7 @@ def main():
 
     strings = stage_localization(asset_dir, args.out)
     stage_catalog(args.apk_dir, args.out)
-    index = stage_sprite_index(asset_dir, args.out)
-    if not args.skip_icons:
-        stage_icons(asset_dir, args.out, index, args.all_sprites)
+    index = stage_sprites(asset_dir, args.out, not args.skip_icons, args.all_sprites)
     sprite_names = {n for v in index.values() for n in v}
     stage_items(strings, sprite_names, args.out)
 

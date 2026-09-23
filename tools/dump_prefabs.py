@@ -6,7 +6,7 @@ field by field. This walks each prefab's GameObject hierarchy and writes out the
 MonoBehaviour components only -- skills, buffs, bullets, conditions, character stats --
 dropping Transforms, renderers and particle systems, which are presentation noise.
 
-    python tools/dump_prefabs.py                     # every group (slow, ~20 min)
+    python tools/dump_prefabs.py                     # every group (~25 s, cached after)
     python tools/dump_prefabs.py --groups buff skill
     python tools/dump_prefabs.py --list              # show the groups and their bundles
 
@@ -34,7 +34,11 @@ import re
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from functools import partial
+
+import parallel
 from extract_soulknight import shipped_bundles
+from parallel import cache_tag, every, map_bundles
 
 BUNDLE_HASH = re.compile(r'_[0-9a-f]{32}\.bundle$')
 BOILERPLATE = {
@@ -148,9 +152,20 @@ def compact(value, names):
     return value
 
 
-def dump_bundle(path, mono, out_rows):
-    env = unity(path, *mono)
-    scripts = script_names(env)
+def mono_scripts(mono):
+    """MonoScript path_id -> class name, read once from the monoscripts bundle(s).
+
+    MonoBehaviours reference their script across files by path_id alone, and the three
+    monoscripts variants agree on every one they share, so this table is global. It used
+    to be rebuilt by loading the monoscripts bundle next to every single bundle."""
+    return script_names(unity(*mono))
+
+
+def dump_bundle(path, mono_names, out_rows):
+    env = unity(path)
+    # Same precedence as loading both files into one environment: the monoscripts
+    # bundle's entries win over any the bundle carries itself.
+    scripts = {**script_names(env), **mono_names}
     objs = {o.path_id: o for o in env.objects}
     trees = {}
     for o in env.objects:
@@ -214,6 +229,17 @@ def dump_bundle(path, mono, out_rows):
             out_rows.append(row)
 
 
+def dump_one(path, mono_names):
+    """Worker: `(rows, error)` for one bundle. Rows found before an error are kept, as
+    the sequential loop kept them."""
+    rows = []
+    try:
+        dump_bundle(path, mono_names, rows)
+    except Exception as e:
+        return rows, str(e)
+    return rows, None
+
+
 def main():
     ap = argparse.ArgumentParser(
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
@@ -222,7 +248,9 @@ def main():
     ap.add_argument('--out', default='extracted')
     ap.add_argument('--groups', nargs='*', default=None, choices=sorted(GROUPS))
     ap.add_argument('--list', action='store_true')
+    parallel.add_arguments(ap)
     args = ap.parse_args()
+    parallel.configure(args)
 
     asset_dir = os.path.join(args.apk_dir, 'assets', 'Asset')
     if not os.path.isdir(asset_dir):
@@ -235,18 +263,38 @@ def main():
         return
 
     mono = pick_bundles(asset_dir, ('2df21d6c37629e395273171aa169d769_monoscripts',))
+    mono_names = mono_scripts(mono)
     dest = os.path.join(args.out, 'prefabs')
     os.makedirs(dest, exist_ok=True)
 
-    for group in args.groups or sorted(GROUPS):
-        files = pick_bundles(asset_dir, GROUPS[group])
+    # All groups' bundles go through one pool, so a group of 3 big bundles does not
+    # leave 5 workers idle. The cache tag carries the monoscripts file names: a new
+    # script table must not be joined with rows cached under the old one.
+    groups = args.groups or sorted(GROUPS)
+    files = {g: pick_bundles(asset_dir, GROUPS[g]) for g in groups}
+    flat = [f for g in groups for f in files[g]]
+    tag = cache_tag('prefabs', *map(os.path.basename, mono))
+    print(f'reading {len(flat)} bundles in parallel...', flush=True)
+    results = dict(
+        zip(
+            flat,
+            map_bundles(
+                partial(dump_one, mono_names=mono_names),
+                flat,
+                tag=tag,
+                progress=every(25),
+                cacheable=lambda r: r[1] is None,  # a bundle that raised is retried next run
+            ),
+        )
+    )
+
+    for group in groups:
         rows = []
-        for i, f in enumerate(files, 1):
-            try:
-                dump_bundle(f, mono, rows)
-            except Exception as e:
-                print(f'    {logical(f)}: {e}', file=sys.stderr)
-            print(f'  [{group}] {i}/{len(files)} {len(rows)} prefabs', flush=True)
+        for f in files[group]:
+            got, err = results[f]
+            rows.extend(got)
+            if err:
+                print(f'    {logical(f)}: {err}', file=sys.stderr)
         path = os.path.join(dest, group + '.json')
         with open(path, 'w', encoding='utf8') as fh:
             json.dump(rows, fh, ensure_ascii=False, separators=(',', ':'))

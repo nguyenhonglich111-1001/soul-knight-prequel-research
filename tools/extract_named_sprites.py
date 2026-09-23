@@ -6,7 +6,7 @@ so whole families of icons were skipped. The Fatebound icons are the important o
 is a sprite named after its buff id, e.g. the sprite `EBF_SCATTERING` is the icon for the
 buff `EBF_SCATTERING` ("Multishot"). Those never matched, so they were never written.
 
-Rather than re-running the ~30 minute full sprite pass, this reads `sprite_index.json` to
+Rather than re-running the full sprite pass, this reads `sprite_index.json` to
 find which bundles actually hold the wanted names and opens only those -- one at a time,
 which is what `extract_soulknight.export_sprites` requires to decode them correctly.
 
