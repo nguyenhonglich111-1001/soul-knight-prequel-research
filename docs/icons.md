@@ -170,6 +170,33 @@ Sprite numbers do **not** follow the slot digit everywhere.
   lacks, so match on the inner disc only.
 - **Set effect texts:** `120401` Bouldarch, `120407` Lamian, `120415` Tartarean Pantocrator.
 
+## Leaderboard profiles
+
+`tools/match_profile_icons.py` names the 8 items on a player's profile ("Character Traits")
+screenshot. It was calibrated 2026-09-25 on IMG_6312-6315 and got 32/32 right.
+
+- **Slot layout.**
+
+  | | Left column | Right column |
+  |---|---|---|
+  | Row 1 | Mech gear | Cubis core |
+  | Row 2 | Necklace | Helm |
+  | Row 3 | Ring | Armor |
+  | Row 4 | Boots | Weapon |
+
+  The gear slot also holds `108xxx` Clockgears and Octagram Matrix, which matches the codex's
+  Mech Core tab.
+- **Why the codex matcher does not work here.**
+  - The `+NN` label covers sprite rows 11-19.
+  - A rarity glow brightens every icon, so plain colour distance picks dark lookalikes
+    (Ciphertag, Elementalist's Sorcery Hat).
+  - The scale varies by row (5.7-6.8, weapon largest).
+- **What the tool does instead.** It compares rows 0-10 by normalised cross-correlation, and
+  only against sprites of the slot's own kind.
+- **Fallback when an icon is not in the APK.** Match the slot against icons sampled from the
+  codex recordings instead (frame icon at `(448,158)`, scale 5.2, minus the frame colours),
+  then read the name off the frame. That route also found all 28 non-weapon items.
+
 ## Known limits, stated rather than hidden
 
 - `derived` assumes the art never runs backwards inside a gap. It does once:

@@ -44,7 +44,11 @@ python -c "import json;s=json.load(open('extracted/1.13.0/localization_all.json'
 
 Edit `guide/*.json`, then run `python tools/build_guide.py` to regenerate `range-guide.html`.
 The item-synergy page is `python tools/build_guide.py --guide guide/synergies.json -o
-synergy-guide.html`.
+synergy-guide.html`, and the leaderboard-build page is `--guide guide/leaderboard.json -o
+leaderboard-guide.html`.
+
+To read a leaderboard player's gear, screenshot their profile and run
+`python tools/match_profile_icons.py "Soul knight prequel"/<shot>.PNG`. It names all 8 items.
 `python tools/export_guide_png.py` cuts it into Discord-sized PNGs in
 `extracted/_sheets/guide_png/` (needs `pip install playwright`; it uses the installed Edge).
 

@@ -23,6 +23,31 @@ querying the output or when touching `build_equipment.py`, `build_item_details.p
 | `icons/` | ~5,660 PNGs, one subfolder per name prefix; `icon` fields are relative to it |
 | `asset_catalog.json` / `sprite_index.json` | Addressables address → asset path / sprite name → its bundle(s) (65,194 sprites) |
 
+## Looking something up
+
+Items live in two tables, split by key shape, and neither covers the other:
+
+- **`10SNNN` numeric IDs** are in `equipment.json` (effect, icon), `item_details.json`
+  (category, class) and `items_numeric.json`.
+- **`ITEM_*` keys** (`ITEM_CL_S1_010`) are only in `items.json`, keyed `key`, with `id` minus
+  the `ITEM_` prefix. Their `descriptions` are usually empty.
+
+Every key, numeric or `ITEM_*`, is also a key in `localization_all.json`. Never answer with a raw
+key; resolve it there to its name first.
+
+**For a keyword** ("what does Bladeheart do"):
+
+1. Look up `glossary.json` by token (`renxin`) or by `name`. That gives the rules text.
+2. Grep `$<token>$` in `localization_all.json`. That finds every affix and effect line that
+   mentions it (stack cap, `: Ascension`, …).
+3. Grep `$<token>$` in `equipment.json` `effect`. That finds the items that grant or use it.
+4. Check `guide/*.json` notes. Items without effect text (most `ITEM_*` ones) may only be
+   described there. Resolve every `key` in those notes through the two tables above.
+
+**For `{0}` values:** they come from the encrypted config and are usually absent
+(`effect_values_lv1` is often `null`). Say so, and ask the user for the in-game number (see
+[effects.md](effects.md)).
+
 ## Equipment IDs: `10S NNN`
 
 `S` is the slot:

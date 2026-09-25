@@ -82,6 +82,16 @@ mapping each cell's sprite to its item through `icon_map.json`.
   them on luminance correlation over sprite rows 0-12, because the label covers the rest.
 - **Axial Incarnate medallions** have a rarity rim, so match the inner disc only.
 
+## Leaderboard profile screenshots → the 8 items a player wears
+
+```bash
+PYTHONIOENCODING=utf-8 python tools/match_profile_icons.py "Soul knight prequel"/IMG_6312.PNG
+```
+
+Slot layout, scoring and the fallback for icons not in the APK are in `docs/icons.md`
+("Leaderboard profiles"). Put the build write-up in a guide JSON (`guide/leaderboard.json`
+is the template): one section per player plus what they share.
+
 ## Asking the user
 
 The user plays the game and can check anything on screen. Make each question cheap to answer:

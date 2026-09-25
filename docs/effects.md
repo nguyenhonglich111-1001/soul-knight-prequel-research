@@ -115,6 +115,39 @@ together with its Lv.1 `{n}` values.
   - `<keyword>: Ascension` (effect +{0}%): Lambent, Voltcharged, Gelid, Bladeheart.
 
   Which slot or forge category each rolls on is not in the text; ask the user.
+- **How Forged Affixes reach gear** (UI text `77620`-`77637`, `76352`-`76360`, 2026-09-25):
+  - They are not in the Codex of Equipment. The blacksmith's **Forging Replace** screen has
+    three tabs: Stat Affix, **Special Affix** (these keyed affixes) and **Legendary Effect**.
+  - Replacing costs **Affixia** (`95xxx`), which you get by dismantling a Forged Affix or from the
+    Weapon/Armor/Accessory/Core **Affix Reward Packs** in the faction mode (Official Rank,
+    stipend). The Affix Repository lists the Affixia you own.
+  - Special Affixes and Legendary Passives go **only into Suffix slots**. Each item holds at most 1
+    Legendary Passive, and for same-name non-stat affixes across all gear only the highest level
+    counts.
+  - Many legendaries have an Affixia (`95117` Evanescent Halfboots, `95154` Swordmaster's Ring,
+    `95161` Exothermal Necklace), so their effect can be forged onto another item's suffix. Of
+    the keyed affixes, only Frostshock Thunder (`95229`) has an Affixia; Mountcleaving and
+    Bladeheart: Ascension have none yet.
+- **Legendary *logic* is readable even though the numbers are not.** Trigger components list
+  their buff IDs in plain text: `BF_OnAfterExertBuff.targetBuffList`, `BFAC_HasBuff.buff_id_list`.
+  A buff's `cfg: [2, N]` / `IntroduceOverrider Id N` is glossary text `2060NN` (`DBF_POI`
+  7 = Poison Ailment, `BF_Communal_13` 13 = Vulnerable, `CBF_021` 22 = Bleed, `CBF_021_Max`
+  23 = Exsanguinate). Worked example (2026-09-24): Murmuring Ring's "any Ailment" is
+  `BF_5400041`, which fires on `DBF_FIRE/ICE/ELE/LIG/DARK/POI` **and `CBF_021` (Bleed)**, not on
+  Freeze, Daze or other CC, and adds a buff only to targets without `BF_Communal_13`. That
+  prefab ↔ item pairing is inferred from the logic alone (no join key). Patch notes (TapTap,
+  SS0 1月8日) independently confirm the Dark Ailment trigger.
+- **Looming Hour's stack cap is not in the 1.13.0 prefabs** (checked 2026-09-25). The keyword
+  (`206135`, "Max {2} stacks") has no buff with `IntroduceOverrider` `ConfigureType 2, Id 135`
+  (the highest present is 133). The legendary skill prefabs stop at `2400241` (armor) and
+  `6400321` (necklace), before the Vagrant Wyrm pair. Ask the user for the in-game cap.
+- **HP states: `0` = neither, `1` = `$jiankang$` Healthy, `2` = `$binwei$` Critically
+  Injured** (`BFAC_CharState_Hp.state_type`; `BF_2400131_Healthy` = 1, `…_Endangered` = 2).
+  Starforged Battlegarb (`BF_2400151_OnSwtichState`) is a *transition* trigger,
+  `BF_OnCharStateChanged_HP` from `[1]` to `[0, 2]`: it fires once each time you drop out of
+  Healthy, not continuously while below it. Exothermal Necklace (`BF_6400011`) overrides the
+  thresholds (`healthyThreshold` 9999, `endangeredThreshold` 100), so you are never Healthy and
+  Starforged can never fire alongside it (inferred, 2026-09-25).
 
 ## Dead ends: do not search these again
 

@@ -179,11 +179,17 @@
           "title": "Stay unhit — Looming Hour",
           "ranked": false,
           "items": [
-            {"slot": "Armor", "key": "102466", "note": "**Builder.** Gain $sijierdong$ while taking no damage; its effect is stronger."},
-            {"slot": "Necklace", "key": "106746", "note": "**Payoff and fix.** Each stack adds Skill DMG, and taking damage no longer removes stacks. A designed pair."},
+            {"slot": "Armor", "key": "102466", "values": {"0": "3", "1": "25/50"}, "note": "**Builder.** Gain $sijierdong$ while taking no damage; its effect is stronger."},
+            {"slot": "Necklace", "key": "106746", "values": {"0": "3.5/7"}, "note": "**Payoff and fix.** Each stack adds Skill DMG, and taking damage no longer removes stacks. A designed pair."},
             {"slot": "Helmet", "key": "103451", "note": "**Payoff.** More All Damage if you haven't been hit recently."},
-            {"slot": "Ring", "key": "105710", "note": "**Payoff.** Mana regen while $jiankang$."}
+            {"slot": "Ring", "key": "105728", "note": "**Payoff.** Bonus damage per % of actual dodge chance, and each $sijierdong$ stack adds dodge chance."},
+            {"slot": "Ring", "key": "105710", "note": "**Alternative** (same slot): mana regen while $jiankang$."}
           ]
+        },
+        {
+          "type": "callout",
+          "tone": "warn",
+          "text": "Jadeplaque of the Vagrant Wyrm and Exothermal Necklace share the necklace slot. Life-drain shield effects (Sangrilok Helm) may count as taking damage and stop $sijierdong$ from building; the text does not say."
         }
       ]
     },

@@ -27,6 +27,7 @@ python tools/pipeline.py              # all 12 stages -> extracted/<v>/ (~90 s c
 python tools/pipeline.py --list       # stage names; --from <stage> resumes there
 python tools/version_diff.py [old new]   # -> extracted/<new>/changes_from_<old>.md + "Your action"
 python tools/build_icon_map.py --check   # guard guide/icon_map.json
+python tools/match_profile_icons.py <shot>.PNG   # leaderboard profile -> its 8 items
 python tools/export_guide_png.py      # guide -> Discord PNGs (playwright, system Edge)
 python -m pytest                      # fast tests;  -m "" adds the slow golden-output test
 ```
@@ -48,6 +49,15 @@ The `build_*` stages are pure joins over the JSON and run instantly. What each o
 - `build_guide` reads `guide/*.json`, `localization_all`, `items_numeric`, `equipment`,
   `glossary` and `icons/`. Every `$token$` keyword on a guide page gets its in-game rules text
   as a tooltip; write `$jisu$` (not "Swift") in guide prose to get one.
+- **Any page for the user** (tier list, one-off artifact) needs the same keyword tooltips, even
+  when it is built outside `build_guide`. Import `term_html` from `tools/build_guide.py`, feed it
+  `glossary.json`, and copy its `.has-tip`/`.tip` CSS and `placeTip` script. A keyword that the
+  glossary lacks (e.g. Recklessness) takes its definition from the item's own effect text.
+- **Every answer that names items also gets an item-sheet artifact** showing what they look like.
+  Write a small guide JSON in the scratchpad (`title`, `subtitle`, `sections` of `cards` blocks
+  with `key` + `note`, `limits`), then run
+  `build_guide.py --guide <it>.json -o <it>-full.html --fragment <it>.html`. Publish the
+  fragment, and do not open it. `subtitle` is escaped, so put `$token$`s in notes, not there.
 
 ## Dev loop
 
@@ -97,7 +107,7 @@ icon belongs to an item, what `{0}` resolves to, whether a name matches the scre
 |---|---|
 | icons, `icon_map.json`, sprite series, Axial Incarnates | `docs/icons.md` |
 | descriptions, legendary effects, `effect_map.json`, `$token$` glossary/`{0}`, dead ends | `docs/effects.md` |
-| output files, ID schemes, `ITEM_*` alias, class/rarity, prefab fields, Chinese cross-check | `docs/data-model.md` |
+| looking up an item or keyword, output files, ID schemes, `ITEM_*` alias, class/rarity, prefab fields, Chinese cross-check | `docs/data-model.md` |
 | extractor internals, bundle variants, cache, decryption status, single-stage re-runs | `docs/extraction.md` |
 | screenshots, recordings, codex grids, asking the user | `.claude/skills/codex-screenshots/` |
 

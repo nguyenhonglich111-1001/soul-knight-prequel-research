@@ -1,0 +1,191 @@
+{
+  "title": "Leaderboard Rangers",
+  "page_title": "Soul Knight Leaderboard Ranger Builds",
+  "subtitle": "Soul Knight Prequel 1.13.0: what four top Rangers wear, and why it works",
+  "kicker": "Ranger",
+  "byline": "Gear read off four leaderboard profiles (2026-09-25) by pixel-matching each slot against the game's sprites and the codex recordings. Hover or tap an underlined keyword to see its in-game rules.",
+  "reading_note": "A profile shows 8 slots. Left column, top to bottom: **Mech gear, Necklace, Ring, Boots**. Right column: **Cubis core, Helm, Armor, Weapon**. The weapon decides the build: its legendary effect rewrites one Ranger skill. Players are listed by the power score under their name (the fist icon).",
+  "tldr": [
+    "3 of 4 run **Firmament's Caprice**, the Cloudpiercer Shot build (in game: \"Arrow Monsoon\"). The 4th runs **Grandfather Paradox**, the Scattershot build.",
+    "Everyone plays **Physical**: all six elements read 0%, and the seventh (purple) damage stat reads 108-184%. Cloudpiercer Shot and Scattershot both deal Piercing damage, which the game counts as Physical.",
+    "The shared engine is **Evanescent Halfboots + Swordmaster's Ring**: moving builds $renxin$, and the ring cashes a full stack into a big Physical burst.",
+    "Every other slot adds a differently worded damage bonus: Skill DMG, bonus damage, total damage, and enemies taking more damage. No two items stack the same line.",
+    "They pay for it with defence: lower resistances, no shields, a self-curse, spending life. A Ranger fights at range and can afford it."
+  ],
+  "glossary": {},
+  "sections": [
+    {
+      "id": "consensus",
+      "title": "What they all wear",
+      "tag": "4 players",
+      "blocks": [
+        {
+          "type": "prose",
+          "text": "The count after each item is how many of the four wear it. Where the four disagree, the alternatives are in the player sections below."
+        },
+        {
+          "type": "cards",
+          "kind": "equipment",
+          "ranked": false,
+          "items": [
+            {"slot": "Weapon", "key": "101644", "featured": true, "note": "**3 of 4.** Charging Cloudpiercer Shot now pays: more damage and a wider blast. A charged shot already pulls enemies together and applies $yishang$, so one charged shot hits the whole pack harder."},
+            {"slot": "Ring", "key": "105729", "note": "**3 of 4.** The payoff for $renxin$. Filling the stack cashes every stack into total Physical damage for a few seconds, and you build $renxin$ faster in the first place."},
+            {"slot": "Boots", "key": "ITEM_CL_S1_010", "note": "**3 of 4.** The builder. A Ranger is always moving, and every few metres the boots slash everything nearby for Physical damage and add $renxin$ stacks. That fills the Swordmaster's Ring for free."},
+            {"slot": "Armor", "key": "102460", "note": "**3 of 4.** A flat Skill DMG bonus with no condition. Cloudpiercer Shot and Scattershot are both skills. The resistance penalty matters less when you are out of reach."},
+            {"slot": "Helmet", "key": "103461", "note": "**3 of 4.** Bonus damage after a block. Its second clause is why a Ranger takes it: with enough block chance it **triggers on its own every few seconds**, so it works like a permanent buff."},
+            {"slot": "Cubis core", "key": "108716", "note": "**2 of 4.** Makes Chthonic Descent permanent for the whole battle, plus bonus damage. Chthonic Descent comes from the Tartarean Pantocrator (Hades) Axial Incarnate, so these two players almost certainly run it."},
+            {"slot": "Necklace", "key": "106737", "note": "**2 of 4.** A total damage bonus for you and your minions, raised further once your Ignore Enemy DEF beats the enemy's defence."},
+            {"slot": "Necklace", "key": "106733", "note": "**2 of 4.** Kuma's first-pick necklace in the Ranger guide. One more max $zhuanzhu$ stack, and extra skill damage while you hold 2 or more."}
+          ]
+        },
+        {
+          "type": "cards",
+          "kind": "skill",
+          "title": "The skills the weapons rewrite",
+          "ranked": false,
+          "items": [
+            {"key": "200010", "desc_key": "201010", "note": "Firmament's Caprice's skill. Charge it to pull enemies in and apply $yishang$; the bow makes the charged version hit harder and wider."},
+            {"key": "200098", "desc_key": "201098", "note": "Grandfather Paradox's skill: more damage, and every fragment is Physical extra damage."},
+            {"key": "200009", "desc_key": "201009", "note": "Grandfather Paradox makes this trigger **without piercing**: its damage bonus is always on, and skill hits always apply $biaoji$."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "why",
+      "title": "Why the build works",
+      "tag": "The logic",
+      "blocks": [
+        {
+          "type": "steps",
+          "items": [
+            {"text": "**One damage type, all in.** Cloudpiercer Shot and Scattershot deal Piercing damage. Piercing is one of the game's three Physical types, next to Slashing and Bludgeoning. So $renxin$, Swordmaster's Ring, the Halfboots' slashes and Clockgear of the Archer's bullets all boost the main skill. Nobody puts a single point into an element."},
+            {"text": "**A self-feeding engine.** Kiting is what a Ranger does anyway. Evanescent Halfboots turn that movement into $renxin$ stacks, and Swordmaster's Ring turns a full stack into a burst. The build needs no extra button presses to keep its biggest buff running."},
+            {"text": "**Many different damage lines.** The items word their bonuses differently: Skill DMG (Ensorcelled Wardrobe, Heart Pendant, Pandora's Gossamer Silks), bonus damage (Darksteel Helm, Harrier's Headguard, the cores, Fabled Savior's Boots), total damage (Inner Eye Necklace), and the enemy takes more damage ($yishang$ from a charged Cloudpiercer Shot, the Clockgears, Chthonic Descent). If the game multiplies separate lines, as most ARPGs do, spreading across them beats stacking one. The numbers are encrypted, so this cannot be proven from the data."},
+            {"text": "**Defence traded for damage.** Ensorcelled Wardrobe lowers every resistance. Pandora's Gossamer Silks curses you so you take more damage. Harrier's Headguard stops all shields. Vitality Gear spends your life. At range, those costs rarely come due."},
+            {"text": "**Talent skills do double duty.** Talent skills are the chip skills such as Recuperation and Nebula Barrier. Each gear slot hangs a big effect on one: Vitality Gear stacks Attack Power, the Clockgears add a debuffing turret or orb, and Octagram Matrix turns the barrier into an aura that follows you."}
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "text": "**If you are building toward this:** Firmament's Caprice first, then the Halfboots + Swordmaster's Ring pair, since they only work together. Then Ensorcelled Wardrobe. Helm, necklace and cores are where the top players differ, so any of the ones shown is fine."
+        }
+      ]
+    },
+    {
+      "id": "p1",
+      "title": "莫测高深莫奈: power 238,139",
+      "tag": "Bow · Apex 450",
+      "blocks": [
+        {
+          "type": "prose",
+          "text": "Highest power of the four, and the most aggressive build: **73.9% Crit, 357% Crit Damage, 65.8% Attack Speed** (the others have 0%), 10,055 Attack Power, and 156.5% on the purple damage stat. It is the only one of the four without Evanescent Halfboots."
+        },
+        {
+          "type": "cards",
+          "kind": "equipment",
+          "ranked": false,
+          "items": [
+            {"slot": "Weapon", "key": "101644", "note": "Cloudpiercer Shot build."},
+            {"slot": "Armor", "key": "102465", "note": "**The odd one out.** A timed curse: you take more damage, but gain Skill DMG and Crit Damage while it lasts. That is where the top crit-damage number comes from."},
+            {"slot": "Helmet", "key": "103461", "note": "Bonus damage that re-triggers on its own with enough block chance."},
+            {"slot": "Boots", "key": "104712", "note": "**Instead of the Halfboots.** Each dash stacks a damage bonus. So the $renxin$ that feeds the Swordmaster's Ring has to come from somewhere the profile does not show. Evanescent Halfboots has an Affixia, so its effect can be forged onto another item's suffix."},
+            {"slot": "Ring", "key": "105729", "note": "The $renxin$ payoff."},
+            {"slot": "Necklace", "key": "106737", "note": "Total damage, more if your Ignore DEF beats the enemy's DEF."},
+            {"slot": "Cubis core", "key": "108716", "note": "Permanent Chthonic Descent, so expect the Hades Axial Incarnate."},
+            {"slot": "Mech gear", "key": "107702", "note": "Recuperation spends a little life for stacking Attack Power and max life until the next zone. Kuma's recommended gear too."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "title": "淵: power 213,913",
+      "tag": "Bow · Apex 450",
+      "blocks": [
+        {
+          "type": "prose",
+          "text": "**68% Crit, 294.6% Crit Damage**, the highest Attack Power of the four (10,575) and Attack Power Bonus (127.8%). The only one who swaps both the ring and the core for effects that read your stats."
+        },
+        {
+          "type": "cards",
+          "kind": "equipment",
+          "ranked": false,
+          "items": [
+            {"slot": "Weapon", "key": "101644", "note": "Cloudpiercer Shot build."},
+            {"slot": "Armor", "key": "102460", "note": "Flat Skill DMG."},
+            {"slot": "Helmet", "key": "103461", "note": "Auto-triggering bonus damage."},
+            {"slot": "Boots", "key": "ITEM_CL_S1_010", "note": "Movement → $renxin$, and a dodge-friendly slot for the ring below."},
+            {"slot": "Ring", "key": "105728", "note": "**Instead of Swordmaster's Ring.** Bonus damage scales with your dodge chance, and a dodge gives movement speed. Without the Swordmaster's Ring the $renxin$ from the boots still adds Physical damage, but nothing cashes it in."},
+            {"slot": "Necklace", "key": "106733", "note": "Extra max $zhuanzhu$ and skill damage at 2+ stacks."},
+            {"slot": "Cubis core", "key": "108702", "note": "**Scales with Crit Damage** above a threshold, counting base stats only (buffs and legendaries excluded). Fits a build with 294.6% on the sheet."},
+            {"slot": "Mech gear", "key": "108728", "note": "Nebula Barrier becomes an aura that follows you, with All Damage and damage reduction for everyone inside. A barrier you place does nothing for a Ranger who keeps moving."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "title": "警官大叔: power 198,837",
+      "tag": "Bow · Apex 316",
+      "blocks": [
+        {
+          "type": "prose",
+          "text": "The lowest Apex (316) on the board and still close behind. **63.2% Crit, 396% Crit Damage**, the highest of the four. It follows Kuma's early-gear list most closely: Harrier's Headguard, Heart Pendant, Firmament's Caprice."
+        },
+        {
+          "type": "cards",
+          "kind": "equipment",
+          "ranked": false,
+          "items": [
+            {"slot": "Weapon", "key": "101644", "note": "Cloudpiercer Shot build."},
+            {"slot": "Armor", "key": "102460", "note": "Flat Skill DMG."},
+            {"slot": "Helmet", "key": "103466", "note": "**Instead of Darksteel Helm.** Unconditional bonus damage and movement speed. The cost is that you can never have shields, so wear no shield items with it."},
+            {"slot": "Boots", "key": "ITEM_CL_S1_010", "note": "Movement → $renxin$."},
+            {"slot": "Ring", "key": "105729", "note": "Cashes in the $renxin$."},
+            {"slot": "Necklace", "key": "106733", "note": "Extra max $zhuanzhu$ and skill damage at 2+ stacks."},
+            {"slot": "Cubis core", "key": "108729", "note": "**Mode-specific.** Bonus damage per level of your best Reward Pack, but **only inside Pandora's Labyrinth**. A sign that this board is pushed there."},
+            {"slot": "Mech gear", "key": "108721", "note": "Talent skills summon a turret that fires Physical bullets, which the whole Physical stack boosts, and the enemies it hits take more damage."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p4",
+      "title": "河北常佳航: power 194,188",
+      "tag": "Dual Pistols · Apex 412",
+      "blocks": [
+        {
+          "type": "prose",
+          "text": "The one Scattershot player. **82.7% Crit** (the highest of the four), 287.9% Crit Damage, and **184.4% on the purple damage stat** (also the highest). Apart from the weapon and the mech gear, it is the same gear as the bow players."
+        },
+        {
+          "type": "cards",
+          "kind": "equipment",
+          "ranked": false,
+          "items": [
+            {"slot": "Weapon", "key": "101643", "featured": true, "note": "**Scattershot build.** Scattershot hits harder, and Piercing Arrows' bonus damage and $biaoji$ no longer need a pierce, so they are always on. Its fragments are Physical extra damage, which fits the Physical gear."},
+            {"slot": "Armor", "key": "102460", "note": "Flat Skill DMG."},
+            {"slot": "Helmet", "key": "103461", "note": "Auto-triggering bonus damage."},
+            {"slot": "Boots", "key": "ITEM_CL_S1_010", "note": "Movement → $renxin$."},
+            {"slot": "Ring", "key": "105729", "note": "Cashes in the $renxin$."},
+            {"slot": "Necklace", "key": "106737", "note": "Total damage, more if your Ignore DEF beats the enemy's DEF."},
+            {"slot": "Cubis core", "key": "108716", "note": "Permanent Chthonic Descent, so expect the Hades Axial Incarnate."},
+            {"slot": "Mech gear", "key": "108722", "note": "The orb's Shock damage is not boosted (0% Shock), so it is here for the other half: struck enemies **take more damage**, which boosts every Scattershot fragment."}
+          ]
+        },
+        {
+          "type": "cards",
+          "kind": "equipment",
+          "title": "The Axial Incarnate the core points to",
+          "ranked": false,
+          "items": [
+            {"key": "68846", "desc_key": "120415", "note": "**Not on the profile; inferred** from Underlord's Summons, which only does anything with Chthonic Descent. The set's full effect periodically deals True Damage equal to a share of the target's max life, and makes targets take more damage. The core keeps it on for the whole fight."}
+          ]
+        }
+      ]
+    }
+  ],
+  "limits": "Items were identified by pixel-matching each profile slot and confirmed by eye against the codex recordings; all 32 match. The profile does not show affixes, forged legendary effects, the skill tree, Fatebounds or the Axial Incarnate, so anything said about those is inferred and marked as such. The purple damage stat is read as Physical because the other six icons are the elements; that is an inference. `?` values live in the encrypted config, so this page explains why the pieces fit together, not how big each bonus is."
+}
