@@ -104,6 +104,16 @@ def ncc(px, opaque, size, cx, cy, s):
     return 100 * (1 - sab / (math.sqrt(saa * sbb) + 1e-6))
 
 
+def out_of_bounds(shot_size, size, targets, scales, k):
+    """Label of the first target whose search area leaves the screenshot, else None."""
+    w, h = shot_size
+    half = size / 2 * max(scales) * k + max(abs(d) for o in OFFSETS for d in o) * k
+    for label, cx, cy in targets:
+        if cx * k - half < 0 or cy * k - half < 0 or cx * k + half >= w or cy * k + half >= h:
+            return label
+    return None
+
+
 def match(px, sprites, size, cx, cy, scales, k):
     """[(score, sprite)] best first."""
     ranked = []
@@ -136,9 +146,25 @@ def main():
         k = shot.size[0] / REF_W
         px = shot.load()
         print(f'== {os.path.basename(path)}')
+        bad = out_of_bounds(shot.size, size, targets, scales, k)
+        if bad:
+            w, h = shot.size
+            print(
+                f'  skipped: {w}x{h} does not fit the {args.panel} layout calibrated on '
+                f'{REF_W}x1320 (the {bad} slot falls outside it). Send an uncropped landscape shot.'
+            )
+            continue
         for label, cx, cy in targets:
             ranked = match(px, sprites, size, cx * k, cy * k, scales, k)
+            if not ranked:
+                print(f'  {label:<12} no candidate sprites to compare against')
+                continue
             best, name = ranked[0]
+            if len(ranked) < 2:
+                print(
+                    f'  {label:<12} {name}  (score {best:.0f}, no runner-up)  UNSURE -- look at it'
+                )
+                continue
             gap = ranked[1][0] - best
             verdict = '' if best < 40 and gap > 5 else '  UNSURE -- look at it'
             print(f'  {label:<12} {name}  (score {best:.0f}, next +{gap:.0f}){verdict}')

@@ -185,8 +185,8 @@ Sprite numbers do **not** follow the slot digit everywhere.
 - **Spec nodes.** Their icons are the numeric sprites `97NGMM`, four groups of 8 per class. For
   Astreon, groups `9742`/`9744`/`9746`/`9748` follow spec texts `204611`-`204642` in order.
   Art spot checks agree: `974201` dash is `204611`, `974608` two lances is `204634`, `974806`
-  runner is `204640`. See `_sheets/astreon_spec_nodes.png`. Only Magnalume and Lumegyration are
-  entered, as `unconfirmed`.
+  runner is `204640`. See `_sheets/astreon_spec_nodes.png`. Magnalume and Lumegyration are
+  `confirmed`, with the rest of the TapTap build's nodes (see below).
 - **Sacred Soul portraits.** `soul_bonus_8740`-`8742` are the three Astreon Sacred Soul
   portraits by numbering (871x-874x, one block per new class). Only the ones seen on a Sacred
   Soul panel are confirmed (2026-09-26, IMG_6322): Domain of Taixu (`180270`) is

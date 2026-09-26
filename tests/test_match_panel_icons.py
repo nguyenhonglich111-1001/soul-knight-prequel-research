@@ -3,7 +3,7 @@ import sys
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'tools'))
 
-from match_panel_icons import PANELS, load, ncc
+from match_panel_icons import PANELS, REF_W, load, ncc, out_of_bounds
 from PIL import Image
 
 
@@ -36,3 +36,9 @@ def test_ncc_ignores_a_brightness_shift():
             r, g, b = sp[min(x // 10, 19), min(y // 10, 19)]
             px[x, y] = (r + 40, g + 40, b + 40)
     assert ncc(px, opaque, 20, 100, 100, 10) < 1
+
+
+def test_calibrated_shots_fit_and_short_ones_are_rejected():
+    for _pattern, size, targets, scales, _keep in PANELS.values():
+        assert out_of_bounds((REF_W, 1320), size, targets, scales, 1) is None
+        assert out_of_bounds((REF_W, 400), size, targets, scales, 1) is not None
