@@ -92,6 +92,24 @@ Slot layout, scoring and the fallback for icons not in the APK are in `docs/icon
 ("Leaderboard profiles"). Put the build write-up in a guide JSON (`guide/leaderboard.json`
 is the template): one section per player plus what they share.
 
+## Sacred Soul and Eidolon panels → portraits
+
+```bash
+PYTHONIOENCODING=utf-8 python tools/match_panel_icons.py sacred "Soul knight prequel"/IMG_6322.PNG
+PYTHONIOENCODING=utf-8 python tools/match_panel_icons.py eidolon "Soul knight prequel"/IMG_6323.PNG
+```
+
+Read the set name off the Set Effect list, or the Eidolon name off the big portrait. Add
+`confirmed` entries keyed by the set (`1802x0`) or Eidolon (`spt_<id>`) key. Values shown in the
+set list (`Every 5 times…`) go in the guide card's `values`.
+
+## Item-detail screenshots → the affix panel
+
+An item's detail panel lists **prefix** stats, **suffix** stats (Special Affixes and forged-in
+legendaries, which show Lvl and a purple icon), then three red **Celesturgic** (天工) affixes,
+each followed by the stats it grants. Copy it into a guide card's `build` field (see
+`affix_panel` in `tools/build_guide.py`). A group scrolled off screen is `null`.
+
 ## Asking the user
 
 The user plays the game and can check anything on screen. Make each question cheap to answer:

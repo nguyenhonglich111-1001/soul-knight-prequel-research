@@ -1,0 +1,175 @@
+{
+  "title": "Ranger: Cloudpiercer Shot",
+  "page_title": "Cloudpiercer Shot Build",
+  "subtitle": "Soul Knight Prequel 1.13.0 (SS9): the Ranger's Torrential Arrow build (暴雨箭流), from the Chinese community",
+  "kicker": "Ranger",
+  "byline": "Put together from Chinese community write-ups (233乐园, 7723) and checked against the 1.13.0 game text. The gear comes from four leaderboard profiles read on 2026-09-25, since no current Chinese guide lists a full SS9 gear set. Hover or tap an underlined keyword to see its in-game rules.",
+  "reading_note": "In Chinese this build is called **暴雨箭流** or **暴雨流** (the Torrential Arrow build). In game it is the \"Arrow Monsoon\" build (穿云箭雨). Each card says where it comes from: a Chinese guide, the leaderboard, or the game text. Where nothing backs a pick, the card says so.",
+  "tldr": [
+    "**One skill does the damage:** a **charged** Cloudpiercer Shot. Rain of Arrows: Leonar adds no separate damage. The Sacred Soul folds part of its damage into the charged shot, which becomes a **Torrential Arrow**.",
+    "**Weapon:** **Firmament's Caprice** (翻云覆雨). It makes the charged shot hit harder and wider. 3 of the 4 top Rangers on the leaderboard use it.",
+    "**Stay Physical.** Cloudpiercer Shot deals Piercing damage, which the game counts as Physical, so skip the spec nodes that convert it to Fire, Dark or Poison.",
+    "**Damage over time now counts.** The stronger Sacred Soul tier makes the Torrential Arrow count as damage over time, so the Chinese guides put DoT affixes on the weapon, and the Onslaught Fatebound now helps.",
+    "**Accuracy (命中率) 60% or more**, then crit rate and crit damage. Stat targets for the late-game items are in the gear section."
+  ],
+  "glossary": {},
+  "sections": [
+    {
+      "id": "engine",
+      "title": "How the build works",
+      "tag": "Mechanics",
+      "blocks": [
+        {
+          "type": "steps",
+          "items": [
+            {"text": "**Charge, then release.** A charged Cloudpiercer Shot pulls enemies together, deals Piercing damage and applies $yishang$. The arrow pierces without limit. According to the 7723 write-up, it can hit the same target more than once."},
+            {"text": "**The Sacred Soul turns it into a Torrential Arrow.** Rain of Arrows: Leonar deals more damage, and a charged shot adds part of Leonar's total damage to its own base damage. The 233乐园 guide sums it up: \"本质输出方式还是穿云箭，只吃蓄力投射物\". The damage still comes from Cloudpiercer Shot, and only from the charged shot."},
+            {"text": "**The stronger tier fires more arrows.** The Torrential Arrow also counts as damage over time. For each charge level it fires one extra Torrential Arrow that has no charge level. More charge levels means more arrows."},
+            {"text": "**The weapon pays you for charging.** Firmament's Caprice gives a charged shot more damage and a bigger area. It also slows you while you charge, which the Sacred Soul's charge-time tier offsets."}
+          ]
+        },
+        {
+          "type": "cards",
+          "kind": "skill",
+          "title": "The two skills",
+          "ranked": false,
+          "items": [
+            {"key": "200010", "desc_key": "201010", "featured": true, "note": "**The main skill.** Always release it charged. An uncharged shot is not converted into a Torrential Arrow."},
+            {"key": "200102", "desc_key": "201102", "note": "**Support skill.** Keep it in the loadout. The Sacred Soul folds its total damage into the Torrential Arrow, and the Rain of Arrows spec nodes below still apply."}
+          ]
+        },
+        {
+          "type": "cards",
+          "kind": "skill",
+          "title": "Sacred Soul: the Torrential Arrow set",
+          "ranked": false,
+          "items": [
+            {"key": "206128", "desc_key": "191231", "featured": true, "note": "**The tier that creates the Torrential Arrow.** The set's other tiers: \"For every ? Soul Power, Torrential Arrow deals ?% more damage\" (`191232`), and \"Cloudpiercer Shot's base charge-up time is reduced by ?%, and you take ?% less damage while charging up\" (`191233`)."},
+            {"key": "206128", "desc_key": "191234", "note": "**A stronger version of the tier above,** adding damage over time and one extra arrow per charge level. The game text does not say when this version applies. It may be the upgraded Sacred Soul."}
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warn",
+          "text": "**The Sacred Soul's name is not given here.** The game text holds this set's tier descriptions (`191231`-`191234`), but nothing in the data says which named Sacred Soul item carries them. Check the name in game."
+        }
+      ]
+    },
+    {
+      "id": "specs",
+      "title": "Spec nodes",
+      "tag": "Specializations",
+      "blocks": [
+        {
+          "type": "prose",
+          "text": "Cloudpiercer Shot and Rain of Arrows each have eight spec nodes. None of the Chinese guides found lists which nodes to take. The picks below follow from the mechanics above: charge levels, charge time, $yishang$, and staying Physical."
+        },
+        {
+          "type": "cards",
+          "kind": "skill",
+          "title": "Cloudpiercer Shot: take",
+          "ranked": false,
+          "items": [
+            {"key": "202568", "desc_key": "204568", "featured": true, "note": "**The core node.** Two extra charge levels, each with more damage and area. With the stronger Sacred Soul tier, each level also fires one extra Torrential Arrow."},
+            {"key": "202564", "desc_key": "204564", "note": "Faster charging means more charged shots per minute, and less time slowed by the bow."},
+            {"key": "202565", "desc_key": "204565", "note": "A stronger $yishang$ on a charged shot makes the whole pack take more damage from every source."},
+            {"key": "202562", "desc_key": "204562", "note": "Pulls the room together before the shot, so the piercing arrow hits everything. It also lowers the mana cost."},
+            {"key": "202561", "desc_key": "204561", "note": "**Only if** it stacks with Spacebreak. One more level and a full-charge bonus. Check in game whether both can be active."}
+          ]
+        },
+        {
+          "type": "cards",
+          "kind": "skill",
+          "title": "Cloudpiercer Shot: skip in a Physical build",
+          "ranked": false,
+          "items": [
+            {"key": "202563", "desc_key": "204563", "note": "Converts the shot to Fire. Every top leaderboard Ranger is Physical, with 0% in all six elements."},
+            {"key": "202566", "desc_key": "204566", "note": "Converts to Dark. This is for the Dark Ranger build, not this one."},
+            {"key": "202567", "desc_key": "204567", "note": "Converts to Poison."}
+          ]
+        },
+        {
+          "type": "cards",
+          "kind": "skill",
+          "title": "Rain of Arrows: Leonar",
+          "ranked": false,
+          "items": [
+            {"key": "202575", "desc_key": "204575", "note": "Enemies take more damage over time, and the stronger Sacred Soul tier makes the Torrential Arrow count as damage over time."},
+            {"key": "202576", "desc_key": "204576", "note": "More total damage for Rain of Arrows, which raises the share the Torrential Arrow adds to its base damage."},
+            {"key": "202574", "desc_key": "204574", "note": "A Rain of Arrows that follows you on its own, so you never have to cast it by hand."},
+            {"key": "202573", "desc_key": "204573", "note": "Movement speed while a Rain is active, which helps against the bow's slow while you charge."}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gear",
+      "title": "Gear",
+      "tag": "Leaderboard + affixes",
+      "blocks": [
+        {
+          "type": "prose",
+          "text": "**What the top Rangers wear** (four leaderboard profiles, 2026-09-25; the count is how many of the four wear the item). Every item named in the Chinese late-game checklist below is here too: Darksteel Helm (玄钢), Inner Eye Necklace (心眼), Pandora's Gossamer Silks (纱衣) and Ring of Heavenly Insight (天机)."
+        },
+        {
+          "type": "cards",
+          "kind": "equipment",
+          "by_slot": true,
+          "items": [
+            {"slot": "Weapon", "key": "101644", "note": "**3 of 4.** The build's weapon. A charged shot hits harder and wider."},
+            {"slot": "Helmet", "key": "103461", "note": "**3 of 4.** 玄钢. The Chinese guide wants **50% true block rate** on it, so its bonus re-triggers by itself."},
+            {"slot": "Helmet", "key": "103466", "note": "**1 of 4.** Unconditional bonus damage and movement speed, with no block rate to build."},
+            {"slot": "Armor", "key": "102460", "note": "**3 of 4.** Flat Skill DMG. Cloudpiercer Shot is a skill."},
+            {"slot": "Armor", "key": "102465", "note": "**1 of 4.** 纱衣. The Chinese guide wants **50% true damage reduction** before you run it."},
+            {"slot": "Boots", "key": "ITEM_CL_S1_010", "note": "**3 of 4.** Moving builds $renxin$ for the ring."},
+            {"slot": "Boots", "key": "104712", "note": "**1 of 4.** Stacking damage on dash."},
+            {"slot": "Ring", "key": "105729", "note": "**2 of 4.** Cashes a full $renxin$ stack into Physical damage."},
+            {"slot": "Ring", "key": "105728", "note": "**1 of 4.** 天机. The Chinese guide wants **45% true dodge rate**."},
+            {"slot": "Necklace", "key": "106737", "note": "**2 of 4.** 心眼. The Chinese guide wants **2600+ Ignore DEF**, so that you beat the enemy's defence."},
+            {"slot": "Necklace", "key": "106733", "note": "**2 of 4.** One more max $zhuanzhu$ stack, and Skill DMG at 2+ stacks."},
+            {"slot": "Cubis core", "key": "108716", "note": "**2 of 4.** Permanent Chthonic Descent. Pair it with the Hades Axial Incarnate."},
+            {"slot": "Cubis core", "key": "108702", "note": "**1 of 4.** Scales with crit damage."},
+            {"slot": "Mech gear", "key": "107702", "note": "**1 of 4.** Stacking Attack Power."},
+            {"slot": "Mech gear", "key": "108728", "note": "**1 of 4.** Nebula Barrier becomes a damage aura that follows you."},
+            {"slot": "Mech gear", "key": "108721", "note": "**1 of 4.** A turret that fires Physical bullets."}
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "text": "**Affix priorities (233乐园, 暴雨箭流):**\n• Helmet: Ignore DEF (无视防御).\n• Armor: damage reduction (伤害减免).\n• Boots: Skill DMG (技能伤害) or Lord damage (领主伤害).\n• Ring and necklace: crit rate and crit damage (暴击率, 暴击伤害).\n• Weapon: damage over time (持续伤害) or another damage bonus.\n• Get **accuracy (命中率) to 60% or more** before anything else."
+        }
+      ]
+    },
+    {
+      "id": "fatebound",
+      "title": "Fatebounds",
+      "tag": "Bonds",
+      "blocks": [
+        {
+          "type": "cards",
+          "kind": "fatebound",
+          "ranked": false,
+          "items": [
+            {"key": "EBF_DOUBLE_SKILL", "note": "**Take it.** The 7723 write-up recommends Echocasting at level 3: it recasts the shot, so you fire more charged arrows. It pairs it with the Tactful Swoop dodge (闪避突袭) to keep the casts coming."},
+            {"key": "EBF_LEAD_BULLET", "note": "**Take it.** The 7723 damage math runs it at **level 4**, where it adds +0.75 to the shot's damage modifier, the biggest term in its formula. The slower arrow does not matter, because the shot pierces everything in its path."},
+            {"key": "EBF_LOCK", "note": "The 7723 damage math runs it at **level 3**. Tracking makes each arrow find a target."},
+            {"key": "EBF_STORM", "note": "Boosts damage over time, which the Torrential Arrow counts as (stronger Sacred Soul tier only). Take it for the same reason the Chinese guide puts DoT affixes on the weapon."},
+            {"key": "EBF_SCATTERING", "note": "**Avoid.** According to the 7723 write-up, level-3 Multishot clashes with the Ranger passive Onslaught (疾风骤雨) and can cost about two-fifths of the damage. The same applies to the 3-piece Medusa set."}
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "warn",
+          "text": "The 7723 write-up that covers Echocasting and Multishot dates from December 2024, before the Torrential Arrow rework. It also says the build \"不吃持续\" (gets nothing from damage over time), which the stronger Sacred Soul tier has since changed. Trust its piercing and Multishot notes more than its damage numbers. SS8 also replaced the Fatebound system with Fatebound gems and added **Calamity** Fatebounds (灾厄羁绊). No Chinese source found says which Calamity versions this build wants."
+        },
+        {
+          "type": "callout",
+          "tone": "warn",
+          "text": "**Eidolons (器灵): no recommendation found.** None of the Chinese posts about this build names an Eidolon or a pet. The only Ranger Eidolon pick found is from an S1 guide for the older Rain of Arrows build (黑煞魔之灵, for its bonus against low-life enemies), which is a different build."
+        }
+      ]
+    }
+  ],
+  "limits": "Sources: 233乐园 \"游侠暴雨箭流前期过渡攻略\" (2026-07-09), 7723 \"游侠穿云箭机制解读与伤害计算\" (2024-12-03), and search snippets from SS8 patch coverage (\"暴雨流则将箭雨之力融入穿云箭\"). No full SS9 Chinese gear list was found; TapTap and Bilibili pages would not load outside the app. The gear comes from four leaderboard profiles read on 2026-09-25. The spec picks follow from the game text and have no source behind them. In the game text, spec names sit 2000 keys before their descriptions (202568 Spacebreak → 204568). The `?` values live in the encrypted config. Nothing here was tested in game."
+}

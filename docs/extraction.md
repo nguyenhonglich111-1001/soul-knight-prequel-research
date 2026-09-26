@@ -35,7 +35,7 @@ The `build_*` tools are pure joins over that JSON and never touch the APK.
 
 **`extract_named_sprites.py`** exports sprites that `ICON_PATTERN` never matched (`EBF_`,
 `Incarnation_`, `icn_equip_`, …). It consults `sprite_index.json` and opens only the bundles
-that hold the names asked for. The pipeline runs it three times.
+that hold the names asked for. The pipeline runs it four times.
 
 ## Bundle variants: the catalog decides, and it matters
 

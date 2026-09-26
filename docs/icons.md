@@ -170,6 +170,51 @@ Sprite numbers do **not** follow the slot digit everywhere.
   lacks, so match on the inner disc only.
 - **Set effect texts:** `120401` Bouldarch, `120407` Lamian, `120415` Tartarean Pantocrator.
 
+## Class skills with no skill-tree key (Astreon, SS9)
+
+- **The data gap.** The four newest classes (Tempest Archer, Hellion, Nyxen, Astreon) have no
+  `SX_P1_*` tree keys, so `skill_tree_icon()` finds nothing for them.
+- **Where their icons are.** They are `SD_7N02MM` sprites in the common UI atlas, 10 per class,
+  and the `class_skill_icons` pipeline stage extracts them.
+- **Astreon's mapping.** `SD_7402MM` belongs to skill `2005(30+MM)`, from `SD_740201` The
+  Firmament Shudders to `SD_740210` Genesis Quartet. Every sprite's art fits its skill's name
+  (`_sheets/astreon_skills.png`). The Starsigil prefab `SD_746` names `SD_740206_1`/`_2`, its two
+  forms, directly.
+- **Status.** The ten entries sit under `unconfirmed` in `icon_map.json`, and the guide marks
+  their cards "icon unchecked". Move them to `confirmed` once the user checks them in game.
+- **Spec nodes.** Their icons are the numeric sprites `97NGMM`, four groups of 8 per class. For
+  Astreon, groups `9742`/`9744`/`9746`/`9748` follow spec texts `204611`-`204642` in order.
+  Art spot checks agree: `974201` dash is `204611`, `974608` two lances is `204634`, `974806`
+  runner is `204640`. See `_sheets/astreon_spec_nodes.png`. Only Magnalume and Lumegyration are
+  entered, as `unconfirmed`.
+- **Sacred Soul portraits.** `soul_bonus_8740`-`8742` are the three Astreon Sacred Soul
+  portraits by numbering (871x-874x, one block per new class). Only the ones seen on a Sacred
+  Soul panel are confirmed (2026-09-26, IMG_6322): Domain of Taixu (`180270`) is
+  `soul_bonus_8740`, Valkyrie's Verdict (`180000`) is `soul_bonus_Valkyrie_3`. The panel draws
+  them at ~2.9 px per art px with `Lv.NN` over the lower quarter.
+
+## Sacred Soul and Eidolon panels
+
+`tools/match_panel_icons.py sacred|eidolon <shot>` matches the Character panel's portraits:
+
+- **Sacred Soul** ring: six `soul_bonus_*` portraits. The set each belongs to is read off the
+  Set Effect list beside it.
+- **Eidolons**: the three slot boxes (Support, Weapon, Armor) hold `ItemIcon_spt_<id>` sprites.
+  The name under the big portrait gives the id through the `spt_<id>` game text.
+
+Confirmed so far: Zheng `spt_2309`, Fengxian `spt_2329` and Queenmother `spt_2315` by pixel
+match (score 1-9, runner-up 50+ behind). Worldbane, Scarab, Athena, Artemis and Feathertide were
+checked by the user against the in-game Eidolon list. All eight use the sprite with the same
+number. The other `spt_<id>` Eidolons are in `unconfirmed` by that same pattern (the user's call,
+2026-09-26: show a likely icon, and they correct a wrong one).
+
+**Companions (pets)** follow the same rule, `Pet_<id>` → `ItemIcon_Pet_<id>`, and are all in
+`unconfirmed`. The skill text is `SP_B_<id>` (name) and `SP_B_<id>_D` (summary). The rolled values
+appear only on the Follower → Companions screen.
+
+**Astreon spec nodes:** the 15 equipped in the TapTap build are confirmed (the user checked them
+against the in-game wheels). The other 17 stay `unconfirmed` by sprite order.
+
 ## Leaderboard profiles
 
 `tools/match_profile_icons.py` names the 8 items on a player's profile ("Character Traits")

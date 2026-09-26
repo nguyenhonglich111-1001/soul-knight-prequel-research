@@ -1,0 +1,1507 @@
+{
+  "title": "Astreon: Lance of Taixu",
+  "page_title": "Astreon Lance Build",
+  "subtitle": "Soul Knight Prequel 1.13.0 (SS9): the Lance of Taixu build for Astreon (司星), in full detail",
+  "kicker": "Astreon",
+  "byline": "Build from the top TapTap Astreon guide (一羽, SS9, updated 09/22; about 6-7 京 on the training dummy, floor 1000 in 29 s), matched to the game's own item, affix and skill text. Hover or tap an underlined keyword to see its in-game rules.",
+  "reading_note": "Rows run **best first, left to right**. The first card in each row is the guide's pick; the rest are its stand-ins. The guide wrote Chinese names, and each is shown with the in-game English name. Anything the data could not resolve is marked **unresolved** and listed at the end under \"Still to fill in\".",
+  "tldr": [
+    "**The build:** keep Amaranthine Starsigil locked in its Ravenous Wolf state so that every cast throws a Lance of Taixu, then multiply the Lances.",
+    "**Empyrean Sea** (沧澜云汉) is the weapon that does the locking. Put Ravenous Wolf and the Lance on auto-cast, and Calamitous Echocasting recasts both.",
+    "The **Domain of Taixu** Sacred Soul (4 pieces) makes an Astral General hurl a Colossal Lance every few Lances, and each enemy it pierces spawns more Lances.",
+    "**Stat targets:** passive crit plus panel crit = **100%**. Block, damage reduction and dodge **20% or more each**, to switch on the Celestial Auspice / Terrestrial Vantage / Concord of the Masses affixes. Skill CD speed **150%+** before Calamity Onslaught.",
+    "**One copy of each named affix:** the guide warns that a non-stat affix works only once however many items carry it, so never put the same one on two items."
+  ],
+  "glossary": {},
+  "sections": [
+    {
+      "id": "engine",
+      "title": "How the build works",
+      "tag": "Skills",
+      "blocks": [
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "**Lock the Starsigil on Ravenous Wolf.** Amaranthine Starsigil normally alternates between Ravenous Wolf (throws a Lance of Taixu) and Army Breaker (an Astral General strikes). Empyrean Sea locks it on Ravenous Wolf for good, so every cast is a Lance."
+            },
+            {
+              "text": "**Auto-cast both.** Set Ravenous Wolf **and** the Lance of Taixu skill to auto-cast, so both throw Lances on cooldown (the guide: \"贪狼和太虚枪都开自动施法双扔枪\"). Calamitous Echocasting recasts a skill at intervals, which the guide describes as doubling the throw rate."
+            },
+            {
+              "text": "**Snowball the Lances.** The throw rate triggers the Domain of Taixu Sacred Soul. Every few Lances an Astral General hurls a **Colossal** Lance at the enemy with the most max life, and each enemy it pierces summons another Lance in a random direction. The guide says this split is what keeps floor clearing fast."
+            },
+            {
+              "text": "**Crit on every hit.** Passive crit plus panel crit must reach 100%. Anode Helm, Ring of Lucent Elpis and Polar Extremes all scale off crits and $xianyao$ stacks, and the Lance deals Light damage."
+            },
+            {
+              "text": "**Swap one spec node per activity.** **Magnalume** for farming floors (bigger Lances). **Lumegyration** for bosses, or whenever you are short on damage."
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "kind": "skill",
+          "title": "Core skills",
+          "ranked": false,
+          "items": [
+            {
+              "key": "200536",
+              "desc_key": "201540",
+              "featured": true,
+              "note": "The build's main button, on **auto-cast**. With Empyrean Sea it stays on **Ravenous Wolf**, so each cast is a Lance with bonus damage."
+            },
+            {
+              "key": "200538",
+              "desc_key": "201542",
+              "note": "**Grandvoid's Lumenfall** (太虚落曜) is the Lance of Taixu skill, also on **auto-cast**. The Lance counts as a **summoned minion**, pierces everything in its path, and deals Light damage."
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "kind": "equipment",
+          "title": "Sacred Soul: Domain of Taixu (4) + Valkyrie’s Verdict (2)",
+          "ranked": false,
+          "items": [
+            {
+              "key": "180270",
+              "desc_key": "191264",
+              "values": {
+                "0": "5",
+                "1": "500"
+              },
+              "featured": true,
+              "note": "**4-piece bonus**, values read off a top Astreon's Sacred Soul panel (IMG_6322). The **2-piece** bonus is Awakened Skill CD Speed +10%. Its other tiers add Lance damage per Soul Power (`191265`) and, for every enemy the Colossal Lance pierces, one more Lance (`191266`)."
+            },
+            {
+              "key": "180000",
+              "note": "**The last 2 slots.** The guide only says \"any damage 2-piece\"; the top Astreon on the leaderboard runs **Valkyrie's Verdict**: **2-piece: Dmg to Elites +15%**."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "specs",
+      "title": "Spec nodes, all four skills",
+      "tag": "专精",
+      "blocks": [
+        {
+          "type": "prose",
+          "text": "From the guide's four spec-wheel screenshots (section 3.专精搭配). Every equipped node is at **level 5**. The skill levels shown are 15 for Grandvoid's Lumenfall and 14 for the other three. Node icons follow the spec sprite order and are tagged \"icon unchecked\" until seen in game."
+        },
+        {
+          "type": "cards",
+          "kind": "skill",
+          "ranked": false,
+          "title": "Grandvoid's Lumenfall (太虚落曜), the Lance",
+          "items": [
+            {
+              "key": "200538",
+              "desc_key": "201542",
+              "featured": true,
+              "note": "Skill level 15."
+            },
+            {
+              "key": "202635",
+              "desc_key": "204635",
+              "note": "**Floors.** Bigger Lances hit more of the room."
+            },
+            {
+              "key": "202642",
+              "desc_key": "204642",
+              "note": "Equipped."
+            },
+            {
+              "key": "202638",
+              "desc_key": "204638",
+              "note": "Equipped."
+            },
+            {
+              "key": "202641",
+              "desc_key": "204641",
+              "note": "Equipped."
+            },
+            {
+              "key": "202637",
+              "desc_key": "204637",
+              "note": "**Bosses, or when short on damage:** swap it in for Magnalume (the guide boxes it in red)."
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "kind": "skill",
+          "ranked": false,
+          "title": "Amaranthine Starsigil (紫微星符)",
+          "items": [
+            {
+              "key": "200536",
+              "desc_key": "201540",
+              "featured": true,
+              "note": "Skill level 14. Locked on Ravenous Wolf by Empyrean Sea."
+            },
+            {
+              "key": "202634",
+              "desc_key": "204634",
+              "note": "Equipped."
+            },
+            {
+              "key": "202627",
+              "desc_key": "204627",
+              "note": "Equipped."
+            },
+            {
+              "key": "202629",
+              "desc_key": "204629",
+              "note": "Equipped."
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "kind": "skill",
+          "ranked": false,
+          "title": "Skyvault's Comet (天府流星)",
+          "items": [
+            {
+              "key": "200532",
+              "desc_key": "201536",
+              "featured": true,
+              "note": "Skill level 14."
+            },
+            {
+              "key": "202611",
+              "desc_key": "204611",
+              "note": "Equipped."
+            },
+            {
+              "key": "202614",
+              "desc_key": "204614",
+              "note": "Equipped."
+            },
+            {
+              "key": "202616",
+              "desc_key": "204616",
+              "note": "Equipped."
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "kind": "skill",
+          "ranked": false,
+          "title": "Sidereal Horologue (命宫星盘)",
+          "items": [
+            {
+              "key": "200534",
+              "desc_key": "201538",
+              "featured": true,
+              "note": "Skill level 14."
+            },
+            {
+              "key": "202620",
+              "desc_key": "204620",
+              "note": "Equipped."
+            },
+            {
+              "key": "202624",
+              "desc_key": "204624",
+              "note": "Equipped."
+            },
+            {
+              "key": "202623",
+              "desc_key": "204623",
+              "note": "Equipped."
+            },
+            {
+              "key": "202621",
+              "desc_key": "204621",
+              "note": "Equipped."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gear",
+      "title": "Gear",
+      "tag": "Best first",
+      "blocks": [
+        {
+          "type": "cards",
+          "kind": "equipment",
+          "by_slot": true,
+          "items": [
+            {
+              "slot": "Weapon",
+              "key": "101649",
+              "desc_key": "130052",
+              "note": "**The weapon the build is named after.** It locks the Starsigil to Ravenous Wolf, and the Lance deals more damage. The effect text shown is the one that names this lock (`130052`). Linking it to Empyrean Sea comes from the guide, not from a codex screenshot. A top Astreon wears it (see \"As worn\" below)."
+            },
+            {
+              "slot": "Helmet",
+              "key": "103463",
+              "note": "Each $xianyao$ stack adds Light damage to a **crit**. At 100% crit, that is every Lance hit."
+            },
+            {
+              "slot": "Helmet",
+              "key": "103461",
+              "note": "Fine if it has level-4 affixes (the guide: \"4级阳头可用\"). Bonus damage for you **and your minions**, and the Lance is a minion."
+            },
+            {
+              "slot": "Armor",
+              "key": "102460",
+              "note": "**Best** (the guide: \"负咒盔甲最优\"). Flat Skill DMG with no condition. You pay for it in resistances."
+            },
+            {
+              "slot": "Armor",
+              "key": "102465",
+              "note": "Its extra 30% crit damage is not worth it: the curse makes you take more damage, and the guide says you would need too many affix slots for damage reduction to cover it."
+            },
+            {
+              "slot": "Boots",
+              "key": "104716",
+              "note": "Stacking damage and speed while you move. It gets stronger **for each level-3 Fatebound**, and the build runs several Calamity ones."
+            },
+            {
+              "slot": "Boots",
+              "key": "104712",
+              "note": "Stacking damage on dash."
+            },
+            {
+              "slot": "Boots",
+              "key": "104709",
+              "note": "Flat bonus damage, plus $zhuanzhu$ as you move. The guide also forges this effect onto the best boots as a suffix."
+            },
+            {
+              "slot": "Ring",
+              "key": "105734",
+              "note": "Damage bonus and a higher $xianyao$ cap, which makes Anode Helm's per-stack bonus bigger."
+            },
+            {
+              "slot": "Ring",
+              "key": "105725",
+              "note": "Stand-in: a periodic shield plus close-range damage. The top Astreon wears this ring **with Ring of Lucent Elpis forged into a suffix**, so they get both effects (see \"As worn\" below)."
+            },
+            {
+              "slot": "Ring",
+              "key": "105737",
+              "note": "Stand-in named by the guide (文丑扳指)."
+            },
+            {
+              "slot": "Necklace",
+              "key": "106737",
+              "note": "Total damage for you **and your minions**, which includes the Lance."
+            },
+            {
+              "slot": "Necklace",
+              "key": "106444",
+              "note": "A pillar of light that always crits and hands out $xianyao$ stacks: a Lambent source for the helm and ring."
+            },
+            {
+              "slot": "Mech gear",
+              "key": "108723",
+              "note": "The guide says \"潘多拉盒子\" (Pandora's Ark) without saying which of the three. All three turn a talent skill into a Dark hit that makes enemies **take more damage**. Balegloom's extra applies in the Heart of Calamity."
+            },
+            {
+              "slot": "Mech gear",
+              "key": "108724",
+              "note": "Same idea as Balegloom; its extra applies in Pandora's Labyrinth."
+            },
+            {
+              "slot": "Mech gear",
+              "key": "108725",
+              "note": "Same idea as Balegloom; its extra applies in the Proving Grounds."
+            },
+            {
+              "slot": "Mech gear",
+              "key": "107702",
+              "note": "Stand-in: Recuperation stacks Attack Power."
+            },
+            {
+              "slot": "Mech gear",
+              "key": "108728",
+              "note": "Stand-in: Nebula Barrier becomes an All Damage aura that follows you."
+            },
+            {
+              "slot": "Cubis core",
+              "key": "108716",
+              "note": "Makes Chthonic Descent permanent, with bonus damage for you and your minions. Pair it with the Hades incarnate below."
+            },
+            {
+              "slot": "Cubis core",
+              "key": "108708",
+              "note": "Scales with Soul Power, as does one tier of the Domain of Taixu set."
+            },
+            {
+              "slot": "Cubis core",
+              "as_written": "犬牙蛇眼",
+              "note": "**Unresolved.** No item has this exact name. The nearest match is Ophidian Gaze (黄金蛇眼, `108702`), but it could also be two items (犬牙 + 蛇眼)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "affixes",
+      "title": "Affixes, slot by slot",
+      "tag": "Forging",
+      "blocks": [
+        {
+          "type": "prose",
+          "text": "One panel per slot, in the game's item-detail order: **Prefix** stats, then **Suffix** (Special Affixes in gold, forged-in legendary effects in purple; both go only into suffix slots), then **Celesturgic** (天工, red). \" / \" means any one of them. Hover or tap a named affix to see its effect where the game text has it. Everything comes from the TapTap guide: prefix and suffix from its text, Celesturgic from its chart images."
+        },
+        {
+          "type": "callout",
+          "tone": "warn",
+          "text": "**Two rules from the guide.** 1) \"所有文字类词条（非加成词）同名只可生效一次，不要多打\": a named, non-stat affix counts **once** across all your gear, so never put the same one on two items. 2) Get block, damage reduction and dodge to **20% or more each** on your panel. Celestial Auspice, Terrestrial Vantage and Concord of the Masses only reach full strength above a threshold (\"吃满天时/地利/人和\")."
+        },
+        {
+          "type": "cards",
+          "kind": "equipment",
+          "items": [
+            {
+              "slot": "Weapon",
+              "key": "101649",
+              "desc_key": "130052",
+              "build": {
+                "prefix": [
+                  "Minion DMG",
+                  "DMG to Boss"
+                ],
+                "suffix": [
+                  {
+                    "key": "111695"
+                  },
+                  {
+                    "key": "111647"
+                  },
+                  {
+                    "options": [
+                      "Minion DMG",
+                      {
+                        "key": "111720"
+                      },
+                      {
+                        "key": "101401",
+                        "legendary": true
+                      }
+                    ]
+                  }
+                ],
+                "celesturgic": [
+                  {
+                    "key": "111716",
+                    "bonus": [
+                      "Skill DMG +25%",
+                      "Mana Regen +2"
+                    ],
+                    "flag": "The guide: this Formation makes clearing floors more comfortable, and you can swap it for the Elite, DoT or Minion damage version to suit your stats. The top Astreon runs the Elite one, Ring Formation (Dmg to Elites +40%, Physical Resistance -5%)."
+                  },
+                  {
+                    "key": "111733",
+                    "bonus": [
+                      "Attack Skill Level +5",
+                      "Total DMG Increase +2.5%"
+                    ]
+                  },
+                  {
+                    "key": "111727",
+                    "bonus": [
+                      "Lambent Effect Boost +100%"
+                    ]
+                  }
+                ],
+                "source": "Prefix and suffix from the guide's text; Celesturgic from its chart images (5.天工词条选择), all at Lvl 11. A plain stat row in the Celesturgic group, such as Extra Light Damage 25%, is a stat Celesturgic roll."
+              },
+              "note": "The guide's second prefix is **DMG to Boss**. The top Astreon rolled **Dmg to Elites** instead and took Ring Formation over Goosewing Formation, which suits floor clearing and matches their Valkyrie's Verdict 2-piece."
+            },
+            {
+              "slot": "Helmet",
+              "key": "103463",
+              "build": {
+                "prefix": [
+                  "Ignore Enemy DEF",
+                  {
+                    "options": [
+                      "Block Chance",
+                      "Dodge Chance",
+                      "Damage Reduction"
+                    ]
+                  },
+                  "Attack Power"
+                ],
+                "suffix": [
+                  "Ignore Enemy DEF",
+                  {
+                    "key": "111570",
+                    "desc_key": "111569"
+                  },
+                  {
+                    "options": [
+                      "Ignore Enemy DEF",
+                      {
+                        "key": "103467",
+                        "legendary": true
+                      }
+                    ]
+                  }
+                ],
+                "celesturgic": [
+                  [
+                    "Extra Light Damage",
+                    "25%"
+                  ],
+                  {
+                    "key": "111734",
+                    "bonus": [
+                      "Passive Skill Level +5",
+                      "Total DMG Increase +2.5%"
+                    ]
+                  },
+                  {
+                    "key": "111670",
+                    "bonus": [
+                      "All Damage +40%",
+                      "Physical Resistance -5%"
+                    ]
+                  }
+                ],
+                "source": "Prefix and suffix from the guide's text; Celesturgic from its chart images (5.天工词条选择), all at Lvl 11. A plain stat row in the Celesturgic group, such as Extra Light Damage 25%, is a stat Celesturgic roll."
+              },
+              "note": "Terrestrial Vantage needs **Dodge Chance** above its threshold; the guide says 20%+ on your panel. The prefix's Block / Dodge / Damage Reduction roll is how you get there. The same prefixes apply to Darksteel Helm."
+            },
+            {
+              "slot": "Armor",
+              "key": "102460",
+              "build": {
+                "prefix": [
+                  "Ignore Enemy DEF",
+                  {
+                    "options": [
+                      "Block Chance",
+                      "Dodge Chance",
+                      "Damage Reduction"
+                    ]
+                  },
+                  "Attack Power"
+                ],
+                "suffix": [
+                  {
+                    "key": "111568",
+                    "desc_key": "111567"
+                  },
+                  {
+                    "key": "111566",
+                    "desc_key": "111565"
+                  },
+                  {
+                    "options": [
+                      {
+                        "key": "ITEM_CL_A2_000",
+                        "legendary": true
+                      },
+                      {
+                        "key": "102467",
+                        "legendary": true
+                      }
+                    ]
+                  }
+                ],
+                "celesturgic": [
+                  {
+                    "key": "111723",
+                    "bonus": [
+                      "Minion DMG +31.3%"
+                    ]
+                  },
+                  {
+                    "key": "111574",
+                    "desc_key": "111573",
+                    "bonus": [
+                      "Skill CD Speed +30%; above 50% Skill CD Speed, +10% more Skill DMG"
+                    ]
+                  },
+                  [
+                    "Extra Light Damage",
+                    "25%"
+                  ]
+                ],
+                "source": "Prefix and suffix from the guide's text; Celesturgic from its chart images (5.天工词条选择), all at Lvl 11. A plain stat row in the Celesturgic group, such as Extra Light Damage 25%, is a stat Celesturgic roll."
+              },
+              "note": "Celestial Auspice wants **Block Chance** 20%+ and Concord of the Masses wants **Damage Reduction** 20%+. Terrestrial Vantage on the helmet covers Dodge. Together they are the guide's \"吃满天时/地利/人和\"."
+            },
+            {
+              "slot": "Boots",
+              "key": "104716",
+              "build": {
+                "prefix": [
+                  "Natural DMG",
+                  "Natural DMG",
+                  "Natural DMG"
+                ],
+                "suffix": [
+                  {
+                    "options": [
+                      "Attack Power Bonus",
+                      "Skill DMG"
+                    ]
+                  },
+                  {
+                    "key": "104709",
+                    "legendary": true
+                  }
+                ],
+                "celesturgic": [
+                  {
+                    "key": "111718",
+                    "bonus": [
+                      "Skill DMG +32.5%",
+                      "Basic Attack DMG -5%"
+                    ]
+                  },
+                  {
+                    "key": "111708",
+                    "bonus": [
+                      "Attack Power Bonus +27.5%",
+                      "DEF Bonus -5%"
+                    ]
+                  },
+                  [
+                    "Extra Light Damage",
+                    "25%"
+                  ]
+                ],
+                "source": "Prefix and suffix from the guide's text; Celesturgic from its chart images (5.天工词条选择), all at Lvl 11. A plain stat row in the Celesturgic group, such as Extra Light Damage 25%, is a stat Celesturgic roll."
+              },
+              "note": "Three **Natural DMG** prefixes, plus Huntsman's Boots forged into a suffix. The guide names two suffixes for this slot."
+            },
+            {
+              "slot": "Ring",
+              "key": "105734",
+              "build": {
+                "prefix": [
+                  "Crit Damage",
+                  "Crit Damage",
+                  "Crit Damage"
+                ],
+                "suffix": [
+                  "Crit Damage",
+                  {
+                    "key": "111689"
+                  },
+                  {
+                    "options": [
+                      {
+                        "key": "105737",
+                        "legendary": true
+                      },
+                      {
+                        "key": "105725",
+                        "legendary": true
+                      }
+                    ]
+                  }
+                ],
+                "celesturgic": [
+                  {
+                    "key": "111690",
+                    "bonus": [
+                      "Crit Damage +50%",
+                      "Total DMG Increase +7.5%"
+                    ]
+                  },
+                  {
+                    "key": "111590",
+                    "bonus": [
+                      "With Lambent, or attacking an enemy with a Light ailment: +20% more Light DMG for 1 s"
+                    ]
+                  },
+                  {
+                    "key": "111683",
+                    "bonus": [
+                      "Crit % +18.8%",
+                      "Crit Damage +18.8%"
+                    ]
+                  }
+                ],
+                "source": "Prefix and suffix from the guide's text; Celesturgic from its chart images (5.天工词条选择), all at Lvl 11. A plain stat row in the Celesturgic group, such as Extra Light Damage 25%, is a stat Celesturgic roll."
+              },
+              "note": "The guide's Celesturgic is all crit plus Worldbright's Light bonus. The top Astreon did the ring the other way round: a **Guardsman Badge** base with Ring of Lucent Elpis forged into the suffix (see \"As worn\" below)."
+            },
+            {
+              "slot": "Necklace",
+              "key": "106737",
+              "build": {
+                "prefix": [
+                  "Crit Damage",
+                  "Crit Damage",
+                  "Crit Damage"
+                ],
+                "suffix": [
+                  "Crit Damage",
+                  {
+                    "key": "111689"
+                  },
+                  {
+                    "options": [
+                      {
+                        "key": "106444",
+                        "legendary": true
+                      },
+                      {
+                        "key": "106747",
+                        "legendary": true
+                      }
+                    ]
+                  }
+                ],
+                "celesturgic": [
+                  {
+                    "key": "111735",
+                    "bonus": [
+                      "Support Skill Level +5",
+                      "Total DMG Increase +2.5%"
+                    ]
+                  },
+                  {
+                    "key": "111687",
+                    "bonus": [
+                      "Crit % +25%",
+                      "Total DMG Increase +7.5%"
+                    ]
+                  },
+                  {
+                    "key": "111693",
+                    "bonus": [
+                      "Crit Damage +56.3%"
+                    ]
+                  }
+                ],
+                "source": "Prefix and suffix from the guide's text; Celesturgic from its chart images (5.天工词条选择), all at Lvl 11. A plain stat row in the Celesturgic group, such as Extra Light Damage 25%, is a stat Celesturgic roll."
+              },
+              "note": "Yan Liang's Icon gets stronger if you also carry Wen Chou's Thimble, so pair it with Wen Chou on the ring."
+            },
+            {
+              "slot": "Mech gear",
+              "key": "108723",
+              "build": {
+                "prefix": [
+                  {
+                    "options": [
+                      "Block Chance",
+                      "Dodge Chance",
+                      "Damage Reduction",
+                      "Elemental Resistances"
+                    ]
+                  },
+                  {
+                    "options": [
+                      "Block Chance",
+                      "Dodge Chance",
+                      "Damage Reduction",
+                      "Elemental Resistances"
+                    ]
+                  },
+                  {
+                    "options": [
+                      "Block Chance",
+                      "Dodge Chance",
+                      "Damage Reduction",
+                      "Elemental Resistances"
+                    ]
+                  }
+                ],
+                "suffix": [
+                  {
+                    "key": "111616",
+                    "desc_key": "111615"
+                  },
+                  {
+                    "options": [
+                      {
+                        "key": "111598",
+                        "desc_key": "111597"
+                      },
+                      {
+                        "key": "111600",
+                        "desc_key": "111599"
+                      }
+                    ]
+                  },
+                  {
+                    "options": [
+                      {
+                        "key": "111598",
+                        "desc_key": "111597"
+                      },
+                      {
+                        "key": "111600",
+                        "desc_key": "111599"
+                      }
+                    ]
+                  }
+                ],
+                "celesturgic": [
+                  [
+                    "DOT",
+                    "25%"
+                  ],
+                  {
+                    "key": "111630",
+                    "desc_key": "111629",
+                    "bonus": [
+                      "Attack Power Bonus +13.7%; +100% with any Yellow Turban affix (e.g. Heroes of the Wilds)"
+                    ]
+                  },
+                  {
+                    "key": "111624",
+                    "desc_key": "111623",
+                    "bonus": [
+                      "Skill DMG +14%; +50% per Han-set affix, up to 3 times"
+                    ]
+                  }
+                ],
+                "source": "Prefix and suffix from the guide's text; Celesturgic from its chart images (5.天工词条选择), all at Lvl 11. A plain stat row in the Celesturgic group, such as Extra Light Damage 25%, is a stat Celesturgic roll."
+              },
+              "note": "Defensive prefixes, to reach the 20% thresholds. For the suffixes the guide says Heroes of the Wilds plus \"护汉庭/守纲纪等三四选\": three or four affixes from the Han set, which grow stronger together."
+            },
+            {
+              "slot": "Cubis core",
+              "key": "108716",
+              "build": {
+                "prefix": [
+                  {
+                    "options": [
+                      "All Damage",
+                      "Attack Power Bonus"
+                    ]
+                  },
+                  {
+                    "options": [
+                      "All Damage",
+                      "Attack Power Bonus"
+                    ]
+                  },
+                  {
+                    "options": [
+                      "All Damage",
+                      "Attack Power Bonus"
+                    ]
+                  }
+                ],
+                "suffix": [
+                  {
+                    "options": [
+                      {
+                        "key": "111598",
+                        "desc_key": "111597"
+                      },
+                      {
+                        "key": "111600",
+                        "desc_key": "111599"
+                      }
+                    ]
+                  },
+                  {
+                    "key": "111572",
+                    "desc_key": "111571"
+                  },
+                  {
+                    "key": "108716",
+                    "legendary": true,
+                    "flag": "The guide lists Underlord's Summons both as the core and as a suffix. Forge it in if your core is a different item, e.g. Leaf of Yggdrasil."
+                  }
+                ],
+                "celesturgic": [
+                  [
+                    "DMG to Boss",
+                    "30%"
+                  ],
+                  {
+                    "key": "111618",
+                    "desc_key": "111617",
+                    "bonus": [
+                      "Hit Chance +15.6%; +50% per Han-set affix, up to 3 times"
+                    ]
+                  },
+                  {
+                    "key": "111620",
+                    "desc_key": "111619",
+                    "bonus": [
+                      "Attack Power Bonus +12.5%; +50% per Han-set affix, up to 3 times"
+                    ]
+                  }
+                ],
+                "source": "Prefix and suffix from the guide's text; Celesturgic from its chart images (5.天工词条选择), all at Lvl 11. A plain stat row in the Celesturgic group, such as Extra Light Damage 25%, is a stat Celesturgic roll."
+              },
+              "note": "**Polar Extremes** turns Lambent into more Light damage, and the Lance deals Light damage."
+            }
+          ],
+          "ranked": false
+        }
+      ]
+    },
+    {
+      "id": "worn",
+      "title": "As worn by a top Astreon",
+      "tag": "Leaderboard",
+      "blocks": [
+        {
+          "type": "prose",
+          "text": "All eight items of **我会射** (Astreon, PID17949697, power 266278, 2026-09-26), matched from the profile (IMG_6328) and read off each item's detail panel, in the game's layout. Where it differs from the TapTap guide, the note says so."
+        },
+        {
+          "type": "cards",
+          "kind": "equipment",
+          "ranked": false,
+          "items": [
+            {
+              "slot": "Weapon",
+              "key": "101649",
+              "desc_key": "130052",
+              "build": {
+                "title": "Transcendent · Celesturgic III · Empyrean Sea, Level 60",
+                "main": "Attack Power 405",
+                "prefix": [
+                  [
+                    "Minion DMG",
+                    "8%"
+                  ],
+                  [
+                    "Minion DMG",
+                    "8%"
+                  ],
+                  [
+                    "Minion DMG",
+                    "8%"
+                  ]
+                ],
+                "suffix": [
+                  [
+                    "Dmg to Elites",
+                    "15%"
+                  ],
+                  [
+                    "Dmg to Elites",
+                    "15%"
+                  ],
+                  {
+                    "key": "111647",
+                    "level": 10
+                  }
+                ],
+                "celesturgic": [
+                  {
+                    "key": "111696",
+                    "level": 11,
+                    "bonus": [
+                      "Dmg to Elites +40%",
+                      "Physical Resistance -5%"
+                    ]
+                  },
+                  {
+                    "key": "111733",
+                    "level": 11,
+                    "bonus": [
+                      "Attack Skill Level +5",
+                      "Total DMG Increase +2.5%"
+                    ]
+                  },
+                  {
+                    "key": "111727",
+                    "level": 11,
+                    "bonus": [
+                      "Lambent Effect Boost +100%"
+                    ]
+                  }
+                ],
+                "source": "Top Astreon 我会射, IMG_6326, IMG_6351."
+              },
+              "note": "**Minion DMG ×3** prefix, as the guide says, but **Dmg to Elites** everywhere else: two suffix rolls plus Ring Formation (the Elite version of the guide's Goosewing Formation). It matches their Valkyrie's Verdict 2-piece."
+            },
+            {
+              "slot": "Helmet",
+              "key": "103463",
+              "build": {
+                "title": "Anode Helm (from the profile icon)",
+                "prefix": "Detail panel not captured."
+              },
+              "note": "The guide's first pick. Identified from the profile icon (score 2)."
+            },
+            {
+              "slot": "Armor",
+              "key": "102465",
+              "build": {
+                "title": "Pandora's Gossamer Silks (from the profile icon)",
+                "prefix": "Detail panel not captured."
+              },
+              "note": "**Not the guide's pick.** The guide says Ensorcelled Wardrobe is best and Gossamer Silks is not worth the slots needed for damage reduction. This player runs Gossamer Silks and reaches **50.1% True Damage Reduction** (see the stats below)."
+            },
+            {
+              "slot": "Boots",
+              "key": "104716",
+              "build": {
+                "title": "Transcendent · Celesturgic III · Calamity's Wasting Stride, Level 60",
+                "main": "Attack Power 367",
+                "prefix": [
+                  [
+                    "Natural DMG",
+                    "13%"
+                  ],
+                  [
+                    "Natural DMG",
+                    "13%"
+                  ],
+                  [
+                    "Natural DMG",
+                    "13%"
+                  ]
+                ],
+                "suffix": [
+                  {
+                    "key": "104709",
+                    "level": 4,
+                    "legendary": true
+                  },
+                  [
+                    "Attack Power Bonus",
+                    "9%"
+                  ],
+                  [
+                    "Attack Power Bonus",
+                    "9%"
+                  ]
+                ],
+                "celesturgic": [
+                  {
+                    "key": "111719",
+                    "level": 11,
+                    "bonus": [
+                      "Skill DMG +27.5%"
+                    ]
+                  },
+                  {
+                    "key": "111708",
+                    "level": 11
+                  },
+                  [
+                    "Extra Light Damage",
+                    "25%"
+                  ]
+                ],
+                "source": "Top Astreon 我会射, IMG_6339; the Bladedrag Feint bonus lines are cut off."
+              },
+              "note": "Exactly the guide's boots: **Natural DMG ×3**, Huntsman's Boots forged in, Attack Power Bonus. Its Celesturgic swaps Sevenfold Charge for **Flanking Tactics**."
+            },
+            {
+              "slot": "Ring",
+              "key": "105725",
+              "build": {
+                "title": "Transcendent · Celesturgic III · Guardsman Badge, Level 60",
+                "main": "INT 201",
+                "prefix": [
+                  [
+                    "Crit Damage",
+                    "15%"
+                  ],
+                  [
+                    "Crit Damage",
+                    "15%"
+                  ],
+                  [
+                    "Crit Damage",
+                    "15%"
+                  ]
+                ],
+                "suffix": [
+                  [
+                    "Minion DMG",
+                    "12%"
+                  ],
+                  [
+                    "Minion DMG",
+                    "12%"
+                  ],
+                  {
+                    "key": "105734",
+                    "level": 1,
+                    "legendary": true
+                  }
+                ],
+                "celesturgic": [
+                  {
+                    "key": "111687",
+                    "level": 11,
+                    "bonus": [
+                      "Crit % +25%"
+                    ]
+                  },
+                  {
+                    "key": "111690",
+                    "level": 11
+                  },
+                  {
+                    "key": "111590",
+                    "level": 11
+                  }
+                ],
+                "source": "Top Astreon 我会射, IMG_6327, IMG_6336."
+              },
+              "note": "**3× Crit Damage** prefix, as the guide says. **Minion DMG** suffixes, and **Ring of Lucent Elpis** forged in, so this ring gives the Guardsman Badge effect and Lucent Elpis."
+            },
+            {
+              "slot": "Necklace",
+              "key": "106737",
+              "build": {
+                "title": "Transcendent · Celesturgic III · Inner Eye Necklace, Level 60",
+                "main": "INT 201",
+                "prefix": [
+                  [
+                    "Natural DMG",
+                    "13%"
+                  ],
+                  [
+                    "Natural DMG",
+                    "13%"
+                  ],
+                  [
+                    "Crit %",
+                    "7.5%"
+                  ]
+                ],
+                "suffix": [
+                  {
+                    "key": "111689",
+                    "level": 11
+                  },
+                  {
+                    "key": "106444",
+                    "level": 4,
+                    "legendary": true
+                  },
+                  [
+                    "Minion DMG",
+                    "12%"
+                  ]
+                ],
+                "celesturgic": [
+                  {
+                    "key": "111683",
+                    "level": 11,
+                    "bonus": [
+                      "Crit % +18.8%",
+                      "Crit Damage +18.8%"
+                    ]
+                  },
+                  {
+                    "key": "111704",
+                    "level": 11
+                  },
+                  {
+                    "key": "111693",
+                    "level": 11
+                  }
+                ],
+                "source": "Top Astreon 我会射, IMG_6333; the last two bonus blocks are cut off."
+              },
+              "note": "The guide's suffixes (**Intimidation** + **Necklace of Luminara**), which also settles that Intimidation is a suffix. The prefix trades crit damage for **Natural DMG**."
+            },
+            {
+              "slot": "Mech gear",
+              "key": "107702",
+              "build": {
+                "title": "Transcendent · Celesturgic III · Vitality Gear, Level 60",
+                "main": "Life 860",
+                "prefix": [
+                  [
+                    "Damage Reduction",
+                    "5%"
+                  ],
+                  [
+                    "Damage Reduction",
+                    "5%"
+                  ],
+                  [
+                    "Damage Reduction",
+                    "5%"
+                  ]
+                ],
+                "suffix": [
+                  {
+                    "key": "111598",
+                    "desc_key": "111597",
+                    "level": 1
+                  },
+                  {
+                    "key": "111604",
+                    "desc_key": "111603",
+                    "level": 1
+                  },
+                  {
+                    "key": "111600",
+                    "desc_key": "111599",
+                    "level": 1
+                  }
+                ],
+                "celesturgic": [
+                  [
+                    "DOT",
+                    "25%"
+                  ],
+                  [
+                    "DMG to Boss",
+                    "30%"
+                  ],
+                  {
+                    "key": "111620",
+                    "desc_key": "111619",
+                    "level": 11
+                  }
+                ],
+                "source": "Top Astreon 我会射, IMG_6329; the Celesturgic bonus lines are cut off."
+              },
+              "note": "**Vitality Gear, not Pandora's Ark**, the guide's stand-in. Three Han-set suffixes at Lvl 1: they only need to be present to power up the Han Celesturgic affixes on this item and the core."
+            },
+            {
+              "slot": "Cubis core",
+              "key": "108708",
+              "build": {
+                "title": "Transcendent · Celesturgic III · Leaf of Yggdrasil, Level 60",
+                "main": "Life 860",
+                "prefix": [
+                  [
+                    "Hit %",
+                    "8.3%"
+                  ],
+                  [
+                    "All Damage",
+                    "10%"
+                  ],
+                  [
+                    "All Damage",
+                    "10%"
+                  ]
+                ],
+                "suffix": [
+                  {
+                    "key": "111606",
+                    "desc_key": "111605",
+                    "level": 11
+                  },
+                  {
+                    "key": "108716",
+                    "level": 2,
+                    "legendary": true
+                  },
+                  {
+                    "key": "111572",
+                    "desc_key": "111571",
+                    "level": 5
+                  }
+                ],
+                "celesturgic": [
+                  [
+                    "Close-Range DMG",
+                    "20%"
+                  ],
+                  {
+                    "key": "111618",
+                    "desc_key": "111617",
+                    "level": 11
+                  },
+                  [
+                    "DOT",
+                    "25%"
+                  ]
+                ],
+                "source": "Top Astreon 我会射, IMG_6342; the Celesturgic bonus lines are cut off."
+              },
+              "note": "**Leaf of Yggdrasil with Underlord's Summons forged in.** This is how the guide lists Underlord's Summons both as a core and as a suffix, so it settles that \"check\"."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "stats",
+      "title": "The top Astreon's stats and talents",
+      "tag": "Profile",
+      "blocks": [
+        {
+          "type": "prose",
+          "text": "The TapTap guide gives no talent points or stat allocation, so these come from the same player's profile (IMG_6328, 6353-6361). Treat them as one strong example, not the rule."
+        },
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "**Offense (power 216372).** INT 1245 (STR and DEX 0) · Attack Power 10365 · Attack Power Bonus 111.3% · Crit 66.3% · Crit Damage 362.5% · Hit 59.3% · Skill DMG 47.5% · Ignore Enemy DEF 2264 · All Damage 137.5% · Dmg to Elites 124% · DMG to Boss 30% · +DMG 106.5% · Total DMG Increase 96.8% · DOT 100% · Close-Range DMG 74% · Extra Light Damage 50%. Element bonuses: Natural 155%, **Light 162%**, Dark 155%, all others 0%."
+            },
+            {
+              "text": "**Defense (power 36202).** Life 8543 · DEF 2125 · **True Damage Reduction 50.1%** · Actual Dodge 2.4% · Actual Block 2.4%. Resistances: Fire, Cold and Shock 70%; Natural, Light and Dark 39%."
+            },
+            {
+              "text": "**Bonus (power 20706).** **Skill CD 145.7%**, just under the 150% the guide sets for Calamity Onslaught · **Minion DMG 141.3%** · Minion Life 50% · Skill Cost -15% · Mana 150 · Attack Skill Level 5 · Passive Skill Level 5 · Support Skill Level 0 · Max Soulforce 100."
+            },
+            {
+              "text": "**Talent skills (top row):** Revelation, Leysurge, Adrenaline Spike, Boulderhide, The Reaper."
+            },
+            {
+              "text": "**Talent points:** Attack Power **935** (+1870); maxed at 60/60: Ignore Enemy DEF (+360), Crit % (+15%), Crit Damage (+30%), Dmg to Elites (+30%), Skill Cost (-15%), Damage Reduction (+12%), Hit % (+12%). Left at 0: Life, INT, Mana, Movement Speed, Awakened Skill Dmg, Max Soulforce. The list may continue below Max Soulforce; the screenshot ends there."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "text": "**Crit check:** panel Crit is 66.3%. The guide wants passive crit plus panel crit at 100%, so about a third has to come from passive sources (e.g. Flying General's +25%, which the panel may not count)."
+        }
+      ]
+    },
+    {
+      "id": "incarnate",
+      "title": "Axial Incarnate",
+      "tag": "Incarnate",
+      "blocks": [
+        {
+          "type": "prose",
+          "text": "**Progression:** Boar King → Medusa → **Hades (best)**. Hades comes last because Underlord's Summons needs its Chthonic Descent. **Primordial affixes, in the guide's order:** DMG multiplier (伤害总增) and Lambent effect (显耀效果提升), then Skill CD speed, then All / Skill / Natural damage, then Natural RES penetration (自然抗性穿透)."
+        },
+        {
+          "type": "cards",
+          "kind": "incarnate",
+          "items": [
+            {
+              "key": "356",
+              "desc_key": "120415",
+              "featured": true,
+              "pieces": [
+                {
+                  "key": "68847",
+                  "slot": "Top slot"
+                },
+                {
+                  "key": "68848",
+                  "slot": "Left slot"
+                },
+                {
+                  "key": "68849",
+                  "slot": "Right slot"
+                }
+              ],
+              "note": "**Hades, the endgame pick.** Chthonic Descent: attacked enemies take True Damage based on their max life and take more damage. Underlord's Summons keeps it on for the whole fight."
+            },
+            {
+              "key": "344",
+              "desc_key": "120407",
+              "pieces": [
+                {
+                  "key": "68835",
+                  "slot": "Top slot"
+                },
+                {
+                  "key": "68836",
+                  "slot": "Left slot"
+                },
+                {
+                  "key": "68837",
+                  "slot": "Right slot"
+                }
+              ],
+              "note": "**Medusa**, the step before Hades."
+            },
+            {
+              "key": "68818",
+              "note": "**Boar King**, the first step. Its Axial Heart effect text is not linked in the data."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fatebound",
+      "title": "Fatebounds",
+      "tag": "Bonds",
+      "blocks": [
+        {
+          "type": "prose",
+          "text": "The guide's **active Fatebounds** screenshot (生效羁绊): four Calamity bonds and three regular ones, all at level 3 except Field Marshal at 2. The guide's text adds when to take each."
+        },
+        {
+          "type": "cards",
+          "kind": "fatebound",
+          "title": "Calamity Fatebounds (level 3)",
+          "ranked": false,
+          "items": [
+            {
+              "key": "EBF_DOUBLE_SKILL",
+              "calamity": true,
+              "featured": true,
+              "note": "**Required.** The guide: \"灾厄法术回响双倍触发频率\". The recast doubles how often Ravenous Wolf and the Lance fire."
+            },
+            {
+              "key": "EBF_DASH",
+              "calamity": true,
+              "note": "**Required** (\"刚需\"). Calamity Fatebounds also feed Calamity's Wasting Stride, and the Fengxian Eidolon enhances Sortie."
+            },
+            {
+              "key": "EBF_STORM",
+              "calamity": true,
+              "note": "Take it once your Skill CD speed is **150% or more**. The guide says it then adds \"一个额外乘区\", a separate damage multiplier."
+            },
+            {
+              "key": "EBF_BF_DURATION",
+              "calamity": true,
+              "note": "The guide: \"前期提升很多可以先上\", a big boost early on. It is still in the endgame loadout."
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "kind": "fatebound",
+          "title": "Regular Fatebounds",
+          "ranked": false,
+          "items": [
+            {
+              "key": "EBF_CORE_NATURE",
+              "note": "**Level 3**, the regular version. The text calls the Calamity version an optional upgrade for more extra damage (\"多额外伤\"), paired with the **Queenmother** Eidolon."
+            },
+            {
+              "key": "EBF_CHARGE",
+              "note": "**Level 3.** Lower skill cooldowns, which means more Lances and helps toward 150% Skill CD speed."
+            },
+            {
+              "key": "EBF_SERVANT_MAX",
+              "note": "**Level 2** in the loadout. Stronger minions, and the Lance is a summoned minion. The guide notes it needs **four sockets (四孔)** to reach level 3."
+            }
+          ]
+        },
+        {
+          "type": "callout",
+          "tone": "tip",
+          "text": "**Not in the loadout:** the text also names Calamity Multishot (\"灾厄突进和分裂\"), but the screenshot does not run it."
+        }
+      ]
+    },
+    {
+      "id": "eidolons",
+      "title": "Eidolons and pets",
+      "tag": "Companions",
+      "blocks": [
+        {
+          "type": "cards",
+          "kind": "equipment",
+          "title": "Eidolons (器灵), best first",
+          "ranked": false,
+          "items": [
+            {
+              "slot": "Utility",
+              "key": "spt_2309",
+              "desc_key": "spt_2309_C_D",
+              "featured": true,
+              "note": "**The guide's pick (优).** At 100% crit every hit is a consecutive crit. The top Astreon runs it: at level 60 and 5 stars it adds Life +404, **Crit Damage +53.4%** and **Skill CD +24.4%** (IMG_6323)."
+            },
+            {
+              "slot": "Utility",
+              "key": "spt_2306",
+              "desc_key": "spt_2306_C_D",
+              "note": "Stand-in: more damage against low-life enemies."
+            },
+            {
+              "slot": "Weapon",
+              "key": "spt_2329",
+              "desc_key": "spt_2329_C_D",
+              "featured": true,
+              "note": "**The guide's pick (优).** Its other effect gives Sortie extra enhancements, and Sortie is a required Fatebound. The top Astreon runs it: at level 60 and 5 stars it adds Life +404 and **Attack Power Bonus +34.5%** (IMG_6324)."
+            },
+            {
+              "slot": "Weapon",
+              "key": "spt_2314",
+              "desc_key": "spt_2314_C_D",
+              "note": "Stand-in: crit chance and crit damage."
+            },
+            {
+              "slot": "Armor",
+              "key": "spt_2315",
+              "desc_key": "spt_2315_C_D",
+              "featured": true,
+              "note": "**Best (最优)**, tied with Athena. Pairs with Calamity Nature's Core. The top Astreon runs it: at level 60 and 5 stars it adds Life +404, DEF +314 and **Elemental Resistance +13.7%** (IMG_6325)."
+            },
+            {
+              "slot": "Armor",
+              "key": "spt_2313",
+              "desc_key": "spt_2313_C_D",
+              "featured": true,
+              "note": "**Best (最优)**, tied with Queenmother. The guide notes Athena was **recently buffed** (新加强)."
+            },
+            {
+              "slot": "Armor",
+              "key": "spt_2310",
+              "desc_key": "spt_2310_C_D",
+              "note": "Good (优). Buffs that change with your current life."
+            },
+            {
+              "slot": "Armor",
+              "key": "spt_2319",
+              "desc_key": "spt_2319_C_D",
+              "note": "Stand-in: enhancements while moving."
+            }
+          ]
+        },
+        {
+          "type": "cards",
+          "kind": "equipment",
+          "title": "Companions (pets)",
+          "ranked": false,
+          "items": [
+            {
+              "key": "Pet_S13_05",
+              "desc_key": "SP_B_S13_05_D",
+              "featured": true,
+              "note": "**The guide's pick (优).** Passive **Solarflame**: Movement Speed +12%, Extra Fire Damage +16%, **Extra Light Damage +16%** (IMG_6362). The Lance deals Light damage."
+            },
+            {
+              "key": "Pet_S13_04",
+              "desc_key": "SP_B_S13_04_D",
+              "note": "Passive **Zhongmou Catmand!**: every 10 s, allies within 8 m gain 45% more elemental damage for 5 s (IMG_6363)."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "todo",
+      "title": "Still to fill in",
+      "tag": "Open items",
+      "blocks": [
+        {
+          "type": "steps",
+          "items": [
+            {
+              "text": "**Cubis core stand-in \"犬牙蛇眼\":** not an exact item name. Read from its characters it is probably Hellhound Claw (冥犬利爪, the 犬) and Ophidian Gaze (黄金蛇眼, the 蛇眼). The top Astreon runs Leaf of Yggdrasil instead."
+            },
+            {
+              "text": "**Effect text of Claim a Head Amid Ten Thousand, Straw-Marked, Tiger-Leopard Elite, Intimidation and most Celesturgic affixes:** the names are in the game text, but not which keys hold their effect text. The Celesturgic bonus lines are copied from the guide's images instead."
+            },
+            {
+              "text": "**Anode Helm and Pandora's Gossamer Silks detail panels** of the top Astreon: not captured yet."
+            },
+            {
+              "text": "**Cut-off bonus lines** on the top Astreon's mech gear, necklace, boots and core Celesturgic affixes."
+            },
+            {
+              "text": "**Talent effect text:** the names are in the game text, but not which neighbouring key holds each description."
+            },
+            {
+              "text": "**Which Pandora's Ark:** the guide does not say, and the top Astreon runs Vitality Gear, so it stays open."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "limits": "Source: one TapTap guide (一羽, \"【SS9攻略】司星太虚枪毕业攻略\", edited 09/22, September 2026), checked against the 1.13.0 game text. In this APK Astreon's skill descriptions sit 1004 keys after their names, not 1000; the designers' skill labels confirm this, and the page uses that offset. The Special Affix texts use the documented Forged Affix layout (text at N, name at N+1). Nothing in the data links Empyrean Sea to its effect, so that link is the guide's. The `?` values live in the encrypted config. Nothing here was tested in game."
+}

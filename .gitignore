@@ -6,6 +6,9 @@ soul-knight-prequel-*/
 soul-knight-prequel-*.zip
 Soul knight prequel/
 
+# Rendered guide pages: python tools/build_guide.py --all (see README.md)
+guide-pages/
+
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

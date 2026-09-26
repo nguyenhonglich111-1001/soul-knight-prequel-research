@@ -1,7 +1,7 @@
 # Soul Knight Prequel: extracted data
 
-Readable JSON and icons pulled out of the Soul Knight Prequel APK, plus the Ranger guide
-(`range-guide.html`) built from them.
+Readable JSON and icons pulled out of the Soul Knight Prequel APK, plus build guides rendered
+from them into `guide-pages/` (not committed; see "Guide" below).
 
 ## New game version
 
@@ -42,14 +42,32 @@ python -c "import json;s=json.load(open('extracted/1.13.0/localization_all.json'
 
 ## Guide
 
-Edit `guide/*.json`, then run `python tools/build_guide.py` to regenerate `range-guide.html`.
-The item-synergy page is `python tools/build_guide.py --guide guide/synergies.json -o
-synergy-guide.html`, and the leaderboard-build page is `--guide guide/leaderboard.json -o
-leaderboard-guide.html`.
+The guides are written in `guide/*.json` and committed. The HTML pages are **generated** into
+`guide-pages/`, which git ignores, so create them whenever you want to read or share them:
+
+```bash
+python tools/build_guide.py --all          # every guide -> guide-pages/<name>.html
+python tools/build_guide.py --guide guide/astreon.json   # just one -> guide-pages/astreon.html
+```
+
+`python tools/pipeline.py` also runs `--all` as its last stage. The pages:
+
+| Page | Source | What it is |
+|---|---|---|
+| `guide-pages/ranger.html` | `guide/ranger.json` | Ranger levelling-to-endgame guide |
+| `guide-pages/synergies.html` | `guide/synergies.json` | item synergies |
+| `guide-pages/leaderboard.html` | `guide/leaderboard.json` | four leaderboard Ranger builds |
+| `guide-pages/cloudpiercer.html` | `guide/cloudpiercer.json` | Ranger Cloudpiercer Shot build |
+| `guide-pages/astreon.html` | `guide/astreon.json` | Astreon Lance of Taixu build |
+
+A new guide is a new `guide/<name>.json` with `sections`; `--all` picks it up.
+To publish one as a claude.ai artifact, add `--fragment <file>` and publish that file.
 
 To read a leaderboard player's gear, screenshot their profile and run
 `python tools/match_profile_icons.py "Soul knight prequel"/<shot>.PNG`. It names all 8 items.
-`python tools/export_guide_png.py` cuts it into Discord-sized PNGs in
+For the Sacred Soul ring or the Eidolon slots, run `python tools/match_panel_icons.py sacred`
+(or `eidolon`) on that panel's screenshot.
+`python tools/export_guide_png.py` cuts `guide-pages/ranger.html` (build it first) into Discord-sized PNGs in
 `extracted/_sheets/guide_png/` (needs `pip install playwright`; it uses the installed Edge).
 
 ## Known gaps

@@ -12,6 +12,8 @@ into `extracted/<version>/`. A hand-written guide in `guide/` is rendered from t
   regenerable. `extracted/_sheets/` (contact sheets, guide PNGs) is shared.
 - `guide/`: the **only hand-authored data**. It holds guide prose plus the confirmed maps
   (`icon_map.json`, `effect_map.json`, `weapon_types.json`), rendered by `tools/build_guide.py`.
+- `guide-pages/`: the rendered HTML pages, one per guide file. **Git-ignored**: never commit
+  them; recreate them with `build_guide.py --all`.
 - `tools/`: the pipeline. Every tool defaults to the newest version (`tools/versions.py`);
   `--apk-dir` / `--out` override.
 - `tests/`: pytest. `docs/`: the domain knowledge below. `PLAN.md`: the current work plan.
@@ -23,18 +25,20 @@ otherwise printing any Chinese string crashes with `UnicodeEncodeError`.
 
 ```bash
 python tools/unpack_apk.py            # new .apk/.xapk/.apks/.zip in root -> soul-knight-prequel-<v>/
-python tools/pipeline.py              # all 12 stages -> extracted/<v>/ (~90 s cold), then version_diff
+python tools/pipeline.py              # all 13 stages -> extracted/<v>/ (~90 s cold), then version_diff
 python tools/pipeline.py --list       # stage names; --from <stage> resumes there
 python tools/version_diff.py [old new]   # -> extracted/<new>/changes_from_<old>.md + "Your action"
 python tools/build_icon_map.py --check   # guard guide/icon_map.json
 python tools/match_profile_icons.py <shot>.PNG   # leaderboard profile -> its 8 items
-python tools/export_guide_png.py      # guide -> Discord PNGs (playwright, system Edge)
+python tools/match_panel_icons.py sacred|eidolon <shot>.PNG   # Sacred Soul / Eidolon portraits
+python tools/build_guide.py --all     # every guide/*.json -> guide-pages/<name>.html (git-ignored)
+python tools/export_guide_png.py      # guide-pages/ranger.html -> Discord PNGs (playwright, Edge)
 python -m pytest                      # fast tests;  -m "" adds the slow golden-output test
 ```
 
 Stage order matters:
 
-1. The extractors run first: `extract_soulknight`, `extract_named_sprites` ×3,
+1. The extractors run first: `extract_soulknight`, `extract_named_sprites` ×4,
    `extract_skill_links`, `dump_prefabs`.
 2. `build_icon_map` runs next.
 3. Then `build_equipment` → `build_indexes` → `build_glossary` → `build_item_details` →
@@ -56,7 +60,7 @@ The `build_*` stages are pure joins over the JSON and run instantly. What each o
 - **Every answer that names items also gets an item-sheet artifact** showing what they look like.
   Write a small guide JSON in the scratchpad (`title`, `subtitle`, `sections` of `cards` blocks
   with `key` + `note`, `limits`), then run
-  `build_guide.py --guide <it>.json -o <it>-full.html --fragment <it>.html`. Publish the
+  `build_guide.py --guide <it>.json -o guide-pages/<it>.html --fragment <it>.html`. Publish the
   fragment, and do not open it. `subtitle` is escaped, so put `$token$`s in notes, not there.
 
 ## Dev loop
@@ -72,9 +76,13 @@ with it.
 
 ## Hard rules
 
-- **Never invent an ID → sprite-number or item → effect-key formula.** Both have been tried and
-  disproved, and the real tables are encrypted. Unknown means no icon or no text, never a
-  guess. See `docs/icons.md` and `docs/effects.md`.
+- **Never invent an item → effect-key formula.** It has been tried and disproved, and the
+  real table is encrypted. Unknown means no text, never a guess. See `docs/effects.md`.
+- **Icons may be guessed, but never as confirmed** (the user's call, 2026-09-26: "add it anyway,
+  if it's wrong I'll correct it"). A sprite found by a naming pattern or by matching its art
+  goes in `unconfirmed` in `guide/icon_map.json`. The page then shows it with an "icon
+  unchecked" tag, and the user corrects it in game. Only `confirmed` entries feed
+  `build_icon_map`'s derivation. See `docs/icons.md`.
 - **Never rewrite `confirmed` entries** in `guide/*.json` from a tool. They are the user's
   in-game observations.
 - **Load one bundle per UnityPy environment, filtered through the catalog.** Co-loading

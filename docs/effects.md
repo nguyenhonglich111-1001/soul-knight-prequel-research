@@ -13,6 +13,12 @@ block:
 - `+1000` for the `1`-`447` item block and for the `200xxx` skill block (`200102` Rain of
   Arrows: Leonar → `201102`);
 - `+100` for `7301`-`7437`.
+- **Except Astreon (SS9), whose skills are `+1004`:** `200531`-`200540` → `201535`-`201544`
+  (`200536` Amaranthine Starsigil → `201540` Ravenous Wolf / Army Breaker). The designers' skill
+  labels (`SD_743`-`SD_749` in `prefabs/skill.json`) confirm it for Dipper of Descending Stars,
+  Axis Revolution, Starsea's Waning and Ninefold Confluence (2026-09-25). Its spec nodes pair
+  `2026NN` name → `2046NN` text (`202635` Magnalume → `204635`). Astreon has no skill-tree
+  keys in 1.13.0.
 
 `NUMERIC_DESC_RULES` in `extract_soulknight.py` holds the item offsets, and they are applied
 automatically in `items_numeric.json`.
