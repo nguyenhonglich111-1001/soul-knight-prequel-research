@@ -1,4 +1,4 @@
-"""range-guide.html -> a set of PNGs sized for posting to Discord.
+"""guide-pages/ranger.html -> a set of PNGs sized for posting to Discord.
 
 One full-page screenshot of the guide is ~10,000 px tall, and Discord shrinks and
 re-compresses anything that size until the text is unreadable -- even the "original" you
@@ -115,7 +115,7 @@ def export(page, html_path, layout, width, limit, out_dir):
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split('\n')[0])
-    ap.add_argument('--html', default='range-guide.html')
+    ap.add_argument('--html', default=os.path.join('guide-pages', 'ranger.html'))
     ap.add_argument('--out', default=os.path.join('extracted', '_sheets', 'guide_png'))
     ap.add_argument('--layout', choices=[*LAYOUTS, 'both'], default='both')
     ap.add_argument('--max', type=int, default=1400, help='max piece height, CSS px')

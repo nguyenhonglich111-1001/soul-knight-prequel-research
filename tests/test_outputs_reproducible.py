@@ -18,9 +18,9 @@ STAGES = [
     ['build_indexes.py'],
     ['build_glossary.py'],
     ['build_item_details.py'],
-    ['build_guide.py'],
+    ['build_guide.py', '--all'],
 ]
-OUTPUTS = ['extracted', 'guide', 'range-guide.html']
+OUTPUTS = ['extracted', 'guide']  # guide-pages/ is git-ignored
 
 
 def run(*args):

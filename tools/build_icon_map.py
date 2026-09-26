@@ -95,9 +95,12 @@ def write_map(path, data):
         ]
         return '{\n' + ',\n'.join(rows) + '\n }' if rows else '{}'
 
-    head = {k: v for k, v in data.items() if k not in ('confirmed', 'derived')}
+    # `unconfirmed` is hand-written like `confirmed`: icons shown before the user has checked
+    # them in game (build_guide marks them). Never derived from.
+    blocks = ('unconfirmed', 'confirmed', 'derived')
+    head = {k: v for k, v in data.items() if k not in blocks}
     lines = [f' {json.dumps(k)}: {json.dumps(v, ensure_ascii=False)}' for k, v in head.items()]
-    lines += [f' "confirmed": {block(data["confirmed"])}', f' "derived": {block(data["derived"])}']
+    lines += [f' {json.dumps(k)}: {block(data[k])}' for k in blocks if k in data]
     with open(path, 'w', encoding='utf8') as fh:
         fh.write('{\n' + ',\n'.join(lines) + '\n}\n')
 

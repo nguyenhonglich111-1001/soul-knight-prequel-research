@@ -48,6 +48,13 @@ STAGES = [
         True,
         True,
     ),
+    (
+        'class_skill_icons',
+        'extract_named_sprites.py',
+        ['--prefix', 'SD_', 'soul_bonus_', '97', '--folder', 'ClassSkill'],
+        True,
+        True,
+    ),
     ('skill_links', 'extract_skill_links.py', [], True, True),
     ('prefabs', 'dump_prefabs.py', [], True, True),
     ('build_icon_map', 'build_icon_map.py', [], False, False),
@@ -55,7 +62,7 @@ STAGES = [
     ('build_indexes', 'build_indexes.py', [], False, True),
     ('build_glossary', 'build_glossary.py', [], False, True),
     ('build_item_details', 'build_item_details.py', [], False, True),
-    ('build_guide', 'build_guide.py', [], False, True),
+    ('build_guide', 'build_guide.py', ['--all'], False, True),
 ]
 
 

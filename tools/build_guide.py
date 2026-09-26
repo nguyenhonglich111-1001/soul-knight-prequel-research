@@ -6,8 +6,15 @@ extracted data -- `101644`, `EBF_SCATTERING`, `SX_P1_22_100`. This resolves each
 its real in-game name, description and icon, inlines the icons as base64 so the page is
 one portable file, and prints what it could not resolve instead of quietly dropping it.
 
-    PYTHONIOENCODING=utf-8 python tools/build_guide.py
-    PYTHONIOENCODING=utf-8 python tools/build_guide.py --guide guide/ranger.json -o out.html
+Pages go to `guide-pages/` (git-ignored; rebuild them whenever you need them):
+
+    PYTHONIOENCODING=utf-8 python tools/build_guide.py --all     # every guide -> guide-pages/<name>.html
+    PYTHONIOENCODING=utf-8 python tools/build_guide.py           # guide/ranger.json only
+    PYTHONIOENCODING=utf-8 python tools/build_guide.py --guide guide/astreon.json \
+        -o guide-pages/astreon.html --fragment <scratch>/astreon.html   # + a fragment to publish
+
+A guide file is any `guide/*.json` with `sections`; the maps next to them (`icon_map.json`,
+`effect_map.json`, `weapon_types.json`) are skipped.
 """
 
 import argparse
@@ -127,10 +134,12 @@ class Data:
         imap = json.load(open(imap, encoding='utf8')) if os.path.exists(imap) else {}
         self.mapped_icons = {
             k: self.icons[v['icon']]
-            for part in ('confirmed', 'derived')
+            for part in ('confirmed', 'derived', 'unconfirmed')
             for k, v in imap.get(part, {}).items()
             if v['icon'] in self.icons
         }
+        # Shown, but marked on the card until the user has checked them in game.
+        self.unchecked_icons = set(imap.get('unconfirmed', {})) - set(self.icons)
         # `$token$` -> the keyword's in-game name and rules text (tools/build_glossary.py).
         gl = os.path.join(out, 'glossary.json')
         gl = json.load(open(gl, encoding='utf8'))['glossary'] if os.path.exists(gl) else {}
@@ -222,6 +231,7 @@ class Data:
             'values': values,
             'icon': self.data_uri(path) if path else None,
             'icon_name': os.path.basename(path) if path else None,
+            'icon_unchecked': bool(path) and key in self.unchecked_icons,
         }
 
 
@@ -319,6 +329,94 @@ class Renderer:
             )
         return f'<div class="pieces">{"".join(tiles)}</div>'
 
+    def affix_panel(self, build):
+        """An item's affixes, laid out like the game's item-detail panel.
+
+        `build` is `{title, main, prefix, suffix, celesturgic, source}`. Each group is a list
+        of rows, or a string shown in place of the rows (e.g. why the group is missing).
+        A row is one of:
+
+        - `[stat, value]`, a stat roll as the panel prints it;
+        - `"stat"`, a stat the guide names without a value;
+        - `{key|name, desc_key, level, legendary, bonus, flag}`, a Special Affix, a
+          forged-in legendary (`legendary: true`, purple as in game) or, in `celesturgic`,
+          a Celesturgic affix (red). A keyed row shows its effect text on hover. `bonus`
+          lists the stat lines the panel prints under a Celesturgic affix, and `flag` notes
+          a doubt about the row;
+        - `{options: [row, ...]}`, alternatives, any one of which fills the slot."""
+
+        def named(row, kind):
+            if isinstance(row, str):
+                return f'<span>{html.escape(row)}</span>'
+            name = (row.get('key') and self.d.text(row['key'])) or row.get('name') or '?'
+            cls = 'ax-leg' if row.get('legendary') else ('' if kind == 'celesturgic' else 'ax-sp')
+            desc = None
+            if row.get('key'):
+                desc = self.d.resolve({'key': row['key'], 'desc_key': row.get('desc_key')})['desc']
+            if not desc:
+                return f'<span class="{cls}">{html.escape(name)}</span>'
+            return (
+                f'<span class="{cls} has-tip" tabindex="0">{html.escape(name)}'
+                f'<span class="tip" role="tooltip"><b>{html.escape(name)}</b>'
+                f'{self.rt(desc)}</span></span>'
+            )
+
+        def rows(items, kind):
+            if isinstance(items, str):
+                return f'<div class="ax-row ax-none">{html.escape(items)}</div>'
+            out = []
+            for row in items:
+                if isinstance(row, list):
+                    stat, value = row
+                    cls = 'ax-row ax-cel' if kind == 'celesturgic' else 'ax-row'
+                    out.append(
+                        f'<div class="{cls}"><span>{html.escape(stat)}</span>'
+                        f'<span class="ax-val">{html.escape(value)}</span></div>'
+                    )
+                    continue
+                if isinstance(row, str):
+                    out.append(f'<div class="ax-row">{named(row, kind)}</div>')
+                    continue
+                opts = row.get('options') or [row]
+                body = '<span class="ax-or"> / </span>'.join(named(o, kind) for o in opts)
+                cls = 'ax-row ax-cel' if kind == 'celesturgic' else 'ax-row'
+                right = f'Lvl {row["level"]}' if row.get('level') else ''
+                if row.get('flag'):
+                    right += (
+                        f'<span class="ax-flag" title="{html.escape(row["flag"])}">check</span>'
+                    )
+                out.append(
+                    f'<div class="{cls}"><span class="ax-name">{body}</span>'
+                    f'<span class="ax-val">{right}</span></div>'
+                )
+                if row.get('flag'):
+                    out.append(f'<div class="ax-bonus ax-flagnote">{self.rt(row["flag"])}</div>')
+                for line in row.get('bonus', []):
+                    out.append(f'<div class="ax-bonus">{html.escape(line)}</div>')
+            return ''.join(out)
+
+        head = ''
+        if build.get('title'):
+            head += f'<div class="ax-title">{html.escape(build["title"])}</div>'
+        if build.get('main'):
+            head += f'<div class="ax-main">{html.escape(build["main"])}</div>'
+        groups = ''.join(
+            f'<div class="ax-group"><div class="ax-label">{name}</div>'
+            f'{rows(build.get(key), key)}</div>'
+            for key, name in (
+                ('prefix', 'Prefix'),
+                ('suffix', 'Suffix'),
+                ('celesturgic', 'Celesturgic'),
+            )
+            if key in build
+        )
+        src = (
+            f'<div class="ax-src">{html.escape(build["source"])}</div>'
+            if build.get('source')
+            else ''
+        )
+        return f'<div class="affixes">{head}{groups}{src}</div>'
+
     def card(self, entry, kind, rank=None, show_slot=True):
         r = self.d.resolve(entry)
         shown = entry.get('as_written')
@@ -353,6 +451,11 @@ class Renderer:
             meta.append(f'<span class="rank">{rank}</span>')
         if entry.get('calamity'):
             meta.append('<span class="cal">Calamity</span>')
+        if r.get('icon_unchecked'):
+            meta.append(
+                '<span class="unchecked" title="icon matched by its art; not yet checked in game">'
+                'icon unchecked</span>'
+            )
         if meta:
             bits.append(f'<div class="meta">{"".join(meta)}</div>')
         bits.append('</div></div>')
@@ -362,6 +465,8 @@ class Renderer:
             )
         if entry.get('pieces'):
             bits.append(self.pieces(entry['pieces']))
+        if entry.get('build'):
+            bits.append(self.affix_panel(entry['build']))
         if entry.get('note'):
             bits.append(f'<p class="note">{self.rt(entry["note"])}</p>')
         bits.append('</div>')
@@ -607,12 +712,13 @@ code {{ font-family:var(--mono); font-size:.87em; color:var(--charmed);
 .slot {{ display:inline-flex; align-items:center; gap:5px; background:var(--panel2);
         padding:2px 9px; border-radius:99px; }}
 .pip {{ width:13px; height:13px; }}
-.cal, .rank {{
+.cal, .rank, .unchecked {{
   font-family:var(--mono); font-size:11px!important; font-weight:600;
   padding:2px 9px; border-radius:99px; letter-spacing:.06em; text-transform:uppercase;
 }}
 .cal {{ background:rgba(232,80,72,.16); color:var(--insane)!important; }}
 .rank {{ background:rgba(250,170,63,.15); color:var(--legendary)!important; }}
+.unchecked {{ background:var(--panel2); color:var(--faint)!important; }}
 .desc {{ margin:0; font-size:14.5px; color:#bfc5d6; }}
 .note {{
   margin:0; font-size:14px; color:var(--dim);
@@ -626,6 +732,28 @@ code {{ font-family:var(--mono); font-size:.87em; color:var(--charmed);
 }}
 .val {{ color:var(--legendary); font-weight:600; cursor:help; }}
 .pieces {{ display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }}
+/* A worn item's affixes, in the game's item-detail order: prefix, suffix, Celesturgic. */
+.affixes {{ background:var(--bg); border-radius:10px; padding:10px 12px; font-size:13.5px; }}
+.ax-title {{ color:var(--insane); font-weight:600; line-height:1.3; }}
+.ax-main {{ font-family:var(--mono); color:var(--fg); text-align:center; margin:4px 0 2px; }}
+.ax-group {{ border-top:1px dashed var(--line); margin-top:6px; padding-top:6px; }}
+.ax-label {{ font-family:var(--mono); font-size:10.5px; letter-spacing:.12em;
+            text-transform:uppercase; color:var(--faint); margin-bottom:2px; }}
+.ax-row {{ display:flex; justify-content:space-between; gap:10px; padding:2px 6px;
+          color:#cbd0e0; }}
+.ax-val {{ font-family:var(--mono); white-space:nowrap; }}
+.ax-sp {{ color:var(--legendary); }}
+.ax-name {{ min-width:0; }}
+.ax-or {{ color:var(--faint); }}
+.ax-flag {{ margin-left:6px; font-family:var(--mono); font-size:10px; font-weight:600;
+           text-transform:uppercase; color:var(--bg); background:var(--legendary);
+           border-radius:99px; padding:1px 6px; cursor:help; }}
+.ax-flagnote {{ color:var(--legendary); }}
+.ax-leg {{ color:var(--epic); }}
+.ax-cel {{ background:rgba(232,80,72,.22); color:#ffd9d4; border-radius:4px; margin-top:3px; }}
+.ax-bonus {{ color:var(--dim); padding:0 6px 0 16px; font-size:12.5px; }}
+.ax-none {{ color:var(--faint); font-style:italic; }}
+.ax-src {{ color:var(--faint); font-size:11.5px; margin-top:6px; }}
 .piece {{
   background:var(--bg); border-radius:10px; padding:10px 6px 8px;
   display:flex; flex-direction:column; align-items:center; gap:6px; text-align:center;
@@ -724,32 +852,32 @@ STANDALONE = """<!doctype html>
 # --------------------------------------------------------------------------- main
 
 
-def main():
-    ap = argparse.ArgumentParser(
-        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
-    )
-    ap.add_argument('--guide', default='guide/ranger.json')
-    ap.add_argument('--out', help='extracted version folder (default: newest extracted/<version>/)')
-    ap.add_argument('-o', '--output', default='range-guide.html')
-    ap.add_argument(
-        '--fragment', help='also write the bare title+style+content form, for publishing'
-    )
-    args = ap.parse_args()
-    versions.resolve_out_arg(args)
+PAGES = 'guide-pages'
 
-    if not os.path.isdir(args.out):
-        sys.exit(f'missing {args.out} -- run the extraction pipeline first')
-    data = Data(args.out)
-    guide = json.load(open(args.guide, encoding='utf8'))
+
+def guide_files(folder='guide'):
+    """Every guide page source in `folder`: the JSON files that have `sections`."""
+    out = []
+    for name in sorted(os.listdir(folder)):
+        path = os.path.join(folder, name)
+        if name.endswith('.json') and 'sections' in json.load(open(path, encoding='utf8')):
+            out.append(path)
+    return out
+
+
+def build(data, guide_path, output, fragment_path=None):
+    """Render one guide file; print what it wrote and what it could not resolve."""
+    guide = json.load(open(guide_path, encoding='utf8'))
     renderer = Renderer(data, guide)
     fragment = renderer.render()
     head, _, rest = fragment.partition('</style>\n')
     page = STANDALONE.format(fragment=f'{head}</style>\n</head>\n<body>\n{rest}')
 
-    written = [(args.output, page)]
-    if args.fragment:
-        written.append((args.fragment, fragment))
+    written = [(output, page)]
+    if fragment_path:
+        written.append((fragment_path, fragment))
     for path, text in written:
+        os.makedirs(os.path.dirname(path) or '.', exist_ok=True)
         with open(path, 'w', encoding='utf8') as fh:
             fh.write(text)
         print(f'{path}: {len(text) / 1024:.0f} KB')
@@ -763,7 +891,35 @@ def main():
             names = sorted(set(rows))
             print(f'  {len(names)} {label}: {", ".join(names)}')
     if 'src=""' in page:
-        sys.exit('ERROR: empty img src in output')
+        sys.exit(f'ERROR: empty img src in {output}')
+
+
+def main():
+    ap = argparse.ArgumentParser(
+        description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
+    )
+    ap.add_argument('--guide', default='guide/ranger.json')
+    ap.add_argument('--all', action='store_true', help=f'render every guide into {PAGES}/')
+    ap.add_argument('--out', help='extracted version folder (default: newest extracted/<version>/)')
+    ap.add_argument('-o', '--output', help=f'default: {PAGES}/<guide name>.html')
+    ap.add_argument(
+        '--fragment', help='also write the bare title+style+content form, for publishing'
+    )
+    args = ap.parse_args()
+    versions.resolve_out_arg(args)
+
+    if not os.path.isdir(args.out):
+        sys.exit(f'missing {args.out} -- run the extraction pipeline first')
+    data = Data(args.out)
+
+    def page_for(path):
+        return os.path.join(PAGES, os.path.basename(path)[:-5] + '.html')
+
+    if args.all:
+        for path in guide_files():
+            build(data, path, page_for(path))
+    else:
+        build(data, args.guide, args.output or page_for(args.guide), args.fragment)
 
 
 if __name__ == '__main__':
